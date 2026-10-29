@@ -1,19 +1,7 @@
-# Woosong Newsletter Editor — Beta V5
+# Newsletter Editor V6 Beta
 
-Static HTML editor with Traditional Chinese / Korean UI.
-
-## Publish on GitHub Pages
-1. Create a new **public** repository, e.g. `newsletter-editor-beta`.
-2. Upload `index.html` at repository root and commit.
-3. Navigate to **Settings > Pages > Build and deployment > Deploy from a branch**.
-4. Choose `main` and `/(root)` and Save.
-5. Visit `https://YOUR_USERNAME.github.io/newsletter-editor-beta/`.
-
-## Notes
-- Files and articles are processed locally in browser; there is **no shared cloud workspace**.
-- Each colleague sees their own browser state. Share a newsletter using **Export JSON / Import JSON**.
-- Images are converted/compressed in browser. HEIC may fail; convert to JPG.
-- Browser localStorage is limited; export JSON regularly.
-- Don't publish private student information or internal materials into the public repository.
-- Placeholder logos, sample content and demo QR codes are not official publication material.
-- Test printing on A4 before distribution.
+- 每個內容區塊可上傳一張主圖片、任意多張附加圖片以及一張 QR Code。
+- 使用「新增文章／活動」建立更多獨立內容區塊。
+- 圖片存在個別瀏覽器本機；上傳過多圖片可能超出 localStorage 容量。
+- GitHub Pages: 建立公開 repository，將 index.html 放在根目錄，Settings > Pages 啟用 main/root。
+- 建議以 JSON 定期備份，並先以測試照片與非敏感資料測試。
