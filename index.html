@@ -285,6 +285,12 @@ input[type=range]{accent-color:#245883}
 .demo-controls{flex:none;display:flex;gap:6px}.demo-controls button{border:1px solid #ffffff55;background:transparent;color:#fff;border-radius:8px;padding:7px 10px;font-size:12px;font-weight:700;cursor:pointer}.demo-controls button:hover{background:#ffffff1f}.demo-stop{background:#c2453a!important;border-color:#c2453a!important}
 @media(max-width:760px){.demo-play-narrow{display:inline-block}.demo-bar{flex-wrap:wrap}.demo-caption{flex-basis:100%}}
 @media print{#demoLayer{display:none!important}}
+/* Export to Canva */
+.export-actions .btn-canva{grid-column:1/-1}
+.btn-canva{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#00c4cc,#7d2ae8)!important;color:#fff!important;text-decoration:none}
+.btn-canva:hover{filter:brightness(1.07)}
+.canva-mark{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#fff;color:#7d2ae8;font:italic 800 13px Georgia,serif}
+.canva-dialog{width:min(100%,480px)}.canva-dialog h3{display:flex;align-items:center;gap:9px;margin:0 0 12px;font-size:18px}.canva-dialog ol{margin:0 0 12px;padding-left:20px;font-size:13.5px;line-height:1.75}.canva-dialog .tiny{line-height:1.6;margin:0 0 16px}
 /* In-page confirm / alert */
 .ui-dialog-overlay{position:fixed;inset:0;background:rgba(12,26,45,.5);display:grid;place-items:center;z-index:100000;padding:20px}.ui-dialog{width:min(100%,420px);background:#fff;color:#1c344f;border-radius:14px;box-shadow:0 18px 60px #0004;padding:22px}.ui-dialog p{margin:0 0 18px;font-size:14px;line-height:1.6;white-space:pre-line}.ui-dialog-actions{display:flex;justify-content:flex-end;gap:8px}.ui-dialog-actions .btn{min-width:84px;padding:10px 14px}
 @media print{.ui-dialog-overlay{display:none!important}}
@@ -318,9 +324,9 @@ input[type=range]{accent-color:#245883}
 </section>
 <section class="pane" data-pane="export" role="tabpanel" hidden>
 <details class="group" open><summary data-i18n="export.group"></summary><div class="inner">
-<div class="export-actions"><button type="button" class="btn" data-act="export-pdf" data-i18n="export.pdf"></button><button type="button" class="btn secondary" data-act="export-png"><span data-i18n="export.png"></span></button><button type="button" class="btn secondary" data-act="export-png-all"><span data-i18n="export.pngAll"></span></button><button type="button" class="btn secondary" data-act="export-json" data-i18n="export.json"></button><button type="button" class="btn secondary" data-act="export-import" data-i18n="export.import"></button></div>
+<div class="export-actions"><button type="button" class="btn" data-act="export-pdf" data-i18n="export.pdf"></button><button type="button" class="btn secondary" data-act="export-png"><span data-i18n="export.png"></span></button><button type="button" class="btn secondary" data-act="export-png-all"><span data-i18n="export.pngAll"></span></button><button type="button" class="btn btn-canva" data-act="export-canva"><span class="canva-mark" aria-hidden="true">C</span><span data-i18n="export.canva"></span></button><button type="button" class="btn secondary" data-act="export-json" data-i18n="export.json"></button><button type="button" class="btn secondary" data-act="export-import" data-i18n="export.import"></button></div>
 <input type="file" id="importFile" accept="application/json,.json" hidden>
-<p class="tiny" data-i18n="export.pngNote"></p></div></details>
+<p class="tiny" data-i18n="export.canvaHint"></p><p class="tiny" data-i18n="export.pngNote"></p></div></details>
 <details class="group" open><summary data-i18n="help.title"></summary><div class="inner"><button type="button" class="btn secondary manual-link" data-act="manual-open" data-i18n="man.open"></button><button type="button" class="btn secondary manual-link" data-act="demo-run" data-i18n="demo.play"></button><div class="tiny" data-i18n="help.body"></div></div></details>
 </section>
 </div>
@@ -442,7 +448,7 @@ const translations={
  "man.s7.points":["單頁：100% 大小，適合細看文字。", "雙頁：兩頁並排；多頁：全部頁面縮成小圖。", "點任一頁就切換到編輯那一頁；按兩下回到單頁。"],
  "man.s8.title":"匯出與列印",
  "man.s8.lead":"在「④ 匯出」產生 PDF、PNG，或備份成 JSON。",
- "man.s8.points":["PDF：按「列印／另存 PDF」，紙張選 A4、縮放 100%、邊界「無」，並勾選「背景圖形」。", "PNG：可保存目前頁，或把所有頁打包成一個 ZIP 檔。", "JSON：「匯出資料 JSON」備份；換電腦時用「匯入資料 JSON」還原。"],
+ "man.s8.points":["PDF：按「列印／另存 PDF」，紙張選 A4、縮放 100%、邊界「無」，並勾選「背景圖形」。", "PNG：可保存目前頁，或把所有頁打包成一個 ZIP 檔。", "JSON：「匯出資料 JSON」備份；換電腦時用「匯入資料 JSON」還原。", "想加更多裝飾：按「匯出到 Canva（可編輯）」，再把檔案上傳到 Canva 繼續設計。"],
  "man.s9.title":"復原、快捷鍵與儲存",
  "man.s9.lead":"做錯了不用擔心，所有操作都可以復原。",
  "man.s9.points":["↶ 復原（Ctrl+Z）／↷ 重做（Ctrl+Y）；Ctrl+S 立即儲存。", "按「⌨ 快捷鍵」可隨時查看所有快捷鍵。", "資料存在這台電腦的瀏覽器裡；清除瀏覽器資料會遺失，請定期匯出 JSON。", "遇到問題，按頁面最下方的「聯絡我」與作者聯繫。"],
@@ -472,6 +478,15 @@ const translations={
  "demo.bold":"迎新說明會",
  "demo.a2.title":"校友交流晚會預告",
  "demo.a2.line":"{n}．活動當天將邀請校友分享在韓國與海外的工作經驗，並安排交流餐會，歡迎在校生與校友踴躍參加。",
+ "export.canva":"匯出到 Canva（可編輯）",
+ "export.canvaBusy":"正在產生 Canva 檔案… {n} / {total} 頁",
+ "export.canvaHint":"產生 Canva 可匯入的 .pptx 檔：每頁一頁，文字和圖片都能在 Canva 中個別編輯，方便再加入貼圖與裝飾。",
+ "canva.title":"Canva 檔案已下載",
+ "canva.steps":["已下載檔案：{file}", "按下方「打開 Canva」並登入。", "把這個檔案拖進 Canva 首頁，或按「上傳」→ 選擇這個檔案。", "Canva 會轉成可編輯的設計，就可以加入貼圖、背景與各種裝飾。"],
+ "canva.note":"提示：字型可能換成 Canva 中相近的字型，可在 Canva 重新選擇；示範用的佔位圖片也會一起匯出，在 Canva 中把自己的照片拖到上面即可替換。在 Canva 的修改無法帶回本編輯器，建議先在這裡把文字定稿。",
+ "canva.open":"打開 Canva",
+ "canva.close":"稍後再說",
+ "canva.failed":"Canva 檔案產生失敗：{error}",
  'handle.title':'拖曳調整寬度',
  'contact.open':'聯絡我','contact.title':'問題回報與使用協助','contact.intro':'如果編輯器出現錯誤或有使用問題，請透過以下電子郵件聯絡作者。',
  'contact.copy':'複製信箱','contact.copied':'已複製','contact.send':'撰寫郵件','contact.close':'關閉','contact.subject':'Newsletter 編輯器問題回報'
@@ -583,7 +598,7 @@ const translations={
  "man.s7.points":["한 페이지: 100% 크기로 글자를 자세히 볼 때.", "두 페이지: 두 페이지를 나란히, 여러 페이지: 모든 페이지를 작은 그림으로.", "페이지를 클릭하면 그 페이지를 편집하고, 두 번 클릭하면 한 페이지 보기로 돌아갑니다."],
  "man.s8.title":"내보내기와 인쇄",
  "man.s8.lead":"‘④ 내보내기’에서 PDF와 PNG를 만들거나 JSON으로 백업합니다.",
- "man.s8.points":["PDF: ‘인쇄 / PDF로 저장’에서 용지 A4, 배율 100%, 여백 없음, ‘배경 그래픽’을 켜 주세요.", "PNG: 현재 페이지만 저장하거나, 모든 페이지를 ZIP 파일 하나로 저장합니다.", "JSON: ‘JSON으로 백업’으로 저장하고, 다른 컴퓨터에서는 ‘JSON 불러오기’로 복원합니다."],
+ "man.s8.points":["PDF: ‘인쇄 / PDF로 저장’에서 용지 A4, 배율 100%, 여백 없음, ‘배경 그래픽’을 켜 주세요.", "PNG: 현재 페이지만 저장하거나, 모든 페이지를 ZIP 파일 하나로 저장합니다.", "JSON: ‘JSON으로 백업’으로 저장하고, 다른 컴퓨터에서는 ‘JSON 불러오기’로 복원합니다.", "장식을 더하고 싶다면 ‘Canva로 내보내기 (편집 가능)’를 누른 뒤 파일을 Canva에 올려 계속 디자인하세요."],
  "man.s9.title":"실행 취소, 단축키, 저장",
  "man.s9.lead":"실수해도 괜찮습니다. 모든 작업은 되돌릴 수 있습니다.",
  "man.s9.points":["↶ 실행 취소(Ctrl+Z) / ↷ 다시 실행(Ctrl+Y), Ctrl+S로 바로 저장합니다.", "‘⌨ 단축키’를 누르면 모든 단축키를 볼 수 있습니다.", "데이터는 이 컴퓨터의 브라우저에 저장됩니다. 브라우저 데이터를 지우면 사라지므로 JSON으로 자주 백업하세요.", "문제가 있으면 페이지 맨 아래 ‘문의하기’로 제작자에게 연락하세요."],
@@ -613,6 +628,15 @@ const translations={
  "demo.bold":"오리엔테이션",
  "demo.a2.title":"동문 교류의 밤 안내",
  "demo.a2.line":"{n}. 행사 당일에는 국내외에서 활동하는 동문들이 경험을 나누고 교류 만찬도 함께합니다. 재학생과 동문의 많은 참여 바랍니다.",
+ "export.canva":"Canva로 내보내기 (편집 가능)",
+ "export.canvaBusy":"Canva 파일 만드는 중… {n} / {total}페이지",
+ "export.canvaHint":"Canva에서 불러올 수 있는 .pptx 파일을 만듭니다. 페이지마다 한 장이며, 글과 이미지를 Canva에서 각각 편집하고 스티커나 장식을 더할 수 있습니다.",
+ "canva.title":"Canva 파일을 내려받았습니다",
+ "canva.steps":["내려받은 파일: {file}", "아래 ‘Canva 열기’를 누르고 로그인합니다.", "이 파일을 Canva 홈 화면으로 끌어다 놓거나 ‘업로드’ → 파일 선택을 누릅니다.", "Canva가 편집 가능한 디자인으로 바꿔 주며, 스티커·배경·장식을 자유롭게 더할 수 있습니다."],
+ "canva.note":"참고: 글꼴은 Canva의 비슷한 글꼴로 바뀔 수 있으니 Canva에서 다시 고르세요. 예시용 자리 이미지도 함께 내보내며, Canva에서 사진을 그 위로 끌어다 놓으면 바뀝니다. Canva에서 바꾼 내용은 이 편집기로 되돌아오지 않으므로 글은 여기서 먼저 확정하세요.",
+ "canva.open":"Canva 열기",
+ "canva.close":"나중에",
+ "canva.failed":"Canva 파일을 만들지 못했습니다: {error}",
  'handle.title':'드래그하여 너비 조절',
  'contact.open':'문의하기','contact.title':'오류 신고 및 이용 문의','contact.intro':'편집기 오류나 이용 중 궁금한 점이 있다면 아래 이메일로 문의해 주세요.',
  'contact.copy':'이메일 복사','contact.copied':'복사 완료','contact.send':'이메일 보내기','contact.close':'닫기','contact.subject':'뉴스레터 편집기 오류 및 이용 문의'
@@ -724,7 +748,7 @@ const translations={
  "man.s7.points":["Single Page: 100% size for reading details.", "Two Pages: side by side; All Pages: every page as a thumbnail.", "Click a page to edit it; double-click to go back to single-page view."],
  "man.s8.title":"Export and Print",
  "man.s8.lead":"In “④ Export”, create a PDF or PNG, or back up your work as JSON.",
- "man.s8.points":["PDF: press “Print / Save as PDF” and choose A4 paper, 100% scale, no margins, and turn on “Background graphics”.", "PNG: save the current page, or every page bundled into one ZIP file.", "JSON: “Export JSON Backup” saves your work; “Import JSON” restores it on another computer."],
+ "man.s8.points":["PDF: press “Print / Save as PDF” and choose A4 paper, 100% scale, no margins, and turn on “Background graphics”.", "PNG: save the current page, or every page bundled into one ZIP file.", "JSON: “Export JSON Backup” saves your work; “Import JSON” restores it on another computer.", "Want more decoration? Press “Export to Canva (editable)” and upload the file to Canva to keep designing."],
  "man.s9.title":"Undo, Shortcuts and Saving",
  "man.s9.lead":"Don’t worry about mistakes — every action can be undone.",
  "man.s9.points":["↶ Undo (Ctrl+Z) / ↷ Redo (Ctrl+Y); Ctrl+S saves right away.", "Press “⌨ Shortcuts” to see every shortcut.", "Your work lives in this computer’s browser. Clearing browser data deletes it, so export a JSON backup regularly.", "Need help? Press “Contact me” at the very bottom of the page."],
@@ -754,6 +778,15 @@ const translations={
  "demo.bold":"orientation session",
  "demo.a2.title":"Alumni Networking Night",
  "demo.a2.line":"{n}. Alumni working in Korea and abroad will share their career stories over a networking dinner. Students and alumni are warmly invited.",
+ "export.canva":"Export to Canva (editable)",
+ "export.canvaBusy":"Creating Canva file… page {n} / {total}",
+ "export.canvaHint":"Creates a .pptx file that Canva can import: one page per page, with every text and image editable on its own in Canva, ready for stickers and decorations.",
+ "canva.title":"Your Canva file is downloaded",
+ "canva.steps":["Downloaded file: {file}", "Press “Open Canva” below and sign in.", "Drag the file onto the Canva home page, or press “Upload” → choose the file.", "Canva turns it into an editable design — add stickers, backgrounds and decorations."],
+ "canva.note":"Note: Canva may swap fonts for similar ones you can change there; sample placeholder images are exported too — drag your own photo onto one in Canva to replace it. Changes made in Canva don’t come back to this editor, so finish the text here first.",
+ "canva.open":"Open Canva",
+ "canva.close":"Later",
+ "canva.failed":"Could not create the Canva file: {error}",
  'handle.title':'Drag to resize',
  'contact.open':'Contact me','contact.title':'Bug Reports & Support','contact.intro':'Found a bug or need help with the editor? Contact the creator at the email below.',
  'contact.copy':'Copy Email','contact.copied':'Copied','contact.send':'Write Email','contact.close':'Close','contact.subject':'Newsletter Editor Bug Report / Support'
@@ -1520,6 +1553,7 @@ function onAction(btn){
   case 'export-pdf':saveNow();return window.print();
   case 'export-png':return savePNG(btn);
   case 'export-png-all':return savePNGAll(btn);
+  case 'export-canva':return saveCanva(btn);
   case 'export-json':return saveJSON();
   case 'export-import':return $('#importFile').click();
   case 'contact-open':return openContact();
@@ -1832,6 +1866,197 @@ function makeZip(files){
  return new Blob([...parts,...central,e.buffer],{type:'application/zip'});
 }
 
+/* ===== Export to Canva: an editable PowerPoint (.pptx) built from the rendered A4 pages =====
+   Every heading, paragraph, image, coloured box and rule becomes its own object at the same place,
+   so Canva (or PowerPoint) can import it as an editable design. */
+const EMU_W=7560000,EMU_H=10692000,PX=EMU_W/794; /* A4 in EMU; the preview sheet is 794 × 1123 px */
+const xmlEsc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c])).replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g,'');
+const emu=v=>Math.max(0,Math.round(v*PX));
+function cssColor(c){const m=/rgba?\(([^)]+)\)/.exec(c||'');if(!m)return null;const v=m[1].split(/[ ,/]+/).filter(Boolean).map(Number);if(v.length>3&&v[3]===0)return null;
+ return {hex:v.slice(0,3).map(x=>Math.max(0,Math.min(255,Math.round(x))).toString(16).padStart(2,'0')).join('').toUpperCase(),alpha:v.length>3?v[3]:1}}
+const fillXml=c=>c?`<a:solidFill><a:srgbClr val="${c.hex}">${c.alpha<1?`<a:alpha val="${Math.round(c.alpha*100000)}"/>`:''}</a:srgbClr></a:solidFill>`:'<a:noFill/>';
+function bgColor(cs){return cssColor(cs.backgroundColor)||cssColor((/rgba?\([^)]+\)/.exec(cs.backgroundImage||'')||[])[0])}
+function eastAsianFont(text,serif){if(/[ᄀ-ᇿ㄰-㆏가-힯]/.test(text))return serif?'Noto Serif KR':'Noto Sans KR';return serif?'Noto Serif TC':'Noto Sans TC'}
+function latinFont(cs){const f=(cs.fontFamily||'').split(',')[0].replace(/["']/g,'').trim();return /georgia|times|serif|batang/i.test(cs.fontFamily)&&!/sans/i.test(f)?(f&&!/serif$/i.test(f)?f:'Georgia'):(f&&!/sans-serif/i.test(f)?f:'Arial')}
+/* Paragraphs of styled runs from DOM nodes (white-space aware, <br> and bold/italic/colour per run). */
+function runsFrom(nodes,root){
+ const pre=/pre/.test(getComputedStyle(root).whiteSpace),paras=[[]];
+ const push=(text,el)=>{const cs=getComputedStyle(el);const run={ls:parseFloat(cs.letterSpacing)||0,t:text,b:Number(cs.fontWeight)>=600||cs.fontWeight==='bold',i:cs.fontStyle==='italic',c:cssColor(cs.color),sz:parseFloat(cs.fontSize),serif:/georgia|times|serif|batang|mingliu/i.test(cs.fontFamily)&&!/sans-serif/i.test(cs.fontFamily.split(',')[0]),latin:latinFont(cs)};paras[paras.length-1].push(run)};
+ const walk=n=>{
+  if(n.nodeType===3){let v=n.nodeValue;if(!pre)v=v.replace(/\s+/g,' ');const parts=pre?v.split('\n'):[v];parts.forEach((piece,k)=>{if(k)paras.push([]);if(piece)push(piece,n.parentElement)});return}
+  if(n.nodeType!==1)return;if(n.tagName==='BR'){paras.push([]);return}
+  if(n.matches('img,svg,.inline-figs,.demo-visual,.extra-gallery'))return;
+  const cs=getComputedStyle(n);if(cs.display==='none')return;
+  if(cs.display==='block'&&paras[paras.length-1].length)paras.push([]);
+  n.childNodes.forEach(walk);
+  if(cs.display==='block')paras.push([]);
+ };
+ nodes.forEach(walk);
+ const out=paras.map(p=>{const r=p.slice();if(!pre&&r.length){r[0]={...r[0],t:r[0].t.replace(/^\s+/,'')};const l=r.length-1;r[l]={...r[l],t:r[l].t.replace(/\s+$/,'')}}return r.filter(x=>x.t)});
+ while(out.length&&!out[0].length)out.shift();while(out.length&&!out[out.length-1].length)out.pop();
+ return out;
+}
+function textXml(paras,cs,align,anchor){
+ const lh=parseFloat(cs.lineHeight),fs=parseFloat(cs.fontSize)||12,spc=Number.isFinite(lh)&&fs?Math.round(Math.min(2.5,Math.max(0.8,lh/fs))*100000):100000;
+ const algn={center:'ctr',right:'r',end:'r',justify:'just'}[align]||'l',lang=HTML_LANG[currentLanguage]==='zh-Hant'?'zh-TW':HTML_LANG[currentLanguage];
+ const rPr=r=>`<a:rPr lang="${lang}" sz="${Math.max(100,Math.round(r.sz*75))}"${r.b?' b="1"':''}${r.i?' i="1"':''}${r.ls?` spc="${Math.round(r.ls*75)}"`:''} dirty="0">${fillXml(r.c)}<a:latin typeface="${xmlEsc(r.latin)}"/><a:ea typeface="${eastAsianFont(r.t,r.serif)}"/><a:cs typeface="${xmlEsc(r.latin)}"/></a:rPr>`;
+ const body=(paras.length?paras:[[]]).map(p=>`<a:p><a:pPr algn="${algn}"><a:lnSpc><a:spcPct val="${spc}"/></a:lnSpc></a:pPr>${p.map(r=>`<a:r>${rPr(r)}<a:t>${xmlEsc(r.t)}</a:t></a:r>`).join('')||`<a:endParaRPr lang="${lang}" sz="${Math.round(fs*75)}" dirty="0"/>`}</a:p>`).join('');
+ return `<p:txBody><a:bodyPr wrap="square" lIns="0" tIns="0" rIns="0" bIns="0" anchor="${anchor||'t'}"><a:noAutofit/></a:bodyPr><a:lstStyle/>${body}</p:txBody>`;
+}
+const xfrm=b=>`<a:xfrm><a:off x="${emu(b.x)}" y="${emu(b.y)}"/><a:ext cx="${Math.max(1,emu(b.w))}" cy="${Math.max(1,emu(b.h))}"/></a:xfrm>`;
+/* Builds one slide from one rendered sheet. Returns {xml, images:[{rid, src}]}. */
+/* Sample placeholder pictures are inline SVG; draw them to PNG first so they export as replaceable images. */
+const demoRasters=new Map();
+async function rasterizeDemoVisuals(root){
+ demoRasters.clear();
+ await Promise.all([...root.querySelectorAll('.demo-visual svg')].map(svg=>new Promise(res=>{
+  const el=svg.closest('.demo-visual'),r=el.getBoundingClientRect(),w=Math.max(2,Math.round(r.width*2)),h=Math.max(2,Math.round(r.height*2));
+  const clone=svg.cloneNode(true);clone.setAttribute('width',w);clone.setAttribute('height',h);
+  const im=new Image();im.onload=()=>{const c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(im,0,0,w,h);demoRasters.set(el,{src:c.toDataURL('image/png'),w,h});res()};im.onerror=res;
+  im.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(new XMLSerializer().serializeToString(clone));
+ })));
+}
+/* Splits body text into boxes by measured lines: lines that wrap beside a floated picture get a narrower
+   box, the lines below it a full-width one (slide text boxes cannot flow around images). */
+function segmentBoxes(group,bodyEl){
+ const bb=bodyEl.getBoundingClientRect(),art=bodyEl.closest('.article')||bodyEl;
+ const floats=[...art.querySelectorAll('img.article-image,.demo-visual')].map(x=>({r:x.getBoundingClientRect(),side:getComputedStyle(x).float})).filter(f=>f.side==='left'||f.side==='right');
+ const items=[];
+ const walk=n=>{
+  if(n.nodeType===3){for(let i=0;i<n.nodeValue.length;i++){const ch=n.nodeValue[i];let rect=null;if(ch!=='\n'){const r=document.createRange();r.setStart(n,i);r.setEnd(n,i+1);rect=[...r.getClientRects()].find(x=>x.width>0&&x.height>0)||null}items.push({node:n,ch,rect})}return}
+  if(n.nodeType!==1)return;if(n.tagName==='BR'){items.push({br:true});return}
+  if(n.matches('img,svg,.inline-figs,.demo-visual,.extra-gallery'))return;n.childNodes.forEach(walk);
+ };
+ group.forEach(walk);
+ const lines=[];let cur=null,pending=[];
+ for(const it of items){
+  if(!it.rect){(cur?cur.items:pending).push(it);continue}
+  if(!cur||it.rect.top>=cur.bottom-2){cur={top:it.rect.top,bottom:it.rect.bottom,items:pending.concat(it)};pending=[];lines.push(cur)}
+  else{cur.items.push(it);cur.bottom=Math.max(cur.bottom,it.rect.bottom)}
+ }
+ const bandOf=l=>{const f=floats.find(f=>f.r.top<l.bottom-1&&f.r.bottom>l.top+1);return f?{key:f.side+f.r.top,f}:{key:'full'}};
+ const boxes=[];
+ for(const l of lines){const band=bandOf(l),last=boxes[boxes.length-1];if(last&&last.key===band.key){last.lines.push(l)}else boxes.push({key:band.key,f:band.f,lines:[l]})}
+ return boxes.map(g=>{
+  let left=bb.left,right=bb.right;if(g.f){if(g.f.side==='right')right=Math.min(right,g.f.r.left-2);else left=Math.max(left,g.f.r.right+2)}
+  const top=g.lines[0].top,bottom=g.lines[g.lines.length-1].bottom,paras=[[]];
+  for(const l of g.lines)for(const it of l.items){
+   if(it.br||it.ch==='\n'){paras.push([]);continue}
+   const para=paras[paras.length-1],prev=para[para.length-1];
+   if(prev&&prev.node===it.node)prev.t+=it.ch;
+   else{const cs=getComputedStyle(it.node.parentElement);para.push({node:it.node,t:it.ch,ls:parseFloat(cs.letterSpacing)||0,b:Number(cs.fontWeight)>=600||cs.fontWeight==='bold',i:cs.fontStyle==='italic',c:cssColor(cs.color),sz:parseFloat(cs.fontSize),serif:/georgia|times|serif|batang|mingliu/i.test(cs.fontFamily)&&!/sans-serif/i.test(cs.fontFamily.split(',')[0]),latin:latinFont(cs)})}
+  }
+  const clean=paras.map(p=>p.map(r=>({...r,t:r.t.replace(/[ \t]{2,}/g,' ')})).filter(r=>r.t)).filter((p,k,arr)=>p.length||(k>0&&k<arr.length-1));
+  return {box:{left,top,width:right-left,height:bottom-top},paras:clean,limit:g.f&&g.f.side==='right'?g.f.r.left-1:null};
+ }).filter(x=>x.paras.length);
+}
+function sheetToSlide(sheet){
+ const S=sheet.getBoundingClientRect(),H=sheet.clientHeight,shapes=[],media=[];let id=2;
+ const box=r=>({x:r.left-S.left,y:r.top-S.top,w:r.width,h:r.height});
+ const inPage=b=>b.w>0.5&&b.h>0.5&&b.y<H-1&&b.x<794;
+ const clip=b=>({...b,h:Math.min(b.h,H-b.y)});
+ const rect=(b,fill,opts={})=>{if(!inPage(b))return;b=clip(b);const geom=opts.radius?`<a:prstGeom prst="roundRect"><a:avLst><a:gd name="adj" fmla="val ${Math.round(Math.min(50000,opts.radius/Math.min(b.w,b.h)*100000))}"/></a:avLst></a:prstGeom>`:`<a:prstGeom prst="${opts.ellipse?'ellipse':'rect'}"><a:avLst/></a:prstGeom>`;
+  const ln=opts.line?`<a:ln w="${Math.round(opts.line.w*PX)}">${fillXml(opts.line.c)}</a:ln>`:'<a:ln><a:noFill/></a:ln>';
+  shapes.push(`<p:sp><p:nvSpPr><p:cNvPr id="${id}" name="${opts.name||'Shape'} ${id++}"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr><p:spPr>${xfrm(b)}${geom}${fillXml(fill)}${ln}</p:spPr>${opts.text||'<p:txBody><a:bodyPr/><a:lstStyle/><a:p><a:endParaRPr lang="en-US" dirty="0"/></a:p></p:txBody>'}</p:sp>`)};
+ const text=(b,paras,cs,align,name,maxRight)=>{if(!paras.length||!inPage(b))return;b=clip(b);b={...b,w:Math.min((maxRight??794)-b.x,794-b.x,Math.max(b.w,b.w*1.06+4))};
+  shapes.push(`<p:sp><p:nvSpPr><p:cNvPr id="${id}" name="${name||'Text'} ${id++}"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr><p:spPr>${xfrm(b)}<a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/></p:spPr>${textXml(paras,cs,align)}</p:sp>`)};
+ const borders=(el,b,cs)=>{for(const [side,key] of [['top','Top'],['bottom','Bottom'],['left','Left'],['right','Right']]){const w=parseFloat(cs[`border${key}Width`]);const c=cs[`border${key}Style`]!=='none'&&w>0?cssColor(cs[`border${key}Color`]):null;if(!c)continue;
+  const r=side==='top'?{x:b.x,y:b.y,w:b.w,h:w}:side==='bottom'?{x:b.x,y:b.y+b.h-w,w:b.w,h:w}:side==='left'?{x:b.x,y:b.y,w:w,h:b.h}:{x:b.x+b.w-w,y:b.y,w:w,h:b.h};
+  if(cs[`border${key}Style`]==='double'&&w>=3){const t=Math.max(1,w/3);rect(side==='top'||side==='bottom'?{...r,h:t}:{...r,w:t},c,{name:'Rule'});rect(side==='top'||side==='bottom'?{...r,y:r.y+w-t,h:t}:{...r,x:r.x+w-t,w:t},c,{name:'Rule'})}
+  else rect(r,c,{name:'Rule'})}};
+ const picture=(img,b,forceFit)=>{if(!inPage(b)||!img.naturalWidth)return;const cs=forceFit?{objectFit:forceFit,objectPosition:'50% 50%'}:getComputedStyle(img),fit=cs.objectFit,[px,py]=(cs.objectPosition||'50% 50%').split(' ').map(v=>parseFloat(v)/100||0.5);
+  const nw=img.naturalWidth,nh=img.naturalHeight;let crop={l:0,t:0,r:0,b:0};
+  if(fit==='cover'){const sc=Math.max(b.w/nw,b.h/nh),vw=b.w/sc,vh=b.h/sc;const l=(nw-vw)*px/nw,t=(nh-vh)*py/nh;crop={l,t,r:1-l-vw/nw,b:1-t-vh/nh}}
+  else if(fit==='contain'||fit==='scale-down'){const sc=Math.min(b.w/nw,b.h/nh),dw=nw*sc,dh=nh*sc;b={x:b.x+(b.w-dw)*px,y:b.y+(b.h-dh)*py,w:dw,h:dh}}
+  const over=b.y+b.h-H;if(over>0){const cut=over/b.h;crop={...crop,b:crop.b+(1-crop.t-crop.b)*cut};b={...b,h:b.h-over}}
+  let k=media.findIndex(m=>m.src===img.src);if(k<0){media.push({src:img.src});k=media.length-1}
+  const pct=v=>Math.max(0,Math.round(v*100000));
+  shapes.push(`<p:pic><p:nvPicPr><p:cNvPr id="${id}" name="Picture ${id++}"/><p:cNvPicPr><a:picLocks noChangeAspect="1"/></p:cNvPicPr><p:nvPr/></p:nvPicPr><p:blipFill><a:blip r:embed="rIdImg${k}"/><a:srcRect l="${pct(crop.l)}" t="${pct(crop.t)}" r="${pct(crop.r)}" b="${pct(crop.b)}"/><a:stretch><a:fillRect/></a:stretch></p:blipFill><p:spPr>${xfrm(b)}<a:prstGeom prst="rect"><a:avLst/></a:prstGeom></p:spPr></p:pic>`)};
+ // 1. coloured boxes and rules (masthead lines, cards, column dividers, footer line, underlines)
+ sheet.querySelectorAll('.mast,.mast-compact,.schoolmark,.issue,.column,.article,.underline,.footer,.nex-extra-section').forEach(el=>{const cs=getComputedStyle(el),b=box(el.getBoundingClientRect());const bg=bgColor(cs);if(bg&&!el.matches('.column'))rect(b,bg,{radius:parseFloat(cs.borderTopLeftRadius)||0,name:'Box'});borders(el,b,cs)});
+ // 2. section heading bars: the side rules and the pill with its title
+ sheet.querySelectorAll('.bar').forEach(bar=>{const pill=bar.querySelector('.pill');if(!pill)return;const bb=box(bar.getBoundingClientRect()),pb=box(pill.getBoundingClientRect());
+  for(const pos of ['::before','::after']){const ps=getComputedStyle(bar,pos);if(ps.content==='none'||ps.display==='none')continue;const c=cssColor(ps.backgroundColor);if(!c)continue;const y=pb.y+pb.h/2-0.5;
+   if(pos==='::before'&&pb.x-bb.x>4)rect({x:bb.x,y,w:pb.x-bb.x,h:1},c,{name:'Rule'});if(pos==='::after'&&bb.x+bb.w-(pb.x+pb.w)>4)rect({x:pb.x+pb.w,y,w:bb.x+bb.w-(pb.x+pb.w),h:1},c,{name:'Rule'})}
+  const cs=getComputedStyle(pill),w=parseFloat(cs.borderTopWidth),sides=['Top','Right','Bottom','Left'];
+  const uniform=sides.every(k=>parseFloat(cs[`border${k}Width`])===w&&cs[`border${k}Style`]===cs.borderTopStyle&&cs[`border${k}Color`]===cs.borderTopColor);
+  const lc=uniform&&cs.borderTopStyle!=='none'&&w>0?cssColor(cs.borderTopColor):null;
+  const paras=runsFrom([...pill.childNodes],pill);
+  rect(pb,bgColor(cs),{radius:parseFloat(cs.borderTopLeftRadius)||0,line:lc?{w,c:lc}:null,name:'Heading',text:paras.length?textXml(paras,cs,'center','ctr').replace('lIns="0" tIns="0" rIns="0" bIns="0"','lIns="36000" tIns="0" rIns="36000" bIns="0"'):''});
+  if(!uniform)borders(pill,pb,cs);
+ });
+ // 3. pictures (logo, main images, collages, pictures inside text)
+ sheet.querySelectorAll('img').forEach(img=>picture(img,box(img.getBoundingClientRect())));
+ sheet.querySelectorAll('.demo-visual').forEach(el=>{const png=demoRasters.get(el);if(png)picture({src:png.src,naturalWidth:png.w,naturalHeight:png.h},box(el.getBoundingClientRect()),'fill')});
+ const logo=sheet.querySelector('.placeholder-logo');if(logo){const cs=getComputedStyle(logo);rect(box(logo.getBoundingClientRect()),null,{ellipse:true,line:{w:parseFloat(cs.borderTopWidth)||3,c:cssColor(cs.borderTopColor)},name:'Logo',text:textXml(runsFrom([...logo.childNodes],logo),cs,'center','ctr')})}
+ // 4. text: masthead, issue, article titles and body (split around pictures), footer
+ const textOf=(el,name)=>{const cs=getComputedStyle(el);text(box(el.getBoundingClientRect()),runsFrom([...el.childNodes],el),cs,cs.textAlign,name)};
+ sheet.querySelectorAll('.mast .univ,.mast .newsletter,.mast .korean,.mast .vol,.mast-compact > span').forEach(el=>textOf(el,'Masthead'));
+ sheet.querySelectorAll('.mast .issue .month,.mast .issue .year').forEach(el=>textOf(el,'Issue'));
+ sheet.querySelectorAll('.article h3').forEach(el=>textOf(el,'Title'));
+ sheet.querySelectorAll('.article-body').forEach(bodyEl=>{
+  const cs=getComputedStyle(bodyEl);let group=[];
+  const flush=()=>{if(group.length)segmentBoxes(group,bodyEl).forEach(sg=>text(box(sg.box),sg.paras,cs,cs.textAlign,'Body',sg.limit!=null?sg.limit-S.left:undefined));group=[]};
+  for(const n of bodyEl.childNodes){if(n.nodeType===1&&n.matches('.inline-figs')){flush();continue}group.push(n)}flush();
+ });
+ sheet.querySelectorAll('.footer > *').forEach(el=>textOf(el,'Footer'));
+ const bg=cssColor(getComputedStyle(sheet).backgroundColor)||{hex:'FFFFFF',alpha:1};
+ const ns='xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main"';
+ const xml=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<p:sld ${ns}><p:cSld><p:bg><p:bgPr>${fillXml(bg)}<a:effectLst/></p:bgPr></p:bg><p:spTree><p:nvGrpSpPr><p:cNvPr id="1" name=""/><p:cNvGrpSpPr/><p:nvPr/></p:nvGrpSpPr><p:grpSpPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="0" cy="0"/><a:chOff x="0" y="0"/><a:chExt cx="0" cy="0"/></a:xfrm></p:grpSpPr>${shapes.join('')}</p:spTree></p:cSld><p:clrMapOvr><a:masterClrMapping/></p:clrMapOvr></p:sld>`;
+ return {xml,media};
+}
+function dataUrlBytes(src){const m=/^data:([^;,]+)(;base64)?,(.*)$/.exec(src);if(!m)return null;const raw=m[2]?atob(m[3]):decodeURIComponent(m[3]);const u=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)u[i]=raw.charCodeAt(i);return {mime:m[1],bytes:u}}
+function buildPptx(slides){
+ const enc=new TextEncoder(),files=[],add=(name,text)=>files.push({name,data:typeof text==='string'?enc.encode(text):text});
+ const NS_P='xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main"',HEAD='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n';
+ const REL='http://schemas.openxmlformats.org/officeDocument/2006/relationships',PKG='http://schemas.openxmlformats.org/package/2006/relationships';
+ const grp='<p:nvGrpSpPr><p:cNvPr id="1" name=""/><p:cNvGrpSpPr/><p:nvPr/></p:nvGrpSpPr><p:grpSpPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="0" cy="0"/><a:chOff x="0" y="0"/><a:chExt cx="0" cy="0"/></a:xfrm></p:grpSpPr>';
+ const mediaIndex=new Map(),mediaFiles=[];
+ const slideRels=slides.map(sl=>sl.media.map((m,k)=>{let f=mediaIndex.get(m.src);if(!f){const d=dataUrlBytes(m.src);if(!d)return null;const ext=/png/.test(d.mime)?'png':/gif/.test(d.mime)?'gif':'jpeg';f=`image${mediaFiles.length+1}.${ext}`;mediaIndex.set(m.src,f);mediaFiles.push({name:f,bytes:d.bytes})}return {rid:`rIdImg${k}`,file:f}}).filter(Boolean));
+ add('[Content_Types].xml',HEAD+`<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Default Extension="jpeg" ContentType="image/jpeg"/><Default Extension="png" ContentType="image/png"/><Default Extension="gif" ContentType="image/gif"/><Override PartName="/ppt/presentation.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml"/><Override PartName="/ppt/slideMasters/slideMaster1.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.slideMaster+xml"/><Override PartName="/ppt/slideLayouts/slideLayout1.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml"/><Override PartName="/ppt/theme/theme1.xml" ContentType="application/vnd.openxmlformats-officedocument.theme+xml"/><Override PartName="/ppt/presProps.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.presProps+xml"/><Override PartName="/ppt/viewProps.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.viewProps+xml"/><Override PartName="/ppt/tableStyles.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.tableStyles+xml"/><Override PartName="/docProps/core.xml" ContentType="application/vnd.openxmlformats-package.core-properties+xml"/><Override PartName="/docProps/app.xml" ContentType="application/vnd.openxmlformats-officedocument.extended-properties+xml"/>${slides.map((_,i)=>`<Override PartName="/ppt/slides/slide${i+1}.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.slide+xml"/>`).join('')}</Types>`);
+ add('_rels/.rels',HEAD+`<Relationships xmlns="${PKG}"><Relationship Id="rId1" Type="${REL}/officeDocument" Target="ppt/presentation.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" Target="docProps/core.xml"/><Relationship Id="rId3" Type="${REL}/extended-properties" Target="docProps/app.xml"/></Relationships>`);
+ const now=new Date().toISOString().replace(/\.\d+Z$/,'Z');
+ add('docProps/core.xml',HEAD+`<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><dc:title>${xmlEsc(`${data.university||'Newsletter'} ${data.mastTitle||''} ${data.year||''}-${data.month||''}`.trim())}</dc:title><dc:creator>Newsletter Editor · NexAeon.Studio</dc:creator><dcterms:created xsi:type="dcterms:W3CDTF">${now}</dcterms:created><dcterms:modified xsi:type="dcterms:W3CDTF">${now}</dcterms:modified></cp:coreProperties>`);
+ add('docProps/app.xml',HEAD+`<Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/extended-properties"><Application>Newsletter Editor</Application><Slides>${slides.length}</Slides></Properties>`);
+ add('ppt/presentation.xml',HEAD+`<p:presentation ${NS_P} saveSubsetFonts="1"><p:sldMasterIdLst><p:sldMasterId id="2147483648" r:id="rId1"/></p:sldMasterIdLst><p:sldIdLst>${slides.map((_,i)=>`<p:sldId id="${256+i}" r:id="rId${10+i}"/>`).join('')}</p:sldIdLst><p:sldSz cx="${EMU_W}" cy="${EMU_H}"/><p:notesSz cx="${EMU_H}" cy="${EMU_W}"/></p:presentation>`);
+ add('ppt/_rels/presentation.xml.rels',HEAD+`<Relationships xmlns="${PKG}"><Relationship Id="rId1" Type="${REL}/slideMaster" Target="slideMasters/slideMaster1.xml"/><Relationship Id="rId2" Type="${REL}/theme" Target="theme/theme1.xml"/><Relationship Id="rId3" Type="${REL}/presProps" Target="presProps.xml"/><Relationship Id="rId4" Type="${REL}/viewProps" Target="viewProps.xml"/><Relationship Id="rId5" Type="${REL}/tableStyles" Target="tableStyles.xml"/>${slides.map((_,i)=>`<Relationship Id="rId${10+i}" Type="${REL}/slide" Target="slides/slide${i+1}.xml"/>`).join('')}</Relationships>`);
+ add('ppt/presProps.xml',HEAD+`<p:presentationPr ${NS_P}/>`);
+ add('ppt/viewProps.xml',HEAD+`<p:viewPr ${NS_P}><p:normalViewPr><p:restoredLeft sz="15620"/><p:restoredTop sz="94660"/></p:normalViewPr><p:gridSpacing cx="72008" cy="72008"/></p:viewPr>`);
+ add('ppt/tableStyles.xml',HEAD+`<a:tblStyleLst xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" def="{5C22544A-7EE6-4342-B048-85BDC9FD1C3A}"/>`);
+ add('ppt/slideMasters/slideMaster1.xml',HEAD+`<p:sldMaster ${NS_P}><p:cSld><p:bg><p:bgRef idx="1001"><a:schemeClr val="bg1"/></p:bgRef></p:bg><p:spTree>${grp}</p:spTree></p:cSld><p:clrMap bg1="lt1" tx1="dk1" bg2="lt2" tx2="dk2" accent1="accent1" accent2="accent2" accent3="accent3" accent4="accent4" accent5="accent5" accent6="accent6" hlink="hlink" folHlink="folHlink"/><p:sldLayoutIdLst><p:sldLayoutId id="2147483649" r:id="rId1"/></p:sldLayoutIdLst><p:txStyles><p:titleStyle><a:lvl1pPr><a:defRPr sz="3200"/></a:lvl1pPr></p:titleStyle><p:bodyStyle><a:lvl1pPr><a:defRPr sz="1800"/></a:lvl1pPr></p:bodyStyle><p:otherStyle><a:lvl1pPr><a:defRPr sz="1800"/></a:lvl1pPr></p:otherStyle></p:txStyles></p:sldMaster>`);
+ add('ppt/slideMasters/_rels/slideMaster1.xml.rels',HEAD+`<Relationships xmlns="${PKG}"><Relationship Id="rId1" Type="${REL}/slideLayout" Target="../slideLayouts/slideLayout1.xml"/><Relationship Id="rId2" Type="${REL}/theme" Target="../theme/theme1.xml"/></Relationships>`);
+ add('ppt/slideLayouts/slideLayout1.xml',HEAD+`<p:sldLayout ${NS_P} type="blank" preserve="1"><p:cSld name="Blank"><p:spTree>${grp}</p:spTree></p:cSld><p:clrMapOvr><a:masterClrMapping/></p:clrMapOvr></p:sldLayout>`);
+ add('ppt/slideLayouts/_rels/slideLayout1.xml.rels',HEAD+`<Relationships xmlns="${PKG}"><Relationship Id="rId1" Type="${REL}/slideMaster" Target="../slideMasters/slideMaster1.xml"/></Relationships>`);
+ const clr=(n,v)=>`<a:${n}><a:srgbClr val="${v}"/></a:${n}>`,font=f=>`<a:latin typeface="${f}"/><a:ea typeface="Noto Sans TC"/><a:cs typeface="${f}"/>`;
+ add('ppt/theme/theme1.xml',HEAD+`<a:theme xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" name="Newsletter"><a:themeElements><a:clrScheme name="Newsletter"><a:dk1><a:srgbClr val="111111"/></a:dk1><a:lt1><a:srgbClr val="FFFFFF"/></a:lt1>${clr('dk2','1B3E64')}${clr('lt2','EEF3F9')}${clr('accent1','1B3E64')}${clr('accent2','F34E39')}${clr('accent3','2F7FD0')}${clr('accent4','F3CBD1')}${clr('accent5','C9EBEE')}${clr('accent6','2F8A5F')}${clr('hlink','2F7FD0')}${clr('folHlink','6A4E87')}</a:clrScheme><a:fontScheme name="Newsletter"><a:majorFont>${font('Georgia')}</a:majorFont><a:minorFont>${font('Arial')}</a:minorFont></a:fontScheme><a:fmtScheme name="Newsletter"><a:fillStyleLst><a:solidFill><a:schemeClr val="phClr"/></a:solidFill><a:solidFill><a:schemeClr val="phClr"/></a:solidFill><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:fillStyleLst><a:lnStyleLst><a:ln w="6350"><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:ln><a:ln w="12700"><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:ln><a:ln w="19050"><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:ln></a:lnStyleLst><a:effectStyleLst><a:effectStyle><a:effectLst/></a:effectStyle><a:effectStyle><a:effectLst/></a:effectStyle><a:effectStyle><a:effectLst/></a:effectStyle></a:effectStyleLst><a:bgFillStyleLst><a:solidFill><a:schemeClr val="phClr"/></a:solidFill><a:solidFill><a:schemeClr val="phClr"/></a:solidFill><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:bgFillStyleLst></a:fmtScheme></a:themeElements><a:objectDefaults/><a:extraClrSchemeLst/></a:theme>`);
+ slides.forEach((sl,i)=>{
+  add(`ppt/slides/slide${i+1}.xml`,sl.xml);
+  add(`ppt/slides/_rels/slide${i+1}.xml.rels`,HEAD+`<Relationships xmlns="${PKG}"><Relationship Id="rId1" Type="${REL}/slideLayout" Target="../slideLayouts/slideLayout1.xml"/>${slideRels[i].map(m=>`<Relationship Id="${m.rid}" Type="${REL}/image" Target="../media/${m.file}"/>`).join('')}</Relationships>`);
+ });
+ mediaFiles.forEach(m=>add(`ppt/media/${m.name}`,m.bytes));
+ return makeZip(files);
+}
+async function saveCanva(btn){
+ const label=btn.querySelector('[data-i18n]')||btn,total=data.pages.length,restoreView=useSingleView();
+ try{
+  btn.disabled=true;label.textContent=t('export.canvaBusy',{n:0,total});
+  renderPreview();await decodeImages($('#pagesStack'));if(document.fonts&&document.fonts.ready)await document.fonts.ready;await rasterizeDemoVisuals($('#pagesStack'));
+  const slides=[];
+  for(let i=0;i<total;i++){label.textContent=t('export.canvaBusy',{n:i+1,total});const sheet=sheetEl(i);sheet.classList.add('is-exporting');try{slides.push(sheetToSlide(sheet))}finally{sheet.classList.remove('is-exporting')}await new Promise(r=>setTimeout(r,0))}
+  const name=`${fileBase()}-canva.pptx`;
+  downloadBlob(new Blob([buildPptx(slides)],{type:'application/vnd.openxmlformats-officedocument.presentationml.presentation'}),name);
+  canvaDialog(name);
+ }catch(e){uiAlert(t('canva.failed',{error:e.message}))}
+ finally{demoRasters.clear();btn.disabled=false;label.textContent=t('export.canva');restoreView()}
+}
+function canvaDialog(file){
+ const wrap=document.createElement('div');wrap.className='ui-dialog-overlay';
+ wrap.innerHTML=`<div class="ui-dialog canva-dialog" role="dialog" aria-modal="true" aria-labelledby="canvaTitle"><h3 id="canvaTitle"><span class="canva-mark" aria-hidden="true">C</span>${esc(t('canva.title'))}</h3><ol>${t('canva.steps').map(x=>`<li>${esc(x.replace('{file}',file))}</li>`).join('')}</ol><p class="tiny">${esc(t('canva.note'))}</p><div class="ui-dialog-actions"><button type="button" class="btn secondary" data-canva="close">${esc(t('canva.close'))}</button><a class="btn btn-canva" id="canvaOpen" href="https://www.canva.com/" target="_blank" rel="noopener" data-canva="open">${esc(t('canva.open'))}</a></div></div>`;
+ const close=()=>{wrap.remove();document.removeEventListener('keydown',onKey,true)};const onKey=e=>{if(e.key==='Escape'){e.preventDefault();close()}};
+ wrap.addEventListener('click',e=>{if(e.target===wrap||e.target.closest('[data-canva]'))close()});
+ document.addEventListener('keydown',onKey,true);document.body.appendChild(wrap);wrap.querySelector('#canvaOpen').focus();
+}
+
 /* ===== Contact dialog ===== */
 function openContact(){$('#contactCopy').textContent=t('contact.copy');$('#contactOverlay').classList.add('is-open');$('#contactClose').focus()}
 function closeContact(){$('#contactOverlay').classList.remove('is-open');$('#contactOpen').focus()}
@@ -2095,6 +2320,6 @@ async function runDemo(opts={}){
 applyTranslations();renderPanels();renderPreview();showTab(activeTab);recordHistory();
 try{if(localStorage.getItem(MANUAL_KEY)!=='1')openManual(0,true)}catch(e){}
 ensureImageSizes().then(n=>{if(n){persist();renderPreview()}});
-window.NewsletterEditor={runDemo,get demoActive(){return demoActive},openManual,closeManual,ensureImageSizes,autoFlow,get data(){return data},get currentLanguage(){return currentLanguage},get pageIndex(){return pageIndex},translations,t,setLanguage,showTab,saveNow};
+window.NewsletterEditor={saveCanva,runDemo,get demoActive(){return demoActive},openManual,closeManual,ensureImageSizes,autoFlow,get data(){return data},get currentLanguage(){return currentLanguage},get pageIndex(){return pageIndex},translations,t,setLanguage,showTab,saveNow};
 })();
 </script></body></html>
