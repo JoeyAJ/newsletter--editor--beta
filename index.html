@@ -88,6 +88,16 @@ input[type=range]{accent-color:#245883}
 }
 .side input::selection, .side textarea::selection {background:#bfdafa;color:#102b48;-webkit-text-fill-color:#102b48}
 .side select option {color:#172b45;background:#fff}
+</style><style id="nex-pane-resize-css">
+@media (min-width:851px){.app.nex-resizable{grid-template-columns:minmax(300px,var(--nex-sidebar-width,440px)) 9px minmax(0,1fr)!important}.nex-resizable .side{grid-column:1}.nex-resizable .workspace{grid-column:3}.nex-pane-handle{grid-column:2;grid-row:1;align-self:stretch;cursor:col-resize;background:#e1e8f0;position:relative;z-index:15;touch-action:none}.nex-pane-handle:hover,.nex-pane-handle.dragging{background:#9bb5d3}.nex-pane-handle:after{content:'⋮';position:sticky;top:48%;display:grid;place-items:center;width:21px;height:57px;border:1px solid #c7d6e5;background:white;color:#264866;border-radius:9px;margin-left:-6px;font-weight:bold}.nex-resizable .side{min-width:0}.nex-resizable .workspace{min-width:0}}
+@media(max-width:850px){.nex-pane-handle{display:none!important}.app.nex-resizable{display:block!important}}
+@media print{.nex-pane-handle{display:none!important}.app.nex-resizable{display:block!important}}
+.nex-reset-holder{margin:16px 0 0;padding:12px;border-top:1px solid #e0e7ef}.nex-reset-holder .btn{width:100%}
+</style><style id="nex-multipage-css">
+/* Multi-page extension — fixed A4 per sheet */
+.nex-pages-panel{margin:12px 0;border:1px solid #d6e2ef;border-radius:12px;background:#fff;padding:12px}
+.nex-pages-panel h3{font-size:14px;margin:0 0 8px;color:#213f60}.nex-pages-row{display:flex;gap:6px;flex-wrap:wrap;margin:9px 0}.nex-page-btn{background:#f2f6fc;color:#23415f;border:1px solid #d5e1ef;border-radius:7px;padding:9px 12px;font-size:12px;cursor:pointer;font-weight:700}.nex-page-btn[aria-current="page"]{background:#1b3e64;color:white}.nex-part{border:1px solid #d7e2f0;border-radius:9px;margin-top:12px;padding:12px;background:#fbfdff}.nex-part label{font-size:12px;display:block;font-weight:700;margin:8px 0 4px}.nex-part input,.nex-part textarea{background:white;color:#1b3047}.nex-part-head{display:flex;justify-content:space-between;align-items:center;gap:8px}.nex-part-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.nex-extra-section{grid-column:1/-1;border-top:2px solid #bccbda;margin-top:4px;padding-top:10px}.nex-extra-section h2{font-size:19px;color:#1d4268;margin:2px 0 12px;border-left:5px solid #d27059;padding-left:10px}.nex-extra-story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin:12px 0 16px;break-inside:avoid}.nex-extra-story.no-photo{display:block}.nex-extra-story img{width:100%;max-height:220px;object-fit:contain;border-radius:5px}.nex-extra-story h3{font-size:15px;margin:0 0 7px}.nex-extra-story p{font-size:12px;line-height:1.6;white-space:pre-line;overflow-wrap:anywhere}.nex-sheet{position:relative;width:794px;min-height:1123px;height:1123px;overflow:hidden;flex:none;page-break-after:always;break-after:page}.nex-sheet:after{content:attr(data-sheet-caption);position:absolute;bottom:5px;right:12px;font:10px Arial;color:#53677d}.nex-page-overflow{outline:3px solid #d65050!important}.nex-overflow-warning{font-size:11px;color:#b33d30;font-weight:700;margin-top:5px}.nex-paging-note{color:#657a8f;font-size:11px;line-height:1.5}.nex-pages-container{max-width:840px;margin:0 auto}.nex-pages-container .page{margin-bottom:24px}.nex-page-active{outline:3px solid #9cbde0;outline-offset:2px}
+@media print{.nex-pages-container .page{width:210mm!important;height:297mm!important;min-height:297mm!important;max-height:297mm!important;margin:0!important;box-shadow:none!important;break-after:page;page-break-after:always}.nex-pages-container .page:last-child{break-after:auto;page-break-after:auto}.nex-sheet:after{display:none}.nex-page-active{outline:none}.nex-pages-panel{display:none!important}}
 </style></head><body><div class="app"><aside class="side"><div class="lang-controls"><button type="button" id="langZh" onclick="setUiLanguage('zh')">繁體中文</button><button type="button" id="langKo" onclick="setUiLanguage('ko')">한국어</button><button type="button" id="langEn" onclick="setUiLanguage('en')">English</button></div><h2>Newsletter 編輯器</h2><p class="sub">雙欄校園電子報 · 每篇可上傳多張圖片 · A4 PDF 列印</p><div class="toolbar"><button class="btn" onclick="window.print()">列印／另存 PDF</button><button class="btn secondary" onclick="savePNG()">保存 PNG</button><button class="btn secondary" onclick="saveJSON()">匯出資料 JSON</button><button class="btn secondary" onclick="document.getElementById('importFile').click()">匯入資料</button><input type="file" id="importFile" accept="application/json" hidden onchange="importJSON(event)"><button class="btn warning" onclick="resetData()">重設示範內容</button></div><details class="group" open><summary>01 基本資訊及識別</summary><div class="inner" id="metadata"></div></details><details class="group" open><summary>02 排版模板及欄目抬頭</summary><div class="inner" id="styleEdit"></div></details><details class="group" open><summary>03 左欄內容編輯</summary><div class="inner"><div id="leftEdit"></div><button class="btn secondary" onclick="addArticle('left')">＋ 新增左欄文章</button></div></details><details class="group" open><summary>04 右欄內容編輯</summary><div class="inner"><div id="rightEdit"></div><button class="btn secondary" onclick="addArticle('right')">＋ 新增右欄活動</button></div></details><details class="group"><summary>05 操作說明</summary><div class="inner tiny">圖片可上傳 JPG/PNG/WebP 等檔案，系統會自動壓縮；HEIC 建議先轉 JPG。編輯內容自動儲存在目前瀏覽器；如要換電腦，使用「匯出資料 JSON」。PDF 使用瀏覽器「列印／另存為 PDF」，請將紙張設成 A4，縮放選 100%，邊界選無，並啟用背景圖形。內容過多可能超過一頁，請縮短文字或拆成多期。使用正式校徽須上傳已獲授權之圖檔。</div></details></aside><main class="workspace"><p class="note">右側為即時預覽。示範內容均為版型佔位文字，請於發行前替換、核實所有日期與聯絡資料。</p><section id="preview" class="page"></section></main></div>
 <script>
 let uiLanguage='zh';
@@ -594,4 +604,117 @@ el('nexaeonCopy').addEventListener('click',async()=>{if(!valid(email)){showSetti
 for(const id of ['langZh','langKo','langEn'])el(id)?.addEventListener('click',()=>queueMicrotask(paint));paint();
 })();
 </script>
-</body></html>
+<script id="nex-pane-i18n-final">
+(()=>{'use strict';
+const app=document.querySelector('.app'),side=document.querySelector('.side'),preview=document.querySelector('.workspace');
+if(app&&side&&preview){app.classList.add('nex-resizable');const handle=document.createElement('div');handle.className='nex-pane-handle';handle.setAttribute('role','separator');handle.setAttribute('aria-orientation','vertical');handle.tabIndex=0;handle.title='Drag to resize / 드래그하여 너비 조절 / 拖曳調整寬度';side.after(handle);
+let w=440;try{w=Number(localStorage.getItem('nex-sidebar-width'))||440}catch(e){};
+const update=n=>{w=Math.min(Math.max(300,n),Math.max(320,innerWidth-340));app.style.setProperty('--nex-sidebar-width',w+'px')};update(w);
+handle.addEventListener('pointerdown',e=>{if(innerWidth<=850)return;handle.setPointerCapture(e.pointerId);handle.classList.add('dragging');e.preventDefault()});handle.addEventListener('pointermove',e=>{if(handle.hasPointerCapture(e.pointerId))update(e.clientX-app.getBoundingClientRect().left)});const finish=()=>{handle.classList.remove('dragging');try{localStorage.setItem('nex-sidebar-width',String(w))}catch(e){}};handle.addEventListener('pointerup',finish);handle.addEventListener('pointercancel',finish);handle.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();update(w+(e.key==='ArrowRight'?24:-24));finish()}});window.addEventListener('resize',()=>update(w));}
+// Move the existing reset button, preserving its onclick handler and confirmation.
+const reset=[...document.querySelectorAll('.toolbar button')].find(x=>/resetData\(\)/.test(x.getAttribute('onclick')||''));
+const info=document.querySelector('#metadata');if(reset&&info){let holder=document.createElement('div');holder.className='nex-reset-holder';holder.id='nex-reset-holder';reset.parentElement.removeChild(reset);holder.appendChild(reset);info.after(holder);}
+const WORDS={
+'本機自動儲存已開啟':['이 브라우저에 자동 저장 중','Autosave is on'],
+'11 種版面與 10 種欄目標題樣式可即時切換。':['11가지 레이아웃과 16가지 섹션 제목 스타일을 선택할 수 있습니다.','Switch between 11 layouts and 16 section heading styles.'],
+'11 種版面與 16 種欄目標題樣式可即時切換。':['11가지 레이아웃과 16가지 섹션 제목 스타일을 선택할 수 있습니다.','Switch between 11 layouts and 16 section heading styles.'],
+'整頁排版模板（11 款）':['전체 페이지 레이아웃 (11종)','Page layouts (11)'],
+'欄目抬頭外觀（16 款）':['섹션 제목 디자인 (16종)','Section heading styles (16)'],
+'點選抬頭樣式即可在右側預覽，文章內容不會改變。':['제목 스타일을 선택하면 오른쪽 미리보기에 적용됩니다. 본문은 변경되지 않습니다.','Select a heading style to preview it on the right. Article content will remain unchanged.'],
+'點選版型即可在右側即時預覽。':['레이아웃을 선택하면 오른쪽에서 바로 미리볼 수 있습니다.','Select a layout to preview it on the right.'],
+'欄目標題':['섹션 제목','Section heading'],
+'選擇建議文字…':['추천 제목 선택...','Choose a suggested heading...'],
+'自訂文字 / 직접 입력…':['직접 입력...','Enter custom text...'],
+'輸入自訂欄目名稱 / 제목 직접 입력':['섹션 제목 직접 입력','Enter a custom section heading'],
+'套用第一區':['첫 번째 섹션에 적용','Apply to first section'],
+'套用第二區':['두 번째 섹션에 적용','Apply to second section'],
+'常用英文抬頭（套用至指定內容區）':['추천 영문 섹션 제목','Suggested English headings'],
+'可一次選取多張 JPG / PNG；圖片會依順序顯示。／여러 이미지를 선택할 수 있습니다.':['JPG·PNG 이미지 여러 장을 선택할 수 있습니다. 선택 순서대로 표시됩니다.','Select multiple JPG/PNG images. They appear in the order selected.'],
+'文章版面 / 기사 레이아웃':['기사 레이아웃','Article layout'],
+'圖片展示 / 이미지 표시':['이미지 표시 방식','Image display'],
+'圖文方向 / 사진 위치':['이미지 위치','Image position'],
+'圖片裁剪（非破壞性） / 이미지 자르기':['이미지 자르기 (원본 유지)','Image crop (non-destructive)'],
+'裁剪焦點：水平 / 자르기 중심: 가로':['자르기 중심: 가로','Crop focus: horizontal'],
+'裁剪焦點：垂直 / 자르기 중심: 세로':['자르기 중심: 세로','Crop focus: vertical'],
+'內容照片／海報':['대표 이미지','Main image'],
+'更多圖片（同一篇可加入多張）／추가 이미지':['추가 이미지 (여러 장 가능)','Additional images (multiple allowed)'],
+'附加圖片 1 / 추가 이미지 1':['추가 이미지 1','Additional image 1'],
+'清除內容圖':['대표 이미지 삭제','Remove main image'],
+'左欄分類':['왼쪽 섹션 제목','Left section heading'],
+'右欄分類':['오른쪽 섹션 제목','Right section heading'],
+'標題字級':['제목 글자 크기','Title font size'],
+'正文字級':['본문 글자 크기','Body font size'],
+'標題加粗':['제목 굵게','Bold title'],
+'正文加粗':['본문 굵게','Bold body'],
+'內容':['콘텐츠','Content'],'排版':['디자인','Design'],'基本資料':['기본 정보','Details'],'匯出':['내보내기','Export'],
+'重設示範內容':['예시 콘텐츠 초기화','Reset sample content'],
+'左欄文章':['왼쪽 기사','Left articles'],'右欄活動':['오른쪽 소식','Right updates'],
+'內容照片 / 海報':['대표 이미지','Main image'],
+'學校 Logo（上傳圖片）':['학교 로고 (이미지 업로드)','University logo (upload image)']
+};
+const maps={ko:new Map(),en:new Map()};for(const [zh,[ko,en]] of Object.entries(WORDS)){maps.ko.set(zh,ko);maps.en.set(zh,en);maps.ko.set(ko,ko);maps.en.set(en,en)}
+// Existing i18n scripts may leave Korean labels untranslated in English, and Chinese labels in Korean.
+const cross=new Map();for(const [zh,[ko,en]] of Object.entries(WORDS)){cross.set(ko,{zh,en});cross.set(en,{zh,ko});}
+function lang(){return document.getElementById('langEn')?.classList.contains('selected')?'en':document.getElementById('langKo')?.classList.contains('selected')?'ko':'zh'}
+function trans(t,l){const key=t.trim();if(!key||l==='zh')return t;let z=maps[l].get(key);if(!z){const c=cross.get(key);if(c)z=c[l]||key;}if(!z){const m=key.match(/^附加圖片\s*(\d+)\s*\/.*$/);if(m)z=(l==='ko'?'추가 이미지 ':'Additional image ')+m[1];}return z?t.replace(key,z):t}
+let busy=false;function repair(){if(busy)return;busy=true;try{const l=lang();if(!side)return;const walk=document.createTreeWalker(side,NodeFilter.SHOW_TEXT);let n;while(n=walk.nextNode()){if(n.parentElement?.closest('textarea,script,style,.lang-controls,.item textarea'))continue;const v=trans(n.nodeValue,l);if(v!==n.nodeValue)n.nodeValue=v}
+for(const el of side.querySelectorAll('[placeholder],[title],[aria-label]'))for(const a of ['placeholder','title','aria-label']){const v=el.getAttribute(a);if(v){const z=trans(v,l);if(z!==v)el.setAttribute(a,z)}}
+if(reset)reset.textContent=({zh:'重設示範內容',ko:'예시 콘텐츠 초기화',en:'Reset sample content'})[l];
+const holder=document.getElementById('nex-reset-holder');if(holder&&info&&!info.parentNode?.contains(holder))info.after(holder);
+const u=document.querySelector('.ux-status');if(u)u.innerHTML='<span>●</span> '+({zh:'本機自動儲存已開啟',ko:'이 브라우저에 자동 저장 중',en:'Autosave is on'})[l];
+}finally{busy=false}}
+for(const id of ['langZh','langKo','langEn'])document.getElementById(id)?.addEventListener('click',()=>queueMicrotask(repair));
+// Editor sections update after direct user interaction; observe new UI nodes only.
+const observer=new MutationObserver(records=>{if(busy)return;if(records.some(r=>r.type==='childList'&&[...r.addedNodes].some(n=>n.nodeType===1||n.nodeType===3)))queueMicrotask(repair)});
+/* Observer disabled to prevent endless interface-update loop. */
+repair();
+})();
+</script><script id="nex-multipage-extension">
+(()=>{'use strict';
+const pEl=document.getElementById('preview');if(!pEl)return;
+const baseRender=window.render, originalReset=window.resetData, originalImport=window.importJSON;
+const keys=['left','right','leftLabel','rightLabel','layout','headingStyle'];
+const languages={
+ zh:{pages:'頁面管理 · A4',newPage:'＋ 新增 A4 頁',duplicate:'複製目前頁',remove:'刪除目前頁',part:'Part 主題區塊',addPart:'＋ 新增 Part',addStory:'＋ 新增文章',del:'刪除',up:'上移',down:'下移',title:'Part 標題',storyTitle:'文章標題',body:'文章內容',image:'內容圖片',choose:'選擇頁面',note:'每頁固定 A4（210 × 297 mm）。內容超出頁面會提示，請移到下一頁；不會擅自縮小文字。',confirm:'確定刪除這一頁及其內容？',confirmPart:'確定刪除這個 Part？',atLeast:'至少需保留一頁。',overflow:'內容超過 A4 範圍，請減少內容或新增頁面。',partLabel:'新主題',story:'新文章',content:'請輸入內容',active:'目前編輯'},
+ ko:{pages:'페이지 관리 · A4',newPage:'＋ A4 페이지 추가',duplicate:'현재 페이지 복제',remove:'현재 페이지 삭제',part:'파트 섹션',addPart:'＋ 파트 추가',addStory:'＋ 기사 추가',del:'삭제',up:'위로',down:'아래로',title:'파트 제목',storyTitle:'기사 제목',body:'본문',image:'본문 이미지',choose:'페이지 선택',note:'각 페이지는 A4(210 × 297mm) 크기로 고정됩니다. 내용이 넘치면 다음 페이지로 옮겨 주세요. 글자 크기는 자동으로 줄이지 않습니다.',confirm:'현재 페이지와 내용을 삭제할까요?',confirmPart:'이 파트를 삭제할까요?',atLeast:'페이지는 최소 한 장이 필요합니다.',overflow:'A4 페이지를 벗어난 내용이 있습니다. 분량을 줄이거나 페이지를 추가해 주세요.',partLabel:'새 파트',story:'새 기사',content:'내용을 입력하세요',active:'편집 중'},
+ en:{pages:'Pages · A4',newPage:'＋ Add A4 page',duplicate:'Duplicate page',remove:'Delete page',part:'Part sections',addPart:'＋ Add Part',addStory:'＋ Add article',del:'Delete',up:'Move up',down:'Move down',title:'Part heading',storyTitle:'Article title',body:'Body text',image:'Article image',choose:'Choose a page',note:'Each page is fixed at A4 (210 × 297 mm). If content overflows, move it to another page; text will not shrink automatically.',confirm:'Delete this page and its content?',confirmPart:'Delete this Part?',atLeast:'Keep at least one page.',overflow:'Content exceeds the A4 page. Shorten it or add another page.',partLabel:'New Part',story:'New article',content:'Enter content',active:'Editing'}
+};
+let idx=0, working=false;
+function lng(){return document.getElementById('langEn')?.classList.contains('selected')?'en':document.getElementById('langKo')?.classList.contains('selected')?'ko':'zh'}
+function t(){return languages[lng()]}
+function snapshot(){let o={};for(const k of keys)o[k]=structuredClone(data[k]);return o}
+function load(o){for(const k of keys)data[k]=structuredClone(o[k])}
+function normalPage(o){if(!o||typeof o!=='object')o=snapshot();o.parts=Array.isArray(o.parts)?o.parts:[];for(const k of keys){if(o[k]===undefined)o[k]=structuredClone(data[k])}return o}
+if(!Array.isArray(data.pages)||!data.pages.length)data.pages=[{...snapshot(),parts:[]}];
+data.pages=data.pages.map(normalPage);
+function saveActive(){if(!data.pages[idx])return;const old=data.pages[idx];data.pages[idx]={...snapshot(),parts:old.parts||[]}}
+function persistPages(){try{localStorage.setItem('woosong-newsletter-v1',JSON.stringify(data))}catch(e){}}
+const panel=document.createElement('section');panel.id='nexPagesPanel';panel.className='nex-pages-panel';
+const contentPane=document.getElementById('leftEdit')?.closest('details');if(contentPane)contentPane.parentNode.insertBefore(panel,contentPane);else document.querySelector('.side')?.append(panel);
+const stack=document.createElement('div');stack.className='nex-pages-container';stack.id='nexPagesStack';pEl.parentNode.insertBefore(stack,pEl);stack.append(pEl);
+function safe(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function makeExtras(page){return (page.parts||[]).map((part)=>`<section class="nex-extra-section"><h2>${safe(part.title)}</h2>${(part.stories||[]).map(st=>`<article class="nex-extra-story ${st.image?'':'no-photo'}">${st.image?`<img src="${safe(st.image)}" alt="">`:''}<div><h3>${safe(st.title)}</h3><p>${safe(st.body)}</p></div></article>`).join('')}</section>`).join('')}
+function renderPages(){if(working)return;working=true;try{saveActive();persistPages();const current=snapshot(), pages=data.pages, results=[];for(let i=0;i<pages.length;i++){load(pages[i]);baseRender();const head=pEl.innerHTML;const html=head.replace('</div><footer class="footer">',makeExtras(pages[i])+'</div><footer class="footer">');results.push(html)}load(current);pEl.className='page nex-sheet '+(data.layout||'mode1')+' '+(data.headingStyle||'style1');pEl.innerHTML=results[idx];pEl.classList.add('nex-page-active');pEl.dataset.sheetCaption=`${idx+1} / ${pages.length}`;stack.querySelectorAll('[data-nex-extra-page]').forEach(x=>x.remove());results.forEach((html,i)=>{if(i===idx)return;const node=document.createElement('section');node.className='page nex-sheet '+(pages[i].layout||'mode1')+' '+(pages[i].headingStyle||'style1');node.setAttribute('data-nex-extra-page','');node.dataset.sheetCaption=`${i+1} / ${pages.length}`;node.innerHTML=html;if(i<idx)stack.insertBefore(node,pEl);else stack.append(node)});document.querySelectorAll('#nexPagesStack .nex-sheet').forEach(el=>{const footer=el.querySelector('.footer');el.classList.toggle('nex-page-overflow',!!footer&&footer.getBoundingClientRect().bottom>el.getBoundingClientRect().bottom-25)})}finally{working=false}}
+window.render=function(){renderPages()};
+function refreshControls(){meta();styleEditor();editor('left');editor('right');if(window.updateSectionNames)updateSectionNames();paintPanel();window.render()}
+function selectPage(i){if(i<0||i>=data.pages.length)return;saveActive();idx=i;load(data.pages[idx]);persistPages();refreshControls();pEl.scrollIntoView({block:'start',behavior:'smooth'})}
+function addPage(copy=false){saveActive();let newp=copy?structuredClone(data.pages[idx]):{...snapshot(),left:[],right:[],leftLabel:data.leftLabel,rightLabel:data.rightLabel,parts:[]};data.pages.splice(idx+1,0,newp);idx++;load(newp);persistPages();refreshControls()}
+function deletePage(){if(data.pages.length===1){alert(t().atLeast);return}if(!confirm(t().confirm))return;data.pages.splice(idx,1);idx=Math.min(idx,data.pages.length-1);load(data.pages[idx]);persistPages();refreshControls()}
+function addPart(){saveActive();data.pages[idx].parts.push({title:t().partLabel,stories:[{title:t().story,body:t().content,image:''}]});persistPages();paintPanel();window.render()}
+function updatePart(p,key,v){saveActive();data.pages[idx].parts[p][key]=v;persistPages();window.render()}
+function updateStory(p,i,key,v){saveActive();data.pages[idx].parts[p].stories[i][key]=v;persistPages();window.render()}
+function managePart(p,action){saveActive();const a=data.pages[idx].parts;if(action==='delete'){if(!confirm(t().confirmPart))return;a.splice(p,1)}else if(action==='up'&&p>0)[a[p-1],a[p]]=[a[p],a[p-1]];else if(action==='down'&&p<a.length-1)[a[p+1],a[p]]=[a[p],a[p+1]];persistPages();paintPanel();window.render()}
+function manageStory(p,i,action){saveActive();const a=data.pages[idx].parts[p].stories;if(action==='add')a.push({title:t().story,body:'',image:''});if(action==='delete')a.splice(i,1);if(action==='up'&&i>0)[a[i-1],a[i]]=[a[i],a[i-1]];if(action==='down'&&i<a.length-1)[a[i+1],a[i]]=[a[i],a[i+1]];persistPages();paintPanel();window.render()}
+function uploadStory(evt,p,i){let file=evt.target.files?.[0];if(!file)return;readImage(file,v=>{updateStory(p,i,'image',v);paintPanel()},'photo')}
+function paintPanel(){const l=t();panel.innerHTML=`<h3>${l.pages}</h3><div class="nex-pages-row">${data.pages.map((p,i)=>`<button class="nex-page-btn" data-page="${i}" aria-current="${i===idx?'page':'false'}">${i+1} / ${data.pages.length}</button>`).join('')}</div><div class="nex-pages-row"><button class="btn secondary small" data-action="new">${l.newPage}</button><button class="btn secondary small" data-action="duplicate">${l.duplicate}</button><button class="btn warning small" data-action="remove">${l.remove}</button></div><p class="nex-paging-note">${l.note}</p><hr><h3>${l.part} · ${2+data.pages[idx].parts.length}</h3><div class="nex-paging-note">Part 1 / Part 2 = ${lng()==='ko'?'기존 왼쪽·오른쪽 섹션':lng()==='en'?'Existing left and right sections':'原有左欄、右欄'}</div>${data.pages[idx].parts.map((part,p)=>`<div class="nex-part"><div class="nex-part-head"><strong>Part ${p+3}</strong><div class="minirow"><button class="btn secondary small" data-partaction="up" data-p="${p}">↑</button><button class="btn secondary small" data-partaction="down" data-p="${p}">↓</button><button class="btn warning small" data-partaction="delete" data-p="${p}">${l.del}</button></div></div><label>${l.title}</label><input data-parttitle="${p}" value="${safe(part.title)}">${part.stories.map((st,i)=>`<div class="nex-part"><div class="nex-part-head"><b>${l.storyTitle} ${i+1}</b><div class="minirow"><button class="btn secondary small" data-storyaction="up" data-p="${p}" data-i="${i}">↑</button><button class="btn secondary small" data-storyaction="down" data-p="${p}" data-i="${i}">↓</button><button class="btn warning small" data-storyaction="delete" data-p="${p}" data-i="${i}">${l.del}</button></div></div><label>${l.storyTitle}</label><input data-stitle="${p}:${i}" value="${safe(st.title)}"><label>${l.body}</label><textarea data-sbody="${p}:${i}">${safe(st.body)}</textarea><label>${l.image}</label><input type="file" accept="image/*" data-simage="${p}:${i}">${st.image?`<img src="${safe(st.image)}" style="width:95px;height:70px;object-fit:contain" alt="">`:''}</div>`).join('')}<div class="nex-part-actions"><button class="btn secondary small" data-storyaction="add" data-p="${p}" data-i="0">${l.addStory}</button></div></div>`).join('')}<button class="btn secondary" data-action="part">${l.addPart}</button>`}
+panel.addEventListener('click',e=>{const x=e.target.closest('button');if(!x)return;if(x.dataset.page!==undefined)return selectPage(Number(x.dataset.page));if(x.dataset.action==='new')return addPage();if(x.dataset.action==='duplicate')return addPage(true);if(x.dataset.action==='remove')return deletePage();if(x.dataset.action==='part')return addPart();if(x.dataset.partaction)return managePart(Number(x.dataset.p),x.dataset.partaction);if(x.dataset.storyaction)return manageStory(Number(x.dataset.p),Number(x.dataset.i),x.dataset.storyaction)});
+panel.addEventListener('input',e=>{const x=e.target;if(x.dataset.parttitle!==undefined)return updatePart(Number(x.dataset.parttitle),'title',x.value);for(const [key,field] of [['stitle','title'],['sbody','body']])if(x.dataset[key]){const [p,i]=x.dataset[key].split(':').map(Number);updateStory(p,i,field,x.value);return}});
+panel.addEventListener('change',e=>{if(!e.target.dataset.simage)return;const [p,i]=e.target.dataset.simage.split(':').map(Number);uploadStory(e,p,i)});
+for(const id of ['langZh','langKo','langEn'])document.getElementById(id)?.addEventListener('click',()=>queueMicrotask(paintPanel));
+window.resetData=function(){originalReset();idx=0;data.pages=[{...snapshot(),parts:[]}];persistPages();refreshControls()};
+// Keep historical JSON compatible. Existing import handler loads it then rebuilds the page manager.
+window.importJSON=function(e){const f=e.target.files?.[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const val=JSON.parse(r.result);if(!Array.isArray(val.left)||!Array.isArray(val.right))throw Error('invalid');data=val;idx=0;if(!Array.isArray(data.pages)||!data.pages.length)data.pages=[{...snapshot(),parts:[]}];data.pages=data.pages.map(normalPage);load(data.pages[0]);persistPages();refreshControls()}catch(ex){alert(lng()==='ko'?'올바른 JSON 파일이 아닙니다.':lng()==='en'?'Invalid JSON file.':'JSON 格式不符，無法匯入')}};r.readAsText(f)};
+// Save pages into the legacy JSON exporter before every save (wrapper render syncs edits).
+load(data.pages[0]);paintPanel();renderPages();
+})();
+</script></body></html>
