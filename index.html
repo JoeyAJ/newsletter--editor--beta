@@ -208,6 +208,15 @@ input[type=range]{accent-color:#245883}
 .cont-marker{font-size:.78em;font-weight:600;color:#6b7c8f;font-style:italic;white-space:nowrap}.cont-marker.cont-next{display:block;text-align:right;margin-top:3px}
 .mast-compact{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-top:3px double #111;border-bottom:1px solid #111;padding:6px 2px;margin-bottom:14px;font-size:12px}.mast-compact .mc-title{font-family:Georgia,'Times New Roman',serif;font-weight:900;font-size:24px;letter-spacing:-.5px}.mast-compact .mc-issue{color:#c2412f;font-weight:700}
 .sheet-flow-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;max-width:794px;margin:-14px auto 26px;padding:8px 12px;background:#fff3f1;border:1px solid #f0c3bb;border-radius:8px;font-size:12px;color:#b33d30;font-weight:700}
+/* Image collage and pictures inside body text */
+.page .article .extra-gallery{display:grid;gap:6px;margin:8px 0 2px;clear:both}.page .article .extra-gallery.stack{display:block}
+.page .article .inline-figs{display:grid;gap:6px;margin:6px 0 8px;white-space:normal}
+.page .article .extra-gallery .article-image.extra-preview.gimg:nth-child(n),.page .article .inline-figs .article-image.extra-preview.gimg:nth-child(n){float:none!important;display:block;width:100%!important;max-width:100%!important;height:auto!important;max-height:none!important;margin:0!important;background:#eef2f6;border-radius:3px}
+.page .article .article-image.extra-preview.gimg.single:nth-child(n){max-height:320px!important}
+.page .article .extra-gallery .article-image.extra-preview.gimg.single.natural:nth-child(n),.page .article .inline-figs .article-image.extra-preview.gimg.single.natural:nth-child(n){width:auto!important;height:auto!important;max-width:100%!important;max-height:320px!important;margin:0 auto!important;background:none}
+.place-state{display:block;font-weight:400;font-size:10px;color:#788899;margin-top:2px;word-break:break-all}.place-state.is-placed{color:#1f6a43;font-weight:700}
+.place-row{margin:7px 0 0;flex-wrap:wrap}.insert-help{background:#eef5fc;border-radius:6px;padding:8px 9px;line-height:1.55}
+.reflow-box{margin:8px 0}.reflow-box .tiny{margin:5px 0 0}
 /* In-page confirm / alert */
 .ui-dialog-overlay{position:fixed;inset:0;background:rgba(12,26,45,.5);display:grid;place-items:center;z-index:100000;padding:20px}.ui-dialog{width:min(100%,420px);background:#fff;color:#1c344f;border-radius:14px;box-shadow:0 18px 60px #0004;padding:22px}.ui-dialog p{margin:0 0 18px;font-size:14px;line-height:1.6;white-space:pre-line}.ui-dialog-actions{display:flex;justify-content:flex-end;gap:8px}.ui-dialog-actions .btn{min-width:84px;padding:10px 14px}
 @media print{.ui-dialog-overlay{display:none!important}}
@@ -241,7 +250,7 @@ input[type=range]{accent-color:#245883}
 </section>
 <section class="pane" data-pane="export" role="tabpanel" hidden>
 <details class="group" open><summary data-i18n="export.group"></summary><div class="inner">
-<div class="export-actions"><button type="button" class="btn" data-act="export-pdf" data-i18n="export.pdf"></button><button type="button" class="btn secondary" data-act="export-png"><span data-i18n="export.png"></span></button><button type="button" class="btn secondary" data-act="export-json" data-i18n="export.json"></button><button type="button" class="btn secondary" data-act="export-import" data-i18n="export.import"></button></div>
+<div class="export-actions"><button type="button" class="btn" data-act="export-pdf" data-i18n="export.pdf"></button><button type="button" class="btn secondary" data-act="export-png"><span data-i18n="export.png"></span></button><button type="button" class="btn secondary" data-act="export-png-all"><span data-i18n="export.pngAll"></span></button><button type="button" class="btn secondary" data-act="export-json" data-i18n="export.json"></button><button type="button" class="btn secondary" data-act="export-import" data-i18n="export.import"></button></div>
 <input type="file" id="importFile" accept="application/json,.json" hidden>
 <p class="tiny" data-i18n="export.pngNote"></p></div></details>
 <details class="group" open><summary data-i18n="help.title"></summary><div class="inner tiny" data-i18n="help.body"></div></details>
@@ -307,7 +316,7 @@ const translations={
  'img.extraItem':'附加圖片 {n}','img.ratio':'裁切比例','img.display':'顯示方式','img.focusX':'水平焦點','img.focusY':'垂直焦點',
  'search.placeholder':'搜尋文章標題…','search.label':'搜尋文章標題',
  'export.group':'輸出與備份','export.pdf':'列印／另存 PDF','export.png':'保存目前頁 PNG','export.pngBusy':'PNG 產生中…','export.json':'匯出資料 JSON','export.import':'匯入資料 JSON',
- 'export.pngNote':'PNG 會輸出目前選取的頁面；PDF 會依序列印全部頁面。',
+ 'export.pngAll':'保存所有頁 PNG（ZIP 壓縮檔）','export.pngAllBusy':'產生中… {n} / {total} 頁','export.pngNote':'「保存目前頁 PNG」輸出目前選取的頁面；「保存所有頁 PNG」把每一頁存成 PNG 並打包成一個 ZIP 壓縮檔；PDF 會依序列印全部頁面。',
  'help.title':'操作說明',
  'help.body':'圖片可上傳 JPG／PNG／WebP 等檔案，系統會自動壓縮；HEIC 建議先轉成 JPG。編輯內容會自動儲存在目前瀏覽器；如要換電腦，請使用「匯出資料 JSON」。PDF 請使用「列印／另存 PDF」，紙張設為 A4、縮放 100%、邊界選「無」，並啟用背景圖形。每頁固定為 A4，內容過多時請新增頁面或縮短文字。使用正式校徽前，請確認已獲授權。',
  'msg.storageFull':'瀏覽器儲存空間不足，資料可能無法自動保存。請先匯出 JSON 備份，並減少圖片。',
@@ -324,6 +333,7 @@ const translations={
  'sample.newTitle':'新標題','sample.newBody':'請輸入內容','sample.newPart':'新 Part',
  "design.headerTitle":"頁首樣式（目前頁面）","design.headerHint":"報頭內容（校名、期數、Logo）一律沿用「基本資料」，每一頁自動繼承。","header.full":"完整報頭（與第 1 頁相同）","header.compact":"精簡頁首（適合續頁，節省空間）","header.none":"不顯示頁首","flow.title":"跨頁接續","flow.auto":"自動接續到下一頁","flow.autoHint":"把超出 A4 的文字與圖片自動移到下一頁（沒有下一頁會自動新增），報頭、Part 抬頭與欄位位置都會沿用。","flow.undo":"復原自動接續","flow.confirmUndo":"要回到接續前的狀態嗎？接續之後做的修改也會一併取消。","flow.done":"已把超出的內容接續到後面的頁面，請檢查第 {pages} 頁。","flow.nothing":"目前沒有超出 A4 的內容。","flow.stuck":"第 {pages} 頁有單篇內容（例如大圖）本身就超過一頁，無法自動分割，請縮小圖片或手動分拆。","flow.splitCursor":"從游標處分割 → 後段移到下一頁","flow.moveNext":"整篇移到下一頁","flow.caretHint":"請先在正文中點一下要分割的位置（不能在最前面或最後面）。","flow.contNext":"（接下頁）","flow.contPrev":"（續前頁）","flow.markerNotice":"跨頁接續標示：","flow.markerRemove":"移除接續標示","flow.overflowBar":"第 {n} 頁內容超出 A4","flow.moved":"已移到第 {n} 頁。",
  'dialog.ok':'確定','dialog.cancel':'取消',
+ "img.insert":"插入到正文游標處","img.unplace":"移出正文","img.placed":"已插入正文","img.notPlaced":"顯示在文末圖片區","img.insertHelp":"圖文交錯：先在正文中點一下要放圖片的位置，再按圖片旁的「插入到正文游標處」。正文裡會出現圖片代碼（例如 [[IMG:ab12cd]]），同一行放兩、三個代碼會並排顯示；刪除代碼即可移出正文。","img.galleryMode":"文末圖片排列（未插入正文的圖片）","gallery.grid-cover":"自動拼貼（填滿裁切，整齊）","gallery.grid-contain":"自動拼貼（完整顯示）","gallery.stack":"單張依序排列（舊版）","img.galleryCols":"每列張數","cols.auto":"自動（依欄寬）","flow.reflow":"重新自動排版跨頁內容","flow.reflowHint":"修改文字或圖片後按這裡：先把自動接續的內容合併回原文，再依目前版面重新分頁（手動分割的內容不受影響）。",
  'handle.title':'拖曳調整寬度',
  'contact.open':'聯絡我','contact.title':'問題回報與使用協助','contact.intro':'如果編輯器出現錯誤或有使用問題，請透過以下電子郵件聯絡作者。',
  'contact.copy':'複製信箱','contact.copied':'已複製','contact.send':'撰寫郵件','contact.close':'關閉','contact.subject':'Newsletter 編輯器問題回報'
@@ -377,7 +387,7 @@ const translations={
  'img.extraItem':'추가 이미지 {n}','img.ratio':'자르기 비율','img.display':'표시 방식','img.focusX':'가로 초점','img.focusY':'세로 초점',
  'search.placeholder':'기사 제목 검색…','search.label':'기사 제목 검색',
  'export.group':'출력 및 백업','export.pdf':'인쇄 / PDF로 저장','export.png':'현재 페이지 PNG로 저장','export.pngBusy':'PNG 생성 중…','export.json':'JSON으로 백업','export.import':'JSON 불러오기',
- 'export.pngNote':'PNG는 현재 선택한 페이지만 저장하며, PDF는 모든 페이지를 순서대로 인쇄합니다.',
+ 'export.pngAll':'모든 페이지 PNG로 저장 (ZIP 압축 파일)','export.pngAllBusy':'생성 중… {n} / {total}페이지','export.pngNote':'‘현재 페이지 PNG로 저장’은 선택한 페이지만, ‘모든 페이지 PNG로 저장’은 각 페이지를 PNG로 만들어 ZIP 압축 파일 하나로 저장합니다. PDF는 모든 페이지를 순서대로 인쇄합니다.',
  'help.title':'사용 안내',
  'help.body':'JPG·PNG·WebP 이미지를 업로드할 수 있으며, 파일 크기는 자동으로 최적화됩니다. HEIC 파일은 JPG로 변환한 뒤 업로드해 주세요. 편집 내용은 이 브라우저에 자동 저장됩니다. 다른 기기에서 작업하려면 ‘JSON으로 백업’을 이용하세요. PDF로 저장할 때는 ‘인쇄 / PDF로 저장’에서 용지 A4, 배율 100%, 여백 없음으로 설정하고 배경 그래픽 인쇄를 켜 주세요. 각 페이지는 A4로 고정되므로 내용이 많으면 페이지를 추가하거나 분량을 줄여 주세요. 학교 공식 로고는 사용 권한을 확인한 뒤 사용해 주세요.',
  'msg.storageFull':'브라우저 저장 공간이 부족해 자동 저장이 되지 않을 수 있습니다. JSON으로 백업하고 이미지 수를 줄여 주세요.',
@@ -394,6 +404,7 @@ const translations={
  'sample.newTitle':'새 제목','sample.newBody':'내용을 입력해 주세요','sample.newPart':'새 파트',
  "design.headerTitle":"페이지 머리글 (현재 페이지)","design.headerHint":"제호 정보(학교명, 호수, 로고)는 ‘기본 정보’ 설정을 모든 페이지가 자동으로 이어받습니다.","header.full":"전체 제호 (1페이지와 동일)","header.compact":"간략 머리글 (속지용, 공간 절약)","header.none":"머리글 표시 안 함","flow.title":"페이지 이어서 배치","flow.auto":"다음 페이지로 자동 이어서 배치","flow.autoHint":"A4를 벗어난 글과 이미지를 다음 페이지로 자동으로 옮깁니다. 다음 페이지가 없으면 새로 만들며, 제호·파트 제목·단 위치는 그대로 유지됩니다.","flow.undo":"자동 배치 되돌리기","flow.confirmUndo":"이어서 배치하기 전 상태로 되돌릴까요? 이후에 수정한 내용도 함께 취소됩니다.","flow.done":"넘친 내용을 다음 페이지로 옮겼습니다. {pages}페이지를 확인해 주세요.","flow.nothing":"현재 A4를 벗어난 내용이 없습니다.","flow.stuck":"{pages}페이지에 한 페이지보다 큰 항목(예: 큰 이미지)이 있어 자동으로 나눌 수 없습니다. 이미지를 줄이거나 직접 나눠 주세요.","flow.splitCursor":"커서 위치에서 나누기 → 뒷부분을 다음 페이지로","flow.moveNext":"기사 전체를 다음 페이지로","flow.caretHint":"본문에서 나눌 위치를 먼저 클릭해 주세요. (맨 앞이나 맨 끝은 안 됩니다)","flow.contNext":"(다음 페이지에 계속)","flow.contPrev":"(앞 페이지에서 계속)","flow.markerNotice":"페이지 이어짐 표시:","flow.markerRemove":"이어짐 표시 삭제","flow.overflowBar":"{n}페이지 내용이 A4를 벗어남","flow.moved":"{n}페이지로 옮겼습니다.",
  'dialog.ok':'확인','dialog.cancel':'취소',
+ "img.insert":"본문 커서 위치에 삽입","img.unplace":"본문에서 빼기","img.placed":"본문에 삽입됨","img.notPlaced":"기사 끝 이미지 영역에 표시","img.insertHelp":"글과 이미지 섞어 배치: 본문에서 이미지를 넣을 위치를 먼저 클릭한 뒤, 이미지 옆의 ‘본문 커서 위치에 삽입’을 누르세요. 본문에 이미지 코드(예: [[IMG:ab12cd]])가 들어가며, 한 줄에 코드를 2~3개 넣으면 나란히 표시됩니다. 코드를 지우면 본문에서 빠집니다.","img.galleryMode":"기사 끝 이미지 배치 (본문에 넣지 않은 이미지)","gallery.grid-cover":"자동 콜라주 (채우기, 정돈된 배치)","gallery.grid-contain":"자동 콜라주 (전체 보기)","gallery.stack":"한 장씩 차례로 (이전 방식)","img.galleryCols":"한 줄당 이미지 수","cols.auto":"자동 (단 너비 기준)","flow.reflow":"페이지 이어짐 다시 자동 배치","flow.reflowHint":"글이나 이미지를 수정한 뒤 누르세요. 자동으로 이어진 내용을 원래 기사로 합친 다음 현재 레이아웃에 맞게 다시 나눕니다. (직접 나눈 내용은 그대로 유지됩니다)",
  'handle.title':'드래그하여 너비 조절',
  'contact.open':'문의하기','contact.title':'오류 신고 및 이용 문의','contact.intro':'편집기 오류나 이용 중 궁금한 점이 있다면 아래 이메일로 문의해 주세요.',
  'contact.copy':'이메일 복사','contact.copied':'복사 완료','contact.send':'이메일 보내기','contact.close':'닫기','contact.subject':'뉴스레터 편집기 오류 및 이용 문의'
@@ -447,7 +458,7 @@ const translations={
  'img.extraItem':'Additional image {n}','img.ratio':'Crop ratio','img.display':'Display','img.focusX':'Horizontal focus','img.focusY':'Vertical focus',
  'search.placeholder':'Search article titles…','search.label':'Search article titles',
  'export.group':'Output & Backup','export.pdf':'Print / Save as PDF','export.png':'Save Current Page as PNG','export.pngBusy':'Generating PNG…','export.json':'Export JSON Backup','export.import':'Import JSON',
- 'export.pngNote':'PNG saves the currently selected page; PDF prints all pages in order.',
+ 'export.pngAll':'Save All Pages as PNG (ZIP)','export.pngAllBusy':'Generating… page {n} / {total}','export.pngNote':'“Save Current Page as PNG” saves the selected page; “Save All Pages as PNG” saves every page as a PNG and bundles them in one ZIP file. PDF prints all pages in order.',
  'help.title':'How to Use',
  'help.body':'Upload JPG, PNG, or WebP images; files are optimized automatically. Convert HEIC files to JPG first. Your work is saved automatically in this browser. To continue on another device, use “Export JSON Backup”. For PDF, use “Print / Save as PDF” with A4 paper, 100% scale, no margins, and background graphics turned on. Each page is fixed at A4, so add a page or shorten the text if content overflows. Use the official university logo only with permission.',
  'msg.storageFull':'Browser storage is full, so changes may not be saved. Export a JSON backup and reduce the number of images.',
@@ -464,6 +475,7 @@ const translations={
  'sample.newTitle':'New title','sample.newBody':'Enter content','sample.newPart':'New Part',
  "design.headerTitle":"Page Header (current page)","design.headerHint":"Masthead details (university, issue, logo) come from Basic Information and carry over to every page automatically.","header.full":"Full masthead (same as page 1)","header.compact":"Compact header (for inner pages, saves space)","header.none":"No header","flow.title":"Continue Across Pages","flow.auto":"Continue Overflow on Next Page","flow.autoHint":"Moves text and images that overflow the A4 page to the next page (creating it if needed), keeping the masthead, Part headings and column placement.","flow.undo":"Undo Continue","flow.confirmUndo":"Return to the state before continuing? Changes made afterwards will also be undone.","flow.done":"Overflowing content was continued on the following pages. Please check page {pages}.","flow.nothing":"No content currently exceeds the A4 page.","flow.stuck":"An item on page {pages} (such as a large image) is taller than a whole page and cannot be split automatically. Shrink the image or split it manually.","flow.splitCursor":"Split at Cursor → Rest to Next Page","flow.moveNext":"Move Article to Next Page","flow.caretHint":"First click in the body text where you want to split (not at the very beginning or end).","flow.contNext":"(Continued on next page)","flow.contPrev":"(Continued from previous page)","flow.markerNotice":"Page continuation marker:","flow.markerRemove":"Remove Marker","flow.overflowBar":"Page {n} exceeds A4","flow.moved":"Moved to page {n}.",
  'dialog.ok':'OK','dialog.cancel':'Cancel',
+ "img.insert":"Insert at Cursor in Body","img.unplace":"Remove from Body","img.placed":"Placed in body","img.notPlaced":"Shown in the end-of-article image area","img.insertHelp":"Mix text and images: click in the body where the image should go, then press “Insert at Cursor in Body” next to the image. An image code (e.g. [[IMG:ab12cd]]) is added; put two or three codes on one line to show them side by side. Delete the code to take the image out of the body.","img.galleryMode":"End-of-article images (not placed in the body)","gallery.grid-cover":"Auto collage (fill & crop, tidy)","gallery.grid-contain":"Auto collage (show full image)","gallery.stack":"One by one (previous style)","img.galleryCols":"Images per row","cols.auto":"Auto (by column width)","flow.reflow":"Re-run Auto Continue","flow.reflowHint":"Use after editing text or images: auto-continued content is merged back into the original article and split again for the current layout. Manual splits are kept.",
  'handle.title':'Drag to resize',
  'contact.open':'Contact me','contact.title':'Bug Reports & Support','contact.intro':'Found a bug or need help with the editor? Contact the creator at the email below.',
  'contact.copy':'Copy Email','contact.copied':'Copied','contact.send':'Write Email','contact.close':'Close','contact.subject':'Newsletter Editor Bug Report / Support'
@@ -500,6 +512,9 @@ function t(key,vars){
 }
 const $=sel=>document.querySelector(sel);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const shortId=()=>Math.random().toString(36).slice(2,8);
+const IMG_TOKEN=/\[\[IMG:([a-z0-9]{3,12})\]\]/g;
+const placedIds=text=>new Set([...String(text||'').matchAll(IMG_TOKEN)].map(m=>m[1]));
 const uid=()=>Math.random().toString(36).slice(2,9)+Date.now().toString(36).slice(-4);
 const num=(v,d=50)=>{const n=Number(v);return Number.isFinite(n)?n:d};
 const opt=(value,label,selected)=>`<option value="${esc(value)}"${selected?' selected':''}>${esc(label)}</option>`;
@@ -517,7 +532,7 @@ function normalizeArticle(a,legacy){
   if(LEGACY_DEFAULT_BODIES.includes(out.body))out.body='';
  }
  if(out.sampleTag!=='article'&&out.sampleTag!=='event')delete out.sampleTag;
- out.extraImages=(Array.isArray(a.extraImages)?a.extraImages:[]).map(im=>typeof im==='string'?{src:im,ratio:'original',fit:'contain',x:50,y:50}:im).filter(im=>im&&typeof im.src==='string'&&im.src);
+ out.extraImages=(Array.isArray(a.extraImages)?a.extraImages:[]).map(im=>typeof im==='string'?{src:im,ratio:'original',fit:'contain',x:50,y:50}:im).filter(im=>im&&typeof im.src==='string'&&im.src).map(im=>im.id?im:{...im,id:shortId()});
  return out;
 }
 function normalizePart(x,legacy){
@@ -530,7 +545,7 @@ function normalizePart(x,legacy){
 }
 function normalizePage(p,legacy){
  p=p&&typeof p==='object'?p:{};
- return {id:p.id||uid(),header:HEADERS.includes(p.header)?p.header:'full',layout:LAYOUTS.includes(p.layout)?p.layout:'mode1',headingStyle:STYLES.includes(p.headingStyle)?p.headingStyle:'style1',parts:(Array.isArray(p.parts)?p.parts:[]).map(x=>normalizePart(x,legacy))};
+ return {...(p.autoCreated?{autoCreated:true}:{}),id:p.id||uid(),header:HEADERS.includes(p.header)?p.header:'full',layout:LAYOUTS.includes(p.layout)?p.layout:'mode1',headingStyle:STYLES.includes(p.headingStyle)?p.headingStyle:'style1',parts:(Array.isArray(p.parts)?p.parts:[]).map(x=>normalizePart(x,legacy))};
 }
 /* Converts the old "left/right columns + extra parts" format into the unified Part model. */
 function legacyPage(p,root){
@@ -707,8 +722,13 @@ ${a.image?`<div class="main-photo-card"><img class="main-photo-thumbnail" src="$
 <div class="field"><label>${esc(t('img.cropX'))}</label><input type="range" min="0" max="100" value="${num(a.cropX)}" data-art-field="cropX"></div>
 <div class="field"><label>${esc(t('img.cropY'))}</label><input type="range" min="0" max="100" value="${num(a.cropY)}" data-art-field="cropY"></div>
 </div></details></section>`;
+ const placed=placedIds(a.body);
  const extras=`<section class="additional-photo-section"><div class="photo-section-title">${esc(t('img.extraTitle'))}</div><div class="field"><label>${esc(t('img.extraLabel'))}</label>${fileControl('extra',true,a.extraImages.length?t('file.count',{n:a.extraImages.length}):'')}<div class="tiny">${esc(t('img.extraHelp'))}</div></div>
-${a.extraImages.map((ex,k)=>`<div class="extra-edit" data-j="${k}"><div class="extra-head"><img src="${esc(ex.src)}" alt="${esc(t('img.extraItem',{n:k+1}))}"><strong>${esc(t('img.extraItem',{n:k+1}))}</strong><button type="button" class="btn warning small" data-act="extra-remove">${esc(t('img.remove'))}</button></div><div class="extra-grid">
+<p class="tiny insert-help">${esc(t('img.insertHelp'))}</p>
+<div class="part-grid"><div class="field"><label>${esc(t('img.galleryMode'))}</label><select data-art-field="galleryMode">${['grid-cover','grid-contain','stack'].map(v=>opt(v,t('gallery.'+v),(a.galleryMode||'grid-cover')===v)).join('')}</select></div>
+<div class="field"><label>${esc(t('img.galleryCols'))}</label><select data-art-field="galleryCols">${opt('auto',t('cols.auto'),!a.galleryCols||a.galleryCols==='auto')}${[1,2,3,4].map(n=>opt(n,String(n),String(a.galleryCols)===String(n))).join('')}</select></div></div>
+${a.extraImages.map((ex,k)=>`<div class="extra-edit" data-j="${k}"><div class="extra-head"><img src="${esc(ex.src)}" alt="${esc(t('img.extraItem',{n:k+1}))}"><strong>${esc(t('img.extraItem',{n:k+1}))}<small class="place-state${placed.has(ex.id)?' is-placed':''}">${esc(t(placed.has(ex.id)?'img.placed':'img.notPlaced'))} · [[IMG:${esc(ex.id)}]]</small></strong><button type="button" class="btn warning small" data-act="extra-remove">${esc(t('img.remove'))}</button></div>
+<div class="minirow place-row"><button type="button" class="btn secondary small" data-act="extra-insert">${esc(t('img.insert'))}</button><button type="button" class="btn secondary small" data-act="extra-unplace"${placed.has(ex.id)?'':' hidden'}>${esc(t('img.unplace'))}</button></div><div class="extra-grid">
 <label>${esc(t('img.ratio'))}<select data-extra-field="ratio">${CROPS.map(v=>opt(v,t('crop.'+v),(ex.ratio||'original')===v)).join('')}</select></label>
 <label>${esc(t('img.display'))}<select data-extra-field="fit">${['contain','cover'].map(v=>opt(v,t('fit.'+v),(ex.fit||'contain')===v)).join('')}</select></label>
 <label>${esc(t('img.focusX'))}<input type="range" min="0" max="100" value="${num(ex.x)}" data-extra-field="x"></label>
@@ -742,7 +762,7 @@ function partHTML(part,i,count){
 }
 function renderContent(){
  const pg=curPage();
- $('#pagesPanel').innerHTML=`<h3>${esc(t('pages.title'))}</h3>${pageButtonsHTML()}<div class="nex-pages-row"><button type="button" class="btn secondary small" data-act="page-add">${esc(t('pages.add'))}</button><button type="button" class="btn secondary small" data-act="page-dup">${esc(t('pages.duplicate'))}</button><button type="button" class="btn warning small" data-act="page-del">${esc(t('pages.delete'))}</button></div><p class="nex-paging-note">${esc(t('pages.note'))}</p><div class="flow-box" id="overflowWarning" hidden><p class="nex-overflow-warning" id="overflowText" role="status"></p><button type="button" class="btn" data-act="flow-auto">${esc(t('flow.auto'))}</button><p class="tiny">${esc(t('flow.autoHint'))}</p></div>${flowMessage?`<p class="flow-notice" role="status">${esc(flowMessage)}</p>`:''}${undoSnapshot?`<button type="button" class="btn secondary small" data-act="flow-undo">${esc(t('flow.undo'))}</button>`:''}`;
+ $('#pagesPanel').innerHTML=`<h3>${esc(t('pages.title'))}</h3>${pageButtonsHTML()}<div class="nex-pages-row"><button type="button" class="btn secondary small" data-act="page-add">${esc(t('pages.add'))}</button><button type="button" class="btn secondary small" data-act="page-dup">${esc(t('pages.duplicate'))}</button><button type="button" class="btn warning small" data-act="page-del">${esc(t('pages.delete'))}</button></div><p class="nex-paging-note">${esc(t('pages.note'))}</p><div class="flow-box" id="overflowWarning" hidden><p class="nex-overflow-warning" id="overflowText" role="status"></p><button type="button" class="btn" data-act="flow-auto">${esc(t('flow.auto'))}</button><p class="tiny">${esc(t('flow.autoHint'))}</p></div>${flowMessage.length?`<p class="flow-notice" role="status">${esc(flowMessage.map(m=>t(m[0],m[1])).join(' '))}</p>`:''}${data.pages.some(pg=>pg.parts.some(pt=>pt.articles.some(x=>(x.continuedFrom&&!x.manualSplit)||x.flowMovedFrom)))?`<div class="reflow-box"><button type="button" class="btn secondary small" data-act="flow-auto">${esc(t('flow.reflow'))}</button><p class="tiny">${esc(t('flow.reflowHint'))}</p></div>`:''}${undoSnapshot?`<button type="button" class="btn secondary small" data-act="flow-undo">${esc(t('flow.undo'))}</button>`:''}`;
  $('#partsEdit').innerHTML=`<div class="parts-head"><h3>${esc(t('parts.title',{n:pageIndex+1}))}</h3><span class="ux-count">${pg.parts.length}</span></div>${pg.parts.length?'':`<p class="photo-empty">${esc(t('parts.empty'))}</p>`}${pg.parts.map((p,i)=>partHTML(p,i,pg.parts.length)).join('')}<button type="button" class="btn secondary block" data-act="part-add">${esc(t('part.add'))}</button>`;
  applySearch();paintOverflow();
 }
@@ -761,9 +781,43 @@ function applySearch(){
 
 /* ===== Preview ===== */
 /* Body markup is shared by the preview and the page-flow measurement so both lay out identically. */
+const RATIO_CSS={square:'1/1',landscape:'4/3',wide:'16/9',portrait:'3/4'};
+/* One picture in a collage or inline row. A single picture keeps its own proportions; several pictures
+   share a tidy 4:3 cell (or the ratio chosen for that picture) so rows line up. */
+function figImg(x,cols,mode){
+ const natural=x.w&&x.h?`${x.w}/${x.h}`:'4/3',fixed=RATIO_CSS[x.ratio];
+ const fit=fixed?'cover':cols===1?(x.fit==='cover'?'cover':'contain'):(mode==='grid-contain'?'contain':'cover');
+ const pos=`object-fit:${fit};object-position:${num(x.x)}% ${num(x.y)}%`,src=`src="${esc(x.src)}" alt="${esc(t('preview.extraImageAlt'))}"`;
+ /* A lone picture keeps its proportions, is centred and capped in height; width/height attributes give
+    the browser its size before decoding so page-flow measuring is exact. */
+ if(cols===1&&!fixed&&x.w&&x.h)return `<img class="article-image extra-preview gimg single natural" width="${x.w}" height="${x.h}" style="${pos}" ${src}>`;
+ return `<img class="article-image extra-preview gimg${cols===1?' single':''}" style="aspect-ratio:${fixed||(cols===1?natural:'4/3')};${pos}" ${src}>`;
+}
+/* Body text with image codes ([[IMG:id]]) turned into pictures at that spot; codes on one line sit side by side. */
+function richBody(a,text){
+ const byId=new Map(a.extraImages.map(x=>[x.id,x]));let html='',buf=[];
+ const flush=()=>{if(buf.length){html+=esc(buf.join('\n'));buf=[]}};
+ for(const line of String(text).split('\n')){
+  const ids=[...line.matchAll(IMG_TOKEN)].map(m=>m[1]).filter(id=>byId.has(id));
+  if(!ids.length){buf.push(line);continue}
+  const rest=line.replace(IMG_TOKEN,'').trim();if(rest)buf.push(rest);
+  flush();const k=Math.min(ids.length,3);
+  html+=`<div class="inline-figs" style="grid-template-columns:repeat(${k},minmax(0,1fr))">${ids.map(id=>figImg(byId.get(id),ids.length===1?1:k,'grid-cover')).join('')}</div>`;
+ }
+ flush();return html;
+}
+function galleryHTML(a,pos){
+ const placed=placedIds(a.body),list=a.extraImages.filter(x=>!placed.has(x.id));
+ if(!list.length)return '';
+ const mode=['grid-cover','grid-contain','stack'].includes(a.galleryMode)?a.galleryMode:'grid-cover';
+ if(mode==='stack')return `<div class="extra-gallery stack">${list.map(x=>{const ratio=CROPS.includes(x.ratio)&&x.ratio!=='original'?'crop-'+x.ratio:'crop-original';const fit=x.ratio&&x.ratio!=='original'?'cover':(x.fit==='cover'?'cover':'contain');return `<img class="article-image extra-preview ${ratio}" style="object-fit:${fit};object-position:${num(x.x)}% ${num(x.y)}%" src="${esc(x.src)}" alt="${esc(t('preview.extraImageAlt'))}">`}).join('')}</div>`;
+ const n=list.length,want=Number(a.galleryCols);
+ const cols=want>=1&&want<=4?Math.min(want,n):pos==='full'?(n<=4?n:n<=6?3:4):(n===1?1:2);
+ return `<div class="extra-gallery" style="grid-template-columns:repeat(${cols},minmax(0,1fr))">${list.map(x=>figImg(x,cols,mode)).join('')}</div>`;
+}
 function bodyInner(a,text){
  const marker=a.sampleTag?`<span class="sample-marker">${esc(t('sample.'+a.sampleTag+'Placeholder'))}</span>\n`:'';
- const body=text?esc(text):(a.sampleTag||a.continuedFrom)?'':`<span class="is-placeholder">${esc(t('sample.newBody'))}</span>`;
+ const body=text?richBody(a,text):(a.sampleTag||a.continuedFrom)?'':`<span class="is-placeholder">${esc(t('sample.newBody'))}</span>`;
  return marker+body+(a.continuesNext?`<span class="cont-marker cont-next">${esc(t('flow.contNext'))}</span>`:'');
 }
 function mastHTML(pg){
@@ -779,7 +833,7 @@ function card(a,pos,seed){
  const img=a.image?`<img class="article-image ${pos==='left'?'float':''} crop-${CROPS.includes(a.cropRatio)?a.cropRatio:'original'}" style="object-position:${num(a.cropX)}% ${num(a.cropY)}%" src="${esc(a.image)}" alt="${esc(t('preview.articleImageAlt'))}">`
   :showDemo&&!a.continuedFrom?`<div class="demo-visual" data-label="${esc(t('sample.imagePlaceholder'))}" title="${esc(t('sample.imagePlaceholder'))}">${illustration(seed)}</div>`:'';
  const title=(a.title?esc(a.title):`<span class="is-placeholder">${esc(t('sample.newTitle'))}</span>`)+(a.continuedFrom?` <span class="cont-marker cont-prev">${esc(t('flow.contPrev'))}</span>`:'');
- const extras=a.extraImages.map(x=>{const ratio=CROPS.includes(x.ratio)&&x.ratio!=='original'?'crop-'+x.ratio:'crop-original';const fit=x.ratio&&x.ratio!=='original'?'cover':(x.fit==='cover'?'cover':'contain');return `<img class="article-image extra-preview ${ratio}" style="object-fit:${fit};object-position:${num(x.x)}% ${num(x.y)}%" src="${esc(x.src)}" alt="${esc(t('preview.extraImageAlt'))}">`}).join('');
+ const extras=galleryHTML(a,pos);
  return `<article data-aid="${a.id}" class="article card-${cardLayout} photo-${a.photoSide==='left'?'left':'right'}" style="--image-fit:${imageFit};--item-title-size:${titleSize}px;--item-body-size:${bodySize}px;font-family:${family};"><div class="article-head"><h3 class="article-title-custom" style="font-size:${titleSize}px;font-weight:${a.titleBold===false?400:700};font-family:inherit">${title}</h3></div><div class="underline"></div>${img}<div class="article-body article-body-custom" style="font-size:${bodySize}px;font-weight:${a.bodyBold?700:400};font-family:inherit">${bodyInner(a,a.body)}</div>${extras}<div style="clear:both"></div></article>`;
 }
 function pageHTML(pg){
@@ -854,6 +908,19 @@ async function deletePage(){
  data.pages.splice(pageIndex,1);pageIndex=Math.min(pageIndex,data.pages.length-1);
  persist();renderDesign();renderContent();renderPreview();
 }
+function refreshPlaceStates(item,a){
+ const placed=placedIds(a.body);
+ item.querySelectorAll('.extra-edit[data-j]').forEach(row=>{const ex=a.extraImages[Number(row.dataset.j)];if(!ex)return;const on=placed.has(ex.id),st=row.querySelector('.place-state');
+  st.classList.toggle('is-placed',on);st.textContent=`${t(on?'img.placed':'img.notPlaced')} · [[IMG:${ex.id}]]`;row.querySelector('[data-act="extra-unplace"]').hidden=!on});
+}
+/* Removes an image code; a line left empty by the removal is dropped, other lines keep their breaks. */
+function stripToken(body,id){
+ const token=`[[IMG:${id}]]`,lines=String(body).split('\n'),out=[];
+ for(const line of lines){if(!line.includes(token)){out.push(line);continue}const rest=line.split(token).join('').replace(/[ \t]{2,}/g,' ').trim();if(rest)out.push(rest)}
+ return out.join('\n');
+}
+const lastCaret=new Map();
+['keyup','click','select','input'].forEach(type=>document.addEventListener(type,e=>{const ta=e.target;if(ta&&ta.matches&&ta.matches('textarea[data-art-field="body"]')){const aid=ta.closest('[data-aid]')?.dataset.aid;if(aid)lastCaret.set(aid,ta.selectionStart)}},true));
 function move(list,i,d){const n=i+d;if(n<0||n>=list.length)return false;[list[i],list[n]]=[list[n],list[i]];return true}
 function structural(){persist();renderContent();renderCurrentSheet()}
 function readImage(file,callback,kind){
@@ -869,7 +936,7 @@ function readImage(file,callback,kind){
   ctx.fillStyle='#ffffff';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(img,0,0,canvas.width,canvas.height);
   const result=canvas.toDataURL('image/jpeg',.78);
   if(result.length>2.5e6){uiAlert(t('msg.imgStillLarge'));return}
-  callback(result);
+  callback(result,canvas.width,canvas.height);
  }catch(err){uiAlert(t('msg.imgProcess'))}};
  img.onerror=()=>{URL.revokeObjectURL(url);uiAlert(t('msg.imgRead'))};
  img.src=url;
@@ -881,7 +948,7 @@ function handleUpload(input){
  const pid=input.closest('[data-pid]')?.dataset.pid,aid=input.closest('[data-aid]')?.dataset.aid;
  const target=()=>findArticle(pid,aid);
  if(kind==='cover')readImage(files[0],v=>{const a=target();if(!a)return;a.image=v;folds.set('img:'+aid,true);structural()},'photo');
- if(kind==='extra')for(const file of files)readImage(file,v=>{const a=target();if(!a)return;a.extraImages.push({src:v,ratio:'original',fit:'contain',x:50,y:50});folds.set('img:'+aid,true);structural()},'photo');
+ if(kind==='extra')for(const file of files)readImage(file,(v,w,h)=>{const a=target();if(!a)return;a.extraImages.push({id:shortId(),src:v,ratio:'original',fit:'contain',x:50,y:50,w,h});folds.set('img:'+aid,true);structural()},'photo');
 }
 function onAction(btn){
  const act=btn.dataset.act,pid=btn.closest('[data-pid]')?.dataset.pid,aid=btn.closest('[data-aid]')?.dataset.aid;
@@ -905,7 +972,15 @@ function onAction(btn){
   case 'art-del':if(part&&a)uiConfirm(t('article.confirmDelete')).then(ok=>{if(ok&&part.articles.includes(a)){part.articles.splice(part.articles.indexOf(a),1);structural()}});return;
   case 'art-unmark':if(a){delete a.sampleTag;structural()}return;
   case 'img-remove':if(a){a.image='';structural()}return;
-  case 'extra-remove':if(a){a.extraImages.splice(Number(btn.closest('[data-j]').dataset.j),1);structural()}return;
+  case 'extra-remove':if(a){const ex=a.extraImages[Number(btn.closest('[data-j]').dataset.j)];if(ex){a.body=stripToken(a.body,ex.id);a.extraImages.splice(a.extraImages.indexOf(ex),1)}structural()}return;
+  case 'extra-insert':case 'extra-unplace':{if(!a)return;const ex=a.extraImages[Number(btn.closest('[data-j]').dataset.j)];if(!ex)return;
+   const ta=btn.closest('.article-item').querySelector('textarea[data-art-field="body"]');
+   let body=a.body,pos=lastCaret.has(a.id)?lastCaret.get(a.id):body.length;
+   const token=`[[IMG:${ex.id}]]`,old=body.indexOf(token);
+   if(old>-1){body=stripToken(body,ex.id);if(pos>old)pos=Math.max(old,pos-(a.body.length-body.length))}
+   if(act==='extra-insert'){pos=Math.min(Math.max(0,pos),body.length);const before=body.slice(0,pos),after=body.slice(pos);
+    body=before+(before&&!before.endsWith('\n')?'\n':'')+token+(after&&!after.startsWith('\n')?'\n':'')+after;lastCaret.set(a.id,(before+(before&&!before.endsWith('\n')?'\n':'')+token).length)}
+   a.body=body;if(a.sampleTag)delete a.sampleTag;if(ta)ta.value=body;structural();return}
   case 'logo-remove':data.logo='';persist();renderInfo();renderPreview();return;
   case 'reset':
    uiConfirm(t('msg.confirmReset')).then(ok=>{if(!ok)return;data=sample();pageIndex=0;openArticles.clear();collapsedParts.clear();folds.clear();saveNow();renderPanels();renderPreview()});return;
@@ -913,11 +988,12 @@ function onAction(btn){
   case 'flow-undo':return undoFlow();
   case 'art-split':{if(!part||!a)return;const ta=btn.closest('.article-item').querySelector('textarea[data-art-field="body"]');const cut=ta?ta.selectionStart:0;
    if(!(cut>0&&cut<a.body.length)){uiAlert(t('flow.caretHint'));return}
-   takeUndo();splitArticle(pageIndex,part,a,0,cut);afterFlow(t('flow.moved',{n:pageIndex+2}));return}
-  case 'art-next':if(part&&a){takeUndo();moveWhole(pageIndex,part,a);afterFlow(t('flow.moved',{n:pageIndex+2}))}return;
+   takeUndo();splitArticle(pageIndex,part,a,0,cut);afterFlow(['flow.moved',{n:pageIndex+2}]);return}
+  case 'art-next':if(part&&a){takeUndo();moveWhole(pageIndex,part,a);afterFlow(['flow.moved',{n:pageIndex+2}])}return;
   case 'art-unflow':if(a){delete a.continuesNext;delete a.continuedFrom;delete a.contJoin;structural()}return;
   case 'export-pdf':saveNow();return window.print();
   case 'export-png':return savePNG(btn);
+  case 'export-png-all':return savePNGAll(btn);
   case 'export-json':return saveJSON();
   case 'export-import':return $('#importFile').click();
   case 'contact-open':return openContact();
@@ -948,6 +1024,7 @@ document.addEventListener('input',e=>{
   a[f]=el.type==='range'?Number(el.value):el.value;
   const item=el.closest('.article-item');
   if(f==='body'&&a.sampleTag){delete a.sampleTag;item.querySelector('.sample-notice')?.remove()}
+  if(f==='body')refreshPlaceStates(item,a);
   if(f==='title')item.querySelector('.ux-fold-title').textContent=(el.value.split('\n')[0]||t('article.untitled')).slice(0,40);
   persist();schedulePreview();return;
  }
@@ -987,16 +1064,16 @@ document.getElementById('pagesStack').addEventListener('load',()=>{clearTimeout(
    The overflowing page is rendered for real and measured; text is cut at the last position that still
    fits (preferring line/sentence breaks), extra images move first, and whole articles move when even an
    empty body does not fit. Continuations keep the Part heading, column position and text style. */
-let undoSnapshot=null,flowMessage='',flowBusy=false;
-function takeUndo(){undoSnapshot={json:JSON.stringify(data),page:pageIndex};flowMessage=''}
+let undoSnapshot=null,flowMessage=[],flowBusy=false;
+function takeUndo(){undoSnapshot={json:JSON.stringify(data),page:pageIndex};flowMessage=[]}
 async function undoFlow(){
  if(!undoSnapshot||!await uiConfirm(t('flow.confirmUndo'))||!undoSnapshot)return;
- data=JSON.parse(undoSnapshot.json);pageIndex=Math.min(undoSnapshot.page,data.pages.length-1);undoSnapshot=null;flowMessage='';
+ data=JSON.parse(undoSnapshot.json);pageIndex=Math.min(undoSnapshot.page,data.pages.length-1);undoSnapshot=null;flowMessage=[];
  saveNow();renderPanels();renderPreview();
 }
-function afterFlow(msg){flowMessage=msg;persist();renderPanels();renderPreview()}
+function afterFlow(msg){flowMessage=[msg];persist();renderPanels();renderPreview()}
 function ensureNextPage(i){
- if(!data.pages[i+1]){const pg=data.pages[i];data.pages.splice(i+1,0,normalizePage({header:pg.header,layout:pg.layout,headingStyle:pg.headingStyle,parts:[]},false))}
+ if(!data.pages[i+1]){const pg=data.pages[i];const np=normalizePage({header:pg.header,layout:pg.layout,headingStyle:pg.headingStyle,parts:[]},false);np.autoCreated=true;data.pages.splice(i+1,0,np)}
  return data.pages[i+1];
 }
 function contPartFor(i,part){
@@ -1016,17 +1093,23 @@ function dropEmptySource(i,part,cont){
  if(part.contOf)cont.contOf=part.contOf;else delete cont.contOf;
 }
 const STYLE_KEYS=['titleSize','bodySize','fontFamily','titleBold','bodyBold'];
-function splitArticle(i,part,a,extrasKeep,cut){
+const STYLE_KEYS_ALL=[...STYLE_KEYS,'galleryMode','galleryCols'];
+/* extrasKeep counts end-of-article (gallery) pictures that stay; pictures placed in the body travel with their code. */
+function splitArticle(i,part,a,extrasKeep,cut,auto){
  const cont=contPartFor(i,part),headText=a.body.slice(0,cut).replace(/\s+$/,''),rest=a.body.slice(headText.length),lead=rest.match(/^\s*/)[0],join=lead;
- const tail={id:uid(),title:a.title,body:rest.slice(lead.length),image:'',qr:'',extraImages:a.extraImages.slice(extrasKeep),continuedFrom:a.id,contJoin:join};
- for(const k of STYLE_KEYS)if(a[k]!==undefined)tail[k]=a[k];
- a.body=headText;a.extraImages=a.extraImages.slice(0,extrasKeep);a.continuesNext=true;
+ const headIds=placedIds(headText),tailIds=placedIds(rest);
+ const gallery=a.extraImages.filter(x=>!headIds.has(x.id)&&!tailIds.has(x.id)),keepGallery=new Set(gallery.slice(0,extrasKeep).map(x=>x.id));
+ const stays=x=>headIds.has(x.id)||keepGallery.has(x.id);
+ const tail={id:uid(),title:a.title,body:rest.slice(lead.length),image:'',qr:'',extraImages:a.extraImages.filter(x=>!stays(x)),continuedFrom:a.id,contJoin:join};
+ if(auto)tail.autoFlow=true;else tail.manualSplit=true;
+ for(const k of STYLE_KEYS_ALL)if(a[k]!==undefined)tail[k]=a[k];
+ a.body=headText;a.extraImages=a.extraImages.filter(stays);a.continuesNext=true;
  const existing=cont.articles.find(x=>x.continuedFrom===a.id);
  if(existing){existing.body=tail.body+(existing.contJoin||'')+existing.body;existing.contJoin=join;existing.extraImages=tail.extraImages.concat(existing.extraImages)}
  else cont.articles.unshift(tail);
 }
-function moveWhole(i,part,a){
- const cont=contPartFor(i,part);
+function moveWhole(i,part,a,auto){
+ const cont=contPartFor(i,part);if(auto)a.flowMovedFrom=part.id;
  part.articles.splice(part.articles.indexOf(a),1);
  const k=cont.articles.findIndex(x=>x.continuedFrom===a.id);
  if(k>-1){const tail=cont.articles[k];a.body=a.body+(tail.contJoin||'')+tail.body;a.extraImages=a.extraImages.concat(tail.extraImages);if(tail.continuesNext)a.continuesNext=true;else delete a.continuesNext;cont.articles.splice(k,1)}
@@ -1037,6 +1120,7 @@ function moveWhole(i,part,a){
 const sheetEl=i=>document.querySelector(`#pagesStack .nex-sheet[data-sheet="${i}"]`);
 function sheetOverflows(el){const f=el.querySelector('.footer');return f?f.offsetTop+f.offsetHeight>el.clientHeight:el.scrollHeight>el.clientHeight+2}
 async function decodeImages(root){await Promise.all([...root.querySelectorAll('img')].map(img=>img.complete&&img.naturalWidth?null:img.decode().catch(()=>{})))}
+function safeCut(text,pos){for(const m of String(text).matchAll(IMG_TOKEN)){if(pos>m.index&&pos<m.index+m[0].length)return m.index}return pos}
 function niceCut(text,max){
  if(max>=text.length)return text.length;
  const floor=Math.floor(max*0.6);
@@ -1045,7 +1129,7 @@ function niceCut(text,max){
 }
 /* Returns {keep, cut} for a split that fits, or null when the article must move as a whole. */
 function measureSplit(sheet,el,a){
- const bodyEl=el.querySelector('.article-body'),extras=[...el.querySelectorAll('.extra-preview')],footer=sheet.querySelector('.footer');
+ const bodyEl=el.querySelector('.article-body'),extras=[...el.querySelectorAll('.extra-gallery .extra-preview')],footer=sheet.querySelector('.footer');
  /* Judge only this article against the line where the footer must start, so another overflowing column
     does not force this article to move whole. */
  const gap=footer?Math.max(0,footer.getBoundingClientRect().top-el.getBoundingClientRect().bottom):0;
@@ -1054,12 +1138,13 @@ function measureSplit(sheet,el,a){
  const trial=Object.assign({},a,{continuesNext:true});
  for(let keep=extras.length-1;keep>=0;keep--){
   extras[keep].remove();bodyEl.innerHTML=bodyInner(trial,a.body);
-  if(fits())return {keep,cut:a.body.length};
+  if(fits()){if(keep===0&&!a.body.trim()&&!a.image)break;return {keep,cut:a.body.length}}
  }
  let lo=0,hi=a.body.length-1,best=-1;
- while(lo<=hi){const mid=(lo+hi)>>1;bodyEl.innerHTML=bodyInner(trial,a.body.slice(0,mid));if(!fits())hi=mid-1;else{best=mid;lo=mid+1}}
+ el.querySelector('.extra-gallery')?.remove();
+ while(lo<=hi){const mid=(lo+hi)>>1;bodyEl.innerHTML=bodyInner(trial,a.body.slice(0,safeCut(a.body,mid)));if(!fits())hi=mid-1;else{best=mid;lo=mid+1}}
  if(best<=0)return null;
- const cut=niceCut(a.body,best);
+ const cut=safeCut(a.body,niceCut(a.body,safeCut(a.body,best)));
  return cut<12&&a.body.length>40?null:{keep:0,cut};
 }
 async function flowPage(i){
@@ -1072,17 +1157,44 @@ async function flowPage(i){
   const el=arts.reduce((m,x)=>x.getBoundingClientRect().bottom>m.getBoundingClientRect().bottom?x:m);
   const part=data.pages[i].parts.find(p=>p.articles.some(x=>x.id===el.dataset.aid)),a=part.articles.find(x=>x.id===el.dataset.aid);
   const plan=measureSplit(sheet,el,a);
-  if(plan)splitArticle(i,part,a,plan.keep,plan.cut);
-  else{const first=el.closest('.column')?.querySelector('.article')===el;if(first)return 'stuck';moveWhole(i,part,a)}
+  if(plan)splitArticle(i,part,a,plan.keep,plan.cut,true);
+  else{const first=el.closest('.column')?.querySelector('.article')===el;if(first)return 'stuck';moveWhole(i,part,a,true)}
   changed=true;
   if(data.pages.length>i+1&&!sheetEl(i+1))renderPreview();
  }
  return 'stuck';
 }
+/* Older pictures have no stored size; read it once so layout (and page-flow measuring) is exact before decoding. */
+async function ensureImageSizes(){
+ const todo=data.pages.flatMap(pg=>pg.parts.flatMap(pt=>pt.articles.flatMap(a=>a.extraImages))).filter(x=>!(x.w&&x.h));
+ await Promise.all(todo.map(x=>new Promise(res=>{const im=new Image();im.onload=()=>{x.w=im.naturalWidth;x.h=im.naturalHeight;res()};im.onerror=res;im.src=x.src})));
+ return todo.length;
+}
+/* Undo earlier automatic continuations (not manual splits) so a re-run lays everything out afresh. */
+function rejoinAuto(){
+ for(let j=data.pages.length-1;j>=1;j--){
+  const prev=data.pages[j-1],page=data.pages[j];
+  let removed=false;
+  for(const cp of [...page.parts]){
+   const src=cp.contOf&&prev.parts.find(p=>p.id===cp.contOf);if(!src)continue;
+   while(cp.articles.length){
+    const x=cp.articles[0],last=src.articles[src.articles.length-1];
+    if(!x.manualSplit&&last&&x.continuedFrom===last.id){last.body=last.body+(x.contJoin||'')+x.body;last.extraImages=last.extraImages.concat(x.extraImages);if(x.continuesNext)last.continuesNext=true;else delete last.continuesNext;cp.articles.shift()}
+    else if(x.flowMovedFrom===src.id){delete x.flowMovedFrom;src.articles.push(cp.articles.shift())}
+    else break;
+   }
+   if(!cp.articles.length){page.parts.splice(page.parts.indexOf(cp),1);removed=true}
+  }
+  if(!page.parts.length&&(page.autoCreated||removed))data.pages.splice(j,1);
+ }
+ pageIndex=Math.min(pageIndex,data.pages.length-1);
+}
 async function autoFlow(){
  if(flowBusy)return;flowBusy=true;
  const before=JSON.stringify(data),beforePage=pageIndex,touched=[],stuck=[];
  try{
+  await ensureImageSizes();
+  rejoinAuto();
   for(let i=0;i<data.pages.length&&i<60;i++){
    renderPreview();
    const r=await flowPage(i);
@@ -1090,8 +1202,8 @@ async function autoFlow(){
   }
  }finally{flowBusy=false}
  if(JSON.stringify(data)!==before){undoSnapshot={json:before,page:beforePage}}
- flowMessage=touched.length?t('flow.done',{pages:[...new Set(touched)].join(', ')}):stuck.length?'':t('flow.nothing');
- if(stuck.length)flowMessage=(flowMessage?flowMessage+' ':'')+t('flow.stuck',{pages:stuck.join(', ')});
+ flowMessage=touched.length?[['flow.done',{pages:[...new Set(touched)].join(', ')}]]:stuck.length?[]:[['flow.nothing']];
+ if(stuck.length)flowMessage.push(['flow.stuck',{pages:stuck.join(', ')}]);
  persist();renderPanels();renderPreview();
  await decodeImages($('#pagesStack'));checkOverflow();
 }
@@ -1120,21 +1232,70 @@ async function ensurePngRenderer(){
  }
  throw new Error(t('msg.pngLoad'));
 }
+const fileBase=()=>`woosong-newsletter-${data.year||'year'}-${data.month||'month'}`;
+function downloadBlob(blob,name){
+ const url=URL.createObjectURL(blob),link=document.createElement('a');
+ link.href=url;link.download=name;document.body.appendChild(link);link.click();link.remove();
+ setTimeout(()=>URL.revokeObjectURL(url),60000);
+}
+/* Renders one A4 sheet of the preview to a PNG blob (2× scale), without the editor's outlines or captions. */
+async function captureSheet(i){
+ const target=sheetEl(i);if(!target)throw new Error(t('msg.pngCapture'));
+ /* html2canvas copies ::after content before onclone runs, so hide the page caption on the live sheet during capture. */
+ target.classList.add('is-exporting');
+ let canvas;try{canvas=await window.html2canvas(target,{backgroundColor:'#ffffff',scale:2,useCORS:true,allowTaint:false,logging:false,scrollX:0,scrollY:0,windowWidth:1200,onclone:doc=>{const p=doc.querySelector(`#pagesStack .nex-sheet[data-sheet="${i}"]`);p.classList.remove('nex-page-active','nex-page-overflow');p.classList.add('is-exporting');p.style.transform='none';p.style.boxShadow='none';p.style.margin='0'}})}finally{target.classList.remove('is-exporting')}
+ if(!canvas.width||!canvas.height)throw new Error(t('msg.pngCapture'));
+ return new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(new Error(t('msg.pngConvert'))),'image/png'));
+}
+async function preparePng(){
+ await ensurePngRenderer();
+ if(document.fonts&&document.fonts.ready)await document.fonts.ready;
+ await decodeImages($('#pagesStack'));
+}
 async function savePNG(btn){
  const label=btn.querySelector('[data-i18n]')||btn;
  try{
   btn.disabled=true;label.textContent=t('export.pngBusy');
-  await ensurePngRenderer();
-  if(document.fonts&&document.fonts.ready)await document.fonts.ready;
-  const target=document.getElementById('preview');
-  const canvas=await window.html2canvas(target,{backgroundColor:'#ffffff',scale:2,useCORS:true,allowTaint:false,logging:false,scrollX:0,scrollY:0,windowWidth:1200,onclone:doc=>{const p=doc.getElementById('preview');p.classList.remove('nex-page-active','nex-page-overflow');p.classList.add('is-exporting');p.style.transform='none';p.style.boxShadow='none';p.style.margin='0'}});
-  if(!canvas.width||!canvas.height)throw new Error(t('msg.pngCapture'));
-  const blob=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(new Error(t('msg.pngConvert'))),'image/png'));
-  const url=URL.createObjectURL(blob),link=document.createElement('a');
-  link.href=url;link.download=`woosong-newsletter-${data.year||'year'}-${data.month||'month'}-p${pageIndex+1}.png`;document.body.appendChild(link);link.click();link.remove();
-  setTimeout(()=>URL.revokeObjectURL(url),60000);
+  await preparePng();
+  downloadBlob(await captureSheet(pageIndex),`${fileBase()}-p${String(pageIndex+1).padStart(2,'0')}.png`);
  }catch(e){uiAlert(t('msg.pngFailed',{error:e.message})+'\n'+t('msg.pngAdvice'))}
  finally{btn.disabled=false;label.textContent=t('export.png')}
+}
+async function savePNGAll(btn){
+ const label=btn.querySelector('[data-i18n]')||btn,total=data.pages.length;
+ try{
+  btn.disabled=true;label.textContent=t('export.pngAllBusy',{n:0,total});
+  await preparePng();
+  const files=[];
+  for(let i=0;i<total;i++){
+   label.textContent=t('export.pngAllBusy',{n:i+1,total});
+   const blob=await captureSheet(i);
+   files.push({name:`${fileBase()}-p${String(i+1).padStart(2,'0')}.png`,data:new Uint8Array(await blob.arrayBuffer())});
+  }
+  downloadBlob(makeZip(files),`${fileBase()}-png.zip`);
+ }catch(e){uiAlert(t('msg.pngFailed',{error:e.message})+'\n'+t('msg.pngAdvice'))}
+ finally{btn.disabled=false;label.textContent=t('export.pngAll')}
+}
+/* Minimal ZIP writer (stored entries, no compression — PNG data is already compressed), so no extra library is needed. */
+const CRC_TABLE=(()=>{const tb=new Uint32Array(256);for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;tb[n]=c>>>0}return tb})();
+function crc32(u8){let c=0xFFFFFFFF;for(let i=0;i<u8.length;i++)c=CRC_TABLE[(c^u8[i])&255]^(c>>>8);return (c^0xFFFFFFFF)>>>0}
+function makeZip(files){
+ const enc=new TextEncoder(),parts=[],central=[],d=new Date();let offset=0,centralSize=0;
+ const time=(d.getHours()<<11)|(d.getMinutes()<<5)|(d.getSeconds()>>1),date=((d.getFullYear()-1980)<<9)|((d.getMonth()+1)<<5)|d.getDate();
+ for(const f of files){
+  const name=enc.encode(f.name),crc=crc32(f.data),size=f.data.length;
+  const h=new DataView(new ArrayBuffer(30));
+  h.setUint32(0,0x04034b50,true);h.setUint16(4,20,true);h.setUint16(6,0x0800,true);h.setUint16(8,0,true);h.setUint16(10,time,true);h.setUint16(12,date,true);
+  h.setUint32(14,crc,true);h.setUint32(18,size,true);h.setUint32(22,size,true);h.setUint16(26,name.length,true);h.setUint16(28,0,true);
+  parts.push(h.buffer,name,f.data);
+  const c=new DataView(new ArrayBuffer(46));
+  c.setUint32(0,0x02014b50,true);c.setUint16(4,20,true);c.setUint16(6,20,true);c.setUint16(8,0x0800,true);c.setUint16(10,0,true);c.setUint16(12,time,true);c.setUint16(14,date,true);
+  c.setUint32(16,crc,true);c.setUint32(20,size,true);c.setUint32(24,size,true);c.setUint16(28,name.length,true);c.setUint32(42,offset,true);
+  central.push(c.buffer,name);centralSize+=46+name.length;offset+=30+name.length+size;
+ }
+ const e=new DataView(new ArrayBuffer(22));
+ e.setUint32(0,0x06054b50,true);e.setUint16(8,files.length,true);e.setUint16(10,files.length,true);e.setUint32(12,centralSize,true);e.setUint32(16,offset,true);
+ return new Blob([...parts,...central,e.buffer],{type:'application/zip'});
 }
 
 /* ===== Contact dialog ===== */
@@ -1161,6 +1322,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#contactOverlay'
 
 /* ===== Start ===== */
 applyTranslations();renderPanels();renderPreview();showTab(activeTab);
-window.NewsletterEditor={autoFlow,get data(){return data},get currentLanguage(){return currentLanguage},get pageIndex(){return pageIndex},translations,t,setLanguage,showTab,saveNow};
+ensureImageSizes().then(n=>{if(n){persist();renderPreview()}});
+window.NewsletterEditor={ensureImageSizes,autoFlow,get data(){return data},get currentLanguage(){return currentLanguage},get pageIndex(){return pageIndex},translations,t,setLanguage,showTab,saveNow};
 })();
 </script></body></html>
