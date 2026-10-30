@@ -226,19 +226,25 @@ input[type=range]{accent-color:#245883}
 .nex-pages-container[data-view="two"] .nex-sheet,.nex-pages-container[data-view="grid"] .nex-sheet{transform:scale(var(--sheet-scale));transform-origin:top left;margin:0 calc(794px * (var(--sheet-scale) - 1)) calc(1123px * (var(--sheet-scale) - 1)) 0!important}
 .nex-pages-container[data-view="two"] .sheet-flow-bar,.nex-pages-container[data-view="grid"] .sheet-flow-bar{display:none!important}
 .nex-pages-container[data-view="grid"] .nex-page-active{outline-width:8px}.nex-pages-container[data-view="grid"] .nex-sheet:after{font-size:22px;bottom:2px}
-/* Body block editor */
-.blk-editor>label{display:block;font-size:12px;font-weight:700;color:#4c5968;margin:0 0 4px}.blk-hint{margin:0 0 6px;line-height:1.5}
-.blk{border:1px solid #d6e1ec;border-radius:9px;background:#fff;padding:8px}.blk-img{background:#f6f9fc}
-.blk-head{display:flex;align-items:center;justify-content:space-between;gap:6px;margin:0 0 6px}.blk-name{font-size:11px;font-weight:700;color:#4c6380}
-.blk-input{min-height:96px}.blk-input.is-drop,.blk-bar.is-drop,.blk-img.is-drop{outline:2px dashed #3d7fc0;outline-offset:2px;background:#eef6ff}
-.blk-foot{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:6px}.blk-drop{font-size:10px;color:#8090a2}
-.blk-caret{display:inline-flex;align-items:center;gap:6px}.blk-caret svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.blk-img-row{display:flex;gap:8px;flex-wrap:wrap;align-items:stretch}
-.blk-thumb{position:relative;width:96px;height:72px;border-radius:6px;overflow:hidden;background:#e3eaf2;border:1px solid #d0dbe7}.blk-thumb img{width:100%;height:100%;object-fit:cover;display:block}
-.blk-x{position:absolute;top:3px;right:3px;width:22px;height:22px;border-radius:50%;border:0;background:#0009;color:#fff;font-size:12px;line-height:22px;padding:0;cursor:pointer}.blk-x:hover{background:#b33d30}
-.blk-side{width:96px;height:72px;border:1px dashed #9db3c9;border-radius:6px;background:#fff;color:#2b5379;font-size:11px;font-weight:700;cursor:pointer;padding:4px}
-.blk-bar{display:flex;justify-content:center;gap:6px;margin:4px 0;position:relative}.blk-bar:before{content:'';position:absolute;left:0;right:0;top:50%;border-top:1px dashed #cdd8e4;z-index:0}
-.blk-add{position:relative;z-index:1;border:1px solid #cdd8e4;background:#fff;color:#2b5379;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;cursor:pointer}.blk-add:hover{border-color:#3d7fc0;background:#eef6ff}
+/* Undo / redo bar */
+.ux-statusbar{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}.ux-statusbar .ux-status{padding-top:7px}
+.ux-actions{display:flex;gap:5px;padding-top:6px}.ux-act{border:1px solid #d3deea;background:#fff;color:#23415f;border-radius:7px;padding:5px 9px;font-size:11px;font-weight:700;cursor:pointer}.ux-act:disabled{opacity:.4;cursor:default}.ux-act:not(:disabled):hover{border-color:#3d7fc0;background:#eef6ff}
+.ux-status.is-flash{color:#1f6a43;font-weight:700}
+/* WYSIWYG body editor */
+.ce-field>label{display:block;font-size:12px;font-weight:700;color:#4c5968;margin:0 0 5px}
+.ce-toolbar{display:flex;gap:6px;flex-wrap:wrap;padding:6px;border:1px solid #ccd5df;border-bottom:0;border-radius:6px 6px 0 0;background:#f4f7fb}
+.ce-tool{display:inline-flex;align-items:center;gap:5px;border:1px solid #cfdae6;background:#fff;color:#1e3b60;border-radius:6px;padding:6px 10px;font-size:12px;font-weight:700;cursor:pointer}.ce-tool:hover{border-color:#3d7fc0;background:#eef6ff}.ce-tool svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ce-editor{min-height:150px;max-height:560px;overflow:auto;border:1px solid #ccd5df;border-radius:0 0 6px 6px;padding:10px;background:#fff;color:#172b45;font-size:13px;line-height:1.7;white-space:normal;overflow-wrap:anywhere;outline:none}
+.ce-editor:focus{border-color:#4c8fd4;box-shadow:0 0 0 2px #4c8fd433}
+.ce-editor:empty:before{content:attr(data-placeholder);color:#718197}
+.ce-editor.is-drop{background:#f7fbff}
+.ce-fig{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0;padding:4px;border-radius:7px;border:1px dashed transparent;user-select:none}
+.ce-fig.is-target{border-color:#3d7fc0;background:#eef6ff}
+.ce-img{position:relative;display:inline-block;width:132px;height:96px;border-radius:6px;overflow:hidden;background:#e3eaf2;cursor:grab;box-shadow:0 1px 3px #0002}
+.ce-img img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}.ce-img.is-dragging{opacity:.35}
+.ce-x{position:absolute;top:4px;right:4px;width:22px;height:22px;border-radius:50%;border:0;background:#000a;color:#fff;font-size:12px;line-height:22px;padding:0;cursor:pointer;opacity:0;transition:opacity .12s}.ce-img:hover .ce-x,.ce-x:focus{opacity:1}.ce-x:hover{background:#b33d30}
+.ce-drop-line{position:absolute;height:3px;border-radius:2px;background:#2f7fd0;box-shadow:0 0 0 2px #2f7fd044;pointer-events:none;z-index:100001}
+.ce-hint{margin:6px 0 0;line-height:1.55}
 /* In-page confirm / alert */
 .ui-dialog-overlay{position:fixed;inset:0;background:rgba(12,26,45,.5);display:grid;place-items:center;z-index:100000;padding:20px}.ui-dialog{width:min(100%,420px);background:#fff;color:#1c344f;border-radius:14px;box-shadow:0 18px 60px #0004;padding:22px}.ui-dialog p{margin:0 0 18px;font-size:14px;line-height:1.6;white-space:pre-line}.ui-dialog-actions{display:flex;justify-content:flex-end;gap:8px}.ui-dialog-actions .btn{min-width:84px;padding:10px 14px}
 @media print{.ui-dialog-overlay{display:none!important}}
@@ -256,7 +262,7 @@ input[type=range]{accent-color:#245883}
 <button type="button" class="ux-tab" role="tab" data-act="tab" data-tab="content"><span class="tab-step">3</span><span data-i18n="tab.content"></span></button>
 <button type="button" class="ux-tab" role="tab" data-act="tab" data-tab="export"><span class="tab-step">4</span><span data-i18n="tab.export"></span></button>
 </nav>
-<div class="ux-status" id="saveStatus" role="status" aria-live="polite"></div>
+<div class="ux-statusbar"><div class="ux-status" id="saveStatus" role="status" aria-live="polite"></div><div class="ux-actions"><button type="button" class="ux-act" id="undoBtn" data-act="undo" data-i18n-attr="title:hist.undoTitle;aria-label:hist.undoTitle" disabled><span aria-hidden="true">↶</span> <span data-i18n="hist.undo"></span></button><button type="button" class="ux-act" id="redoBtn" data-act="redo" data-i18n-attr="title:hist.redoTitle;aria-label:hist.redoTitle" disabled><span aria-hidden="true">↷</span> <span data-i18n="hist.redo"></span></button><button type="button" class="ux-act" data-act="shortcuts"><span aria-hidden="true">⌨</span> <span data-i18n="keys.button"></span></button></div></div>
 </div>
 <div class="ux-body">
 <p class="ux-hint" id="tabHint"></p>
@@ -358,6 +364,7 @@ const translations={
  "img.insert":"插入到正文游標處","img.unplace":"移出正文","img.placed":"已插入正文","img.notPlaced":"顯示在文末圖片區","img.insertHelp":"這裡上傳的圖片會排在文章最後的拼貼區。想把圖片放在文字之間，請使用上方「正文與圖片」的「在游標處插入圖片」。","img.galleryMode":"文末圖片排列（未插入正文的圖片）","gallery.grid-cover":"自動拼貼（填滿裁切，整齊）","gallery.grid-contain":"自動拼貼（完整顯示）","gallery.stack":"單張依序排列（舊版）","img.galleryCols":"每列張數","cols.auto":"自動（依欄寬）","flow.reflow":"重新自動排版跨頁內容","flow.reflowHint":"修改文字或圖片後按這裡：先把自動接續的內容合併回原文，再依目前版面重新分頁（手動分割的內容不受影響）。",
  "view.label":"預覽方式","view.single":"單頁","view.two":"雙頁","view.grid":"多頁","view.hint":"點選頁面即可切換編輯，按兩下回到單頁檢視。",
  "blk.label":"正文與圖片（依順序排版）","blk.hint":"在文字中點一下要放圖的位置，再按「在游標處插入圖片」；也可以直接貼上圖片（Ctrl+V），或把照片拖進文字框。","blk.textN":"文字段落 {n}","blk.imgRow":"圖片（{n} 張並排）","blk.insertAtCursor":"在游標處插入圖片","blk.addText":"＋ 文字段落","blk.addImage":"＋ 圖片","blk.addSide":"＋ 並排一張","blk.removeImg":"刪除這張圖片","blk.confirmRemoveImg":"確定刪除這張圖片？","blk.confirmDeleteText":"確定刪除這段文字？","blk.confirmDeleteRow":"確定刪除這一列圖片？","blk.toCollage":"移到文末拼貼區","img.toBody":"放進正文（加在最後）","blk.dropHint":"可貼上或拖曳圖片",
+ "hist.undo":"復原","hist.redo":"重做","hist.undoTitle":"復原上一步（Ctrl+Z）","hist.redoTitle":"重做（Ctrl+Y）","keys.button":"快捷鍵","keys.list":"Ctrl + Z：復原上一步\nCtrl + Y 或 Ctrl + Shift + Z：重做\nCtrl + S：立即儲存\nCtrl + B：粗體（在正文選取文字後）\nCtrl + V：貼上文字或圖片\n\n圖片：在正文中用滑鼠拖動即可移到任何位置；拖到另一張圖片上會並排。\nMac 請以 ⌘ 取代 Ctrl。","status.savedNow":"已儲存","ce.label":"正文與圖片","ce.bold":"粗體","ce.boldTitle":"粗體（Ctrl+B）","ce.insert":"插入圖片","ce.hint":"直接打字即可。插入圖片：在文字中點一下再按「插入圖片」，或直接貼上、拖入照片。圖片可用滑鼠拖到文字中任何位置（藍線就是放下的位置），拖到另一張圖上即可並排；✕ 刪除，Ctrl+Z 可復原。",
  'handle.title':'拖曳調整寬度',
  'contact.open':'聯絡我','contact.title':'問題回報與使用協助','contact.intro':'如果編輯器出現錯誤或有使用問題，請透過以下電子郵件聯絡作者。',
  'contact.copy':'複製信箱','contact.copied':'已複製','contact.send':'撰寫郵件','contact.close':'關閉','contact.subject':'Newsletter 編輯器問題回報'
@@ -431,6 +438,7 @@ const translations={
  "img.insert":"본문 커서 위치에 삽입","img.unplace":"본문에서 빼기","img.placed":"본문에 삽입됨","img.notPlaced":"기사 끝 이미지 영역에 표시","img.insertHelp":"여기서 올린 이미지는 기사 끝 콜라주에 배치됩니다. 글 사이에 이미지를 넣으려면 위쪽 ‘본문과 이미지’에서 ‘커서 위치에 이미지 넣기’를 사용하세요.","img.galleryMode":"기사 끝 이미지 배치 (본문에 넣지 않은 이미지)","gallery.grid-cover":"자동 콜라주 (채우기, 정돈된 배치)","gallery.grid-contain":"자동 콜라주 (전체 보기)","gallery.stack":"한 장씩 차례로 (이전 방식)","img.galleryCols":"한 줄당 이미지 수","cols.auto":"자동 (단 너비 기준)","flow.reflow":"페이지 이어짐 다시 자동 배치","flow.reflowHint":"글이나 이미지를 수정한 뒤 누르세요. 자동으로 이어진 내용을 원래 기사로 합친 다음 현재 레이아웃에 맞게 다시 나눕니다. (직접 나눈 내용은 그대로 유지됩니다)",
  "view.label":"미리보기 방식","view.single":"한 페이지","view.two":"두 페이지","view.grid":"여러 페이지","view.hint":"페이지를 클릭하면 편집할 페이지로 바뀌고, 두 번 클릭하면 한 페이지 보기로 돌아갑니다.",
  "blk.label":"본문과 이미지 (순서대로 배치)","blk.hint":"본문에서 이미지를 넣을 위치를 클릭한 뒤 ‘커서 위치에 이미지 넣기’를 누르세요. 이미지를 바로 붙여넣거나(Ctrl+V) 사진을 글 상자로 끌어다 놓아도 됩니다.","blk.textN":"본문 단락 {n}","blk.imgRow":"이미지 ({n}장 나란히)","blk.insertAtCursor":"커서 위치에 이미지 넣기","blk.addText":"＋ 본문 단락","blk.addImage":"＋ 이미지","blk.addSide":"＋ 옆에 한 장 더","blk.removeImg":"이 이미지 삭제","blk.confirmRemoveImg":"이 이미지를 삭제할까요?","blk.confirmDeleteText":"이 단락을 삭제할까요?","blk.confirmDeleteRow":"이 이미지 줄을 삭제할까요?","blk.toCollage":"기사 끝 콜라주로 이동","img.toBody":"본문 끝에 넣기","blk.dropHint":"이미지 붙여넣기·끌어 놓기 가능",
+ "hist.undo":"실행 취소","hist.redo":"다시 실행","hist.undoTitle":"실행 취소 (Ctrl+Z)","hist.redoTitle":"다시 실행 (Ctrl+Y)","keys.button":"단축키","keys.list":"Ctrl + Z: 실행 취소\nCtrl + Y 또는 Ctrl + Shift + Z: 다시 실행\nCtrl + S: 지금 저장\nCtrl + B: 굵게 (본문에서 글자를 선택한 뒤)\nCtrl + V: 글자 또는 이미지 붙여넣기\n\n이미지: 본문 안에서 마우스로 끌어 원하는 위치로 옮길 수 있습니다. 다른 이미지 위에 놓으면 나란히 배치됩니다.\nMac에서는 Ctrl 대신 ⌘를 사용하세요.","status.savedNow":"저장됨","ce.label":"본문과 이미지","ce.bold":"굵게","ce.boldTitle":"굵게 (Ctrl+B)","ce.insert":"이미지 넣기","ce.hint":"바로 입력하면 됩니다. 이미지 넣기: 글 사이를 클릭한 뒤 ‘이미지 넣기’를 누르거나, 이미지를 붙여넣거나 끌어다 놓으세요. 이미지는 마우스로 끌어 글의 원하는 위치로 옮길 수 있고(파란 선이 놓일 위치), 다른 이미지 위에 놓으면 나란히 배치됩니다. ✕로 삭제, Ctrl+Z로 되돌리기.",
  'handle.title':'드래그하여 너비 조절',
  'contact.open':'문의하기','contact.title':'오류 신고 및 이용 문의','contact.intro':'편집기 오류나 이용 중 궁금한 점이 있다면 아래 이메일로 문의해 주세요.',
  'contact.copy':'이메일 복사','contact.copied':'복사 완료','contact.send':'이메일 보내기','contact.close':'닫기','contact.subject':'뉴스레터 편집기 오류 및 이용 문의'
@@ -504,6 +512,7 @@ const translations={
  "img.insert":"Insert at Cursor in Body","img.unplace":"Remove from Body","img.placed":"Placed in body","img.notPlaced":"Shown in the end-of-article image area","img.insertHelp":"Images uploaded here appear in the collage at the end of the article. To place an image between paragraphs, use “Insert Image at Cursor” in Body Text & Images above.","img.galleryMode":"End-of-article images (not placed in the body)","gallery.grid-cover":"Auto collage (fill & crop, tidy)","gallery.grid-contain":"Auto collage (show full image)","gallery.stack":"One by one (previous style)","img.galleryCols":"Images per row","cols.auto":"Auto (by column width)","flow.reflow":"Re-run Auto Continue","flow.reflowHint":"Use after editing text or images: auto-continued content is merged back into the original article and split again for the current layout. Manual splits are kept.",
  "view.label":"Preview","view.single":"Single Page","view.two":"Two Pages","view.grid":"All Pages","view.hint":"Click a page to edit it; double-click to return to single-page view.",
  "blk.label":"Body Text & Images (in order)","blk.hint":"Click in the text where the image should go, then press “Insert Image at Cursor”. You can also paste an image (Ctrl+V) or drag photos into the text box.","blk.textN":"Text {n}","blk.imgRow":"Images ({n} side by side)","blk.insertAtCursor":"Insert Image at Cursor","blk.addText":"+ Text","blk.addImage":"+ Image","blk.addSide":"+ Add One Beside","blk.removeImg":"Delete this image","blk.confirmRemoveImg":"Delete this image?","blk.confirmDeleteText":"Delete this text block?","blk.confirmDeleteRow":"Delete this row of images?","blk.toCollage":"Move to End Collage","img.toBody":"Add to End of Body","blk.dropHint":"Paste or drop images here",
+ "hist.undo":"Undo","hist.redo":"Redo","hist.undoTitle":"Undo (Ctrl+Z)","hist.redoTitle":"Redo (Ctrl+Y)","keys.button":"Shortcuts","keys.list":"Ctrl + Z: Undo\nCtrl + Y or Ctrl + Shift + Z: Redo\nCtrl + S: Save now\nCtrl + B: Bold (select text in the body first)\nCtrl + V: Paste text or images\n\nImages: drag an image with the mouse to move it anywhere in the text; drop it on another image to place them side by side.\nOn Mac, use ⌘ instead of Ctrl.","status.savedNow":"Saved","ce.label":"Body Text & Images","ce.bold":"Bold","ce.boldTitle":"Bold (Ctrl+B)","ce.insert":"Insert Image","ce.hint":"Just type. To add images: click in the text and press “Insert Image”, or paste or drop photos in. Drag an image with the mouse to move it anywhere in the text (the blue line shows where it lands); drop it on another image to place them side by side. ✕ deletes; Ctrl+Z undoes.",
  'handle.title':'Drag to resize',
  'contact.open':'Contact me','contact.title':'Bug Reports & Support','contact.intro':'Found a bug or need help with the editor? Contact the creator at the email below.',
  'contact.copy':'Copy Email','contact.copied':'Copied','contact.send':'Write Email','contact.close':'Close','contact.subject':'Newsletter Editor Bug Report / Support'
@@ -661,9 +670,31 @@ const uiConfirm=msg=>uiDialog(msg,true),uiAlert=msg=>uiDialog(msg,false);
 
 /* ===== Persistence ===== */
 let saveTimer=null,saveState='idle',lastSaved=null,storageWarned=false;
-function persist(){clearTimeout(saveTimer);saveTimer=setTimeout(saveNow,250)}
+/* ===== Undo / redo: snapshots of the data (image strings are shared, not copied) ===== */
+const HISTORY_MAX=80;let history=[],hIndex=-1,hTimer=null,restoring=false;
+const cloneData=v=>Array.isArray(v)?v.map(cloneData):v&&typeof v==='object'?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,cloneData(x)])):v;
+const dataSig=d=>JSON.stringify(d,(k,v)=>typeof v==='string'&&v.length>300?v.length+':'+v.slice(-48):v);
+function recordHistory(){
+ clearTimeout(hTimer);hTimer=null;const sig=dataSig(data);
+ if(history[hIndex]&&history[hIndex].sig===sig){history[hIndex].page=pageIndex;return}
+ history=history.slice(0,hIndex+1);history.push({sig,data:cloneData(data),page:pageIndex});
+ if(history.length>HISTORY_MAX)history.shift();hIndex=history.length-1;paintHistory();
+}
+const flushHistory=()=>{if(hTimer)recordHistory()};
+function scheduleHistory(){if(restoring)return;clearTimeout(hTimer);hTimer=setTimeout(recordHistory,400)}
+function paintHistory(){const u=$('#undoBtn'),r=$('#redoBtn');if(u)u.disabled=!(hIndex>0||hTimer);if(r)r.disabled=hIndex>=history.length-1}
+function stepHistory(d){
+ if(hTimer)recordHistory();
+ const n=hIndex+d;if(n<0||n>=history.length)return;
+ restoring=true;
+ try{hIndex=n;const h=history[n];data=cloneData(h.data);pageIndex=Math.min(Math.max(0,h.page),data.pages.length-1);undoSnapshot=null;flowMessage=[];saveNow();renderPanels();renderPreview()}
+ finally{restoring=false}
+ paintHistory();
+}
+function persist(){clearTimeout(saveTimer);saveTimer=setTimeout(saveNow,250);scheduleHistory();paintHistory()}
 function saveNow(){
  clearTimeout(saveTimer);saveTimer=null;
+ scheduleHistory();
  try{localStorage.setItem(STORAGE_KEY,JSON.stringify(data));saveState='saved';lastSaved=new Date()}
  catch(err){saveState='failed';if(!storageWarned){storageWarned=true;uiAlert(t('msg.storageFull'))}}
  paintStatus();
@@ -731,41 +762,56 @@ function renderDesign(){
 <details class="design-accordion" data-fold="design:layout"${fold('design:layout',true)?' open':''}><summary>${esc(t('design.layoutTitle'))}</summary><div class="design-inner"><p class="design-caption">${esc(t('design.layoutHint'))}</p><section class="template-gallery-container"><label class="demo-toggle"><input type="checkbox" data-demo-toggle${showDemo?' checked':''}> ${esc(t('design.demoToggle'))}</label><div class="template-gallery">${gallery}</div></section></div></details>
 <details class="design-accordion" data-fold="design:heading"${fold('design:heading',true)?' open':''}><summary>${esc(t('design.headingTitle'))}</summary><div class="design-inner"><p class="design-caption">${esc(t('design.headingHint'))}</p><div class="style-picks">${picks}</div><p class="tiny">${esc(t('design.partNote'))}</p></div></details>`;
 }
-/* ===== Body as blocks: text paragraphs and image rows, in reading order =====
-   Stored as plain body text where an image row is one line of [[IMG:id]] codes; users never see the codes. */
-function parseBlocks(body){
- const out=[];let buf=null;
- for(const line of String(body??'').split('\n')){
-  const ids=[...line.matchAll(IMG_TOKEN)].map(m=>m[1]);
-  if(!ids.length){(buf=buf||[]).push(line);continue}
-  const rest=line.replace(IMG_TOKEN,'').trim();if(rest)(buf=buf||[]).push(rest);
-  if(buf){out.push({type:'text',text:buf.join('\n')});buf=null}
-  out.push({type:'images',ids});
+/* ===== Body editor (what you see is what you get) =====
+   Text and pictures are edited in one box. Storage stays plain text: **bold** inside a line, and a
+   picture row is a line of [[IMG:id]] codes. Users never see either. */
+const inlineHTML=(line,tag='b')=>esc(line).replace(/\*\*(.+?)\*\*/g,`<${tag}>$1</${tag}>`);
+function ceFigHTML(imgs){
+ return `<figure class="ce-fig" contenteditable="false">${imgs.map(x=>`<span class="ce-img" draggable="true" data-id="${esc(x.id)}"><img src="${esc(x.src)}" alt="" draggable="false"><button type="button" class="ce-x" data-act="ce-img-del" tabindex="-1" title="${esc(t('blk.removeImg'))}" aria-label="${esc(t('blk.removeImg'))}">✕</button></span>`).join('')}</figure>`;
+}
+function ceHTML(a){
+ const byId=new Map(a.extraImages.map(x=>[x.id,x]));let html='',prevText=false;
+ for(const line of String(a.body??'').split('\n')){
+  const ids=[...line.matchAll(IMG_TOKEN)].map(m=>m[1]).filter(id=>byId.has(id)),rest=line.replace(IMG_TOKEN,'');
+  if(ids.length){if(rest.trim()){if(prevText)html+='<br>';html+=inlineHTML(rest.trim())}html+=ceFigHTML(ids.map(id=>byId.get(id)));prevText=false}
+  else{if(prevText)html+='<br>';html+=inlineHTML(rest);prevText=true}
  }
- if(buf)out.push({type:'text',text:buf.join('\n')});
- return out.length?out:[{type:'text',text:''}];
+ /* a trailing <br> keeps the last empty line / the spot after a final picture reachable */
+ if(/(<br>|<\/figure>)$/.test(html))html+='<br>';
+ return html;
 }
-function serializeBlocks(blocks){
- let body='';const starts=[];
- blocks.forEach((b,i)=>{if(i)body+='\n';starts.push(body.length);body+=b.type==='text'?b.text:b.ids.map(id=>`[[IMG:${id}]]`).join(' ')});
- return {body,starts};
+/* Editor DOM → stored text. partial=true is used to measure the text before the cursor. */
+function ceSerialize(root,partial){
+ const lines=[''];let open=false,afterFig=false,pend=false;
+ const last=()=>lines.length-1;
+ const closeBold=()=>{if(open){lines[last()]+='**';open=false}};
+ const newline=()=>{closeBold();lines.push('')};
+ const flushPend=()=>{if(pend){pend=false;if(afterFig)afterFig=false;newline()}};
+ const addText=(s,b)=>{s=s.replace(/ /g,' ').replace(/[​﻿]/g,'');if(!s)return;
+  flushPend();if(afterFig){lines.push('');afterFig=false}
+  const parts=s.split('\n');parts.forEach((piece,k)=>{if(k)newline();if(!piece)return;if(b!==open){lines[last()]+='**';open=b}lines[last()]+=piece});};
+ const addFig=ids=>{pend=false;closeBold();if(lines[last()]!==''||afterFig)lines.push('');lines[last()]=ids.map(id=>`[[IMG:${id}]]`).join(' ');afterFig=true};
+ const walk=(node,b)=>{for(const n of node.childNodes){
+  if(n.nodeType===3){addText(n.nodeValue,b);continue}
+  if(n.nodeType!==1||n.matches('.ce-x,.ce-drop-line'))continue;
+  if(n.matches('figure.ce-fig')){const ids=[...n.querySelectorAll('[data-id]')].map(x=>x.dataset.id);if(ids.length)addFig(ids);continue}
+  if(n.tagName==='BR'){
+   if(/^(DIV|P|LI)$/.test(n.parentElement.tagName)&&n.parentElement!==root&&!n.nextSibling)continue;
+   flushPend();if(afterFig){afterFig=false;lines.push('')}else newline();continue}
+  const bold=b||/^(B|STRONG)$/.test(n.tagName)||n.style.fontWeight==='bold'||Number(n.style.fontWeight)>=600;
+  const block=/^(DIV|P|LI|H[1-6]|BLOCKQUOTE)$/.test(n.tagName);
+  if(block){if(pend)flushPend();else if(lines[last()]!==''||afterFig){if(afterFig){afterFig=false;lines.push('')}else newline()}}
+  walk(n,bold);
+  if(block)pend=true;
+ }};
+ walk(root,false);
+ if(!partial)closeBold();
+ let out=lines.join('\n');
+ if(!partial&&root.lastChild&&root.lastChild.nodeName==='BR'&&out.endsWith('\n'))out=out.slice(0,-1);
+ return out;
 }
-function blocksHTML(a){
- const blocks=parseBlocks(a.body),byId=new Map(a.extraImages.map(x=>[x.id,x]));
- const bar=i=>{const textNear=blocks[i-1]?.type==='text'||blocks[i]?.type==='text';
-  return `<div class="blk-bar" data-at="${i}">${textNear?'':`<button type="button" class="blk-add" data-act="blk-add-text" data-at="${i}">${esc(t('blk.addText'))}</button>`}<button type="button" class="blk-add" data-act="blk-add-img" data-at="${i}">${esc(t('blk.addImage'))}</button></div>`};
- let html=bar(0),nText=0;
- blocks.forEach((b,i)=>{
-  const tools=`<div class="minirow"><button type="button" class="btn secondary small" data-act="blk-up" title="${esc(t('common.moveUp'))}" aria-label="${esc(t('common.moveUp'))}"${i===0?' disabled':''}>↑</button><button type="button" class="btn secondary small" data-act="blk-down" title="${esc(t('common.moveDown'))}" aria-label="${esc(t('common.moveDown'))}"${i===blocks.length-1?' disabled':''}>↓</button><button type="button" class="btn warning small" data-act="blk-del">${esc(t('common.delete'))}</button></div>`;
-  if(b.type==='text'){nText++;
-   html+=`<div class="blk blk-text" data-bi="${i}"><div class="blk-head"><span class="blk-name">${esc(t('blk.textN',{n:nText}))}</span>${tools}</div><textarea class="blk-input" data-bi="${i}" placeholder="${esc(t('ph.articleBody'))}">${esc(b.text)}</textarea><div class="blk-foot"><button type="button" class="btn secondary small blk-caret" data-act="blk-img-caret"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="m5 17 5-5 3 3 2-2 4 4"/></svg>${esc(t('blk.insertAtCursor'))}</button><span class="blk-drop">${esc(t('blk.dropHint'))}</span></div></div>`;
-  }else{
-   const imgs=b.ids.map(id=>byId.get(id)).filter(Boolean);
-   html+=`<div class="blk blk-img" data-bi="${i}"><div class="blk-head"><span class="blk-name">${esc(t('blk.imgRow',{n:imgs.length}))}</span>${tools}</div><div class="blk-img-row">${imgs.map(x=>`<div class="blk-thumb" data-img="${esc(x.id)}"><img src="${esc(x.src)}" alt=""><button type="button" class="blk-x" data-act="blk-img-del" title="${esc(t('blk.removeImg'))}" aria-label="${esc(t('blk.removeImg'))}">✕</button></div>`).join('')}${imgs.length<3?`<button type="button" class="blk-side" data-act="blk-img-side">${esc(t('blk.addSide'))}</button>`:''}</div></div>`;
-  }
-  html+=bar(i+1);
- });
- return `<div class="field blk-editor"><label>${esc(t('blk.label'))}</label><p class="tiny blk-hint">${esc(t('blk.hint'))}</p>${html}</div>`;
+function ceEditorHTML(a){
+ return `<div class="field ce-field"><label>${esc(t('ce.label'))}</label><div class="ce-toolbar"><button type="button" class="ce-tool" data-act="ce-bold" title="${esc(t('ce.boldTitle'))}"><b>B</b> ${esc(t('ce.bold'))}</button><button type="button" class="ce-tool" data-act="ce-insert"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="m5 17 5-5 3 3 2-2 4 4"/></svg>${esc(t('ce.insert'))}</button></div><div class="ce-editor" contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" aria-label="${esc(t('ce.label'))}" data-placeholder="${esc(t('ph.articleBody'))}">${ceHTML(a)}</div><p class="tiny ce-hint">${esc(t('ce.hint'))}</p></div>`;
 }
 function articleHTML(part,a,j,count){
  const open=openArticles.has(a.id),firstLine=(a.title||'').split('\n')[0]||t('article.untitled');
@@ -804,7 +850,7 @@ ${a.extraImages.map((ex,k)=>`<div class="extra-edit" data-j="${k}"><div class="e
 <div class="ux-article-body"${open?'':' hidden'}>
 <div class="field"><label>${esc(t('article.title'))}</label><textarea rows="2" data-art-field="title" placeholder="${esc(t('ph.articleTitle'))}">${esc(a.title)}</textarea></div>
 ${a.sampleTag?`<div class="sample-notice"><span>${esc(t('article.sampleNotice'))} <b>${esc(t('sample.'+a.sampleTag+'Placeholder'))}</b></span><button type="button" class="btn secondary small" data-act="art-unmark">${esc(t('article.sampleRemove'))}</button></div>`:''}
-${blocksHTML(a)}
+${ceEditorHTML(a)}
 ${(a.continuesNext||a.continuedFrom)?`<div class="sample-notice cont-notice"><span>${esc(t('flow.markerNotice'))} <b>${esc([a.continuedFrom?t('flow.contPrev'):'',a.continuesNext?t('flow.contNext'):''].filter(Boolean).join(' '))}</b></span><button type="button" class="btn secondary small" data-act="art-unflow">${esc(t('flow.markerRemove'))}</button></div>`:''}
 <div class="flow-tools"><span class="flow-tools-title">${esc(t('flow.title'))}</span><button type="button" class="btn secondary small" data-act="art-split">${esc(t('flow.splitCursor'))}</button><button type="button" class="btn secondary small" data-act="art-next">${esc(t('flow.moveNext'))}</button></div>
 <details class="sub-settings" data-fold="text:${a.id}"${fold('text:'+a.id,false)?' open':''}><summary>${esc(t('type.group'))}</summary><div class="sub-settings-inner">${typeControls}</div></details>
@@ -860,7 +906,7 @@ function figImg(x,cols,mode){
 /* Body text with image codes ([[IMG:id]]) turned into pictures at that spot; codes on one line sit side by side. */
 function richBody(a,text){
  const byId=new Map(a.extraImages.map(x=>[x.id,x]));let html='',buf=[];
- const flush=()=>{if(buf.length){html+=esc(buf.join('\n'));buf=[]}};
+ const flush=()=>{if(buf.length){html+=buf.map(l=>inlineHTML(l,'strong')).join('\n');buf=[]}};
  for(const line of String(text).split('\n')){
   const ids=[...line.matchAll(IMG_TOKEN)].map(m=>m[1]).filter(id=>byId.has(id));
   if(!ids.length){buf.push(line);continue}
@@ -1006,12 +1052,15 @@ function stripToken(body,id){
  for(const line of lines){if(!line.includes(token)){out.push(line);continue}const rest=line.split(token).join('').replace(/[ \t]{2,}/g,' ').trim();if(rest)out.push(rest)}
  return out.join('\n');
 }
-/* Remember where the user last put the cursor in each article's text blocks. */
-const lastCaret=new Map();
-['focusin','keyup','click','select','input'].forEach(type=>document.addEventListener(type,e=>{const ta=e.target;if(ta&&ta.matches&&ta.matches('textarea.blk-input')){const aid=ta.closest('[data-aid]')?.dataset.aid;if(aid)lastCaret.set(aid,{bi:Number(ta.dataset.bi),pos:ta.selectionStart})}},true));
-/* Live cursor position (a textarea keeps its selection after losing focus) in the text block last used. */
-function caretIn(a,bi){const c=lastCaret.get(a.id);if(!c||c.bi!==bi)return null;const ta=document.querySelector(`.article-item[data-aid="${a.id}"] textarea.blk-input[data-bi="${bi}"]`);return ta?ta.selectionStart:c.pos}
-function caretOffset(a){const c=lastCaret.get(a.id);if(!c)return 0;const blocks=parseBlocks(a.body),b=blocks[c.bi];if(!b||b.type!=='text')return 0;return serializeBlocks(blocks).starts[c.bi]+Math.min(caretIn(a,c.bi)??0,b.text.length)}
+/* ===== Body editor interactions ===== */
+const savedRange=new Map();
+document.addEventListener('selectionchange',()=>{const sel=getSelection();if(!sel.rangeCount)return;const n=sel.anchorNode,ed=n&&(n.nodeType===1?n:n.parentElement)?.closest?.('.ce-editor');
+ if(ed){const aid=ed.closest('[data-aid]')?.dataset.aid;if(aid)savedRange.set(aid,sel.getRangeAt(0).cloneRange())}});
+const editorOf=aid=>document.querySelector(`.article-item[data-aid="${aid}"] .ce-editor`);
+function offsetAt(ed,container,offset){const r=document.createRange();r.setStart(ed,0);r.setEnd(container,offset);const box=document.createElement('div');box.appendChild(r.cloneContents());return ceSerialize(box,true).length}
+/* Position in the stored text of the user's cursor in this article (null when unknown). */
+function caretOffset(a){const ed=editorOf(a.id),r=savedRange.get(a.id);if(!ed||!r||!ed.contains(r.startContainer))return null;return offsetAt(ed,r.startContainer,r.startOffset)}
+function rangeFromPoint(x,y){if(document.caretRangeFromPoint)return document.caretRangeFromPoint(x,y);const pos=document.caretPositionFromPoint&&document.caretPositionFromPoint(x,y);if(!pos)return null;const r=document.createRange();r.setStart(pos.offsetNode,pos.offset);return r}
 function pickImages(multiple){
  return new Promise(resolve=>{const input=document.createElement('input');input.type='file';input.accept='image/*';input.multiple=!!multiple;input.hidden=true;
   input.addEventListener('change',()=>{resolve([...input.files]);input.remove()});input.addEventListener('cancel',()=>{resolve([]);input.remove()});
@@ -1023,52 +1072,121 @@ function loadImageFiles(files){
 }
 /* 1→1, 2→2, 3→3, 4→2+2, 5→3+2, 6→3+3 … pictures per row */
 function chunkRows(ids){const rows=[];let rest=ids.slice();while(rest.length){const n=rest.length===4?2:Math.min(3,rest.length);rows.push(rest.splice(0,n))}return rows}
-/* Adds pictures to an article at a place in its blocks: {at} between blocks, {split:bi,pos} inside a text block, {side:bi} beside a row. */
-async function insertImages(aid,files,where){
+/* Inserts picture rows into stored text at an offset, keeping **bold** balanced on the split line. */
+function insertRowsAt(body,offset,ids){
+ body=String(body);let off=offset==null?body.length:safeCut(body,Math.min(Math.max(0,offset),body.length));
+ let before=body.slice(0,off),after=body.slice(off);
+ if(((before.slice(before.lastIndexOf('\n')+1).match(/\*\*/g)||[]).length)%2){before+='**';after='**'+after}
+ const rows=chunkRows(ids).map(r=>r.map(id=>`[[IMG:${id}]]`).join(' ')).join('\n');
+ return before+(before&&!before.endsWith('\n')?'\n':'')+rows+(after&&!after.startsWith('\n')?'\n':'')+after;
+}
+function findArticleById(aid){for(const pt of curPage().parts){const a=pt.articles.find(x=>x.id===aid);if(a)return a}return null}
+async function insertImages(aid,files,offset,joinRowOf){
  const imgs=await loadImageFiles(files);if(!imgs.length)return;
- const a=findArticle(document.querySelector(`.article-item[data-aid="${aid}"]`)?.closest('[data-pid]')?.dataset.pid,aid);if(!a)return;
- a.extraImages.push(...imgs);
- let blocks=parseBlocks(a.body);const ids=imgs.map(x=>x.id);
- if(blocks.length===1&&blocks[0].type==='text'&&!blocks[0].text&&where.at!==undefined){blocks=[];where={at:0}}
- if(where.side!==undefined&&blocks[where.side]?.type==='images'){const row=blocks[where.side];const room=Math.max(0,3-row.ids.length);row.ids.push(...ids.slice(0,room));blocks.splice(where.side+1,0,...chunkRows(ids.slice(room)).map(r=>({type:'images',ids:r})))}
- else if(where.split!==undefined&&blocks[where.split]?.type==='text'){
-  const b=blocks[where.split],pos=Math.min(Math.max(0,where.pos),b.text.length),before=b.text.slice(0,pos).replace(/\n+$/,''),after=b.text.slice(pos).replace(/^\n+/,'');
-  const repl=[];if(before)repl.push({type:'text',text:before});repl.push(...chunkRows(ids).map(r=>({type:'images',ids:r})));if(after)repl.push({type:'text',text:after});
-  blocks.splice(where.split,1,...repl);
- }else blocks.splice(Math.min(where.at??blocks.length,blocks.length),0,...chunkRows(ids).map(r=>({type:'images',ids:r})));
- a.body=serializeBlocks(blocks).body;openArticles.add(aid);structural();
+ const a=findArticleById(aid);if(!a)return;flushHistory();
+ a.extraImages.push(...imgs);const ids=imgs.map(x=>x.id);
+ if(joinRowOf){const lines=a.body.split('\n'),k=lines.findIndex(l=>l.includes(`[[IMG:${joinRowOf}]]`));
+  if(k>-1){const have=[...lines[k].matchAll(IMG_TOKEN)].length,room=Math.max(0,3-have);lines[k]+=ids.slice(0,room).map(id=>` [[IMG:${id}]]`).join('');a.body=lines.join('\n');
+   const restIds=ids.slice(room);if(restIds.length){const end=a.body.split('\n').slice(0,k+1).join('\n').length;a.body=insertRowsAt(a.body,end,restIds)}
+   openArticles.add(aid);return structural()}}
+ a.body=insertRowsAt(a.body,offset,ids);openArticles.add(aid);structural();
 }
-async function blockAction(act,btn,a){
- const blocks=parseBlocks(a.body),bi=Number(btn.closest('[data-bi]')?.dataset.bi),at=Number(btn.dataset.at);
- const commit=()=>{a.body=serializeBlocks(blocks).body;structural()};
- const removeImgs=ids=>{a.extraImages=a.extraImages.filter(x=>!ids.includes(x.id))};
- switch(act){
-  case 'blk-add-text':blocks.splice(at,0,{type:'text',text:''});a.body=serializeBlocks(blocks).body;structural();document.querySelector(`.article-item[data-aid="${a.id}"] textarea.blk-input[data-bi="${at}"]`)?.focus();return;
-  case 'blk-add-img':return insertImages(a.id,await pickImages(true),{at});
-  case 'blk-img-caret':{const ta=btn.closest('.blk-text').querySelector('textarea');const pos=caretIn(a,bi)??ta.value.length;
-   return insertImages(a.id,await pickImages(true),{split:bi,pos})}
-  case 'blk-img-side':return insertImages(a.id,await pickImages(true),{side:bi});
-  case 'blk-img-del':{const id=btn.closest('[data-img]').dataset.img;if(!await uiConfirm(t('blk.confirmRemoveImg')))return;
-   const row=blocks[bi];row.ids=row.ids.filter(x=>x!==id);if(!row.ids.length)blocks.splice(bi,1);removeImgs([id]);return commit()}
-  case 'blk-up':case 'blk-down':if(move(blocks,bi,act==='blk-up'?-1:1))commit();return;
-  case 'blk-del':{const b=blocks[bi];if(!b)return;
-   if(b.type==='images'){if(!await uiConfirm(t('blk.confirmDeleteRow')))return;removeImgs(b.ids)}
-   else if(b.text.trim()&&!await uiConfirm(t('blk.confirmDeleteText')))return;
-   blocks.splice(bi,1);if(!blocks.length)blocks.push({type:'text',text:''});return commit()}
+function onEditorInput(ed){
+ const item=ed.closest('.article-item'),a=findArticleById(item.dataset.aid);if(!a)return;
+ const before=placedIds(a.body);a.body=ceSerialize(ed);const now=placedIds(a.body);
+ const gone=[...before].filter(id=>!now.has(id));if(gone.length)a.extraImages=a.extraImages.filter(x=>!gone.includes(x.id));
+ if(a.sampleTag){delete a.sampleTag;item.querySelector('.sample-notice')?.remove()}
+ refreshPlaceStates(item,a);persist();schedulePreview();
+}
+/* Keyboard: Enter = line break, Ctrl+B = bold; paste stays plain text unless it is a picture. */
+/* The picture right before (Backspace) or after (Delete) a collapsed cursor, if any. */
+function figureBeside(ed,forward){
+ const sel=getSelection();if(!sel.rangeCount||!sel.isCollapsed)return null;let node=sel.anchorNode;const off=sel.anchorOffset;
+ if(node.nodeType===3){if(forward?off<node.nodeValue.length:off>0)return null}
+ else{const kid=forward?node.childNodes[off]:node.childNodes[off-1];if(kid)return kid.nodeType===1&&kid.matches('figure.ce-fig')?kid:null}
+ while(node&&node!==ed){const sib=forward?node.nextSibling:node.previousSibling;if(sib)return sib.nodeType===1&&sib.matches('figure.ce-fig')?sib:null;node=node.parentNode}
+ return null;
+}
+document.addEventListener('keydown',e=>{const ed=e.target.closest&&e.target.closest('.ce-editor');if(!ed)return;
+ if((e.key==='Backspace'||e.key==='Delete')&&!e.isComposing){const fig=figureBeside(ed,e.key==='Delete');
+  if(fig){e.preventDefault();flushHistory();const aid=ed.closest('[data-aid]').dataset.aid,a=findArticleById(aid);if(!a)return;
+   const ids=[...fig.querySelectorAll('[data-id]')].map(x=>x.dataset.id),id=ids[e.key==='Delete'?0:ids.length-1];
+   a.body=stripToken(a.body,id);a.extraImages=a.extraImages.filter(x=>x.id!==id);openArticles.add(aid);structural();return}}
+ if(e.key==='Enter'&&!e.isComposing){e.preventDefault();if(!document.execCommand('insertLineBreak'))document.execCommand('insertHTML',false,'<br>')}
+ if((e.ctrlKey||e.metaKey)&&!e.altKey&&e.key.toLowerCase()==='b'){e.preventDefault();document.execCommand('bold')}
+});
+document.addEventListener('paste',e=>{const ed=e.target.closest&&e.target.closest('.ce-editor');if(!ed)return;e.preventDefault();
+ const files=[...(e.clipboardData?.files||[])].filter(f=>/^image\//.test(f.type)),aid=ed.closest('[data-aid]').dataset.aid;
+ if(files.length){const sel=getSelection(),off=sel.rangeCount&&ed.contains(sel.anchorNode)?offsetAt(ed,sel.getRangeAt(0).startContainer,sel.getRangeAt(0).startOffset):null;insertImages(aid,files,off);return}
+ const text=e.clipboardData?.getData('text/plain');if(text)document.execCommand('insertText',false,text);});
+/* Drag pictures to move them inside the text; drop on another picture to sit side by side. */
+let dragImg=null;
+/* Snap a drop point to the paragraph boundary nearest the pointer, so pictures land between paragraphs
+   instead of cutting a sentence. Returns {range, y} for where to insert and where to draw the guide. */
+function dropSpot(ed,x,y){
+ const r=rangeFromPoint(x,y);if(!r||!ed.contains(r.startContainer))return null;
+ let node=r.startContainer;if(node===ed){node=ed.childNodes[Math.min(r.startOffset,ed.childNodes.length-1)];if(!node)return {range:r,y:ed.getBoundingClientRect().top+8}}
+ while(node.parentNode&&node.parentNode!==ed)node=node.parentNode;
+ const isBreak=n=>n&&n.nodeType===1&&(n.tagName==='BR'||n.matches('figure.ce-fig'));
+ let first=node,last=node;
+ if(!(node.nodeType===1&&/^(DIV|P)$/.test(node.tagName))){
+  if(isBreak(node)){const prev=node.previousSibling;if(prev&&!isBreak(prev)){first=last=prev}else{const g=document.createRange();g.setStartBefore(node);g.collapse(true);return {range:g,y:node.getBoundingClientRect().top}}}
+  while(first.previousSibling&&!isBreak(first.previousSibling))first=first.previousSibling;
+  while(last.nextSibling&&!isBreak(last.nextSibling))last=last.nextSibling;
  }
+ const para=document.createRange();para.setStartBefore(first);para.setEndAfter(last);const box=para.getBoundingClientRect();
+ const g=document.createRange(),above=y<box.top+box.height/2;
+ if(above)g.setStartBefore(first);else g.setStartAfter(last);g.collapse(true);
+ return {range:g,y:above?box.top-3:box.bottom+1};
 }
-/* Paste or drop pictures straight into a text block (at the cursor) or onto a "+" bar. */
-document.addEventListener('paste',e=>{const ta=e.target;if(!ta.matches||!ta.matches('textarea.blk-input'))return;
- const files=[...(e.clipboardData?.files||[])].filter(f=>/^image\//.test(f.type));if(!files.length)return;e.preventDefault();
- const aid=ta.closest('[data-aid]').dataset.aid;insertImages(aid,files,{split:Number(ta.dataset.bi),pos:ta.selectionStart});});
-const dropZone=el=>el&&el.closest&&el.closest('textarea.blk-input,.blk-bar,.blk-img');
-document.addEventListener('dragover',e=>{const z=dropZone(e.target);if(z&&[...(e.dataTransfer?.types||[])].includes('Files')){e.preventDefault();z.classList.add('is-drop')}});
-document.addEventListener('dragleave',e=>{const z=dropZone(e.target);if(z)z.classList.remove('is-drop')});
-document.addEventListener('drop',e=>{const z=dropZone(e.target);if(!z)return;const files=[...(e.dataTransfer?.files||[])].filter(f=>/^image\//.test(f.type));if(!files.length)return;e.preventDefault();z.classList.remove('is-drop');
- const aid=z.closest('[data-aid]').dataset.aid;
- if(z.matches('textarea'))insertImages(aid,files,{split:Number(z.dataset.bi),pos:document.activeElement===z?z.selectionStart:z.value.length});
- else if(z.matches('.blk-img'))insertImages(aid,files,{side:Number(z.dataset.bi)});
- else insertImages(aid,files,{at:Number(z.dataset.at)});});
+const dropLine=()=>{let l=document.querySelector('.ce-drop-line');if(!l){l=document.createElement('div');l.className='ce-drop-line';document.body.appendChild(l)}return l};
+const clearDrop=()=>{document.querySelector('.ce-drop-line')?.remove();document.querySelectorAll('.ce-fig.is-target,.ce-editor.is-drop').forEach(x=>x.classList.remove('is-target','is-drop'))};
+document.addEventListener('dragstart',e=>{const img=e.target.closest&&e.target.closest('.ce-img');if(!img)return;dragImg=img;e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('text/x-newsletter-img',img.dataset.id);img.classList.add('is-dragging')});
+document.addEventListener('dragend',()=>{dragImg?.classList.remove('is-dragging');dragImg=null;clearDrop()});
+document.addEventListener('dragover',e=>{const ed=e.target.closest&&e.target.closest('.ce-editor');if(!ed)return;
+ const files=[...(e.dataTransfer?.types||[])].includes('Files');if(!dragImg&&!files)return;
+ if(dragImg&&dragImg.closest('.ce-editor')!==ed)return;
+ e.preventDefault();e.dataTransfer.dropEffect=dragImg?'move':'copy';
+ document.querySelectorAll('.ce-fig.is-target').forEach(x=>x.classList.remove('is-target'));ed.classList.add('is-drop');
+ const fig=e.target.closest('.ce-fig'),line=dropLine();
+ if(fig&&(!dragImg||!fig.contains(dragImg)||fig.children.length>1)){fig.classList.add('is-target');line.hidden=true;return}
+ const spot=dropSpot(ed,e.clientX,e.clientY);if(!spot){line.hidden=true;return}
+ const edBox=ed.getBoundingClientRect();line.hidden=false;line.style.cssText=`left:${edBox.left+6+window.scrollX}px;top:${spot.y+window.scrollY}px;width:${edBox.width-12}px`;
+});
+document.addEventListener('dragleave',e=>{const ed=e.target.closest&&e.target.closest('.ce-editor');if(ed&&!ed.contains(e.relatedTarget))clearDrop()});
+document.addEventListener('drop',e=>{const ed=e.target.closest&&e.target.closest('.ce-editor');if(!ed)return;
+ const aid=ed.closest('[data-aid]').dataset.aid,fig=e.target.closest('.ce-fig'),files=[...(e.dataTransfer?.files||[])].filter(f=>/^image\//.test(f.type));
+ if(!dragImg&&!files.length)return;e.preventDefault();clearDrop();
+ if(files.length&&!dragImg){
+  if(fig){insertImages(aid,files,null,fig.querySelector('[data-id]')?.dataset.id);return}
+  const spot=dropSpot(ed,e.clientX,e.clientY);insertImages(aid,files,spot?offsetAt(ed,spot.range.startContainer,spot.range.startOffset):null);return;
+ }
+ const src=dragImg,oldFig=src.closest('.ce-fig');if(src.closest('.ce-editor')!==ed)return;flushHistory();
+ if(fig){const over=e.target.closest('.ce-img');
+  if(fig.contains(src)&&!over)return;
+  if(!fig.contains(src)&&fig.querySelectorAll('.ce-img').length>=3)return;
+  if(over&&over!==src){const rb=over.getBoundingClientRect();fig.insertBefore(src,e.clientX>rb.left+rb.width/2?over.nextSibling:over)}else if(!over)fig.appendChild(src);
+ }else{
+  const spot=dropSpot(ed,e.clientX,e.clientY);if(!spot||src.contains(spot.range.startContainer))return;
+  const nf=document.createElement('figure');nf.className='ce-fig';nf.contentEditable='false';nf.appendChild(src);spot.range.insertNode(nf);
+ }
+ if(oldFig&&!oldFig.querySelector('.ce-img')){
+  /* the picture was the line break between two text lines: keep that break */
+  const inline=x=>x&&!(x.nodeType===1&&(x.tagName==='BR'||x.matches('figure,div,p')));
+  if(inline(oldFig.previousSibling)&&inline(oldFig.nextSibling))oldFig.replaceWith(document.createElement('br'));else oldFig.remove();
+ }
+ dragImg=null;
+ const a=findArticleById(aid);if(!a)return;a.body=ceSerialize(ed);openArticles.add(aid);structural();
+});
+/* Undo / redo / save shortcuts anywhere in the editor (also replaces the browser's own text undo). */
+document.addEventListener('keydown',e=>{
+ if(!(e.ctrlKey||e.metaKey)||e.altKey)return;const k=e.key.toLowerCase();
+ if(k==='z'){e.preventDefault();stepHistory(e.shiftKey?1:-1)}
+ else if(k==='y'){e.preventDefault();stepHistory(1)}
+ else if(k==='s'){e.preventDefault();saveNow();recordHistory();flashSaved()}
+},true);
+document.addEventListener('beforeinput',e=>{if(e.inputType==='historyUndo'||e.inputType==='historyRedo'){e.preventDefault();stepHistory(e.inputType==='historyUndo'?-1:1)}},true);
+function flashSaved(){const el=$('#saveStatus');if(!el)return;el.innerHTML='<span aria-hidden="true">●</span> '+esc(t('status.savedNow'));el.classList.add('is-flash');setTimeout(()=>{el.classList.remove('is-flash');paintStatus()},1500)}
 function move(list,i,d){const n=i+d;if(n<0||n>=list.length)return false;[list[i],list[n]]=[list[n],list[i]];return true}
 function structural(){persist();renderContent();renderCurrentSheet()}
 function readImage(file,callback,kind,onFail){
@@ -1100,6 +1218,7 @@ function handleUpload(input){
  if(kind==='extra')for(const file of files)readImage(file,(v,w,h)=>{const a=target();if(!a)return;a.extraImages.push({id:shortId(),src:v,ratio:'original',fit:'contain',x:50,y:50,w,h});folds.set('img:'+aid,true);structural()},'photo');
 }
 function onAction(btn){
+ if(!/^(undo|redo|tab|lang|view|page-select|part-toggle|art-toggle|shortcuts|contact-)/.test(btn.dataset.act))flushHistory();
  const act=btn.dataset.act,pid=btn.closest('[data-pid]')?.dataset.pid,aid=btn.closest('[data-aid]')?.dataset.aid;
  const pg=curPage(),part=pid?findPart(pid):null,a=part&&aid?part.articles.find(x=>x.id===aid):null;
  switch(act){
@@ -1124,16 +1243,20 @@ function onAction(btn){
   case 'extra-remove':if(a){const ex=a.extraImages[Number(btn.closest('[data-j]').dataset.j)];if(ex){a.body=stripToken(a.body,ex.id);a.extraImages.splice(a.extraImages.indexOf(ex),1)}structural()}return;
   case 'extra-tobody':case 'extra-unplace':{if(!a)return;const ex=a.extraImages[Number(btn.closest('[data-j]').dataset.j)];if(!ex)return;
    a.body=stripToken(a.body,ex.id);
-   if(act==='extra-tobody'){const blocks=parseBlocks(a.body);if(blocks.length===1&&blocks[0].type==='text'&&!blocks[0].text)blocks.length=0;blocks.push({type:'images',ids:[ex.id]});a.body=serializeBlocks(blocks).body}
+   if(act==='extra-tobody')a.body=insertRowsAt(a.body,null,[ex.id]);
    structural();return}
-  case 'blk-add-text':case 'blk-add-img':case 'blk-img-caret':case 'blk-img-side':case 'blk-img-del':case 'blk-up':case 'blk-down':case 'blk-del':
-   if(a)blockAction(act,btn,a);return;
+  case 'ce-bold':{const ed=btn.closest('.ce-field').querySelector('.ce-editor');ed.focus();const r=savedRange.get(aid);if(r&&ed.contains(r.startContainer)){const sel=getSelection();sel.removeAllRanges();sel.addRange(r)}document.execCommand('bold');return}
+  case 'ce-insert':{if(!a)return;const off=caretOffset(a);return pickImages(true).then(files=>insertImages(aid,files,off))}
+  case 'ce-img-del':{if(!a)return;const id=btn.closest('[data-id]').dataset.id;a.body=stripToken(a.body,id);a.extraImages=a.extraImages.filter(x=>x.id!==id);structural();return}
+  case 'undo':return stepHistory(-1);
+  case 'redo':return stepHistory(1);
+  case 'shortcuts':return uiAlert(t('keys.list'));
   case 'logo-remove':data.logo='';persist();renderInfo();renderPreview();return;
   case 'reset':
    uiConfirm(t('msg.confirmReset')).then(ok=>{if(!ok)return;data=sample();pageIndex=0;openArticles.clear();collapsedParts.clear();folds.clear();saveNow();renderPanels();renderPreview()});return;
   case 'flow-auto':return autoFlow();
   case 'flow-undo':return undoFlow();
-  case 'art-split':{if(!part||!a)return;const cut=caretOffset(a);
+  case 'art-split':{if(!part||!a)return;const cut=caretOffset(a)??0;
    if(!(cut>0&&cut<a.body.length)){uiAlert(t('flow.caretHint'));return}
    takeUndo();splitArticle(pageIndex,part,a,0,cut);afterFlow(['flow.moved',{n:pageIndex+2}]);return}
   case 'art-next':if(part&&a){takeUndo();moveWhole(pageIndex,part,a);afterFlow(['flow.moved',{n:pageIndex+2}])}return;
@@ -1149,6 +1272,7 @@ function onAction(btn){
   case 'contact-copy':return copyEmail(btn);
  }
 }
+document.addEventListener('mousedown',e=>{if(e.target.closest&&e.target.closest('.ce-tool,.ce-x'))e.preventDefault()});
 document.addEventListener('click',e=>{
  const btn=e.target.closest('button[data-act]');
  if(btn&&!btn.disabled){e.preventDefault();onAction(btn);return}
@@ -1167,13 +1291,7 @@ document.addEventListener('input',e=>{
   const preset=card.querySelector('[data-part-field="preset"]');if(preset)preset.value=HEADINGS.includes(el.value)?el.value:'';
   persist();schedulePreview();return;
  }
- if(el.matches('textarea.blk-input')){
-  const a=findArticle(pid,aid);if(!a)return;const blocks=parseBlocks(a.body),bi=Number(el.dataset.bi);
-  if(!blocks[bi]||blocks[bi].type!=='text')return;blocks[bi].text=el.value;a.body=serializeBlocks(blocks).body;
-  const item=el.closest('.article-item');
-  if(a.sampleTag){delete a.sampleTag;item.querySelector('.sample-notice')?.remove()}
-  refreshPlaceStates(item,a);persist();schedulePreview();return;
- }
+ if(el.matches('.ce-editor')){onEditorInput(el);return}
  if(el.dataset.artField&&(el.tagName==='TEXTAREA'||el.type==='range')){
   const a=findArticle(pid,aid);if(!a)return;const f=el.dataset.artField;
   a[f]=el.type==='range'?Number(el.value):el.value;
@@ -1189,7 +1307,7 @@ document.addEventListener('input',e=>{
  }
 });
 document.addEventListener('change',e=>{
- const el=e.target;
+ const el=e.target;flushHistory();
  if(el.id==='importFile')return importJSON(el);
  if(!el.closest('.side'))return;
  if(el.matches('input[type=file][data-upload]'))return handleUpload(el);
@@ -1250,24 +1368,30 @@ function dropEmptySource(i,part,cont){
 const STYLE_KEYS=['titleSize','bodySize','fontFamily','titleBold','bodyBold'];
 const STYLE_KEYS_ALL=[...STYLE_KEYS,'galleryMode','galleryCols'];
 /* extrasKeep counts end-of-article (gallery) pictures that stay; pictures placed in the body travel with their code. */
+/* Rejoins a continuation onto the text it came from, undoing any bold markers added by the split. */
+const joinBody=(head,tail)=>tail.boldSplit?head.replace(/\*\*$/,'')+(tail.contJoin||'')+tail.body.replace(/^\*\*/,''):head+(tail.contJoin||'')+tail.body;
 function splitArticle(i,part,a,extrasKeep,cut,auto){
- const cont=contPartFor(i,part),headText=a.body.slice(0,cut).replace(/\s+$/,''),rest=a.body.slice(headText.length),lead=rest.match(/^\s*/)[0],join=lead;
+ const cont=contPartFor(i,part),rawHead=a.body.slice(0,cut).replace(/\s+$/,''),rest=a.body.slice(rawHead.length),lead=rest.match(/^\s*/)[0],join=lead;
+ /* a cut inside **bold** closes it on this page and reopens it on the next */
+ const openBold=((rawHead.slice(rawHead.lastIndexOf('\n')+1).match(/\*\*/g)||[]).length)%2===1;
+ const headText=openBold?rawHead+'**':rawHead,tailText=(openBold?'**':'')+rest.slice(lead.length);
  const headIds=placedIds(headText),tailIds=placedIds(rest);
  const gallery=a.extraImages.filter(x=>!headIds.has(x.id)&&!tailIds.has(x.id)),keepGallery=new Set(gallery.slice(0,extrasKeep).map(x=>x.id));
  const stays=x=>headIds.has(x.id)||keepGallery.has(x.id);
- const tail={id:uid(),title:a.title,body:rest.slice(lead.length),image:'',qr:'',extraImages:a.extraImages.filter(x=>!stays(x)),continuedFrom:a.id,contJoin:join};
+ const tail={id:uid(),title:a.title,body:tailText,image:'',qr:'',extraImages:a.extraImages.filter(x=>!stays(x)),continuedFrom:a.id,contJoin:join};
+ if(openBold)tail.boldSplit=true;
  if(auto)tail.autoFlow=true;else tail.manualSplit=true;
  for(const k of STYLE_KEYS_ALL)if(a[k]!==undefined)tail[k]=a[k];
  a.body=headText;a.extraImages=a.extraImages.filter(stays);a.continuesNext=true;
  const existing=cont.articles.find(x=>x.continuedFrom===a.id);
- if(existing){existing.body=tail.body+(existing.contJoin||'')+existing.body;existing.contJoin=join;existing.extraImages=tail.extraImages.concat(existing.extraImages)}
+ if(existing){existing.body=joinBody(tail.body,existing);existing.contJoin=join;if(openBold)existing.boldSplit=true;else delete existing.boldSplit;existing.extraImages=tail.extraImages.concat(existing.extraImages)}
  else cont.articles.unshift(tail);
 }
 function moveWhole(i,part,a,auto){
  const cont=contPartFor(i,part);if(auto)a.flowMovedFrom=part.id;
  part.articles.splice(part.articles.indexOf(a),1);
  const k=cont.articles.findIndex(x=>x.continuedFrom===a.id);
- if(k>-1){const tail=cont.articles[k];a.body=a.body+(tail.contJoin||'')+tail.body;a.extraImages=a.extraImages.concat(tail.extraImages);if(tail.continuesNext)a.continuesNext=true;else delete a.continuesNext;cont.articles.splice(k,1)}
+ if(k>-1){const tail=cont.articles[k];a.body=joinBody(a.body,tail);a.extraImages=a.extraImages.concat(tail.extraImages);if(tail.continuesNext)a.continuesNext=true;else delete a.continuesNext;cont.articles.splice(k,1)}
  else delete a.continuesNext;
  cont.articles.unshift(a);
  dropEmptySource(i,part,cont);
@@ -1334,7 +1458,7 @@ function rejoinAuto(){
    const src=cp.contOf&&prev.parts.find(p=>p.id===cp.contOf);if(!src)continue;
    while(cp.articles.length){
     const x=cp.articles[0],last=src.articles[src.articles.length-1];
-    if(!x.manualSplit&&last&&x.continuedFrom===last.id){last.body=last.body+(x.contJoin||'')+x.body;last.extraImages=last.extraImages.concat(x.extraImages);if(x.continuesNext)last.continuesNext=true;else delete last.continuesNext;cp.articles.shift()}
+    if(!x.manualSplit&&last&&x.continuedFrom===last.id){last.body=joinBody(last.body,x);last.extraImages=last.extraImages.concat(x.extraImages);if(x.continuesNext)last.continuesNext=true;else delete last.continuesNext;cp.articles.shift()}
     else if(x.flowMovedFrom===src.id){delete x.flowMovedFrom;src.articles.push(cp.articles.shift())}
     else break;
    }
@@ -1476,7 +1600,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#contactOverlay'
 })();
 
 /* ===== Start ===== */
-applyTranslations();renderPanels();renderPreview();showTab(activeTab);
+applyTranslations();renderPanels();renderPreview();showTab(activeTab);recordHistory();
 ensureImageSizes().then(n=>{if(n){persist();renderPreview()}});
 window.NewsletterEditor={ensureImageSizes,autoFlow,get data(){return data},get currentLanguage(){return currentLanguage},get pageIndex(){return pageIndex},translations,t,setLanguage,showTab,saveNow};
 })();
