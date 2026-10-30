@@ -217,12 +217,21 @@ input[type=range]{accent-color:#245883}
 .place-state{display:block;font-weight:400;font-size:10px;color:#788899;margin-top:2px;word-break:break-all}.place-state.is-placed{color:#1f6a43;font-weight:700}
 .place-row{margin:7px 0 0;flex-wrap:wrap}.insert-help{background:#eef5fc;border-radius:6px;padding:8px 9px;line-height:1.55}
 .reflow-box{margin:8px 0}.reflow-box .tiny{margin:5px 0 0}
+/* Preview view toolbar */
+.preview-toolbar{position:sticky;top:-25px;z-index:12;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;margin:-25px -20px 10px;padding:10px 20px 8px;background:#e8edf3;border-bottom:1px solid #d6dfe9}
+.pv-label{font-size:12px;font-weight:700;color:#41546a;margin-right:2px}
+.pv-btn{border:1px solid #c9d6e4;background:#fff;color:#23415f;border-radius:7px;padding:7px 12px;font-size:12px;font-weight:700;cursor:pointer}.pv-btn.active{background:#1b3e64;border-color:#1b3e64;color:#fff}.pv-btn:focus-visible{outline:2px solid #3875b1;outline-offset:2px}
+.pv-hint{font-size:11px;color:#61738a}
+.nex-pages-container[data-view="two"],.nex-pages-container[data-view="grid"]{max-width:none;display:grid;grid-template-columns:repeat(var(--sheet-cols),calc(794px * var(--sheet-scale)));gap:18px;justify-content:center;align-items:start}
+.nex-pages-container[data-view="two"] .nex-sheet,.nex-pages-container[data-view="grid"] .nex-sheet{transform:scale(var(--sheet-scale));transform-origin:top left;margin:0 calc(794px * (var(--sheet-scale) - 1)) calc(1123px * (var(--sheet-scale) - 1)) 0!important}
+.nex-pages-container[data-view="two"] .sheet-flow-bar,.nex-pages-container[data-view="grid"] .sheet-flow-bar{display:none!important}
+.nex-pages-container[data-view="grid"] .nex-page-active{outline-width:8px}.nex-pages-container[data-view="grid"] .nex-sheet:after{font-size:22px;bottom:2px}
 /* In-page confirm / alert */
 .ui-dialog-overlay{position:fixed;inset:0;background:rgba(12,26,45,.5);display:grid;place-items:center;z-index:100000;padding:20px}.ui-dialog{width:min(100%,420px);background:#fff;color:#1c344f;border-radius:14px;box-shadow:0 18px 60px #0004;padding:22px}.ui-dialog p{margin:0 0 18px;font-size:14px;line-height:1.6;white-space:pre-line}.ui-dialog-actions{display:flex;justify-content:flex-end;gap:8px}.ui-dialog-actions .btn{min-width:84px;padding:10px 14px}
 @media print{.ui-dialog-overlay{display:none!important}}
 /* Contact dialog */
 .nexaeon-contact-overlay{position:fixed;inset:0;background:rgba(12,26,45,.52);display:none;place-items:center;z-index:99999;padding:20px}.nexaeon-contact-overlay.is-open{display:grid}.nexaeon-contact-dialog{width:min(100%,440px);background:#fff;color:#1c344f;border-radius:16px;box-shadow:0 18px 70px #0004;padding:24px;line-height:1.6}.nexaeon-contact-dialog h3{font-size:20px;margin:0 0 9px}.nexaeon-contact-dialog p{margin:0 0 17px;font-size:13px;color:#54677e}.nexaeon-email-box{background:#eef4fb;border:1px solid #d2dfef;border-radius:10px;padding:13px;overflow-wrap:anywhere;font-weight:700;font-size:16px}.nexaeon-contact-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.nexaeon-contact-actions button,.nexaeon-contact-actions a{border:1px solid #cbd8e7;background:#fff;color:#234768;border-radius:8px;padding:10px 12px;cursor:pointer;text-decoration:none;font-weight:700;font-size:12px}.nexaeon-contact-actions .primary{background:#1b3e64;color:#fff}
-@media print{.sheet-flow-bar,.side,.note,.nexaeon-footer,.nex-pane-handle,.nexaeon-contact-overlay{display:none!important}.nex-sheet{outline:none!important;cursor:default}.nex-sheet:after{display:none!important}.workspace{background:#fff!important}.nex-pages-container{max-width:none;margin:0}}
+@media print{.nex-pages-container{display:block!important}.nex-pages-container .nex-sheet{transform:none!important}.preview-toolbar,.sheet-flow-bar,.side,.note,.nexaeon-footer,.nex-pane-handle,.nexaeon-contact-overlay{display:none!important}.nex-sheet{outline:none!important;cursor:default}.nex-sheet:after{display:none!important}.workspace{background:#fff!important}.nex-pages-container{max-width:none;margin:0}}
 </style>
 </head><body><div class="app nex-resizable"><aside class="side">
 <div class="ux-top">
@@ -258,7 +267,7 @@ input[type=range]{accent-color:#245883}
 </div>
 </aside>
 <div class="nex-pane-handle" role="separator" aria-orientation="vertical" tabindex="0" data-i18n-attr="title:handle.title;aria-label:handle.title"></div>
-<main class="workspace"><p class="note" data-i18n="preview.note"></p><div class="nex-pages-container" id="pagesStack"></div>
+<main class="workspace"><div class="preview-toolbar" role="group" data-i18n-attr="aria-label:view.label"><span class="pv-label" data-i18n="view.label"></span><button type="button" class="pv-btn" data-act="view" data-view="single" data-i18n="view.single"></button><button type="button" class="pv-btn" data-act="view" data-view="two" data-i18n="view.two"></button><button type="button" class="pv-btn" data-act="view" data-view="grid" data-i18n="view.grid"></button><span class="pv-hint" data-i18n="view.hint"></span></div><p class="note" data-i18n="preview.note"></p><div class="nex-pages-container" id="pagesStack"></div>
 <footer class="nexaeon-footer" aria-label="NexAeon Studio"><div><div class="brand-name">© NexAeon<span class="brand-dot">.</span>Studio <span class="brand-credit">· Built by Joey</span></div></div><button type="button" class="contact-link" id="contactOpen" data-act="contact-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span data-i18n="contact.open"></span></button></footer>
 </main></div>
 <div class="nexaeon-contact-overlay" id="contactOverlay"><div class="nexaeon-contact-dialog" role="dialog" aria-modal="true" aria-labelledby="contactTitle"><h3 id="contactTitle" data-i18n="contact.title"></h3><p data-i18n="contact.intro"></p><div class="nexaeon-email-box">joeyaj11@gmail.com</div><div class="nexaeon-contact-actions"><button type="button" id="contactCopy" class="primary" data-act="contact-copy" data-i18n="contact.copy"></button><a id="contactMail" href="mailto:joeyaj11@gmail.com" data-i18n="contact.send"></a><button type="button" id="contactClose" data-act="contact-close" data-i18n="contact.close"></button></div></div></div>
@@ -334,6 +343,7 @@ const translations={
  "design.headerTitle":"頁首樣式（目前頁面）","design.headerHint":"報頭內容（校名、期數、Logo）一律沿用「基本資料」，每一頁自動繼承。","header.full":"完整報頭（與第 1 頁相同）","header.compact":"精簡頁首（適合續頁，節省空間）","header.none":"不顯示頁首","flow.title":"跨頁接續","flow.auto":"自動接續到下一頁","flow.autoHint":"把超出 A4 的文字與圖片自動移到下一頁（沒有下一頁會自動新增），報頭、Part 抬頭與欄位位置都會沿用。","flow.undo":"復原自動接續","flow.confirmUndo":"要回到接續前的狀態嗎？接續之後做的修改也會一併取消。","flow.done":"已把超出的內容接續到後面的頁面，請檢查第 {pages} 頁。","flow.nothing":"目前沒有超出 A4 的內容。","flow.stuck":"第 {pages} 頁有單篇內容（例如大圖）本身就超過一頁，無法自動分割，請縮小圖片或手動分拆。","flow.splitCursor":"從游標處分割 → 後段移到下一頁","flow.moveNext":"整篇移到下一頁","flow.caretHint":"請先在正文中點一下要分割的位置（不能在最前面或最後面）。","flow.contNext":"（接下頁）","flow.contPrev":"（續前頁）","flow.markerNotice":"跨頁接續標示：","flow.markerRemove":"移除接續標示","flow.overflowBar":"第 {n} 頁內容超出 A4","flow.moved":"已移到第 {n} 頁。",
  'dialog.ok':'確定','dialog.cancel':'取消',
  "img.insert":"插入到正文游標處","img.unplace":"移出正文","img.placed":"已插入正文","img.notPlaced":"顯示在文末圖片區","img.insertHelp":"圖文交錯：先在正文中點一下要放圖片的位置，再按圖片旁的「插入到正文游標處」。正文裡會出現圖片代碼（例如 [[IMG:ab12cd]]），同一行放兩、三個代碼會並排顯示；刪除代碼即可移出正文。","img.galleryMode":"文末圖片排列（未插入正文的圖片）","gallery.grid-cover":"自動拼貼（填滿裁切，整齊）","gallery.grid-contain":"自動拼貼（完整顯示）","gallery.stack":"單張依序排列（舊版）","img.galleryCols":"每列張數","cols.auto":"自動（依欄寬）","flow.reflow":"重新自動排版跨頁內容","flow.reflowHint":"修改文字或圖片後按這裡：先把自動接續的內容合併回原文，再依目前版面重新分頁（手動分割的內容不受影響）。",
+ "view.label":"預覽方式","view.single":"單頁","view.two":"雙頁","view.grid":"多頁","view.hint":"點選頁面即可切換編輯，按兩下回到單頁檢視。",
  'handle.title':'拖曳調整寬度',
  'contact.open':'聯絡我','contact.title':'問題回報與使用協助','contact.intro':'如果編輯器出現錯誤或有使用問題，請透過以下電子郵件聯絡作者。',
  'contact.copy':'複製信箱','contact.copied':'已複製','contact.send':'撰寫郵件','contact.close':'關閉','contact.subject':'Newsletter 編輯器問題回報'
@@ -405,6 +415,7 @@ const translations={
  "design.headerTitle":"페이지 머리글 (현재 페이지)","design.headerHint":"제호 정보(학교명, 호수, 로고)는 ‘기본 정보’ 설정을 모든 페이지가 자동으로 이어받습니다.","header.full":"전체 제호 (1페이지와 동일)","header.compact":"간략 머리글 (속지용, 공간 절약)","header.none":"머리글 표시 안 함","flow.title":"페이지 이어서 배치","flow.auto":"다음 페이지로 자동 이어서 배치","flow.autoHint":"A4를 벗어난 글과 이미지를 다음 페이지로 자동으로 옮깁니다. 다음 페이지가 없으면 새로 만들며, 제호·파트 제목·단 위치는 그대로 유지됩니다.","flow.undo":"자동 배치 되돌리기","flow.confirmUndo":"이어서 배치하기 전 상태로 되돌릴까요? 이후에 수정한 내용도 함께 취소됩니다.","flow.done":"넘친 내용을 다음 페이지로 옮겼습니다. {pages}페이지를 확인해 주세요.","flow.nothing":"현재 A4를 벗어난 내용이 없습니다.","flow.stuck":"{pages}페이지에 한 페이지보다 큰 항목(예: 큰 이미지)이 있어 자동으로 나눌 수 없습니다. 이미지를 줄이거나 직접 나눠 주세요.","flow.splitCursor":"커서 위치에서 나누기 → 뒷부분을 다음 페이지로","flow.moveNext":"기사 전체를 다음 페이지로","flow.caretHint":"본문에서 나눌 위치를 먼저 클릭해 주세요. (맨 앞이나 맨 끝은 안 됩니다)","flow.contNext":"(다음 페이지에 계속)","flow.contPrev":"(앞 페이지에서 계속)","flow.markerNotice":"페이지 이어짐 표시:","flow.markerRemove":"이어짐 표시 삭제","flow.overflowBar":"{n}페이지 내용이 A4를 벗어남","flow.moved":"{n}페이지로 옮겼습니다.",
  'dialog.ok':'확인','dialog.cancel':'취소',
  "img.insert":"본문 커서 위치에 삽입","img.unplace":"본문에서 빼기","img.placed":"본문에 삽입됨","img.notPlaced":"기사 끝 이미지 영역에 표시","img.insertHelp":"글과 이미지 섞어 배치: 본문에서 이미지를 넣을 위치를 먼저 클릭한 뒤, 이미지 옆의 ‘본문 커서 위치에 삽입’을 누르세요. 본문에 이미지 코드(예: [[IMG:ab12cd]])가 들어가며, 한 줄에 코드를 2~3개 넣으면 나란히 표시됩니다. 코드를 지우면 본문에서 빠집니다.","img.galleryMode":"기사 끝 이미지 배치 (본문에 넣지 않은 이미지)","gallery.grid-cover":"자동 콜라주 (채우기, 정돈된 배치)","gallery.grid-contain":"자동 콜라주 (전체 보기)","gallery.stack":"한 장씩 차례로 (이전 방식)","img.galleryCols":"한 줄당 이미지 수","cols.auto":"자동 (단 너비 기준)","flow.reflow":"페이지 이어짐 다시 자동 배치","flow.reflowHint":"글이나 이미지를 수정한 뒤 누르세요. 자동으로 이어진 내용을 원래 기사로 합친 다음 현재 레이아웃에 맞게 다시 나눕니다. (직접 나눈 내용은 그대로 유지됩니다)",
+ "view.label":"미리보기 방식","view.single":"한 페이지","view.two":"두 페이지","view.grid":"여러 페이지","view.hint":"페이지를 클릭하면 편집할 페이지로 바뀌고, 두 번 클릭하면 한 페이지 보기로 돌아갑니다.",
  'handle.title':'드래그하여 너비 조절',
  'contact.open':'문의하기','contact.title':'오류 신고 및 이용 문의','contact.intro':'편집기 오류나 이용 중 궁금한 점이 있다면 아래 이메일로 문의해 주세요.',
  'contact.copy':'이메일 복사','contact.copied':'복사 완료','contact.send':'이메일 보내기','contact.close':'닫기','contact.subject':'뉴스레터 편집기 오류 및 이용 문의'
@@ -476,6 +487,7 @@ const translations={
  "design.headerTitle":"Page Header (current page)","design.headerHint":"Masthead details (university, issue, logo) come from Basic Information and carry over to every page automatically.","header.full":"Full masthead (same as page 1)","header.compact":"Compact header (for inner pages, saves space)","header.none":"No header","flow.title":"Continue Across Pages","flow.auto":"Continue Overflow on Next Page","flow.autoHint":"Moves text and images that overflow the A4 page to the next page (creating it if needed), keeping the masthead, Part headings and column placement.","flow.undo":"Undo Continue","flow.confirmUndo":"Return to the state before continuing? Changes made afterwards will also be undone.","flow.done":"Overflowing content was continued on the following pages. Please check page {pages}.","flow.nothing":"No content currently exceeds the A4 page.","flow.stuck":"An item on page {pages} (such as a large image) is taller than a whole page and cannot be split automatically. Shrink the image or split it manually.","flow.splitCursor":"Split at Cursor → Rest to Next Page","flow.moveNext":"Move Article to Next Page","flow.caretHint":"First click in the body text where you want to split (not at the very beginning or end).","flow.contNext":"(Continued on next page)","flow.contPrev":"(Continued from previous page)","flow.markerNotice":"Page continuation marker:","flow.markerRemove":"Remove Marker","flow.overflowBar":"Page {n} exceeds A4","flow.moved":"Moved to page {n}.",
  'dialog.ok':'OK','dialog.cancel':'Cancel',
  "img.insert":"Insert at Cursor in Body","img.unplace":"Remove from Body","img.placed":"Placed in body","img.notPlaced":"Shown in the end-of-article image area","img.insertHelp":"Mix text and images: click in the body where the image should go, then press “Insert at Cursor in Body” next to the image. An image code (e.g. [[IMG:ab12cd]]) is added; put two or three codes on one line to show them side by side. Delete the code to take the image out of the body.","img.galleryMode":"End-of-article images (not placed in the body)","gallery.grid-cover":"Auto collage (fill & crop, tidy)","gallery.grid-contain":"Auto collage (show full image)","gallery.stack":"One by one (previous style)","img.galleryCols":"Images per row","cols.auto":"Auto (by column width)","flow.reflow":"Re-run Auto Continue","flow.reflowHint":"Use after editing text or images: auto-continued content is merged back into the original article and split again for the current layout. Manual splits are kept.",
+ "view.label":"Preview","view.single":"Single Page","view.two":"Two Pages","view.grid":"All Pages","view.hint":"Click a page to edit it; double-click to return to single-page view.",
  'handle.title':'Drag to resize',
  'contact.open':'Contact me','contact.title':'Bug Reports & Support','contact.intro':'Found a bug or need help with the editor? Contact the creator at the email below.',
  'contact.copy':'Copy Email','contact.copied':'Copied','contact.send':'Write Email','contact.close':'Close','contact.subject':'Newsletter Editor Bug Report / Support'
@@ -860,6 +872,7 @@ function renderPreview(){
  const stack=$('#pagesStack');
  stack.innerHTML=data.pages.map((p,i)=>`<section></section><div class="sheet-flow-bar" data-bar="${i}" hidden><span>${esc(t('flow.overflowBar',{n:i+1}))}</span><button type="button" class="btn small" data-act="flow-auto">${esc(t('flow.auto'))}</button></div>`).join('');
  [...stack.querySelectorAll('section')].forEach((el,i)=>{sheetAttrs(el,i);el.innerHTML=pageHTML(data.pages[i])});
+ layoutPreview();
  checkOverflow();
 }
 function renderCurrentSheet(){
@@ -881,6 +894,28 @@ function paintOverflow(){
 }
 
 /* ===== Actions ===== */
+/* ===== Preview view: single page, two pages side by side, or all pages as thumbnails =====
+   Sheets keep their real A4 size and are scaled with a transform, so editing, overflow checks and
+   exports keep working on true measurements (flow and PNG switch to single view while they run). */
+const VIEW_KEY='woosong-ui-preview-view',VIEWS=['single','two','grid'];
+let previewView=(()=>{try{const v=localStorage.getItem(VIEW_KEY);if(VIEWS.includes(v))return v}catch(e){}return 'single'})();
+function layoutPreview(){
+ const stack=$('#pagesStack'),ws=$('.workspace');if(!stack||!ws)return;
+ const W=Math.max(200,ws.clientWidth-40),gap=18;let cols=1,scale=1;
+ if(previewView==='two'){cols=Math.min(2,data.pages.length)||1;scale=Math.min(1,(W-gap*(cols-1))/cols/794)}
+ else if(previewView==='grid'){cols=Math.max(2,Math.floor((W+gap)/(240+gap)));scale=Math.min(0.42,(W-gap*(cols-1))/cols/794)}
+ stack.dataset.view=previewView;stack.style.setProperty('--sheet-scale',scale.toFixed(4));stack.style.setProperty('--sheet-cols',cols);
+ document.querySelectorAll('.pv-btn').forEach(b=>{const on=b.dataset.view===previewView;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on))});
+ const hint=$('.pv-hint');if(hint)hint.hidden=previewView==='single';
+}
+function setPreviewView(v){
+ if(!VIEWS.includes(v))return;previewView=v;try{localStorage.setItem(VIEW_KEY,v)}catch(e){}
+ layoutPreview();$('#preview')?.scrollIntoView({block:'nearest'});
+}
+/* Temporarily show sheets at full size; returns a function that restores the chosen view. */
+function useSingleView(){const keep=previewView;if(keep==='single')return ()=>{};previewView='single';layoutPreview();return ()=>{previewView=keep;layoutPreview()}}
+if(window.ResizeObserver)new ResizeObserver(()=>layoutPreview()).observe(document.querySelector('.workspace'));
+document.addEventListener('dblclick',e=>{const sheet=e.target.closest('#pagesStack .nex-sheet');if(!sheet||previewView==='single')return;const i=Number(sheet.dataset.sheet);if(i!==pageIndex)selectPage(i);setPreviewView('single');$('#preview')?.scrollIntoView({block:'start'})});
 function selectPage(i){
  if(i<0||i>=data.pages.length)return;
  pageIndex=i;renderDesign();renderContent();
@@ -991,6 +1026,7 @@ function onAction(btn){
    takeUndo();splitArticle(pageIndex,part,a,0,cut);afterFlow(['flow.moved',{n:pageIndex+2}]);return}
   case 'art-next':if(part&&a){takeUndo();moveWhole(pageIndex,part,a);afterFlow(['flow.moved',{n:pageIndex+2}])}return;
   case 'art-unflow':if(a){delete a.continuesNext;delete a.continuedFrom;delete a.contJoin;structural()}return;
+  case 'view':return setPreviewView(btn.dataset.view);
   case 'export-pdf':saveNow();return window.print();
   case 'export-png':return savePNG(btn);
   case 'export-png-all':return savePNGAll(btn);
@@ -1191,7 +1227,7 @@ function rejoinAuto(){
 }
 async function autoFlow(){
  if(flowBusy)return;flowBusy=true;
- const before=JSON.stringify(data),beforePage=pageIndex,touched=[],stuck=[];
+ const before=JSON.stringify(data),beforePage=pageIndex,touched=[],stuck=[],restoreView=useSingleView();
  try{
   await ensureImageSizes();
   rejoinAuto();
@@ -1200,7 +1236,7 @@ async function autoFlow(){
    const r=await flowPage(i);
    if(r==='stuck')stuck.push(i+1);else if(r)touched.push(i+2);
   }
- }finally{flowBusy=false}
+ }finally{flowBusy=false;restoreView()}
  if(JSON.stringify(data)!==before){undoSnapshot={json:before,page:beforePage}}
  flowMessage=touched.length?[['flow.done',{pages:[...new Set(touched)].join(', ')}]]:stuck.length?[]:[['flow.nothing']];
  if(stuck.length)flowMessage.push(['flow.stuck',{pages:stuck.join(', ')}]);
@@ -1253,16 +1289,16 @@ async function preparePng(){
  await decodeImages($('#pagesStack'));
 }
 async function savePNG(btn){
- const label=btn.querySelector('[data-i18n]')||btn;
+ const label=btn.querySelector('[data-i18n]')||btn,restoreView=useSingleView();
  try{
   btn.disabled=true;label.textContent=t('export.pngBusy');
   await preparePng();
   downloadBlob(await captureSheet(pageIndex),`${fileBase()}-p${String(pageIndex+1).padStart(2,'0')}.png`);
  }catch(e){uiAlert(t('msg.pngFailed',{error:e.message})+'\n'+t('msg.pngAdvice'))}
- finally{btn.disabled=false;label.textContent=t('export.png')}
+ finally{btn.disabled=false;label.textContent=t('export.png');restoreView()}
 }
 async function savePNGAll(btn){
- const label=btn.querySelector('[data-i18n]')||btn,total=data.pages.length;
+ const label=btn.querySelector('[data-i18n]')||btn,total=data.pages.length,restoreView=useSingleView();
  try{
   btn.disabled=true;label.textContent=t('export.pngAllBusy',{n:0,total});
   await preparePng();
@@ -1274,7 +1310,7 @@ async function savePNGAll(btn){
   }
   downloadBlob(makeZip(files),`${fileBase()}-png.zip`);
  }catch(e){uiAlert(t('msg.pngFailed',{error:e.message})+'\n'+t('msg.pngAdvice'))}
- finally{btn.disabled=false;label.textContent=t('export.pngAll')}
+ finally{btn.disabled=false;label.textContent=t('export.pngAll');restoreView()}
 }
 /* Minimal ZIP writer (stored entries, no compression — PNG data is already compressed), so no extra library is needed. */
 const CRC_TABLE=(()=>{const tb=new Uint32Array(256);for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;tb[n]=c>>>0}return tb})();
