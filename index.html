@@ -245,6 +245,46 @@ input[type=range]{accent-color:#245883}
 .ce-x{position:absolute;top:4px;right:4px;width:22px;height:22px;border-radius:50%;border:0;background:#000a;color:#fff;font-size:12px;line-height:22px;padding:0;cursor:pointer;opacity:0;transition:opacity .12s}.ce-img:hover .ce-x,.ce-x:focus{opacity:1}.ce-x:hover{background:#b33d30}
 .ce-drop-line{position:absolute;height:3px;border-radius:2px;background:#2f7fd0;box-shadow:0 0 0 2px #2f7fd044;pointer-events:none;z-index:100001}
 .ce-hint{margin:6px 0 0;line-height:1.55}
+/* Manual */
+.ux-titlebar{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.manual-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid #1b3e64;background:#1b3e64;color:#fff;border-radius:18px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;box-shadow:0 2px 6px #1b3e6433}.manual-btn:hover{background:#244f7e}.manual-btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.manual-link{width:100%;margin:0 0 10px}
+.manual-overlay{position:fixed;inset:0;z-index:100002;background:rgba(12,26,45,.55);display:none;place-items:center;padding:18px}.manual-overlay.is-open{display:grid}
+.manual-dialog{width:min(980px,100%);height:min(680px,94vh);background:#fff;border-radius:16px;box-shadow:0 24px 80px #0005;display:grid;grid-template-columns:250px minmax(0,1fr);overflow:hidden;color:#1c344f}
+.manual-nav{background:#f3f7fb;border-right:1px solid #dbe4ee;padding:20px 14px;overflow:auto}.manual-brand{font-size:15px;font-weight:800;color:#1b3e64;line-height:1.35;margin:0 4px 16px}.manual-nav-label{font-size:11px;font-weight:700;color:#7a8ba0;margin:0 6px 6px;letter-spacing:.04em}
+.manual-nav ol{list-style:none;margin:0;padding:0}.manual-nav button{display:flex;gap:9px;align-items:flex-start;width:100%;text-align:left;border:0;background:transparent;border-radius:8px;padding:8px;font-size:12.5px;line-height:1.4;color:#33506f;cursor:pointer}
+.manual-nav button span{flex:none;display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#dfe8f2;color:#33506f;font-size:11px;font-weight:800}.manual-nav button:hover{background:#e6eef7}
+.manual-nav button[aria-current="step"]{background:#1b3e64;color:#fff;font-weight:700}.manual-nav button[aria-current="step"] span{background:#fff;color:#1b3e64}
+.manual-main{display:flex;flex-direction:column;padding:18px 26px 18px;overflow:auto;min-height:0}
+.manual-top{display:flex;justify-content:space-between;align-items:center}.manual-count{font-size:12px;font-weight:700;color:#2f7fd0}
+.manual-x{border:0;background:#eef3f9;width:30px;height:30px;border-radius:50%;cursor:pointer;color:#33506f;font-size:13px}.manual-x:hover{background:#dfe8f2}
+.manual-main h2{font-size:22px;margin:4px 0 12px;color:#14304f}
+.manual-art{border-radius:12px;overflow:hidden;border:1px solid #dbe4ee;background:#eef3f9}.manual-art svg{display:block;width:100%;height:auto;max-height:290px}
+.manual-lead{font-size:14.5px;line-height:1.6;margin:14px 0 6px;font-weight:600;color:#1f3a5a}
+.manual-points{margin:0 0 6px;padding-left:20px;font-size:13.5px;line-height:1.75;color:#34495f}.manual-points li::marker{color:#2f7fd0}
+.manual-dots{display:none;gap:5px;justify-content:center;margin:8px 0}.manual-dots span{width:7px;height:7px;border-radius:50%;background:#cfdae6}.manual-dots span.on{background:#1b3e64}
+.manual-foot{margin-top:auto;padding-top:14px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;border-top:1px solid #e3eaf2}
+.manual-check{display:flex;align-items:center;gap:7px;font-size:12px;color:#5d7088;cursor:pointer}.manual-check input{width:auto}
+.manual-buttons{display:flex;gap:8px;flex-wrap:wrap}.manual-buttons .btn{min-width:88px;padding:10px 14px}.manual-buttons .btn:disabled{opacity:.4;cursor:default}
+.manual-back{position:fixed;left:18px;bottom:18px;z-index:100001;border:0;background:#1b3e64;color:#fff;border-radius:20px;padding:10px 16px;font-size:12px;font-weight:700;cursor:pointer;box-shadow:0 6px 20px #0003}
+@keyframes tourPulse{0%,100%{box-shadow:0 0 0 0 #2f7fd099}50%{box-shadow:0 0 0 8px #2f7fd000}}
+.tour-spot{outline:3px solid #2f7fd0!important;outline-offset:3px;border-radius:8px;animation:tourPulse 1.1s ease-in-out 3}
+@media(max-width:760px){.manual-dialog{grid-template-columns:1fr;height:min(720px,96vh)}.manual-nav{display:none}.manual-dots{display:flex}.manual-main{padding:16px}.manual-main h2{font-size:19px}}
+@media print{.manual-overlay,.manual-back{display:none!important}}
+/* Animated demo */
+.demo-play{display:block;width:100%;margin:0 0 16px;border:0;border-radius:10px;padding:11px 10px;background:linear-gradient(135deg,#2f7fd0,#1b3e64);color:#fff;font-size:12.5px;font-weight:800;cursor:pointer;box-shadow:0 4px 14px #1b3e6440;text-align:center;line-height:1.35}.demo-play:hover{filter:brightness(1.08)}
+.demo-play-narrow{display:none;width:auto;margin:0 8px 0 auto;padding:7px 12px;font-size:11.5px}
+.demo-blocker{position:fixed;inset:0;z-index:100003;background:transparent;cursor:not-allowed}
+.demo-cursor{position:fixed;left:0;top:0;width:26px;height:26px;z-index:100006;pointer-events:none;transition:transform .65s cubic-bezier(.45,.05,.25,1);filter:drop-shadow(0 2px 3px #0006)}.demo-cursor svg{width:100%;height:100%}.demo-cursor.press{scale:.82}
+.demo-ripple{position:fixed;z-index:100005;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;border:3px solid #2f7fd0;pointer-events:none;animation:demoRipple .65s ease-out forwards}
+@keyframes demoRipple{from{transform:scale(.3);opacity:1}to{transform:scale(1.4);opacity:0}}
+.demo-ghost{position:fixed;z-index:100005;width:84px;height:58px;object-fit:cover;border-radius:6px;opacity:.85;box-shadow:0 8px 24px #0005;pointer-events:none}
+.demo-bar{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:100005;width:min(860px,calc(100% - 32px));display:flex;align-items:center;gap:14px;background:#0f2540f2;color:#fff;border-radius:14px;padding:14px 16px;box-shadow:0 12px 40px #0006}
+.demo-badge{flex:none;font-size:11px;font-weight:800;background:#2f7fd0;border-radius:20px;padding:4px 10px}
+.demo-caption{flex:1;margin:0;font-size:14px;line-height:1.55;font-weight:600;opacity:0;transform:translateY(4px);transition:opacity .25s,transform .25s}.demo-caption.show{opacity:1;transform:none}
+.demo-controls{flex:none;display:flex;gap:6px}.demo-controls button{border:1px solid #ffffff55;background:transparent;color:#fff;border-radius:8px;padding:7px 10px;font-size:12px;font-weight:700;cursor:pointer}.demo-controls button:hover{background:#ffffff1f}.demo-stop{background:#c2453a!important;border-color:#c2453a!important}
+@media(max-width:760px){.demo-play-narrow{display:inline-block}.demo-bar{flex-wrap:wrap}.demo-caption{flex-basis:100%}}
+@media print{#demoLayer{display:none!important}}
 /* In-page confirm / alert */
 .ui-dialog-overlay{position:fixed;inset:0;background:rgba(12,26,45,.5);display:grid;place-items:center;z-index:100000;padding:20px}.ui-dialog{width:min(100%,420px);background:#fff;color:#1c344f;border-radius:14px;box-shadow:0 18px 60px #0004;padding:22px}.ui-dialog p{margin:0 0 18px;font-size:14px;line-height:1.6;white-space:pre-line}.ui-dialog-actions{display:flex;justify-content:flex-end;gap:8px}.ui-dialog-actions .btn{min-width:84px;padding:10px 14px}
 @media print{.ui-dialog-overlay{display:none!important}}
@@ -255,7 +295,7 @@ input[type=range]{accent-color:#245883}
 </head><body><div class="app nex-resizable"><aside class="side">
 <div class="ux-top">
 <div class="lang-controls" role="group" data-i18n-attr="aria-label:lang.label"><button type="button" data-act="lang" data-lang="zh-TW" lang="zh-Hant">繁體中文</button><button type="button" data-act="lang" data-lang="ko" lang="ko">한국어</button><button type="button" data-act="lang" data-lang="en" lang="en">English</button></div>
-<h2 data-i18n="app.title">Newsletter 編輯器</h2><p class="sub" data-i18n="app.subtitle"></p>
+<div class="ux-titlebar"><h2 data-i18n="app.title">Newsletter 編輯器</h2><button type="button" class="manual-btn" id="manualBtn" data-act="manual-open"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5"/><path d="M9 7.5h7M9 11h5"/></svg><span data-i18n="man.button"></span></button></div><p class="sub" data-i18n="app.subtitle"></p>
 <nav class="ux-nav" role="tablist" data-i18n-attr="aria-label:nav.label">
 <button type="button" class="ux-tab" role="tab" data-act="tab" data-tab="info"><span class="tab-step">1</span><span data-i18n="tab.info"></span></button>
 <button type="button" class="ux-tab" role="tab" data-act="tab" data-tab="layout"><span class="tab-step">2</span><span data-i18n="tab.layout"></span></button>
@@ -281,7 +321,7 @@ input[type=range]{accent-color:#245883}
 <div class="export-actions"><button type="button" class="btn" data-act="export-pdf" data-i18n="export.pdf"></button><button type="button" class="btn secondary" data-act="export-png"><span data-i18n="export.png"></span></button><button type="button" class="btn secondary" data-act="export-png-all"><span data-i18n="export.pngAll"></span></button><button type="button" class="btn secondary" data-act="export-json" data-i18n="export.json"></button><button type="button" class="btn secondary" data-act="export-import" data-i18n="export.import"></button></div>
 <input type="file" id="importFile" accept="application/json,.json" hidden>
 <p class="tiny" data-i18n="export.pngNote"></p></div></details>
-<details class="group" open><summary data-i18n="help.title"></summary><div class="inner tiny" data-i18n="help.body"></div></details>
+<details class="group" open><summary data-i18n="help.title"></summary><div class="inner"><button type="button" class="btn secondary manual-link" data-act="manual-open" data-i18n="man.open"></button><button type="button" class="btn secondary manual-link" data-act="demo-run" data-i18n="demo.play"></button><div class="tiny" data-i18n="help.body"></div></div></details>
 </section>
 </div>
 </aside>
@@ -365,6 +405,73 @@ const translations={
  "view.label":"預覽方式","view.single":"單頁","view.two":"雙頁","view.grid":"多頁","view.hint":"點選頁面即可切換編輯，按兩下回到單頁檢視。",
  "blk.label":"正文與圖片（依順序排版）","blk.hint":"在文字中點一下要放圖的位置，再按「在游標處插入圖片」；也可以直接貼上圖片（Ctrl+V），或把照片拖進文字框。","blk.textN":"文字段落 {n}","blk.imgRow":"圖片（{n} 張並排）","blk.insertAtCursor":"在游標處插入圖片","blk.addText":"＋ 文字段落","blk.addImage":"＋ 圖片","blk.addSide":"＋ 並排一張","blk.removeImg":"刪除這張圖片","blk.confirmRemoveImg":"確定刪除這張圖片？","blk.confirmDeleteText":"確定刪除這段文字？","blk.confirmDeleteRow":"確定刪除這一列圖片？","blk.toCollage":"移到文末拼貼區","img.toBody":"放進正文（加在最後）","blk.dropHint":"可貼上或拖曳圖片",
  "hist.undo":"復原","hist.redo":"重做","hist.undoTitle":"復原上一步（Ctrl+Z）","hist.redoTitle":"重做（Ctrl+Y）","keys.button":"快捷鍵","keys.list":"Ctrl + Z：復原上一步\nCtrl + Y 或 Ctrl + Shift + Z：重做\nCtrl + S：立即儲存\nCtrl + B：粗體（在正文選取文字後）\nCtrl + V：貼上文字或圖片\n\n圖片：在正文中用滑鼠拖動即可移到任何位置；拖到另一張圖片上會並排。\nMac 請以 ⌘ 取代 Ctrl。","status.savedNow":"已儲存","ce.label":"正文與圖片","ce.bold":"粗體","ce.boldTitle":"粗體（Ctrl+B）","ce.insert":"插入圖片","ce.hint":"直接打字即可。插入圖片：在文字中點一下再按「插入圖片」，或直接貼上、拖入照片。圖片可用滑鼠拖到文字中任何位置（藍線就是放下的位置），拖到另一張圖上即可並排；✕ 刪除，Ctrl+Z 可復原。",
+ "man.button":"使用手冊",
+ "man.title":"使用手冊：5 分鐘上手",
+ "man.step":"第 {n} / {total} 步",
+ "man.prev":"上一步",
+ "man.next":"下一步",
+ "man.done":"開始使用",
+ "man.show":"帶我去看",
+ "man.close":"關閉",
+ "man.dontShow":"下次開啟時不再自動顯示",
+ "man.back":"回到使用手冊",
+ "man.open":"開啟圖文使用手冊",
+ "man.contents":"目錄",
+ "man.art.edit":"編輯區",
+ "man.art.preview":"即時預覽",
+ "man.s1.title":"認識編輯器",
+ "man.s1.lead":"左邊編輯、右邊即時預覽；左上角可隨時切換 繁體中文／한국어／English。",
+ "man.s1.points":["依序完成四個步驟：① 基本資料 → ② 排版設計 → ③ 內容編輯 → ④ 匯出。", "右邊預覽就是印出來的樣子，每一頁固定為 A4。", "拖曳中間的「⋮」可調整左右兩邊的寬度。", "所有修改都會自動儲存在這台電腦的瀏覽器中。"],
+ "man.s2.title":"填寫基本資料",
+ "man.s2.lead":"在「① 基本資料」填寫這一期的資訊，會自動套用到每一頁的報頭與頁尾。",
+ "man.s2.points":["學校名稱、主標題、副標題、月份、年度、期數。", "發行單位與地址會顯示在每一頁的頁尾。", "按「選擇圖片」上傳學校 Logo。", "最下方的「重設示範內容」會清空全部內容，使用前請先匯出 JSON 備份。"],
+ "man.s3.title":"選擇版面與抬頭樣式",
+ "man.s3.lead":"在「② 排版設計」點一下模板即可套用到目前頁面，右邊立即預覽。",
+ "man.s3.points":["11 款整頁排版模板：經典雙欄、圖文卡片、雜誌、報章等。", "16 款欄目抬頭樣式（例如 President’s Message 的外框）。", "每一頁可以用不同版面；續頁可改用「精簡頁首」節省空間。", "可勾選「空白圖片位置顯示示範圖片」，先看整體效果。"],
+ "man.s4.title":"頁面、Part 與文章",
+ "man.s4.lead":"在「③ 內容編輯」中，內容的結構是：A4 頁面 → Part（欄目區塊）→ 文章。",
+ "man.s4.points":["「＋ 新增 A4 頁」增加頁面；點「1 / 3」等按鈕切換要編輯的頁面。", "「＋ 新增 Part」增加欄目，可放在左欄、右欄或全寬。", "Part 抬頭可從常用英文清單選擇，也可以自己輸入。", "點文章標題即可展開編輯；↑ ↓ 調整順序，「刪除」移除。"],
+ "man.s5.title":"寫正文、放圖片",
+ "man.s5.lead":"正文框就像文書軟體：直接打字，圖片會顯示在文字之間。",
+ "man.s5.points":["在文字中點一下，再按「插入圖片」；也可以直接貼上（Ctrl+V）或把照片拖進框裡。", "用滑鼠拖動圖片即可換位置，藍色線就是放下的位置。", "把一張圖拖到另一張圖上，就會並排顯示；滑鼠移到圖上按 ✕ 刪除。", "選取文字後按「粗體」或 Ctrl+B 加粗。主圖與文末拼貼在「圖片設定」中。"],
+ "man.s6.title":"內容太多？自動接到下一頁",
+ "man.s6.lead":"超出 A4 的頁面會出現紅框，一鍵就能把多出的內容接續到下一頁。",
+ "man.s6.points":["按「自動接續到下一頁」，沒有下一頁會自動新增，報頭與欄位都會沿用。", "第 1 頁結尾自動標示「（接下頁）」，下一頁標示「（續前頁）」。", "修改文字或圖片後，按「重新自動排版跨頁內容」重新分頁。", "也可以在文章中用「從游標處分割」或「整篇移到下一頁」自行調整。"],
+ "man.s7.title":"切換預覽方式",
+ "man.s7.lead":"預覽區上方可選擇「單頁」「雙頁」「多頁」，方便檢查整期內容。",
+ "man.s7.points":["單頁：100% 大小，適合細看文字。", "雙頁：兩頁並排；多頁：全部頁面縮成小圖。", "點任一頁就切換到編輯那一頁；按兩下回到單頁。"],
+ "man.s8.title":"匯出與列印",
+ "man.s8.lead":"在「④ 匯出」產生 PDF、PNG，或備份成 JSON。",
+ "man.s8.points":["PDF：按「列印／另存 PDF」，紙張選 A4、縮放 100%、邊界「無」，並勾選「背景圖形」。", "PNG：可保存目前頁，或把所有頁打包成一個 ZIP 檔。", "JSON：「匯出資料 JSON」備份；換電腦時用「匯入資料 JSON」還原。"],
+ "man.s9.title":"復原、快捷鍵與儲存",
+ "man.s9.lead":"做錯了不用擔心，所有操作都可以復原。",
+ "man.s9.points":["↶ 復原（Ctrl+Z）／↷ 重做（Ctrl+Y）；Ctrl+S 立即儲存。", "按「⌨ 快捷鍵」可隨時查看所有快捷鍵。", "資料存在這台電腦的瀏覽器裡；清除瀏覽器資料會遺失，請定期匯出 JSON。", "遇到問題，按頁面最下方的「聯絡我」與作者聯繫。"],
+ "demo.play":"▶ 觀看動畫示範（約 1 分鐘）",
+ "demo.label":"動畫示範",
+ "demo.stop":"■ 結束示範",
+ "demo.fast":"2× 加速",
+ "demo.normal":"1× 正常速度",
+ "demo.c0":"動畫示範：從空白開始做一期電子報，一直到匯出。示範結束後會還原你原本的內容。",
+ "demo.c1":"① 基本資料：輸入學校名稱、主標題、月份、年度與期數，右邊預覽會即時更新。",
+ "demo.c2":"② 排版設計：點一下模板選擇整頁版面，再選欄目抬頭樣式。",
+ "demo.c3":"③ 內容編輯：按「＋ 新增 Part」建立欄目，選擇放置位置與英文抬頭。",
+ "demo.c4":"展開文章，輸入標題與正文，就像使用文書軟體一樣。",
+ "demo.c5":"按「插入圖片」，照片會出現在游標所在的位置。",
+ "demo.c6":"用滑鼠把圖片拖到另一張圖片上，兩張圖就會並排。",
+ "demo.c7":"選取文字，按「粗體」（或 Ctrl+B）加粗。",
+ "demo.c8":"再新增一個右欄 Part。文字太多超出 A4 時，頁面會出現紅框……",
+ "demo.c9":"按「自動接續到下一頁」，多出的內容自動接到第 2 頁，報頭也一起沿用。",
+ "demo.c10":"預覽可以切換成「雙頁」或「多頁」，一次檢查整期。",
+ "demo.c11":"④ 匯出：可列印成 PDF，或把所有頁存成 PNG 壓縮檔。（示範中不會真的下載）",
+ "demo.c12":"完成！示範結束，你原本的內容已經還原。",
+ "demo.sub":"又松大學校友電子報",
+ "demo.issuer":"又松大學 國際交流處",
+ "demo.a1.title":"2026 秋季新生接機圓滿完成",
+ "demo.a1.p1":"今年秋季，來自 20 多個國家的新生抵達仁川機場，志工團隊全程協助接機與報到。",
+ "demo.a1.p2":"抵達校園後，新生參加了迎新說明會，認識校園生活與學習資源。",
+ "demo.bold":"迎新說明會",
+ "demo.a2.title":"校友交流晚會預告",
+ "demo.a2.line":"{n}．活動當天將邀請校友分享在韓國與海外的工作經驗，並安排交流餐會，歡迎在校生與校友踴躍參加。",
  'handle.title':'拖曳調整寬度',
  'contact.open':'聯絡我','contact.title':'問題回報與使用協助','contact.intro':'如果編輯器出現錯誤或有使用問題，請透過以下電子郵件聯絡作者。',
  'contact.copy':'複製信箱','contact.copied':'已複製','contact.send':'撰寫郵件','contact.close':'關閉','contact.subject':'Newsletter 編輯器問題回報'
@@ -439,6 +546,73 @@ const translations={
  "view.label":"미리보기 방식","view.single":"한 페이지","view.two":"두 페이지","view.grid":"여러 페이지","view.hint":"페이지를 클릭하면 편집할 페이지로 바뀌고, 두 번 클릭하면 한 페이지 보기로 돌아갑니다.",
  "blk.label":"본문과 이미지 (순서대로 배치)","blk.hint":"본문에서 이미지를 넣을 위치를 클릭한 뒤 ‘커서 위치에 이미지 넣기’를 누르세요. 이미지를 바로 붙여넣거나(Ctrl+V) 사진을 글 상자로 끌어다 놓아도 됩니다.","blk.textN":"본문 단락 {n}","blk.imgRow":"이미지 ({n}장 나란히)","blk.insertAtCursor":"커서 위치에 이미지 넣기","blk.addText":"＋ 본문 단락","blk.addImage":"＋ 이미지","blk.addSide":"＋ 옆에 한 장 더","blk.removeImg":"이 이미지 삭제","blk.confirmRemoveImg":"이 이미지를 삭제할까요?","blk.confirmDeleteText":"이 단락을 삭제할까요?","blk.confirmDeleteRow":"이 이미지 줄을 삭제할까요?","blk.toCollage":"기사 끝 콜라주로 이동","img.toBody":"본문 끝에 넣기","blk.dropHint":"이미지 붙여넣기·끌어 놓기 가능",
  "hist.undo":"실행 취소","hist.redo":"다시 실행","hist.undoTitle":"실행 취소 (Ctrl+Z)","hist.redoTitle":"다시 실행 (Ctrl+Y)","keys.button":"단축키","keys.list":"Ctrl + Z: 실행 취소\nCtrl + Y 또는 Ctrl + Shift + Z: 다시 실행\nCtrl + S: 지금 저장\nCtrl + B: 굵게 (본문에서 글자를 선택한 뒤)\nCtrl + V: 글자 또는 이미지 붙여넣기\n\n이미지: 본문 안에서 마우스로 끌어 원하는 위치로 옮길 수 있습니다. 다른 이미지 위에 놓으면 나란히 배치됩니다.\nMac에서는 Ctrl 대신 ⌘를 사용하세요.","status.savedNow":"저장됨","ce.label":"본문과 이미지","ce.bold":"굵게","ce.boldTitle":"굵게 (Ctrl+B)","ce.insert":"이미지 넣기","ce.hint":"바로 입력하면 됩니다. 이미지 넣기: 글 사이를 클릭한 뒤 ‘이미지 넣기’를 누르거나, 이미지를 붙여넣거나 끌어다 놓으세요. 이미지는 마우스로 끌어 글의 원하는 위치로 옮길 수 있고(파란 선이 놓일 위치), 다른 이미지 위에 놓으면 나란히 배치됩니다. ✕로 삭제, Ctrl+Z로 되돌리기.",
+ "man.button":"사용 설명서",
+ "man.title":"사용 설명서: 5분 만에 시작하기",
+ "man.step":"{n} / {total}단계",
+ "man.prev":"이전",
+ "man.next":"다음",
+ "man.done":"시작하기",
+ "man.show":"바로 보기",
+ "man.close":"닫기",
+ "man.dontShow":"다음부터 자동으로 열지 않기",
+ "man.back":"사용 설명서로 돌아가기",
+ "man.open":"그림으로 보는 사용 설명서 열기",
+ "man.contents":"목차",
+ "man.art.edit":"편집 영역",
+ "man.art.preview":"실시간 미리보기",
+ "man.s1.title":"편집기 둘러보기",
+ "man.s1.lead":"왼쪽에서 편집하고 오른쪽에서 실시간으로 확인합니다. 왼쪽 위에서 언제든지 繁體中文 / 한국어 / English로 바꿀 수 있습니다.",
+ "man.s1.points":["네 단계를 차례로 진행하세요: ① 기본 정보 → ② 레이아웃 디자인 → ③ 콘텐츠 편집 → ④ 내보내기.", "오른쪽 미리보기가 실제 인쇄 모습이며, 각 페이지는 A4로 고정됩니다.", "가운데 ‘⋮’를 끌어 좌우 너비를 조절할 수 있습니다.", "모든 수정 내용은 이 컴퓨터의 브라우저에 자동 저장됩니다."],
+ "man.s2.title":"기본 정보 입력",
+ "man.s2.lead":"‘① 기본 정보’에 이번 호의 정보를 입력하면 모든 페이지의 제호와 하단에 자동으로 적용됩니다.",
+ "man.s2.points":["학교명, 메인 제목, 부제목, 발행 월, 연도, 호수를 입력합니다.", "발행 기관과 주소는 모든 페이지 하단에 표시됩니다.", "‘이미지 선택’을 눌러 학교 로고를 올립니다.", "맨 아래 ‘예시 콘텐츠로 초기화’는 모든 내용을 지우므로, 먼저 JSON으로 백업하세요."],
+ "man.s3.title":"레이아웃과 제목 스타일 선택",
+ "man.s3.lead":"‘② 레이아웃 디자인’에서 템플릿을 클릭하면 현재 페이지에 바로 적용되고 오른쪽에서 확인할 수 있습니다.",
+ "man.s3.points":["전체 페이지 레이아웃 11종: 기본 2단, 이미지 카드, 매거진, 신문형 등.", "섹션 제목 스타일 16종 (예: President’s Message 테두리).", "페이지마다 다른 레이아웃을 쓸 수 있으며, 속지는 ‘간략 머리글’로 공간을 아낄 수 있습니다.", "‘이미지가 없는 자리에 예시 이미지 표시’로 전체 느낌을 먼저 확인해 보세요."],
+ "man.s4.title":"페이지, 파트, 기사",
+ "man.s4.lead":"‘③ 콘텐츠 편집’의 구조는 A4 페이지 → 파트(섹션) → 기사입니다.",
+ "man.s4.points":["‘＋ A4 페이지 추가’로 페이지를 늘리고, ‘1 / 3’ 같은 버튼으로 편집할 페이지를 고릅니다.", "‘＋ 파트 추가’로 섹션을 만들고 왼쪽 단, 오른쪽 단, 전체 너비 중에 배치합니다.", "파트 제목은 자주 쓰는 영문 제목에서 고르거나 직접 입력합니다.", "기사 제목을 누르면 편집 창이 열리며, ↑ ↓로 순서를 바꾸고 ‘삭제’로 지웁니다."],
+ "man.s5.title":"본문 쓰기와 이미지 넣기",
+ "man.s5.lead":"본문 상자는 문서 프로그램처럼 바로 입력하면 되고, 이미지는 글 사이에 그대로 보입니다.",
+ "man.s5.points":["글 사이를 클릭한 뒤 ‘이미지 넣기’를 누르거나, 이미지를 붙여넣기(Ctrl+V) 또는 끌어다 놓으세요.", "이미지를 마우스로 끌어 위치를 바꿉니다. 파란 선이 놓일 위치입니다.", "이미지를 다른 이미지 위에 놓으면 나란히 배치되고, 이미지 위의 ✕로 삭제합니다.", "글자를 선택하고 ‘굵게’ 또는 Ctrl+B를 누르세요. 대표 이미지와 기사 끝 콜라주는 ‘이미지 설정’에 있습니다."],
+ "man.s6.title":"내용이 넘칠 때: 다음 페이지로 자동 이어서 배치",
+ "man.s6.lead":"A4를 벗어난 페이지는 빨간 테두리로 표시되며, 버튼 하나로 넘친 내용을 다음 페이지로 옮길 수 있습니다.",
+ "man.s6.points":["‘다음 페이지로 자동 이어서 배치’를 누르면 필요한 페이지가 자동으로 추가되고, 제호와 단 배치가 유지됩니다.", "앞 페이지 끝에는 ‘(다음 페이지에 계속)’, 다음 페이지에는 ‘(앞 페이지에서 계속)’이 표시됩니다.", "글이나 이미지를 수정한 뒤에는 ‘페이지 이어짐 다시 자동 배치’를 누르세요.", "기사에서 ‘커서 위치에서 나누기’나 ‘기사 전체를 다음 페이지로’로 직접 조정할 수도 있습니다."],
+ "man.s7.title":"미리보기 방식 바꾸기",
+ "man.s7.lead":"미리보기 위쪽에서 ‘한 페이지’, ‘두 페이지’, ‘여러 페이지’를 고를 수 있습니다.",
+ "man.s7.points":["한 페이지: 100% 크기로 글자를 자세히 볼 때.", "두 페이지: 두 페이지를 나란히, 여러 페이지: 모든 페이지를 작은 그림으로.", "페이지를 클릭하면 그 페이지를 편집하고, 두 번 클릭하면 한 페이지 보기로 돌아갑니다."],
+ "man.s8.title":"내보내기와 인쇄",
+ "man.s8.lead":"‘④ 내보내기’에서 PDF와 PNG를 만들거나 JSON으로 백업합니다.",
+ "man.s8.points":["PDF: ‘인쇄 / PDF로 저장’에서 용지 A4, 배율 100%, 여백 없음, ‘배경 그래픽’을 켜 주세요.", "PNG: 현재 페이지만 저장하거나, 모든 페이지를 ZIP 파일 하나로 저장합니다.", "JSON: ‘JSON으로 백업’으로 저장하고, 다른 컴퓨터에서는 ‘JSON 불러오기’로 복원합니다."],
+ "man.s9.title":"실행 취소, 단축키, 저장",
+ "man.s9.lead":"실수해도 괜찮습니다. 모든 작업은 되돌릴 수 있습니다.",
+ "man.s9.points":["↶ 실행 취소(Ctrl+Z) / ↷ 다시 실행(Ctrl+Y), Ctrl+S로 바로 저장합니다.", "‘⌨ 단축키’를 누르면 모든 단축키를 볼 수 있습니다.", "데이터는 이 컴퓨터의 브라우저에 저장됩니다. 브라우저 데이터를 지우면 사라지므로 JSON으로 자주 백업하세요.", "문제가 있으면 페이지 맨 아래 ‘문의하기’로 제작자에게 연락하세요."],
+ "demo.play":"▶ 애니메이션 데모 보기 (약 1분)",
+ "demo.label":"애니메이션 데모",
+ "demo.stop":"■ 데모 종료",
+ "demo.fast":"2배속",
+ "demo.normal":"보통 속도",
+ "demo.c0":"애니메이션 데모: 빈 화면에서 시작해 뉴스레터 한 호를 만들고 내보내기까지 보여 드립니다. 데모가 끝나면 원래 내용으로 돌아갑니다.",
+ "demo.c1":"① 기본 정보: 학교명, 메인 제목, 발행 월, 연도, 호수를 입력하면 오른쪽 미리보기에 바로 반영됩니다.",
+ "demo.c2":"② 레이아웃 디자인: 템플릿을 클릭해 전체 레이아웃을 고르고 섹션 제목 스타일을 선택합니다.",
+ "demo.c3":"③ 콘텐츠 편집: ‘＋ 파트 추가’로 섹션을 만들고 배치 위치와 영문 제목을 고릅니다.",
+ "demo.c4":"기사를 펼쳐 제목과 본문을 입력합니다. 문서 프로그램처럼 쓰면 됩니다.",
+ "demo.c5":"‘이미지 넣기’를 누르면 커서 위치에 사진이 들어갑니다.",
+ "demo.c6":"이미지를 마우스로 끌어 다른 이미지 위에 놓으면 나란히 배치됩니다.",
+ "demo.c7":"글자를 선택하고 ‘굵게’(또는 Ctrl+B)를 누릅니다.",
+ "demo.c8":"오른쪽 단에 파트를 하나 더 추가합니다. 글이 A4를 넘치면 빨간 테두리가 나타납니다…",
+ "demo.c9":"‘다음 페이지로 자동 이어서 배치’를 누르면 넘친 내용이 2페이지로 이어지고 제호도 그대로 유지됩니다.",
+ "demo.c10":"미리보기를 ‘두 페이지’나 ‘여러 페이지’로 바꿔 전체를 한눈에 확인할 수 있습니다.",
+ "demo.c11":"④ 내보내기: PDF로 인쇄하거나 모든 페이지를 PNG 압축 파일로 저장합니다. (데모에서는 실제로 내려받지 않습니다)",
+ "demo.c12":"완료! 데모가 끝났고 원래 내용으로 돌아왔습니다.",
+ "demo.sub":"우송대학교 동문 소식지",
+ "demo.issuer":"우송대학교 국제교류처",
+ "demo.a1.title":"2026 가을 신입생 공항 픽업 성료",
+ "demo.a1.p1":"올가을 20여 개국에서 온 신입생들이 인천공항에 도착했고, 봉사단이 픽업부터 등록까지 함께했습니다.",
+ "demo.a1.p2":"캠퍼스에 도착한 신입생들은 오리엔테이션에 참여해 학교생활과 학습 지원을 안내받았습니다.",
+ "demo.bold":"오리엔테이션",
+ "demo.a2.title":"동문 교류의 밤 안내",
+ "demo.a2.line":"{n}. 행사 당일에는 국내외에서 활동하는 동문들이 경험을 나누고 교류 만찬도 함께합니다. 재학생과 동문의 많은 참여 바랍니다.",
  'handle.title':'드래그하여 너비 조절',
  'contact.open':'문의하기','contact.title':'오류 신고 및 이용 문의','contact.intro':'편집기 오류나 이용 중 궁금한 점이 있다면 아래 이메일로 문의해 주세요.',
  'contact.copy':'이메일 복사','contact.copied':'복사 완료','contact.send':'이메일 보내기','contact.close':'닫기','contact.subject':'뉴스레터 편집기 오류 및 이용 문의'
@@ -513,6 +687,73 @@ const translations={
  "view.label":"Preview","view.single":"Single Page","view.two":"Two Pages","view.grid":"All Pages","view.hint":"Click a page to edit it; double-click to return to single-page view.",
  "blk.label":"Body Text & Images (in order)","blk.hint":"Click in the text where the image should go, then press “Insert Image at Cursor”. You can also paste an image (Ctrl+V) or drag photos into the text box.","blk.textN":"Text {n}","blk.imgRow":"Images ({n} side by side)","blk.insertAtCursor":"Insert Image at Cursor","blk.addText":"+ Text","blk.addImage":"+ Image","blk.addSide":"+ Add One Beside","blk.removeImg":"Delete this image","blk.confirmRemoveImg":"Delete this image?","blk.confirmDeleteText":"Delete this text block?","blk.confirmDeleteRow":"Delete this row of images?","blk.toCollage":"Move to End Collage","img.toBody":"Add to End of Body","blk.dropHint":"Paste or drop images here",
  "hist.undo":"Undo","hist.redo":"Redo","hist.undoTitle":"Undo (Ctrl+Z)","hist.redoTitle":"Redo (Ctrl+Y)","keys.button":"Shortcuts","keys.list":"Ctrl + Z: Undo\nCtrl + Y or Ctrl + Shift + Z: Redo\nCtrl + S: Save now\nCtrl + B: Bold (select text in the body first)\nCtrl + V: Paste text or images\n\nImages: drag an image with the mouse to move it anywhere in the text; drop it on another image to place them side by side.\nOn Mac, use ⌘ instead of Ctrl.","status.savedNow":"Saved","ce.label":"Body Text & Images","ce.bold":"Bold","ce.boldTitle":"Bold (Ctrl+B)","ce.insert":"Insert Image","ce.hint":"Just type. To add images: click in the text and press “Insert Image”, or paste or drop photos in. Drag an image with the mouse to move it anywhere in the text (the blue line shows where it lands); drop it on another image to place them side by side. ✕ deletes; Ctrl+Z undoes.",
+ "man.button":"Manual",
+ "man.title":"Manual: Get Started in 5 Minutes",
+ "man.step":"Step {n} of {total}",
+ "man.prev":"Back",
+ "man.next":"Next",
+ "man.done":"Start Editing",
+ "man.show":"Show Me",
+ "man.close":"Close",
+ "man.dontShow":"Don’t show automatically next time",
+ "man.back":"Back to Manual",
+ "man.open":"Open the Illustrated Manual",
+ "man.contents":"Contents",
+ "man.art.edit":"Editing",
+ "man.art.preview":"Live preview",
+ "man.s1.title":"Getting Around",
+ "man.s1.lead":"Edit on the left and see the live preview on the right. Switch between 繁體中文 / 한국어 / English at the top left at any time.",
+ "man.s1.points":["Work through four steps: ① Basic Information → ② Layout & Design → ③ Content Editor → ④ Export.", "The preview on the right is exactly what gets printed; every page is a fixed A4 sheet.", "Drag the “⋮” handle in the middle to resize the two sides.", "Every change is saved automatically in this computer’s browser."],
+ "man.s2.title":"Fill In the Basics",
+ "man.s2.lead":"Enter this issue’s details in “① Basic Information”; they appear in the masthead and footer of every page.",
+ "man.s2.points":["University name, main title, subtitle, month, year and issue number.", "Publisher and address appear in the footer of every page.", "Press “Choose Image” to upload the university logo.", "“Reset to Sample Content” at the bottom clears everything — export a JSON backup first."],
+ "man.s3.title":"Choose a Layout and Heading Style",
+ "man.s3.lead":"In “② Layout & Design”, click a template to apply it to the current page and see it on the right.",
+ "man.s3.points":["11 page layouts: classic two-column, image cards, magazine, newspaper and more.", "16 section heading styles (e.g. the frame around “President’s Message”).", "Each page can use its own layout; inner pages can use a “Compact header” to save space.", "Tick “Show sample images in empty image slots” to preview the overall look."],
+ "man.s4.title":"Pages, Parts and Articles",
+ "man.s4.lead":"In “③ Content Editor” the structure is: A4 page → Part (section) → Article.",
+ "man.s4.points":["“+ Add A4 Page” adds a page; buttons like “1 / 3” choose which page you edit.", "“+ Add Part” adds a section placed in the left column, right column or full width.", "Pick a Part heading from the common English list, or type your own.", "Click an article title to edit it; ↑ ↓ reorder and “Delete” removes it."],
+ "man.s5.title":"Write Text and Add Images",
+ "man.s5.lead":"The body box works like a word processor: just type, and images appear right between your paragraphs.",
+ "man.s5.points":["Click in the text and press “Insert Image”, or paste (Ctrl+V) or drag photos into the box.", "Drag an image with the mouse to move it — the blue line shows where it will land.", "Drop an image on another one to place them side by side; hover and press ✕ to delete.", "Select text and press “Bold” or Ctrl+B. The main image and end-of-article collage are under “Image Settings”."],
+ "man.s6.title":"Too Much Content? Continue on the Next Page",
+ "man.s6.lead":"Pages that overflow A4 get a red outline; one click moves the extra content to the next page.",
+ "man.s6.points":["Press “Continue Overflow on Next Page”; pages are added as needed and keep the masthead and columns.", "The first page ends with “(Continued on next page)” and the next starts with “(Continued from previous page)”.", "After editing text or images, press “Re-run Auto Continue” to lay the pages out again.", "In an article you can also use “Split at Cursor” or “Move Article to Next Page”."],
+ "man.s7.title":"Change the Preview",
+ "man.s7.lead":"Above the preview, choose “Single Page”, “Two Pages” or “All Pages” to check the whole issue.",
+ "man.s7.points":["Single Page: 100% size for reading details.", "Two Pages: side by side; All Pages: every page as a thumbnail.", "Click a page to edit it; double-click to go back to single-page view."],
+ "man.s8.title":"Export and Print",
+ "man.s8.lead":"In “④ Export”, create a PDF or PNG, or back up your work as JSON.",
+ "man.s8.points":["PDF: press “Print / Save as PDF” and choose A4 paper, 100% scale, no margins, and turn on “Background graphics”.", "PNG: save the current page, or every page bundled into one ZIP file.", "JSON: “Export JSON Backup” saves your work; “Import JSON” restores it on another computer."],
+ "man.s9.title":"Undo, Shortcuts and Saving",
+ "man.s9.lead":"Don’t worry about mistakes — every action can be undone.",
+ "man.s9.points":["↶ Undo (Ctrl+Z) / ↷ Redo (Ctrl+Y); Ctrl+S saves right away.", "Press “⌨ Shortcuts” to see every shortcut.", "Your work lives in this computer’s browser. Clearing browser data deletes it, so export a JSON backup regularly.", "Need help? Press “Contact me” at the very bottom of the page."],
+ "demo.play":"▶ Watch the Animated Demo (about 1 min)",
+ "demo.label":"Animated demo",
+ "demo.stop":"■ Stop Demo",
+ "demo.fast":"2× Speed",
+ "demo.normal":"1× Normal",
+ "demo.c0":"Animated demo: building an issue from a blank page all the way to export. Your own content is restored when the demo ends.",
+ "demo.c1":"① Basic Information: enter the university name, main title, month, year and issue number — the preview updates instantly.",
+ "demo.c2":"② Layout & Design: click a template to choose the page layout, then a section heading style.",
+ "demo.c3":"③ Content Editor: press “+ Add Part” to create a section, then choose its placement and English heading.",
+ "demo.c4":"Open the article and type a title and body text, just like in a word processor.",
+ "demo.c5":"Press “Insert Image” and the photo appears where the cursor is.",
+ "demo.c6":"Drag an image onto another image with the mouse and the two sit side by side.",
+ "demo.c7":"Select some text and press “Bold” (or Ctrl+B).",
+ "demo.c8":"Add another Part in the right column. When text no longer fits on A4, the page gets a red outline…",
+ "demo.c9":"Press “Continue Overflow on Next Page”: the extra text flows to page 2, with the same masthead.",
+ "demo.c10":"Switch the preview to “Two Pages” or “All Pages” to check the whole issue at once.",
+ "demo.c11":"④ Export: print to PDF, or save every page as PNG in one ZIP file. (Nothing is downloaded during the demo.)",
+ "demo.c12":"Done! The demo is over and your own content has been restored.",
+ "demo.sub":"Woosong University Alumni News",
+ "demo.issuer":"Woosong University International Office",
+ "demo.a1.title":"Fall 2026 Airport Welcome a Success",
+ "demo.a1.p1":"This fall, new students from more than 20 countries landed at Incheon Airport, and volunteers helped them from pickup to registration.",
+ "demo.a1.p2":"On campus, the new students joined an orientation session to learn about student life and study support.",
+ "demo.bold":"orientation session",
+ "demo.a2.title":"Alumni Networking Night",
+ "demo.a2.line":"{n}. Alumni working in Korea and abroad will share their career stories over a networking dinner. Students and alumni are warmly invited.",
  'handle.title':'Drag to resize',
  'contact.open':'Contact me','contact.title':'Bug Reports & Support','contact.intro':'Found a bug or need help with the editor? Contact the creator at the email below.',
  'contact.copy':'Copy Email','contact.copied':'Copied','contact.send':'Write Email','contact.close':'Close','contact.subject':'Newsletter Editor Bug Report / Support'
@@ -671,17 +912,19 @@ const uiConfirm=msg=>uiDialog(msg,true),uiAlert=msg=>uiDialog(msg,false);
 /* ===== Persistence ===== */
 let saveTimer=null,saveState='idle',lastSaved=null,storageWarned=false;
 /* ===== Undo / redo: snapshots of the data (image strings are shared, not copied) ===== */
+let demoActive=false;
 const HISTORY_MAX=80;let history=[],hIndex=-1,hTimer=null,restoring=false;
 const cloneData=v=>Array.isArray(v)?v.map(cloneData):v&&typeof v==='object'?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,cloneData(x)])):v;
 const dataSig=d=>JSON.stringify(d,(k,v)=>typeof v==='string'&&v.length>300?v.length+':'+v.slice(-48):v);
 function recordHistory(){
+ if(demoActive)return;
  clearTimeout(hTimer);hTimer=null;const sig=dataSig(data);
  if(history[hIndex]&&history[hIndex].sig===sig){history[hIndex].page=pageIndex;return}
  history=history.slice(0,hIndex+1);history.push({sig,data:cloneData(data),page:pageIndex});
  if(history.length>HISTORY_MAX)history.shift();hIndex=history.length-1;paintHistory();
 }
 const flushHistory=()=>{if(hTimer)recordHistory()};
-function scheduleHistory(){if(restoring)return;clearTimeout(hTimer);hTimer=setTimeout(recordHistory,400)}
+function scheduleHistory(){if(restoring||demoActive)return;clearTimeout(hTimer);hTimer=setTimeout(recordHistory,400)}
 function paintHistory(){const u=$('#undoBtn'),r=$('#redoBtn');if(u)u.disabled=!(hIndex>0||hTimer);if(r)r.disabled=hIndex>=history.length-1}
 function stepHistory(d){
  if(hTimer)recordHistory();
@@ -691,8 +934,9 @@ function stepHistory(d){
  finally{restoring=false}
  paintHistory();
 }
-function persist(){clearTimeout(saveTimer);saveTimer=setTimeout(saveNow,250);scheduleHistory();paintHistory()}
+function persist(){if(demoActive)return;clearTimeout(saveTimer);saveTimer=setTimeout(saveNow,250);scheduleHistory();paintHistory()}
 function saveNow(){
+ if(demoActive)return;
  clearTimeout(saveTimer);saveTimer=null;
  scheduleHistory();
  try{localStorage.setItem(STORAGE_KEY,JSON.stringify(data));saveState='saved';lastSaved=new Date()}
@@ -728,6 +972,7 @@ function setLanguage(lang){
  try{localStorage.setItem(LANG_KEY,lang)}catch(e){}
  applyTranslations();renderPanels();renderPreview();
  side.scrollTop=scroll;
+ if($('#manualOverlay')?.classList.contains('is-open'))openManual(manualStep,manualAuto);
 }
 function showTab(tab){
  if(!TABS.includes(tab))tab='info';
@@ -1218,7 +1463,7 @@ function handleUpload(input){
  if(kind==='extra')for(const file of files)readImage(file,(v,w,h)=>{const a=target();if(!a)return;a.extraImages.push({id:shortId(),src:v,ratio:'original',fit:'contain',x:50,y:50,w,h});folds.set('img:'+aid,true);structural()},'photo');
 }
 function onAction(btn){
- if(!/^(undo|redo|tab|lang|view|page-select|part-toggle|art-toggle|shortcuts|contact-)/.test(btn.dataset.act))flushHistory();
+ if(!/^(undo|redo|tab|lang|view|page-select|part-toggle|art-toggle|shortcuts|contact-|manual-|demo-)/.test(btn.dataset.act))flushHistory();
  const act=btn.dataset.act,pid=btn.closest('[data-pid]')?.dataset.pid,aid=btn.closest('[data-aid]')?.dataset.aid;
  const pg=curPage(),part=pid?findPart(pid):null,a=part&&aid?part.articles.find(x=>x.id===aid):null;
  switch(act){
@@ -1251,6 +1496,8 @@ function onAction(btn){
   case 'undo':return stepHistory(-1);
   case 'redo':return stepHistory(1);
   case 'shortcuts':return uiAlert(t('keys.list'));
+  case 'manual-open':return openManual();
+  case 'demo-run':return runDemo();
   case 'logo-remove':data.logo='';persist();renderInfo();renderPreview();return;
   case 'reset':
    uiConfirm(t('msg.confirmReset')).then(ok=>{if(!ok)return;data=sample();pageIndex=0;openArticles.clear();collapsedParts.clear();folds.clear();saveNow();renderPanels();renderPreview()});return;
@@ -1599,9 +1846,247 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#contactOverlay'
  window.addEventListener('resize',()=>update(w));
 })();
 
+/* ===== Illustrated manual (opens automatically on the first visit) ===== */
+const MANUAL_KEY='woosong-ui-manual-seen',MANUAL_STEPS=9;
+let manualStep=0;
+const SV={
+ r:(x,y,w,h,f,rx=4,more='')=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}" fill="${f}" ${more}/>`,
+ bar:(x,y,w,f='#cfd9e4',h=5)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${h/2}" fill="${f}"/>`,
+ tx:(x,y,s,size=9,f='#1b3e64',anchor='start',weight=700)=>`<text x="${x}" y="${y}" font-size="${size}" font-weight="${weight}" fill="${f}" text-anchor="${anchor}" font-family="Arial,'Noto Sans KR','Malgun Gothic','Microsoft JhengHei',sans-serif">${esc(s)}</text>`,
+ line:(x1,y1,x2,y2,c='#2f7fd0',w=2,more='')=>`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${c}" stroke-width="${w}" stroke-linecap="round" ${more}/>`,
+ arrow:(x1,y1,x2,y2,c='#2f7fd0')=>`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${c}" stroke-width="2.4" stroke-linecap="round" marker-end="url(#mArrow)"/>`,
+ page:(x,y,w,h,more='stroke="#cfd9e4"')=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="3" fill="#fff" ${more}/>`,
+ mast:(x,y,w)=>w<80?`<rect x="${x}" y="${y}" width="${w}" height="1.4" fill="#222"/><rect x="${x+w*0.2}" y="${y+5}" width="${w*0.5}" height="5" rx="1" fill="#26354a"/><rect x="${x+w-9}" y="${y+4}" width="6" height="7" rx="1" fill="#f34e39"/><rect x="${x}" y="${y+14}" width="${w}" height="1.4" fill="#222"/>`
+  :`<rect x="${x}" y="${y}" width="${w}" height="1.6" fill="#222"/>${SV.tx(x+w/2-6,y+11,'NEWSLETTER',Math.min(11,w/10),'#111','middle',900)}<text x="${x+w-3}" y="${y+12}" font-size="${Math.min(12,w/9)}" font-weight="900" fill="#f34e39" text-anchor="end" font-family="Arial">11</text><rect x="${x}" y="${y+15}" width="${w}" height="1.6" fill="#222"/>`,
+ lines:(x,y,w,n,gap=8)=>Array.from({length:n},(_,i)=>SV.bar(x,y+i*gap,i===n-1?w*0.6:w,'#d5dde6',4)).join(''),
+ pill:(x,y,w,label,f,c='#1b3e64')=>{const wide=[...String(label)].reduce((n,ch)=>n+(/[\u1100-\uffff]/.test(ch)?1:0.56),0);return `${SV.r(x,y,w,13,f,6.5)}${SV.tx(x+w/2,y+9.5,label,Math.min(7.5,(w-8)/Math.max(1,wide)),c,'middle')}`},
+ photo:(x,y,w,h,c='#9fbcd8')=>`${SV.r(x,y,w,h,c,3)}<path d="M${x+3} ${y+h-3} L${x+w*0.35} ${y+h*0.45} L${x+w*0.55} ${y+h*0.7} L${x+w*0.72} ${y+h*0.5} L${x+w-3} ${y+h-3}Z" fill="#ffffff88"/><circle cx="${x+w*0.78}" cy="${y+h*0.28}" r="${Math.min(w,h)*0.1}" fill="#ffffffaa"/>`,
+ key:(x,y,label,w=30)=>`${SV.r(x,y+2,w,20,'#c3cfdc',4)}${SV.r(x,y,w,20,'#fff',4,'stroke="#c3cfdc"')}${SV.tx(x+w/2,y+13.5,label,8.5,'#23415f','middle')}`
+};
+function manualArt(i){
+ const defs=`<defs><marker id="mArrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2f7fd0"/></marker></defs>`;
+ const tabs=(x,y,active)=>[1,2,3,4].map((n,k)=>SV.r(x+k*30,y,27,17,k===active?'#1b3e64':'#eef3f9',4,k===active?'':'stroke="#d3deea"')+SV.tx(x+k*30+13.5,y+12,String(n),8,k===active?'#fff':'#4c6380','middle')).join('');
+ const side=(active,inner)=>`${SV.r(10,10,140,168,'#fff',8,'stroke="#d3deea"')}${SV.r(18,17,124,10,'#e6edf5',5)}${SV.r(19,18,40,8,'#1b3e64',4)}${tabs(18,33,active)}${inner}`;
+ let b='';
+ switch(i){
+  case 0:b=side(0,[0,1,2,3].map(k=>SV.bar(18,60+k*26,40,'#9fb0c3',4)+SV.r(18,67+k*26,124,11,'#f3f6fa',3,'stroke="#d5dee8"')).join(''))+SV.r(155,80,6,24,'#c7d6e5',3)+SV.tx(158,96,'⋮',9,'#264866','middle')
+    +SV.page(178,10,124,168)+SV.mast(186,18,108)+SV.pill(188,42,44,"President",'#f3cbd1')+SV.pill(246,42,44,'Global','#c9ebee')+SV.photo(188,60,46,26)+SV.lines(188,92,46,5)+SV.photo(246,60,46,26,'#c8b59a')+SV.lines(246,92,46,5)+SV.lines(188,140,46,3)+SV.lines(246,140,46,3)
+    +SV.tx(80,194,t('man.art.edit'),9,'#4c6380','middle')+SV.tx(240,194,t('man.art.preview'),9,'#4c6380','middle');break;
+  case 1:b=side(0,['Woosong University','NEWSLETTER','11','2026'].map((v,k)=>SV.bar(18,55+k*25,36,'#9fb0c3',4)+SV.r(18,62+k*25,124,12,'#fff',3,'stroke="#9ec0e2"')+SV.tx(23,71+k*25,v,7.5,'#23415f','start',600)).join('')+`<circle cx="36" cy="164" r="0" fill="none"/>`)
+    +SV.arrow(152,95,182,95)+SV.page(188,30,160,96)+`<circle cx="210" cy="66" r="15" fill="none" stroke="#173d67" stroke-width="3"/>`+SV.tx(210,68,'LOGO',6.5,'#173d67','middle')
+    +SV.r(230,40,2,52,'#444',0)+SV.tx(282,50,'Woosong University',8,'#111','middle',500)+SV.tx(278,70,'NEWSLETTER',11,'#111','middle',900)+SV.r(330,40,1,52,'#444',0)+SV.tx(343,68,'11',14,'#f34e39','end',900)+SV.tx(343,82,'2026',6.5,'#333','end',500)
+    +SV.r(196,104,144,1,'#333',0)+SV.bar(198,111,50,'#bbc5d0',4)+SV.bar(270,111,68,'#bbc5d0',4);break;
+  case 2:b=side(1,'')+[0,1,2,3,4,5].map(k=>{const x=18+(k%2)*63,y=58+Math.floor(k/2)*40,on=k===1;return SV.r(x,y,58,35,'#fff',4,on?'stroke="#14558a" stroke-width="2.5"':'stroke="#d5dee8"')+SV.bar(x+5,y+5,48,'#26354a',3)+(k%3===1?SV.photo(x+5,y+11,48,10):SV.bar(x+5,y+12,21,'#cfd9e4',3)+SV.bar(x+29,y+12,24,'#cfd9e4',3))+SV.bar(x+5,y+25,30,'#dde4ec',3)+(on?`<circle cx="${x+53}" cy="${y+4}" r="6" fill="#14558a"/><path d="M${x+50} ${y+4}l2 2 4-4" stroke="#fff" stroke-width="1.6" fill="none"/>`:'')}).join('')
+    +SV.arrow(152,96,182,96)+SV.page(188,10,150,168)+SV.mast(196,18,134)+SV.pill(200,44,58,'Alumni','#193d5c','#fff')+SV.pill(268,44,58,'Campus','#193d5c','#fff')+SV.photo(200,64,58,34)+SV.photo(268,64,58,34,'#c8b59a')+SV.lines(200,104,58,6)+SV.lines(268,104,58,6);break;
+  case 3:b=SV.page(30,8,190,180)+SV.mast(40,16,170)+SV.r(40,40,80,90,'#fff5f6',4,'stroke="#f0b8c1" stroke-dasharray="3 2"')+SV.pill(44,45,72,`Part 1 · ${t('pos.left')}`,'#f3cbd1')+SV.bar(48,66,60,'#26354a',4)+SV.lines(48,74,64,3)+SV.bar(48,104,52,'#26354a',4)+SV.lines(48,112,64,2)
+    +SV.r(130,40,80,90,'#f2fbfc',4,'stroke="#9ed6dc" stroke-dasharray="3 2"')+SV.pill(134,45,72,`Part 2 · ${t('pos.right')}`,'#c9ebee')+SV.bar(138,66,60,'#26354a',4)+SV.lines(138,74,64,3)+SV.photo(138,100,64,24)
+    +SV.r(40,138,170,42,'#f5f7fb',4,'stroke="#c3cfdc" stroke-dasharray="3 2"')+SV.pill(46,143,80,`Part 3 · ${t('pos.full')}`,'#e3e8f2')+SV.lines(48,162,150,2)
+    +SV.r(240,40,108,24,'#fff',6,'stroke="#c9d6e4"')+SV.tx(294,56,'+ A4',10,'#23415f','middle')+SV.r(240,72,108,24,'#fff',6,'stroke="#c9d6e4"')+SV.tx(294,88,'+ Part',10,'#23415f','middle')+SV.r(240,104,108,24,'#fff',6,'stroke="#c9d6e4"')+SV.tx(294,120,'↑ ↓',11,'#23415f','middle')
+    +SV.tx(294,150,'A4 → Part →',9,'#4c6380','middle')+SV.tx(294,163,t('article.label',{n:''}).trim(),9,'#4c6380','middle');break;
+  case 4:b=SV.r(18,8,324,180,'#fff',8,'stroke="#c3cfdc"')+SV.r(18,8,324,26,'#f4f7fb',8)+SV.r(26,13,40,17,'#fff',4,'stroke="#cfdae6"')+SV.tx(46,25,'B',10,'#1e3b60','middle',900)+SV.r(72,13,60,17,'#fff',4,'stroke="#cfdae6"')+SV.photo(78,17,14,9,'#7d9fc4')+SV.bar(96,19,30,'#9fb0c3',4)
+    +SV.lines(30,44,290,2,9)+SV.r(30,66,62,44,'#9fbcd8',4,'opacity=".35" stroke="#7d9fc4" stroke-dasharray="3 2"')+SV.line(30,119,310,119,'#2f7fd0',3)+SV.lines(30,126,250,2,9)
+    +SV.photo(150,82,62,44)+`<path d="M204 112 l0 18 l5 -5 l4 8 l3 -1.5 l-4 -8 l7 0z" fill="#fff" stroke="#111" stroke-width="1.2"/>`+SV.arrow(96,88,146,98)
+    +SV.photo(30,148,56,34)+SV.photo(92,148,56,34,'#c8b59a')+SV.tx(158,170,'↔',13,'#2f7fd0','start',900)+SV.r(186,150,38,22,'#fff',4,'stroke="#c3cfdc"')+SV.tx(205,165,'Ctrl+B',7,'#23415f','middle')+SV.tx(232,166,t('ce.bold'),12,'#111','start',900);break;
+  case 5:b=SV.page(20,14,120,150,'stroke="#d65050" stroke-width="3"')+SV.mast(28,22,104)+SV.lines(30,48,100,10,9)+[0,1,2].map(k=>SV.bar(30,170+k*8,k===2?60:100,'#f0b4ae',4)).join('')
+    +SV.arrow(146,90,196,90)+SV.page(204,14,120,150)+SV.mast(212,22,104)+SV.lines(214,48,100,6,9)+SV.tx(264,112,'(…)',9,'#6b7c8f','middle',600)
+    +SV.r(150,104,48,0,'#fff')+SV.r(184,172,170,22,'#1b3e64',11)+SV.tx(269,186,t('flow.auto'),8,'#fff','middle');break;
+  case 6:b=SV.r(10,8,340,22,'#e8edf3',6)+[t('view.single'),t('view.two'),t('view.grid')].map((v,k)=>SV.r(20+k*108,11,100,16,k===1?'#1b3e64':'#fff',5,k===1?'':'stroke="#c9d6e4"')+SV.tx(70+k*108,22,v,8,k===1?'#fff':'#23415f','middle')).join('')
+    +SV.page(28,42,62,88)+SV.mast(33,48,52)+SV.lines(35,72,48,6)
+    +SV.page(122,42,54,76)+SV.page(180,42,54,76)+SV.mast(126,47,46)+SV.mast(184,47,46)+SV.lines(128,70,42,5)+SV.lines(186,70,42,5)
+    +[0,1,2,3,4,5].map(k=>SV.page(256+(k%3)*30,42+Math.floor(k/3)*42,26,38)+SV.bar(259+(k%3)*30,47+Math.floor(k/3)*42,20,'#26354a',2)+SV.lines(259+(k%3)*30,53+Math.floor(k/3)*42,20,3,5)).join('')
+    +SV.tx(59,150,'1',11,'#4c6380','middle')+SV.tx(178,150,'2',11,'#4c6380','middle')+SV.tx(300,150,'∞',13,'#4c6380','middle');break;
+  case 7:b=[['PDF','#d64b3f'],['PNG','#2f7fd0'],['ZIP','#8a6bb0'],['JSON','#2f8a5f']].map(([n,c],k)=>{const x=18+k*84;return `<path d="M${x} 20h44l14 14v58h-58z" fill="#fff" stroke="#c3cfdc" stroke-width="1.5"/><path d="M${x+44} 20v14h14" fill="none" stroke="#c3cfdc" stroke-width="1.5"/>`+SV.r(x-4,56,52,18,c,4)+SV.tx(x+22,69,n,10,'#fff','middle',900)+SV.lines(x+8,80,40,2,5)}).join('')
+    +SV.r(18,110,324,76,'#f4f7fb',8,'stroke="#d3deea"')+['A4','100%','0 mm','✓ ▣'].map((v,k)=>SV.r(30+k*78,124,66,22,'#fff',5,'stroke="#c9d6e4"')+SV.tx(63+k*78,139,v,9,'#23415f','middle')).join('')+SV.lines(30,158,300,2,8);break;
+  case 8:b=SV.r(18,14,90,26,'#fff',7,'stroke="#c9d6e4"')+SV.tx(63,31,'↶ '+t('hist.undo'),9,'#23415f','middle')+SV.r(116,14,90,26,'#fff',7,'stroke="#c9d6e4"')+SV.tx(161,31,'↷ '+t('hist.redo'),9,'#23415f','middle')
+    +[['Ctrl','Z'],['Ctrl','Y'],['Ctrl','S'],['Ctrl','B']].map(([a,c],k)=>{const x=18+(k%2)*96,y=58+Math.floor(k/2)*34;return SV.key(x,y,a,36)+SV.tx(x+44,y+14,'+',10,'#4c6380','middle')+SV.key(x+52,y,c,26)}).join('')
+    +`<circle cx="276" cy="80" r="40" fill="#ecf7f0" stroke="#bfe0cb" stroke-width="2"/><path d="M256 82l14 13 26-28" fill="none" stroke="#1f6a43" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>`+SV.tx(276,140,t('status.autosave'),9,'#1f6a43','middle')
+    +SV.r(222,152,108,24,'#fff',12,'stroke="#c9d6e4"')+SV.tx(276,168,'JSON ⤓',9,'#2f8a5f','middle');break;
+ }
+ return `<svg viewBox="0 0 360 200" role="img" aria-label="${esc(t(`man.s${i+1}.title`))}" xmlns="http://www.w3.org/2000/svg">${defs}${SV.r(0,0,360,200,'#eef3f9',10)}${b}</svg>`;
+}
+function manualHTML(){
+ const i=manualStep,points=t(`man.s${i+1}.points`),last=i===MANUAL_STEPS-1;
+ let seen=false;try{seen=localStorage.getItem(MANUAL_KEY)==='1'}catch(e){}
+ return `<div class="manual-dialog" role="dialog" aria-modal="true" aria-labelledby="manualTitle">
+<aside class="manual-nav"><div class="manual-brand">${esc(t('man.title'))}</div><button type="button" class="demo-play" data-man="demo">${esc(t('demo.play'))}</button><div class="manual-nav-label">${esc(t('man.contents'))}</div><ol>${Array.from({length:MANUAL_STEPS},(_,k)=>`<li><button type="button" data-man-step="${k}"${k===i?' aria-current="step"':''}><span>${k+1}</span>${esc(t(`man.s${k+1}.title`))}</button></li>`).join('')}</ol></aside>
+<section class="manual-main"><div class="manual-top"><span class="manual-count">${esc(t('man.step',{n:i+1,total:MANUAL_STEPS}))}</span><button type="button" class="demo-play demo-play-narrow" data-man="demo">${esc(t('demo.play'))}</button><button type="button" class="manual-x" data-man="close" aria-label="${esc(t('man.close'))}" title="${esc(t('man.close'))}">✕</button></div>
+<h2 id="manualTitle">${esc(t(`man.s${i+1}.title`))}</h2><div class="manual-art">${manualArt(i)}</div><p class="manual-lead">${esc(t(`man.s${i+1}.lead`))}</p><ul class="manual-points">${points.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+<div class="manual-dots" aria-hidden="true">${Array.from({length:MANUAL_STEPS},(_,k)=>`<span${k===i?' class="on"':''}></span>`).join('')}</div>
+<div class="manual-foot"><label class="manual-check"><input type="checkbox" id="manualDontShow"${seen||manualAuto?' checked':''}> ${esc(t('man.dontShow'))}</label><div class="manual-buttons"><button type="button" class="btn secondary" data-man="show">${esc(t('man.show'))}</button><button type="button" class="btn secondary" data-man="prev"${i===0?' disabled':''}>${esc(t('man.prev'))}</button><button type="button" class="btn" data-man="${last?'close':'next'}">${esc(t(last?'man.done':'man.next'))}</button></div></div></section></div>`;
+}
+let manualAuto=false;
+function openManual(step,auto){
+ manualAuto=!!auto;if(step!==undefined)manualStep=Math.min(Math.max(0,step),MANUAL_STEPS-1);
+ document.querySelector('.manual-back')?.remove();
+ let ov=$('#manualOverlay');if(!ov){ov=document.createElement('div');ov.id='manualOverlay';ov.className='manual-overlay';document.body.appendChild(ov)}
+ ov.innerHTML=manualHTML();ov.classList.add('is-open');ov.querySelector('[data-man="next"],[data-man="close"].btn')?.focus();
+}
+function closeManual(){
+ const ov=$('#manualOverlay');if(!ov)return;
+ const cb=$('#manualDontShow');try{if(!cb||cb.checked)localStorage.setItem(MANUAL_KEY,'1');else localStorage.removeItem(MANUAL_KEY)}catch(e){}
+ ov.classList.remove('is-open');ov.innerHTML='';$('#manualBtn')?.focus();
+}
+/* "Show me": close the manual, open the right module and pulse the real control. */
+function showMe(i){
+ closeManual();
+ const tab=[null,'info','layout','content','content','content',null,'export',null][i];if(tab)showTab(tab);
+ if(i===4){const it=document.querySelector('#partsEdit .article-item');if(it){const btn=it.querySelector('[data-act="art-toggle"]');if(btn&&btn.getAttribute('aria-expanded')!=='true')btn.click()}}
+ const sel=['.ux-nav','#metadata','.template-gallery','#pagesPanel','#partsEdit .ce-field','#overflowWarning:not([hidden]),#pagesPanel','.preview-toolbar','.export-actions','.ux-actions'][i];
+ const el=[...document.querySelectorAll(sel)].find(x=>x.offsetParent!==null);
+ if(el){el.scrollIntoView({block:'center',behavior:'smooth'});el.classList.remove('tour-spot');void el.offsetWidth;el.classList.add('tour-spot');setTimeout(()=>el.classList.remove('tour-spot'),3600)}
+ const back=document.createElement('button');back.type='button';back.className='manual-back';back.textContent='↩ '+t('man.back');back.addEventListener('click',()=>openManual(i));
+ document.body.appendChild(back);setTimeout(()=>back.remove(),12000);
+}
+document.addEventListener('click',e=>{const ov=$('#manualOverlay');if(!ov||!ov.classList.contains('is-open'))return;
+ if(e.target===ov){closeManual();return}
+ const step=e.target.closest('[data-man-step]');if(step){openManual(Number(step.dataset.manStep),manualAuto);return}
+ const b=e.target.closest('[data-man]');if(!b)return;const a=b.dataset.man;
+ if(a==='demo'){runDemo();return}
+ if(a==='close')closeManual();else if(a==='next')openManual(manualStep+1,manualAuto);else if(a==='prev')openManual(manualStep-1,manualAuto);else if(a==='show')showMe(manualStep);
+});
+document.addEventListener('keydown',e=>{const ov=$('#manualOverlay');if(!ov||!ov.classList.contains('is-open'))return;
+ if(e.key==='Escape'){e.preventDefault();closeManual()}
+ else if(e.key==='ArrowRight'&&manualStep<MANUAL_STEPS-1&&!e.target.matches('input')){e.preventDefault();openManual(manualStep+1,manualAuto)}
+ else if(e.key==='ArrowLeft'&&manualStep>0&&!e.target.matches('input')){e.preventDefault();openManual(manualStep-1,manualAuto)}
+});
+
+/* ===== Animated demo: a visible cursor builds an issue from scratch in the real editor =====
+   The user's data is snapshotted first; saving and history are paused; everything is restored at the end. */
+let demoStop=false,demoSpeed=1,demoSnap=null;
+const DEMO_PACE=1.3; /* base tempo: a full run at 1× takes about a minute */
+class DemoStopped extends Error{}
+const dsleep=ms=>new Promise((res,rej)=>{const end=Date.now()+ms/(demoSpeed*DEMO_PACE);(function tick(){if(demoStop)return rej(new DemoStopped());if(Date.now()>=end)return res();setTimeout(tick,Math.min(60,end-Date.now()))})()});
+const visible=sel=>[...document.querySelectorAll(sel)].find(x=>x.offsetParent!==null||x.getClientRects().length);
+async function demoFind(sel,timeout=4000){const end=Date.now()+timeout;for(;;){const el=visible(sel);if(el)return el;if(Date.now()>end)throw new Error('demo: missing '+sel);await dsleep(80)}}
+function demoUI(){
+ const wrap=document.createElement('div');wrap.id='demoLayer';
+ wrap.innerHTML=`<div class="demo-blocker"></div><div class="demo-cursor" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 2l16 11-7 1.5 4 7.5-3 1.5-4-7.5L4 21z" fill="#fff" stroke="#111" stroke-width="1.5" stroke-linejoin="round"/></svg></div><div class="demo-bar" role="status" aria-live="polite"><span class="demo-badge">${esc(t('demo.label'))}</span><p class="demo-caption"></p><div class="demo-controls"><button type="button" class="demo-speed">${esc(t('demo.fast'))}</button><button type="button" class="demo-stop">${esc(t('demo.stop'))}</button></div></div>`;
+ document.body.appendChild(wrap);
+ wrap.querySelector('.demo-stop').addEventListener('click',()=>{demoStop=true});
+ wrap.querySelector('.demo-speed').addEventListener('click',e=>{demoSpeed=demoSpeed===1?2:1;e.target.textContent=t(demoSpeed===1?'demo.fast':'demo.normal')});
+ const c=wrap.querySelector('.demo-cursor');c.style.transform=`translate(${innerWidth/2}px,${innerHeight/2}px)`;
+ return wrap;
+}
+const demoCursor=()=>document.querySelector('#demoLayer .demo-cursor');
+async function caption(key,vars,hold=1400){const el=document.querySelector('#demoLayer .demo-caption');el.classList.remove('show');void el.offsetWidth;el.textContent=t(key,vars);el.classList.add('show');await dsleep(hold)}
+async function moveTo(el,dx=0.5,dy=0.5){
+ el.scrollIntoView({block:'center',inline:'nearest',behavior:'smooth'});await dsleep(380);
+ const r=el.getBoundingClientRect(),c=demoCursor();c.style.transitionDuration=(0.65/(demoSpeed*DEMO_PACE))+'s';
+ c.style.transform=`translate(${r.left+r.width*dx}px,${r.top+r.height*dy}px)`;await dsleep(720);
+}
+async function tap(el,doClick=true){
+ await moveTo(el);const r=el.getBoundingClientRect(),dot=document.createElement('div');dot.className='demo-ripple';
+ dot.style.left=(r.left+r.width/2)+'px';dot.style.top=(r.top+r.height/2)+'px';document.getElementById('demoLayer').appendChild(dot);setTimeout(()=>dot.remove(),700);
+ demoCursor().classList.add('press');await dsleep(140);demoCursor().classList.remove('press');
+ if(doClick)el.click();await dsleep(420);
+}
+async function typeInto(el,text,per=26){await moveTo(el);el.focus();for(const ch of text){if(demoStop)throw new DemoStopped();el.value+=ch;el.dispatchEvent(new Event('input',{bubbles:true}));await dsleep(per)}}
+function caretToEnd(ed){ed.focus();const r=document.createRange();r.selectNodeContents(ed);r.collapse(false);const s=getSelection();s.removeAllRanges();s.addRange(r)}
+async function typeCE(ed,text,per=24,chunk=2){caretToEnd(ed);for(let i=0;i<text.length;i+=chunk){if(demoStop)throw new DemoStopped();document.execCommand('insertText',false,text.slice(i,i+chunk));await dsleep(per)}}
+async function selectOption(sel,value){await tap(sel,false);sel.value=value;sel.dispatchEvent(new Event('change',{bubbles:true}));await dsleep(500)}
+function demoImage(kind){
+ return new Promise(res=>{const c=document.createElement('canvas');c.width=960;c.height=640;const x=c.getContext('2d');
+  const g=x.createLinearGradient(0,0,0,640);g.addColorStop(0,kind?'#ffd9a8':'#9fd0f5');g.addColorStop(1,kind?'#fff2df':'#e8f5ff');x.fillStyle=g;x.fillRect(0,0,960,640);
+  x.fillStyle=kind?'#f59f4c':'#ffffff';x.beginPath();x.arc(760,130,70,0,7);x.fill();
+  x.fillStyle=kind?'#5b8f6a':'#5d7fa3';x.fillRect(0,470,960,170);
+  const blds=kind?[[90,260,170,220,'#c96f4a'],[300,200,210,280,'#e3a45a'],[560,250,160,230,'#b85d3c']]:[[60,300,330,180,'#e6eef6'],[420,240,420,240,'#d4e2ef']];
+  for(const [bx,by,bw,bh,bc] of blds){x.fillStyle=bc;x.fillRect(bx,by,bw,bh);x.fillStyle='#ffffffaa';for(let wy=by+24;wy<by+bh-30;wy+=46)for(let wx=bx+20;wx<bx+bw-30;wx+=46)x.fillRect(wx,wy,24,26)}
+  for(let i=0;i<9;i++){const px=120+i*85,py=520+(i%2)*18;x.fillStyle=['#2f5f8f','#c2453a','#3c8d5f','#7b4fa0'][i%4];x.beginPath();x.arc(px,py-38,15,0,7);x.fill();x.fillRect(px-14,py-22,28,46)}
+  if(!kind){x.fillStyle='#ffffff';x.beginPath();x.moveTo(170,120);x.lineTo(420,150);x.lineTo(170,180);x.closePath();x.fill();x.fillRect(240,95,40,110)}
+  c.toBlob(b=>res(new File([b],kind?'campus.png':'airport.png',{type:'image/png'})),'image/png')});
+}
+function blankIssue(){return {schema:2,university:'',mastTitle:'',subtitle:'',month:'',year:'',volume:'',issuer:'',address:'',logo:'',pages:[normalizePage({layout:'mode1',headingStyle:'style1',parts:[]},false)]}}
+async function demoScript(){
+ const art=()=>findArticleById(document.querySelector('#partsEdit .part-card:last-of-type .article-item')?.dataset.aid);
+ await caption('demo.c0',null,2600);
+ // ① basic information
+ await tap(await demoFind('.ux-tab[data-tab="info"]'));await caption('demo.c1',null,600);
+ for(const [k,v] of [['university','Woosong University'],['mastTitle','NEWSLETTER'],['subtitle',t('demo.sub')],['month','11'],['year','2026'],['volume','128'],['issuer',t('demo.issuer')]])await typeInto(await demoFind(`#meta-${k}`),v,k==='subtitle'||k==='issuer'?30:45);
+ await dsleep(500);
+ // ② layout & design
+ await tap(await demoFind('.ux-tab[data-tab="layout"]'));await caption('demo.c2',null,600);
+ await tap(await demoFind('[data-act="layout-pick"][data-mode="mode4"]'));await dsleep(400);
+ await tap(await demoFind('[data-act="heading-pick"][data-style="style6"]'));await dsleep(500);
+ // ③ content: Part 1 + article with images and bold text
+ await tap(await demoFind('.ux-tab[data-tab="content"]'));await caption('demo.c3',null,600);
+ await tap(await demoFind('#partsEdit [data-act="part-add"]'));
+ await selectOption(await demoFind('#partsEdit .part-card:last-of-type [data-part-field="position"]'),'left');
+ await selectOption(await demoFind('#partsEdit .part-card:last-of-type [data-part-field="preset"]'),"President's Message");
+ await caption('demo.c4',null,500);
+ await typeInto(await demoFind('#partsEdit .part-card:last-of-type .article-item textarea[data-art-field="title"]'),t('demo.a1.title'),40);
+ let ed=await demoFind('#partsEdit .part-card:last-of-type .ce-editor');await moveTo(ed,0.3,0.4);
+ await typeCE(ed,t('demo.a1.p1'));document.execCommand('insertLineBreak');await typeCE(ed,t('demo.a1.p2'));await dsleep(400);
+ await caption('demo.c5',null,500);
+ const files=await Promise.all([demoImage(0),demoImage(1)]);
+ let a=art();await tap(await demoFind('#partsEdit .part-card:last-of-type [data-act="ce-insert"]'),false);
+ await insertImages(a.id,[files[0]],a.body.indexOf('\n'));await dsleep(700);
+ a=art();await tap(await demoFind('#partsEdit .part-card:last-of-type [data-act="ce-insert"]'),false);
+ await insertImages(a.id,[files[1]],a.body.length);await dsleep(700);
+ // drag the second picture onto the first → side by side
+ await caption('demo.c6',null,400);
+ const imgs=[...document.querySelectorAll('#partsEdit .part-card:last-of-type .ce-img')];
+ if(imgs.length>=2){
+  const [first,second]=imgs;await moveTo(second);const ghost=second.querySelector('img').cloneNode();ghost.className='demo-ghost';document.getElementById('demoLayer').appendChild(ghost);
+  const c=demoCursor(),follow=()=>{const m=/translate\(([-\d.]+)px,\s*([-\d.]+)px\)/.exec(c.style.transform);if(m){ghost.style.left=(Number(m[1])-40)+'px';ghost.style.top=(Number(m[2])-28)+'px'}};
+  const timer=setInterval(follow,30);second.classList.add('is-dragging');first.closest('.ce-fig').classList.add('is-target');
+  await moveTo(first,0.85,0.5);await dsleep(300);clearInterval(timer);ghost.remove();
+  a=art();const id2=second.dataset.id,id1=first.dataset.id;a.body=stripToken(a.body,id2).split('\n').map(l=>l.includes(`[[IMG:${id1}]]`)?l+` [[IMG:${id2}]]`:l).join('\n');structural();await dsleep(900);
+ }
+ // bold
+ await caption('demo.c7',null,400);
+ ed=await demoFind('#partsEdit .part-card:last-of-type .ce-editor');
+ const word=t('demo.bold'),w=document.createTreeWalker(ed,NodeFilter.SHOW_TEXT);let n;
+ while(n=w.nextNode()){const k=n.nodeValue.indexOf(word);if(k>-1){const r=document.createRange();r.setStart(n,k);r.setEnd(n,k+word.length);ed.focus();const sel=getSelection();sel.removeAllRanges();sel.addRange(r);break}}
+ await dsleep(500);await tap(await demoFind('#partsEdit .part-card:last-of-type [data-act="ce-bold"]'));await dsleep(600);
+ // Part 2 with long text → overflow → auto continue
+ await caption('demo.c8',null,500);
+ await tap(await demoFind('#partsEdit > [data-act="part-add"]'));
+ await selectOption(await demoFind('#partsEdit .part-card:last-of-type [data-part-field="preset"]'),'Woosong Global News');
+ await typeInto(await demoFind('#partsEdit .part-card:last-of-type .article-item textarea[data-art-field="title"]'),t('demo.a2.title'),40);
+ ed=await demoFind('#partsEdit .part-card:last-of-type .ce-editor');await moveTo(ed,0.3,0.4);
+ await typeCE(ed,t('demo.a2.line',{n:1}));
+ /* keep writing until the page really overflows (depends on layout and window), then a little more */
+ const overflowing=()=>!!document.querySelector('#pagesStack .sheet-flow-bar:not([hidden])');
+ for(let k=2,extra=0;k<=60&&extra<2;k++){document.execCommand('insertLineBreak');await typeCE(ed,t('demo.a2.line',{n:k}),30,60);await dsleep(120);if(overflowing())extra++}
+ await dsleep(700);
+ const bar=await demoFind('#pagesStack .sheet-flow-bar:not([hidden]) [data-act="flow-auto"]',6000);
+ await moveTo(document.querySelector('#pagesStack .nex-sheet'),0.5,0.85);await dsleep(500);
+ await caption('demo.c9',null,300);await tap(bar,false);await autoFlow();await dsleep(500);
+ const p2=document.querySelector('#pagesStack .nex-sheet[data-sheet="1"]');if(p2){p2.scrollIntoView({block:'start',behavior:'smooth'});await dsleep(1800)}
+ // preview modes
+ await caption('demo.c10',null,300);
+ await tap(await demoFind('.pv-btn[data-view="two"]'));await dsleep(1500);
+ await tap(await demoFind('.pv-btn[data-view="grid"]'));await dsleep(1500);
+ await tap(await demoFind('.pv-btn[data-view="single"]'));await dsleep(400);
+ // ④ export (pointing only — nothing is downloaded)
+ await tap(await demoFind('.ux-tab[data-tab="export"]'));await caption('demo.c11',null,300);
+ await tap(await demoFind('[data-act="export-pdf"]'),false);await dsleep(500);
+ await tap(await demoFind('[data-act="export-png-all"]'),false);await dsleep(1500);
+ await caption('demo.c12',null,2600);
+}
+async function runDemo(opts={}){
+ if(demoActive)return;closeManual();saveNow();flushHistory();
+ demoSnap={data:cloneData(data),page:pageIndex,tab:activeTab,view:previewView,open:new Set(openArticles),collapsed:new Set(collapsedParts),folds:new Map(folds),search:searchText,undo:undoSnapshot,msg:flowMessage};
+ demoActive=true;demoStop=false;demoSpeed=opts.speed||1;
+ const layer=demoUI();const onKey=e=>{if(e.key==='Escape'){e.preventDefault();e.stopPropagation();demoStop=true}};document.addEventListener('keydown',onKey,true);
+ data=blankIssue();pageIndex=0;openArticles.clear();collapsedParts.clear();folds.clear();searchText='';undoSnapshot=null;flowMessage=[];
+ const search=$('#articleSearch');if(search)search.value='';
+ previewView='single';layoutPreview();renderPanels();renderPreview();showTab('info');
+ try{await demoScript()}catch(e){if(!(e instanceof DemoStopped))console.warn('Demo stopped:',e.message)}
+ finally{
+  document.removeEventListener('keydown',onKey,true);layer.remove();getSelection().removeAllRanges();
+  const s0=demoSnap;data=s0.data;pageIndex=Math.min(s0.page,data.pages.length-1);
+  openArticles.clear();s0.open.forEach(x=>openArticles.add(x));collapsedParts.clear();s0.collapsed.forEach(x=>collapsedParts.add(x));folds.clear();s0.folds.forEach((v,k)=>folds.set(k,v));
+  searchText=s0.search;if(search)search.value=s0.search;undoSnapshot=s0.undo;flowMessage=s0.msg;previewView=s0.view;
+  demoActive=false;demoSnap=null;
+  layoutPreview();renderPanels();renderPreview();showTab(s0.tab);paintStatus();paintHistory();
+ }
+}
+
 /* ===== Start ===== */
 applyTranslations();renderPanels();renderPreview();showTab(activeTab);recordHistory();
+try{if(localStorage.getItem(MANUAL_KEY)!=='1')openManual(0,true)}catch(e){}
 ensureImageSizes().then(n=>{if(n){persist();renderPreview()}});
-window.NewsletterEditor={ensureImageSizes,autoFlow,get data(){return data},get currentLanguage(){return currentLanguage},get pageIndex(){return pageIndex},translations,t,setLanguage,showTab,saveNow};
+window.NewsletterEditor={runDemo,get demoActive(){return demoActive},openManual,closeManual,ensureImageSizes,autoFlow,get data(){return data},get currentLanguage(){return currentLanguage},get pageIndex(){return pageIndex},translations,t,setLanguage,showTab,saveNow};
 })();
 </script></body></html>
