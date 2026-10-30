@@ -781,7 +781,15 @@ const LEGACY_DEFAULT_TITLES=['新標題','新文章','새 기사','New article']
 const LEGACY_DEFAULT_BODIES=['請輸入內容','내용을 입력하세요','Enter content'];
 const LEGACY_DEFAULT_PARTS=['新主題','새 파트','New Part'];
 
-let currentLanguage=(()=>{try{const v=localStorage.getItem(LANG_KEY);if(v==='zh')return 'zh-TW';if(SUPPORTED_LANGUAGES.includes(v))return v}catch(e){}return 'zh-TW'})();
+/* First visit: follow the browser's language list (normally the computer's system language).
+   Chinese (any region/script) → zh-TW, Korean → ko, English → en; otherwise English.
+   A language the user picks with the buttons is saved and always wins. */
+function browserLanguage(){
+ const list=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'']).map(x=>String(x).toLowerCase());
+ for(const tag of list){if(tag.startsWith('zh'))return 'zh-TW';if(tag.startsWith('ko'))return 'ko';if(tag.startsWith('en'))return 'en'}
+ return 'en';
+}
+let currentLanguage=(()=>{try{const v=localStorage.getItem(LANG_KEY);if(v==='zh')return 'zh-TW';if(SUPPORTED_LANGUAGES.includes(v))return v}catch(e){}return browserLanguage()})();
 function t(key,vars){
  let s=translations[currentLanguage][key];
  if(s===undefined){console.warn('[i18n] missing key',currentLanguage,key);s=key}
