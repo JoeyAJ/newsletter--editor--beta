@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大學 Newsletter 編輯器</title><style>
+<!doctype html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>又松大學 Newsletter 編輯器</title><style>
 :root{font-family:Arial,'Noto Sans KR','Malgun Gothic',sans-serif;color:#18212a;background:#edf1f5}*{box-sizing:border-box}body{margin:0}.app{display:grid;grid-template-columns:380px minmax(0,1fr);height:100vh;overflow:hidden}.side{min-height:0;overscroll-behavior:contain;background:white;border-right:1px solid #d7dee8;padding:18px;max-height:100vh;overflow:auto}.side h2{margin:0 0 4px;font-size:21px}.sub{color:#66717d;font-size:12px;margin:0 0 15px}.toolbar{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0 16px}.btn{background:#233a52;color:white;border:0;border-radius:7px;padding:9px 11px;font-weight:600;cursor:pointer;font-size:12px}.btn.secondary{background:#e7edf3;color:#203548}.btn.warning{background:#fff2ed;color:#ad4029}.group{border:1px solid #dbe1e8;border-radius:9px;margin:12px 0;overflow:hidden}.group summary{font-weight:700;background:#f5f7f9;padding:11px;cursor:pointer}.inner{padding:12px}.field{margin-bottom:10px}.field label{display:block;font-size:12px;font-weight:700;color:#4c5968;margin:0 0 5px}input,textarea,select{font:inherit;width:100%;border:1px solid #ccd5df;border-radius:6px;padding:8px;background:white;font-size:12px}textarea{min-height:88px;resize:vertical;line-height:1.55}.tiny{font-size:11px;color:#687480}.item{border:1px solid #dde4ec;border-radius:7px;padding:10px;margin:10px 0;background:#fdfefe}.item-head{display:flex;align-items:center;justify-content:space-between;gap:5px}.item-head strong{font-size:12px}.minirow{display:flex;gap:5px}.small{font-size:11px;padding:5px 7px}.workspace{height:100vh;min-height:0;overscroll-behavior:contain;padding:25px 20px 60px;overflow:auto}.note{max-width:850px;margin:0 auto 12px;font-size:12px;color:#6d7783}.page{width:794px;min-height:1123px;background:white;margin:0 auto;box-shadow:0 8px 30px #0002;padding:28px 29px 22px;color:#111;overflow:hidden}.mast{border-top:6px double #111;border-bottom:6px double #111;display:grid;grid-template-columns:125px 1fr 120px;align-items:center;min-height:126px;margin-bottom:14px}.schoolmark{border-right:1px solid #444;height:108px;display:flex;align-items:center;justify-content:center;padding:12px}.schoolmark img{max-height:90px;max-width:100px;object-fit:contain}.placeholder-logo{border:4px solid #173d67;border-radius:50%;height:94px;width:94px;display:flex;align-items:center;justify-content:center;text-align:center;color:#173d67;font-size:12px;font-weight:bold;padding:8px}.mast-title{text-align:center;padding:8px}.univ{font-size:17px}.newsletter{font-family:Georgia,'Times New Roman',serif;font-weight:900;font-size:54px;letter-spacing:-1px;line-height:1.09}.korean{font-size:12px}.issue{border-left:1px solid #444;text-align:right;padding:0 4px 0 10px}.month{font-size:69px;line-height:1;color:#f34e39;font-weight:800}.year{font-size:13px}.vol{font-size:13px}.columns{display:grid;grid-template-columns:1fr 1fr;gap:20px}.column:first-child{padding-right:10px;border-right:1px solid #ececec}.bar{display:flex;align-items:center;gap:0;margin:2px 0 16px}.bar:before,.bar:after{content:"";height:1px;background:#666;flex:1}.pill{display:inline-block;border:1px solid #555;border-radius:25px;padding:4px 19px;white-space:nowrap;font-weight:800;font-size:17px}.pill.pink{background:#f3cbd1}.pill.blue{background:#c9ebee}.article{margin:0 0 24px;break-inside:avoid;page-break-inside:avoid}.article-head{display:flex;gap:6px;align-items:flex-start;justify-content:space-between}.article h3{font-size:15px;line-height:1.34;white-space:pre-line;margin:0 0 5px;letter-spacing:-.45px}.underline{height:2px;background:#f56b5b;width:75%;margin:0 0 9px}.article-body{font-size:11.6px;line-height:1.65;white-space:pre-line;overflow-wrap:anywhere}.article-image{width:100%;height:auto;max-height:190px;object-fit:contain;margin:5px 0}.article-image.float{width:40%;float:right;margin:2px 0 5px 8px;max-height:170px;object-fit:cover}.qr{width:45px;height:45px;object-fit:contain;flex:none}.qr-placeholder{width:45px;height:45px;border:1px dashed #888;font-size:9px;color:#777;display:flex;align-items:center;justify-content:center;text-align:center;flex:none}.footer{margin-top:14px;border-top:1px solid #333;padding-top:10px;display:flex;gap:10px;justify-content:space-between;font-size:9px}.footer strong{font-size:13px}.noitems{font-size:12px;color:#888;border:1px dashed #aaa;padding:15px;text-align:center}@media(max-width:1150px){.app{grid-template-columns:1fr}.side{max-height:none}.workspace{overflow-x:auto}}@page{size:A4 portrait;margin:0}@media print{.app{display:block;height:auto;overflow:visible}.side,.note{display:none!important}.workspace{height:auto;padding:0;overflow:visible}.page{margin:0;box-shadow:none;width:210mm;min-height:297mm}@page{size:A4;margin:0}body{background:white}.side,.note{display:none!important}.app{display:block}.workspace{padding:0;overflow:visible}.page{box-shadow:none;width:210mm;min-height:297mm;padding:7mm 8mm 6mm;margin:0}.article{break-inside:avoid} .columns{gap:5mm}}
 
 /* Multiple editorial layouts and heading styles */
@@ -98,342 +98,19 @@ input[type=range]{accent-color:#245883}
 .nex-pages-panel{margin:12px 0;border:1px solid #d6e2ef;border-radius:12px;background:#fff;padding:12px}
 .nex-pages-panel h3{font-size:14px;margin:0 0 8px;color:#213f60}.nex-pages-row{display:flex;gap:6px;flex-wrap:wrap;margin:9px 0}.nex-page-btn{background:#f2f6fc;color:#23415f;border:1px solid #d5e1ef;border-radius:7px;padding:9px 12px;font-size:12px;cursor:pointer;font-weight:700}.nex-page-btn[aria-current="page"]{background:#1b3e64;color:white}.nex-part{border:1px solid #d7e2f0;border-radius:9px;margin-top:12px;padding:12px;background:#fbfdff}.nex-part label{font-size:12px;display:block;font-weight:700;margin:8px 0 4px}.nex-part input,.nex-part textarea{background:white;color:#1b3047}.nex-part-head{display:flex;justify-content:space-between;align-items:center;gap:8px}.nex-part-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.nex-extra-section{grid-column:1/-1;border-top:2px solid #bccbda;margin-top:4px;padding-top:10px}.nex-extra-section h2{font-size:19px;color:#1d4268;margin:2px 0 12px;border-left:5px solid #d27059;padding-left:10px}.nex-extra-story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin:12px 0 16px;break-inside:avoid}.nex-extra-story.no-photo{display:block}.nex-extra-story img{width:100%;max-height:220px;object-fit:contain;border-radius:5px}.nex-extra-story h3{font-size:15px;margin:0 0 7px}.nex-extra-story p{font-size:12px;line-height:1.6;white-space:pre-line;overflow-wrap:anywhere}.nex-sheet{position:relative;width:794px;min-height:1123px;height:1123px;overflow:hidden;flex:none;page-break-after:always;break-after:page}.nex-sheet:after{content:attr(data-sheet-caption);position:absolute;bottom:5px;right:12px;font:10px Arial;color:#53677d}.nex-page-overflow{outline:3px solid #d65050!important}.nex-overflow-warning{font-size:11px;color:#b33d30;font-weight:700;margin-top:5px}.nex-paging-note{color:#657a8f;font-size:11px;line-height:1.5}.nex-pages-container{max-width:840px;margin:0 auto}.nex-pages-container .page{margin-bottom:24px}.nex-page-active{outline:3px solid #9cbde0;outline-offset:2px}
 @media print{.nex-pages-container .page{width:210mm!important;height:297mm!important;min-height:297mm!important;max-height:297mm!important;margin:0!important;box-shadow:none!important;break-after:page;page-break-after:always}.nex-pages-container .page:last-child{break-after:auto;page-break-after:auto}.nex-sheet:after{display:none}.nex-page-active{outline:none}.nex-pages-panel{display:none!important}}
-</style></head><body><div class="app"><aside class="side"><div class="lang-controls"><button type="button" id="langZh" onclick="setUiLanguage('zh')">繁體中文</button><button type="button" id="langKo" onclick="setUiLanguage('ko')">한국어</button><button type="button" id="langEn" onclick="setUiLanguage('en')">English</button></div><h2>Newsletter 編輯器</h2><p class="sub">雙欄校園電子報 · 每篇可上傳多張圖片 · A4 PDF 列印</p><div class="toolbar"><button class="btn" onclick="window.print()">列印／另存 PDF</button><button class="btn secondary" onclick="savePNG()">保存 PNG</button><button class="btn secondary" onclick="saveJSON()">匯出資料 JSON</button><button class="btn secondary" onclick="document.getElementById('importFile').click()">匯入資料</button><input type="file" id="importFile" accept="application/json" hidden onchange="importJSON(event)"><button class="btn warning" onclick="resetData()">重設示範內容</button></div><details class="group" open><summary>01 基本資訊及識別</summary><div class="inner" id="metadata"></div></details><details class="group" open><summary>02 排版模板及欄目抬頭</summary><div class="inner" id="styleEdit"></div></details><details class="group" open><summary>03 左欄內容編輯</summary><div class="inner"><div id="leftEdit"></div><button class="btn secondary" onclick="addArticle('left')">＋ 新增左欄文章</button></div></details><details class="group" open><summary>04 右欄內容編輯</summary><div class="inner"><div id="rightEdit"></div><button class="btn secondary" onclick="addArticle('right')">＋ 新增右欄活動</button></div></details><details class="group"><summary>05 操作說明</summary><div class="inner tiny">圖片可上傳 JPG/PNG/WebP 等檔案，系統會自動壓縮；HEIC 建議先轉 JPG。編輯內容自動儲存在目前瀏覽器；如要換電腦，使用「匯出資料 JSON」。PDF 使用瀏覽器「列印／另存為 PDF」，請將紙張設成 A4，縮放選 100%，邊界選無，並啟用背景圖形。內容過多可能超過一頁，請縮短文字或拆成多期。使用正式校徽須上傳已獲授權之圖檔。</div></details></aside><main class="workspace"><p class="note">右側為即時預覽。示範內容均為版型佔位文字，請於發行前替換、核實所有日期與聯絡資料。</p><section id="preview" class="page"></section></main></div>
-<script>
-let uiLanguage='zh';
-const sample=()=>({university:'Woosong University',subtitle:'우송대학교 취업지원센터 뉴스레터',month:'11',year:'2026',volume:'127',mastTitle:'NEWSLETTER',layout:'mode1',headingStyle:'style1',leftLabel:"President's Message",rightLabel:'Woosong Global News',issuer:'우송대학교 취업지원센터',address:'대전광역시 동구 동대전로 171',logo:'',left:[{title:'AI 리터러시가 채용 시장을 바꾼다\n- AI 활용을 넘어 협업하는 능력까지!',body:'[示範文章，請替換]\nAI 도구를 이해하고 결과를 비판적으로 검토하는 역량이 중요해지고 있습니다.\n실제 취업 정보와 출처를 확인하여 작성해 주세요.',image:'',qr:''},{title:'AI 시대, 신입사원에게 필요한 진짜 실무 역량',body:'[示範文章，請替換]\nAI가 생성한 결과의 오류를 확인하고 업무 목적에 맞게 수정하는 능력이 필요합니다.',image:'',qr:''},{title:'경력이 없어 고민이라면? 실무 경험으로 시작하자!',body:'[示範文章，請替換]\n프로그램 일정과 참여 방법을 확인한 뒤 게시해 주세요.',image:'',qr:''}],right:[{title:'2026년 커리어비전 캠프(2학년)\n- 나의 커리어 설계 2학년부터 시작!',body:'[示範活動，請替換]\n- 신청기간: YYYY. MM. DD. ~ MM. DD.\n- 진행일자: YYYY. MM. DD.\n- 진행장소: 교내 강의장\n- 문의사항: 담당 부서 확인',image:'',qr:''},{title:'2026년 취업박람회\n- 전공에서 찾은 꿈, 취업으로 달리다!',body:'[示範活動，請替換]\n- 진행일자: YYYY. MM. DD.\n- 진행내용: 채용 상담 및 현장 면접\n- 문의사항: 담당 부서 확인',image:'',qr:''},{title:'2026년 취업역량 강화 캠프(3학년)',body:'[示範活動，請替換]\n- 신청기간: YYYY. MM. DD.\n- 교육내용: 자기소개서 및 면접 준비\n- 문의사항: 담당 부서 확인',image:'',qr:''}]});
-let data;try{data=JSON.parse(localStorage.getItem('woosong-newsletter-v1'))||sample()}catch(e){data=sample()};
-const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));let storageWarningShown=false;const persist=()=>{try{localStorage.setItem('woosong-newsletter-v1',JSON.stringify(data));return true}catch(err){if(!storageWarningShown){storageWarningShown=true;alert(uiLanguage==='ko'?'브라우저 저장 공간이 부족합니다. 이미지를 줄이고 JSON 파일로 백업하세요.':'瀏覽器儲存空間不足：資料可能無法自動保存。請先匯出 JSON 備份，並減少圖片。')}return false}};
-function meta(){const fields=[['university','學校英文名稱'],['mastTitle','主標題（預設 NEWSLETTER）'],['subtitle','韓文副標題'],['month','月份'],['year','年度'],['volume','期數'],['leftLabel','左欄分類'],['rightLabel','右欄分類'],['issuer','發行單位'],['address','地址／頁尾']];document.getElementById('metadata').innerHTML=fields.map(([k,l])=>`<div class="field"><label>${l}</label><input value="${esc(data[k])}" oninput="setMeta('${k}',this.value)"></div>`).join('')+'<div class="field"><label>學校 Logo（上傳圖片）</label><input type="file" accept="image/*" onchange="uploadMeta(event)"></div>'}
-const styles=[['style1','01 經典橢圓框'],['style2','02 方形色塊'],['style3','03 左側強調線'],['style4','04 底線標題'],['style5','05 角標標籤'],['style6','06 深色膠囊'],['style7','07 圓角卡片'],['style8','08 線條極簡'],['style9','09 雙線報章'],['style10','10 數位科技風'],['style11','11 學術細線'],['style12','12 雜誌編號'],['style13','13 漸層色帶'],['style14','14 圓點導覽'],['style15','15 側邊色籤'],['style16','16 典雅襯線']];
-const headings=["President's Message",'Woosong Global News','Alumni Spotlight','Alumni Around China','Student Success Stories','Career & Opportunity','Global Partnership','Woosong Memories','Alumni Business Network','Get Involved'];
-function styleEditor(){const e=document.getElementById('styleEdit');e.innerHTML=`<div class="field"><label>整頁排版模式（即時切換）</label><div class="layout-picks">${[['mode1','模式 1｜經典雙欄'],['mode2','模式 2｜重點摘要'],['mode3','模式 3｜圖文卡片'],['mode4','模式 4｜正式雜誌'],['mode5','模式 5｜經典報章'],['mode6','模式 6｜新聞週刊'],['mode7','模式 7｜藝文月刊'],['mode8','模式 8｜主圖特寫'],['mode9','模式 9｜新聞拼貼'],['mode10','模式 10｜時間軸快訊'],['mode11','模式 11｜左右交錯圖文']].map(([v,t])=>`<button class="pick ${data.layout===v?'active':''}" onclick="chooseLayout('${v}')">${t}</button>`).join('')}</div></div><div class="field"><label>欄目抬頭外觀（共 10 款）</label><div class="style-picks">${styles.map(([v,t])=>`<button class="pick ${data.headingStyle===v?'active':''}" onclick="chooseHeading('${v}')">${t}</button>`).join('')}</div></div><div class="field"><label>常用英文抬頭（套用至指定內容區）</label><select id="headingPreset"><option value="">選擇建議文字…</option>${headings.map(x=>`<option value="${x}">${x}</option>`).join('')}<option value="__custom__">自訂文字 / 직접 입력…</option></select><input id="customHeading" type="text" placeholder="輸入自訂欄目名稱 / 제목 직접 입력" style="margin-top:7px" aria-label="自訂欄目標題"><div class="minirow" style="margin-top:7px"><button class="btn secondary small" onclick="applyPreset('left')">套用第一區</button><button class="btn secondary small" onclick="applyPreset('right')">套用第二區</button></div><p class="tiny">也可直接在「基本資訊」自行輸入任意英文、中文或韓文欄目名稱。以上為示範分類，可依實際電子報主題調整。</p></div>`}
-function chooseLayout(v){data.layout=v;persist();styleEditor();updateSectionNames();render()}
-function chooseHeading(v){data.headingStyle=v;persist();styleEditor();render()}
-function applyPreset(side){const selected=document.getElementById('headingPreset').value;const custom=document.getElementById('customHeading').value.trim();const v=selected==='__custom__'?custom:(custom||selected);if(!v){alert('請先選擇標題或輸入自訂文字 / 제목을 선택하거나 입력하세요.');return;}data[side+'Label']=v;persist();meta();render()}
+</style><style id="nex-custom-layout-style">
+.nex-custom-columns{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:20px!important;align-items:start}.nex-custom-columns>.column{display:block!important;width:auto!important;border:0!important;padding:0!important}.nex-custom-columns>.column:first-child{border-right:1px solid #e0e6ee!important;padding-right:10px!important}.nex-custom-columns .article{width:100%!important;display:block!important;float:none!important;max-width:100%!important}.nex-extra-section{margin:14px 0;break-inside:avoid;grid-column:1/-1}.nex-custom-columns .nex-extra-section{border:0;border-top:1px solid #c9d7e4;padding-top:9px}.nex-extra-section .pill{font-size:15px}.nex-extra-story{display:block;margin:10px 0}.nex-extra-story img{max-height:170px}.nex-extra-story h3{margin:5px 0;font-size:14px}.nex-extra-story p{font-size:11.5px}.nex-file-control{display:flex!important;align-items:center;gap:9px;flex-wrap:wrap;margin:5px 0 10px;cursor:pointer}.nex-file-control input{position:absolute!important;width:1px!important;height:1px!important;opacity:0!important;overflow:hidden!important}.nex-file-control span{background:#e7edf5;color:#1e3b60;border-radius:7px;padding:9px 12px;font-size:12px;font-weight:700}.nex-file-control small{color:#61738a;font-size:11px}.nex-file-control:focus-within span{outline:2px solid #3875b1}.nex-part select{color:#193853;background:#fff}
+@media print{.nex-custom-columns{display:grid!important}}
 
-/* V15: photo workflow labels in every supported UI language */
-const imageUiTerms={
- zh:{coverTitle:'① 主圖／封面圖片',coverUpload:'上傳或更換主圖',uploaded:'已上傳主圖',coverHelp:'下方可調整這張圖片的排版與裁剪。',removeCover:'移除主圖',noCover:'尚未上傳主圖；選擇圖片後會在這裡顯示縮圖。',coverSettings:'主圖排版與裁剪設定',extraTitle:'② 更多圖片'},
- ko:{coverTitle:'① 대표 이미지',coverUpload:'대표 이미지 업로드 또는 변경',uploaded:'대표 이미지 업로드 완료',coverHelp:'아래에서 이미지 배치와 자르기를 조정할 수 있습니다.',removeCover:'대표 이미지 삭제',noCover:'등록된 대표 이미지가 없습니다. 업로드하면 미리보기가 표시됩니다.',coverSettings:'대표 이미지 배치 및 자르기',extraTitle:'② 추가 이미지'},
- en:{coverTitle:'① Main / Cover Image',coverUpload:'Upload or replace main image',uploaded:'Main image uploaded',coverHelp:'Adjust image layout and cropping below.',removeCover:'Remove main image',noCover:'No main image yet. A thumbnail will appear here after upload.',coverSettings:'Main Image Layout & Crop',extraTitle:'② Additional Images'}
-};
-function imgUi(key){const lang=document.getElementById('langEn')?.classList.contains('selected')?'en':uiLanguage==='ko'?'ko':'zh';return imageUiTerms[lang][key]||key}
-function refreshImgLabels(){document.querySelectorAll('[data-image-i18n]').forEach(el=>{el.textContent=imgUi(el.dataset.imageI18n)});}
-function editor(side){const root=document.getElementById(side+'Edit');root.innerHTML=data[side].map((a,i)=>`<div class="item"><div class="item-head"><strong>${side==='left'?'文章':'活動'} ${i+1}</strong><div class="minirow"><button class="btn secondary small" onclick="moveArticle('${side}',${i},-1)">↑</button><button class="btn secondary small" onclick="moveArticle('${side}',${i},1)">↓</button><button class="btn warning small" onclick="removeArticle('${side}',${i})">刪除</button></div></div><div class="field"><label>標題</label><textarea oninput="setArticle('${side}',${i},'title',this.value)" rows="2">${esc(a.title)}</textarea></div><div class="field"><label>正文／活動資訊（可換行）</label><textarea oninput="setArticle('${side}',${i},'body',this.value)">${esc(a.body)}</textarea></div><div class="type-controls"><div><label>標題字級</label><select onchange="setArticle('${side}',${i},'titleSize',this.value)">${[12,14,16,18,20,24,28].map(n=>`<option value="${n}" ${String(a.titleSize||15)===String(n)?'selected':''}>${n}px</option>`).join('')}</select></div><div><label>正文字級</label><select onchange="setArticle('${side}',${i},'bodySize',this.value)">${[10,11,12,13,14,16,18].map(n=>`<option value="${n}" ${String(a.bodySize||12)===String(n)?'selected':''}>${n}px</option>`).join('')}</select></div><div><label>字體</label><select onchange="setArticle('${side}',${i},'fontFamily',this.value)">${[['sans','黑體 / 고딕'],['serif','宋體 / 명조'],['classic','經典報刊 / 신문체']].map(([v,t])=>`<option value="${v}" ${a.fontFamily===v?'selected':''}>${t}</option>`).join('')}</select></div><label class="type-bold"><input type="checkbox" ${a.titleBold!==false?'checked':''} onchange="setArticle('${side}',${i},'titleBold',this.checked)">標題加粗</label><label class="type-bold"><input type="checkbox" ${a.bodyBold?'checked':''} onchange="setArticle('${side}',${i},'bodyBold',this.checked)">正文加粗</label></div><section class="main-photo-section"><div class="photo-section-title" data-image-i18n="coverTitle">${imgUi('coverTitle')}</div><div class="photo-upload"><label class="image-upload-label" data-image-i18n="coverUpload">${imgUi('coverUpload')}</label><input type="file" accept="image/*" onchange="uploadArticle(event,'${side}',${i},'image')"></div>${a.image?`<div class="main-photo-card"><img class="main-photo-thumbnail" src="${a.image}" alt="主圖縮圖"><div class="main-photo-details"><strong data-image-i18n="uploaded">${imgUi('uploaded')}</strong><small data-image-i18n="coverHelp">${imgUi('coverHelp')}</small><button type="button" class="btn warning small" onclick="clearImages('${side}',${i},'image')" data-image-i18n="removeCover">${imgUi('removeCover')}</button></div></div>`:`<div class="photo-empty" data-image-i18n="noCover">${imgUi('noCover')}</div>`}<details class="main-photo-settings" ${a.image?'open':''}><summary data-image-i18n="coverSettings">${imgUi('coverSettings')}</summary><div class="main-photo-settings-inner"><div class="field"><label>文章版面／기사 레이아웃</label><select onchange="setArticle('${side}',${i},'cardLayout',this.value)">${[['auto','自動適配 / 자동 맞춤'],['full','整行寬版 / 가로 전체'],['compact','緊湊卡片 / 작은 카드'],['portrait','直式圖片優先 / 세로 사진'],['split','圖文左右 / 사진+본문']].map(([v,t])=>`<option value="${v}" ${(a.cardLayout||'auto')===v?'selected':''}>${t}</option>`).join('')}</select></div><div class="field"><label>圖片展示／이미지 표시</label><select onchange="setArticle('${side}',${i},'imageFit',this.value)">${[['contain','完整顯示（不裁切） / 전체'],['cover','填滿裁切 / 채우기']].map(([v,t])=>`<option value="${v}" ${(a.imageFit||'contain')===v?'selected':''}>${t}</option>`).join('')}</select></div><div class="field"><label>圖文方向 / 사진 위치</label><select onchange="setArticle('${side}',${i},'photoSide',this.value)">${[['right','圖片在右・文字在左 / 사진 오른쪽'],['left','圖片在左・文字在右 / 사진 왼쪽']].map(([v,t])=>`<option value="${v}" ${(a.photoSide||'right')===v?'selected':''}>${t}</option>`).join('')}</select></div><div class="field"><label>圖片裁剪（非破壞性） / 이미지 자르기</label><select onchange="setArticle('${side}',${i},'cropRatio',this.value)">${[['original','原圖比例 / 원본'],['square','正方形 1:1 / 정사각형'],['landscape','橫幅 4:3 / 가로'],['wide','寬幅 16:9 / 와이드'],['portrait','直幅 3:4 / 세로']].map(([v,t])=>`<option value="${v}" ${(a.cropRatio||'original')===v?'selected':''}>${t}</option>`).join('')}</select></div><div class="field"><label>裁剪焦點：水平 / 자르기 중심: 가로</label><input type="range" min="0" max="100" value="${Number(a.cropX??50)}" oninput="setArticle('${side}',${i},'cropX',Number(this.value))"></div><div class="field"><label>裁剪焦點：垂直 / 자르기 중심: 세로</label><input type="range" min="0" max="100" value="${Number(a.cropY??50)}" oninput="setArticle('${side}',${i},'cropY',Number(this.value))"></div></div></details></section><section class="additional-photo-section"><div class="photo-section-title" data-image-i18n="extraTitle">${imgUi('extraTitle')}</div><div class="field"><label>更多圖片（同一篇可加入多張）／추가 이미지</label><input type="file" accept="image/*" multiple onchange="uploadExtraImages(event,'${side}',${i})"><div class="tiny">可一次選取多張 JPG / PNG；圖片會依順序顯示。／여러 이미지를 선택할 수 있습니다.</div></div><div class="minirow" style="flex-wrap:wrap;margin:6px 0">${(a.extraImages||[]).map((im,j)=>{const ex=typeof im==='string'?{src:im}:im;return `<div class="extra-edit"><div class="extra-head"><img src="${ex.src}" alt="附加圖片預覽"><strong>附加圖片 ${j+1} / 추가 이미지 ${j+1}</strong><button class="btn warning small" onclick="removeExtraImage('${side}',${i},${j})">移除 / 삭제</button></div><div class="extra-grid"><label>裁切比例 / 비율<select onchange="setExtraSetting('${side}',${i},${j},'ratio',this.value)">${[['original','原圖 / 원본'],['square','1:1'],['landscape','4:3'],['wide','16:9'],['portrait','3:4']].map(([v,t])=>`<option value="${v}" ${(ex.ratio||'original')===v?'selected':''}>${t}</option>`).join('')}</select></label><label>顯示方式 / 표시<select onchange="setExtraSetting('${side}',${i},${j},'fit',this.value)">${[['contain','完整顯示 / 전체'],['cover','填滿裁切 / 채우기']].map(([v,t])=>`<option value="${v}" ${(ex.fit||'contain')===v?'selected':''}>${t}</option>`).join('')}</select></label><label>水平焦點 / 가로<input type="range" min="0" max="100" value="${Number(ex.x??50)}" oninput="setExtraSetting('${side}',${i},${j},'x',Number(this.value))"></label><label>垂直焦點 / 세로<input type="range" min="0" max="100" value="${Number(ex.y??50)}" oninput="setExtraSetting('${side}',${i},${j},'y',Number(this.value))"></label></div></div>`}).join('')}</div></div></section>`).join('')}
-function setMeta(k,v){data[k]=v;persist();render()}function setArticle(s,i,k,v){data[s][i][k]=v;persist();render()}function addArticle(s){data[s].push({title:'新標題',body:'請輸入內容',image:'',qr:''});persist();editor(s);render()}function removeArticle(s,i){if(!confirm('確定刪除這個區塊？'))return;data[s].splice(i,1);persist();editor(s);render()}function moveArticle(s,i,d){const n=i+d;if(n<0||n>=data[s].length)return;[data[s][i],data[s][n]]=[data[s][n],data[s][i]];persist();editor(s);render()}function clearImages(s,i,k){data[s][i][k]='';persist();editor(s);render()}
-// Uploads stay in the user's browser. Convert to JPEG/PNG to limit localStorage pressure.
-function uploadError(zh,ko){alert(typeof uiLanguage!=='undefined'&&uiLanguage==='ko'?ko:zh)}
-function readImage(file,callback,kind='photo'){
- if(!file)return;
- const supported=/\.(png|jpe?g|webp|gif|bmp|heic|heif)$/i.test(file.name)||/^image\//.test(file.type);
- if(!supported){uploadError('只支援圖片檔（JPG、PNG、WebP 等）','이미지 파일(JPG, PNG, WebP 등)만 업로드할 수 있습니다.');return}
- if(file.size>25*1024*1024){uploadError('圖片超過 25 MB，請先縮小。','이미지가 25MB를 초과합니다. 크기를 줄여 주세요.');return}
- const url=URL.createObjectURL(file);const img=new Image();
- img.onload=()=>{URL.revokeObjectURL(url);try{
-   const max=kind==='qr'?850:kind==='logo'?700:1400;
-   const scale=Math.min(1,max/Math.max(img.naturalWidth,img.naturalHeight));
-   const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(img.naturalWidth*scale));canvas.height=Math.max(1,Math.round(img.naturalHeight*scale));
-   const ctx=canvas.getContext('2d');if(!ctx)throw Error('Canvas unavailable');
-   if(kind!=='qr'){ctx.fillStyle='#ffffff';ctx.fillRect(0,0,canvas.width,canvas.height)}
-   ctx.drawImage(img,0,0,canvas.width,canvas.height);
-   const result=canvas.toDataURL(kind==='qr'?'image/png':'image/jpeg',kind==='qr'?undefined:.78);
-   if(result.length>2.5e6){uploadError('圖片處理後仍過大，請改用尺寸較小的 JPG／PNG。','이미지를 처리한 후에도 용량이 큽니다. 작은 JPG/PNG 파일을 사용해 주세요.');return}
-   callback(result);
- }catch(err){uploadError('無法處理圖片，請轉換成 JPG、PNG 或 WebP 後重試。','이미지를 처리할 수 없습니다. JPG, PNG 또는 WebP로 변환한 뒤 다시 시도해 주세요.')}};
- img.onerror=()=>{URL.revokeObjectURL(url);uploadError('無法讀取圖片（HEIC 等格式可能不支援），請轉換為 JPG、PNG 或 WebP。','이미지를 읽을 수 없습니다. HEIC 등의 파일은 JPG, PNG, WebP로 변환해 주세요.')};
- img.src=url;
-}
-function uploadMeta(e){readImage(e.target.files[0],v=>{data.logo=v;persist();render()},'logo');e.target.value=''}
-function uploadArticle(e,s,i,k){readImage(e.target.files[0],v=>{if(!data[s]||!data[s][i])return;data[s][i][k]=v;persist();editor(s);render()},k==='qr'?'qr':'photo');e.target.value=''}
-function uploadExtraImages(e,s,i){const files=Array.from(e.target.files||[]);e.target.value='';for(const file of files){readImage(file,v=>{const a=data[s]?.[i];if(!a)return;if(!Array.isArray(a.extraImages))a.extraImages=[];a.extraImages.push({src:v,ratio:'original',fit:'contain',x:50,y:50});persist();editor(s);render()},'photo')}}
-function setExtraSetting(side,i,j,key,value){const a=data[side]?.[i];if(!a||!Array.isArray(a.extraImages)||a.extraImages[j]===undefined)return;let im=a.extraImages[j];if(typeof im==='string')im={src:im,ratio:'original',fit:'contain',x:50,y:50};im[key]=value;a.extraImages[j]=im;persist();render()}
-function removeExtraImage(s,i,j){const imgs=data[s]?.[i]?.extraImages;if(!Array.isArray(imgs))return;imgs.splice(j,1);persist();editor(s);render()}
-function card(a,s){const img=a.image?`<img class="article-image ${s==='left'?'float':''} crop-${a.cropRatio||'original'}" style="object-position:${Number(a.cropX??50)}% ${Number(a.cropY??50)}%" src="${a.image}" alt="文章圖片">`:'';const qr='';const family=a.fontFamily==='serif'?"Georgia, 'Noto Serif KR', 'Batang', 'SimSun', serif":a.fontFamily==='classic'?"'Times New Roman', 'Batang', 'PMingLiU', serif":"Arial, 'Noto Sans KR', 'Malgun Gothic', 'Microsoft JhengHei', sans-serif";const cardLayout=['auto','full','compact','portrait','split'].includes(a.cardLayout)?a.cardLayout:'auto';const imageFit=a.imageFit==='cover'?'cover':'contain';const st=`--image-fit:${imageFit};--item-title-size:${Number(a.titleSize)||15}px;--item-body-size:${Number(a.bodySize)||12}px;font-family:${family};`;return `<article class="article card-${cardLayout} photo-${a.photoSide||'right'}" style="${st}"><div class="article-head"><h3 class="article-title-custom" style="font-size:${Number(a.titleSize)||15}px;font-weight:${a.titleBold===false?400:700};font-family:inherit">${esc(a.title)}</h3>${qr}</div><div class="underline"></div>${img}<div class="article-body article-body-custom" style="font-size:${Number(a.bodySize)||12}px;font-weight:${a.bodyBold?700:400};font-family:inherit">${esc(a.body)}</div>${(a.extraImages||[]).map(im=>{const x=typeof im==='string'?{src:im}:im;const ratio=['square','landscape','wide','portrait'].includes(x.ratio)?'crop-'+x.ratio:'crop-original';const fit=x.ratio&&x.ratio!=='original'?'cover':(x.fit||'contain');return `<img class="article-image extra-preview ${ratio}" style="object-fit:${fit};object-position:${Number(x.x??50)}% ${Number(x.y??50)}%" src="${esc(x.src)}" alt="附加圖片">`}).join('')}<div style="clear:both"></div></article>`}function render(){const logo=data.logo?`<img src="${data.logo}" alt="校徽">`:'<div class="placeholder-logo">SCHOOL<br>LOGO</div>';document.getElementById('preview').className='page '+(data.layout||'mode1')+' '+(data.headingStyle||'style1');document.getElementById('preview').innerHTML=`<header class="mast"><div class="schoolmark">${logo}</div><div class="mast-title"><div class="univ">${esc(data.university)}</div><div class="newsletter">${esc(data.mastTitle===undefined?'NEWSLETTER':data.mastTitle)}</div><div class="korean">${esc(data.subtitle)}</div></div><div class="issue"><div><span class="month">${esc(data.month)}</span> <span class="year">${esc(data.year)}</span></div><div class="vol">vol. ${esc(data.volume)}</div></div></header><div class="columns"><section class="column ${data.left.length===1?'single-story':''}"><div class="bar"><span class="pill pink">${esc(data.leftLabel)}</span></div>${data.left.length?data.left.map(a=>card(a,'left')).join(''):'<div class="noitems">尚未加入內容</div>'}</section><section class="column ${data.right.length===1?'single-story':''}"><div class="bar"><span class="pill blue">${esc(data.rightLabel)}</span></div>${data.right.length?data.right.map(a=>card(a,'right')).join(''):'<div class="noitems">尚未加入活動</div>'}</section></div><footer class="footer"><strong>${esc(data.issuer)}</strong><span>발행인: ${esc(data.issuer)}</span><span>주소: ${esc(data.address)}</span></footer>`}function saveJSON(){const b=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download=`newsletter-${data.year}-${data.month}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}function importJSON(e){const file=e.target.files[0];if(!file)return;const r=new FileReader();r.onload=()=>{try{const x=JSON.parse(r.result);if(!Array.isArray(x.left)||!Array.isArray(x.right))throw Error('invalid');data=x;persist();meta();styleEditor();editor('left');editor('right');render()}catch(e){alert('JSON 格式不符，無法匯入')}};r.readAsText(file)}function resetData(){if(!confirm('將清除目前修改，回到示範模板。建議先匯出資料。'))return;data=sample();persist();meta();styleEditor();editor('left');editor('right');render()}
-function updateSectionNames(){
- const sideBySide=['mode1','mode4','mode5'].includes(data.layout);
- const captions=sideBySide?['03 左欄內容編輯','04 右欄內容編輯']:['03 第一區塊內容編輯','04 第二區塊內容編輯'];
- const korean=sideBySide?['03 왼쪽 섹션','04 오른쪽 섹션']:['03 첫 번째 콘텐츠 영역','04 두 번째 콘텐츠 영역'];
- const groups=Array.from(document.querySelectorAll('.side details summary'));
- for(let i=0;i<groups.length;i++){
-   if(groups[i].textContent.includes('03 ')||groups[i].textContent.includes('04 ')){
-     const n=groups[i].textContent.includes('03 ')?0:1;
-     groups[i].textContent=(typeof uiLanguage!=='undefined'&&uiLanguage==='ko')?korean[n]:captions[n];
-   }
- }
-}
-if(!data.layout)data.layout='mode1';if(!data.headingStyle)data.headingStyle='style1';if(data.mastTitle===undefined)data.mastTitle='NEWSLETTER';meta();styleEditor();editor('left');editor('right');updateSectionNames();render();
-
-// UI translations apply only to editor controls, never newsletter text or English heading choices.
-const uiMap={
-'Newsletter 編輯器':'뉴스레터 편집기',
-'雙欄校園電子報 · 每篇可上傳多張圖片 · A4 PDF 列印':'대학 뉴스레터 · 실시간 미리보기 · A4 PDF 인쇄',
-'保存 PNG':'PNG 이미지 저장','列印／另存 PDF':'인쇄 / PDF 저장','匯出資料 JSON':'JSON 데이터 내보내기','匯入資料':'데이터 가져오기','重設示範內容':'예시 내용 초기화',
-'01 基本資訊及識別':'01 기본 정보 및 로고','02 排版模板及欄目抬頭':'02 레이아웃 및 섹션 제목',
-'03 左欄內容編輯':'03 왼쪽 섹션','04 右欄內容編輯':'04 오른쪽 섹션','05 操作說明':'05 사용 안내',
-'學校英文名稱':'학교 영문명','主標題（預設 NEWSLETTER）':'메인 제목 (기본 NEWSLETTER)','韓文副標題':'한국어 부제목','月份':'월','年度':'연도','期數':'호수',
-'左欄分類':'왼쪽 섹션 제목','右欄分類':'오른쪽 섹션 제목','發行單位':'발행 기관','地址／頁尾':'주소 / 하단 정보','學校 Logo（上傳圖片）':'학교 로고 (이미지 업로드)',
-'整頁排版模式（即時切換）':'전체 레이아웃 (즉시 전환)','欄目抬頭外觀（共 10 款）':'섹션 제목 디자인 (10종)','常用英文抬頭（套用至指定內容區）':'영문 섹션 제목 (영역 선택 후 적용)',
-'選擇建議文字…':'제목 선택…','套用第一區':'첫 번째 영역에 적용','套用第二區':'두 번째 영역에 적용',
-'也可直接在「基本資訊」自行輸入任意英文、中文或韓文欄目名稱。以上為示範分類，可依實際電子報主題調整。':'「기본 정보」에서 영어·중국어·한국어 제목을 직접 입력할 수 있습니다. 제안된 제목은 필요에 따라 변경할 수 있습니다.',
-'模式 1｜經典雙欄':'모드 1 | 기본 2단','模式 2｜重點摘要':'모드 2 | 주요 정보 강조','模式 3｜圖文卡片':'모드 3 | 이미지 카드','模式 4｜正式雜誌':'모드 4 | 매거진형','模式 5｜經典報章':'모드 5 | 신문형','模式 6｜新聞週刊':'모드 6 | 뉴스 주간지형','模式 7｜藝文月刊':'모드 7 | 문화 매거진형',
-'01 經典橢圓框':'01 클래식 타원형','02 方形色塊':'02 사각형 컬러','03 左側強調線':'03 왼쪽 강조선','04 底線標題':'04 밑줄 제목','05 角標標籤':'05 포인트 라벨',
-'06 深色膠囊':'06 진한 캡슐형','07 圓角卡片':'07 둥근 카드','08 線條極簡':'08 미니멀형','09 雙線報章':'09 이중선 신문형','10 數位科技風':'10 디지털 테크형',
-'＋ 新增左欄文章':'＋ 왼쪽 기사 추가','＋ 新增右欄活動':'＋ 오른쪽 항목 추가',
-'標題字級':'제목 글자 크기','正文字級':'본문 글자 크기','字體':'글꼴','標題加粗':'제목 굵게','正文加粗':'본문 굵게','標題':'제목','正文／活動資訊（可換行）':'본문 / 행사 정보 (줄바꿈 가능)','內容照片／海報':'사진 / 포스터 업로드',
-'清除內容圖':'이미지 삭제','刪除':'삭제',
-'圖片可上傳 JPG/PNG/WebP 等檔案，系統會自動壓縮；HEIC 建議先轉 JPG。編輯內容自動儲存在目前瀏覽器；如要換電腦，使用「匯出資料 JSON」。PDF 使用瀏覽器「列印／另存為 PDF」，請將紙張設成 A4，縮放選 100%，邊界選無，並啟用背景圖形。內容過多可能超過一頁，請縮短文字或拆成多期。使用正式校徽須上傳已獲授權之圖檔。':'이미지 및 QR 코드는 PNG/JPG/WebP 파일을 업로드할 수 있습니다. 편집 내용은 현재 브라우저에 자동 저장됩니다. 다른 컴퓨터로 이동할 때는 JSON 내보내기를 사용하세요. PDF는 인쇄 기능에서 A4, 배율 100%, 여백 없음, 배경 그래픽 인쇄로 설정하세요. 내용이 길면 한 페이지를 초과할 수 있습니다. 학교 공식 로고는 사용 권한을 확인하세요.',
-'右側為即時預覽。示範內容均為版型佔位文字，請於發行前替換、核實所有日期與聯絡資料。':'오른쪽은 실시간 미리보기입니다. 예시 내용은 실제 소식이 아니므로 발행 전에 정보, 날짜 및 연락처를 확인하세요.'
-};
-
-const originalText=new WeakMap();
-function translateControls(){
-  document.documentElement.lang=uiLanguage==='ko'?'ko':'zh-Hant';
-  const sidebar=document.querySelector('.side');
-  const translateArea=(area)=>{
-    const walk=document.createTreeWalker(area,NodeFilter.SHOW_TEXT);
-    let node;
-    while((node=walk.nextNode())){
-      if(node.parentElement?.closest('.lang-controls,script,style'))continue;
-      if(!originalText.has(node))originalText.set(node,node.nodeValue);
-      const raw=originalText.get(node);
-      const tr=raw.trim();
-      let value=uiMap[tr];
-      if(!value){const m=tr.match(/^(文章|活動)\s+(\d+)$/);if(m)value=(m[1]==='文章'?'기사 ':'항목 ')+m[2];}
-      if(uiLanguage==='ko'&&value)node.nodeValue=raw.replace(tr,value);
-      else if(uiLanguage==='zh')node.nodeValue=raw;
-    }
-  };
-  translateArea(sidebar);
-  translateArea(document.querySelector('.note'));
-  document.getElementById('langZh').classList.toggle('selected',uiLanguage==='zh');
-  document.getElementById('langKo').classList.toggle('selected',uiLanguage==='ko');
-}
-function setUiLanguage(lang){uiLanguage=lang==='ko'?'ko':'zh';translateControls();updateSectionNames();}
-for(const name of ['meta','styleEditor','editor']){
-  const original=window[name];
-  window[name]=function(...args){const result=original(...args);translateControls();return result};
-}
-translateControls();
-</script>
-<script>
-/* V11 PNG export: capture the complete A4 preview at high resolution. */
-const pngDependencySources=[
- 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js',
- 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js'
-];
-async function ensurePngRenderer(){
- if(typeof window.html2canvas==='function')return;
- for(const src of pngDependencySources){
-  try{await new Promise((resolve,reject)=>{const js=document.createElement('script');js.src=src;js.onload=resolve;js.onerror=reject;document.head.appendChild(js)});if(typeof window.html2canvas==='function')return}catch(e){}
- }
- throw new Error('PNG 繪圖元件無法載入。請連接網路後重試。');
-}
-async function savePNG(){
- const btn=Array.from(document.querySelectorAll('button')).find(b=>b.getAttribute('onclick')==='savePNG()');
- const old=btn?.textContent;
- try{
-  if(btn){btn.disabled=true;btn.textContent=uiLanguage==='ko'?'PNG 생성 중…':'PNG 產生中…'}
-  await ensurePngRenderer();
-  if(document.fonts?.ready)await document.fonts.ready;
-  const target=document.getElementById('preview');
-  const canvas=await window.html2canvas(target,{backgroundColor:'#ffffff',scale:2,useCORS:true,allowTaint:false,logging:false,scrollX:0,scrollY:0,windowWidth:1200,onclone:doc=>{const p=doc.getElementById('preview');p.style.transform='none';p.style.boxShadow='none';p.style.margin='0';}});
-  if(!canvas.width||!canvas.height)throw new Error('畫面擷取失敗');
-  const blob=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(new Error('PNG 轉換失敗')),'image/png'));
-  const url=URL.createObjectURL(blob);const link=document.createElement('a');link.href=url;link.download=`woosong-newsletter-${data.year||'year'}-${data.month||'month'}.png`;document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);
- }catch(e){alert((uiLanguage==='ko'?'PNG 저장 실패: ':'PNG 匯出失敗：')+e.message+'\n建議使用最新版 Chrome／Edge，並保持網路連線。')}finally{if(btn){btn.disabled=false;btn.textContent=old}}
-}
-// Preserve original live editor and extend only the bilingual labels.
-Object.assign(uiMap,{
- '模式 8｜主圖特寫':'모드 8 | 대표 이미지 특집',
- '模式 9｜新聞拼貼':'모드 9 | 뉴스 콜라주',
- '模式 10｜時間軸快訊':'모드 10 | 타임라인 소식',
- '模式 11｜左右交錯圖文':'모드 11 | 교차 이미지 기사'
-});
-</script>
-<script id="ux-sidebar-code-v12">
-(function(){
-const side=document.querySelector('.side');if(!side)return;
-const language=side.querySelector('.lang-controls'),heading=side.querySelector('h2'),sub=side.querySelector('.sub'),toolbar=side.querySelector('.toolbar'),groups=[...side.querySelectorAll(':scope > details.group')];
-if(groups.length!==5)return;
-const top=document.createElement('div');top.className='ux-top';side.prepend(top);top.append(language,heading,sub);
-const nav=document.createElement('nav');nav.className='ux-nav';nav.setAttribute('aria-label','編輯功能分類');top.append(nav);
-const body=document.createElement('div');body.className='ux-body';side.append(body);const guidance=document.createElement('p');guidance.className='ux-hint';body.append(guidance);
-const search=document.createElement('div');search.className='ux-search';search.innerHTML='<input id="uxArticleSearch" type="search" placeholder="搜尋文章標題 / 제목 검색" aria-label="搜尋文章標題">';body.append(search);
-for(const g of groups)body.append(g);body.append(toolbar);
-const meta=groups[0],style=groups[1],left=groups[2],right=groups[3],help=groups[4];
-const tabs=[['content','內容 / 콘텐츠'],['layout','排版 / 레이아웃'],['info','基本資料 / 기본정보'],['export','匯出 / 내보내기']];let active='content', openCards=new Set(), searchText='';
-const status=document.createElement('div');status.className='ux-status';top.append(status);
-function labels(){const ko=window.uiLanguage==='ko';return {search:ko?'기사 제목 검색…':'搜尋文章標題…',hints:{content:ko?'기사를 선택하면 편집 도구가 펼쳐집니다. 제목 검색으로 빠르게 찾을 수 있습니다.':'點選文章標題展開編輯；可搜尋文章並保留新增、排序、圖片操作。',layout:ko?'11개 레이아웃과 10개 제목 스타일을 선택하세요.':'11 種版面與 10 種欄目標題樣式可即時切換。',info:ko?'학교명, 발행호, 로고와 연락 정보를 변경하세요.':'集中修改學校名稱、期數、欄目、Logo 與頁尾資訊。',export:ko?'PNG/PDF 저장, JSON 백업 및 복원 기능을 이용하세요.':'在此下載 PNG／PDF、備份 JSON 或匯入既有作品。'},status:ko?'자동 저장 활성화':'本機自動儲存已開啟'};}
-function show(tab){active=tab;const L=labels();nav.innerHTML='';tabs.forEach(([id,title],i)=>{const b=document.createElement('button');b.type='button';b.className='ux-tab'+(id===tab?' active':'');b.textContent=window.uiLanguage==='ko'?title.split(' / ')[1]:title.split(' / ')[0];b.setAttribute('aria-pressed',String(tab===id));b.onclick=()=>show(id);nav.append(b)});guidance.textContent=L.hints[tab];search.classList.toggle('ux-pane-hidden',tab!=='content');[[meta,'info'],[style,'layout'],[left,'content'],[right,'content'],[help,'export'],[toolbar,'export']].forEach(([g,id])=>g.classList.toggle('ux-pane-hidden',tab!==id));[meta,style,left,right,help].forEach(g=>{if(tab==='content'&&(g===left||g===right))g.open=true;else if(g===meta||g===style)g.open=true});search.querySelector('input').placeholder=L.search;status.innerHTML='<span>●</span> '+L.status;decorate();}
-function decorate(){for(const [s,g] of [['left',left],['right',right]]){const root=document.getElementById(s+'Edit');if(!root)continue;const items=[...root.children].filter(x=>x.classList.contains('item'));for(let i=0;i<items.length;i++){const it=items[i];if(it.querySelector('.ux-fold'))continue;const head=it.querySelector('.item-head');if(!head)continue;const label=head.querySelector('strong');const original=label?.textContent||'';if(label)label.style.display='none';const title=it.querySelector('textarea')?.value||original;const key=s+'-'+i;const t=document.createElement('button');t.type='button';t.className='ux-fold';t.setAttribute('aria-expanded',String(openCards.has(key)));t.innerHTML='<span></span><span class="ux-snippet"></span>';t.firstChild.textContent=original+'　▸ '+(title.split('\n')[0]||'未命名文章').slice(0,36);t.lastChild.textContent=window.uiLanguage==='ko'?'눌러서 편집 / 접기':'點擊展開／收合';head.insertBefore(t,head.querySelector('.minirow'));
-const wrap=document.createElement('div');wrap.className='ux-article-body';while(head.nextSibling)wrap.append(head.nextSibling);it.append(wrap);wrap.hidden=!openCards.has(key);t.onclick=()=>{const on=t.getAttribute('aria-expanded')!=='true';t.setAttribute('aria-expanded',String(on));wrap.hidden=!on;if(on)openCards.add(key);else openCards.delete(key);};const input=wrap.querySelector('textarea');if(input)input.addEventListener('input',()=>{t.firstChild.textContent=original+'　▸ '+(input.value.split('\n')[0]||'未命名文章').slice(0,36);});}const count=g.querySelector('summary');let badge=count.querySelector('.ux-count');if(!badge){badge=document.createElement('span');badge.className='ux-count';count.append(badge)}badge.textContent=String(items.length);}
-applySearch();}
-function applySearch(){const q=searchText.trim().toLowerCase();for(const root of [document.getElementById('leftEdit'),document.getElementById('rightEdit')]){if(!root)continue;root.querySelectorAll('.item').forEach(it=>{const h=it.querySelector('.ux-fold');it.style.display=!q||((h?.textContent||'').toLowerCase().includes(q))?'':'none';});}}
-search.querySelector('input').addEventListener('input',e=>{searchText=e.target.value;applySearch()});
-for(const name of ['editor','setUiLanguage']){const base=window[name];if(typeof base==='function')window[name]=function(...args){const out=base.apply(this,args);if(name==='setUiLanguage')show(active);else decorate();return out;};}
-show('content');
-})();
-</script><script id="v14-preview-gallery">
-(function(){
-'use strict';
-const names={zh:['經典雙欄','重點摘要','圖文卡片','正式雜誌','經典報章','新聞週刊','藝文月刊','主圖特寫','新聞拼貼','時間軸快訊','左右交錯圖文'],ko:['기본 2단 편집','핵심 소식 요약','이미지 카드형','정통 매거진형','신문 지면형','뉴스 위클리','문화 매거진','대표 이미지 강조','뉴스 콜라주','소식 타임라인','이미지·본문 교차형']};
-const desc={zh:['左右雙欄，適合正式季刊','三欄摘要，適合消息快覽','圖文卡片，適合多個活動','典雅欄位，適合專題文章','報章式密集文字','三欄新聞，適合大量短訊','圖片與留白兼顧','大圖焦點與重點標題','大小圖片與新聞交錯','事件與日期的閱讀節奏','左右交替，適合人物報導'],ko:['공식 소식지에 적합한 2단 구성','주요 소식을 한눈에 정리','여러 행사 소식을 카드로 구성','기획 기사에 어울리는 정갈한 편집','기사 중심의 신문형 지면','짧은 뉴스를 모은 3단 편집','사진과 여백을 살린 구성','대표 사진을 크게 강조','기사와 사진을 다양하게 배치','행사 소식을 순서대로 정리','인터뷰에 어울리는 교차 배치']};
-const colors=[['#233c5b','#c2d0dd','#fff'],['#285782','#c7ddec','#f4f9ff'],['#3a6f88','#b4d0dc','#f8fafc'],['#253f59','#cad0dc','#f9f6f1'],['#262626','#c2c2c2','#fff'],['#a63039','#e4b1b2','#fff'],['#876949','#d9c8b3','#fff9f1'],['#135d66','#92c7ca','#f6fbfa'],['#253c68','#b8c9e2','#fff'],['#3a7c71','#bfdcd1','#f6faf7'],['#6a4e87','#d1c0e2','#fff']];
-let showDemo=true;
-const oldRender=window.render;
-function illustration(seed){const c=colors[seed%colors.length];return `<svg viewBox="0 0 360 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="360" height="150" fill="${c[1]}"/><circle cx="288" cy="31" r="23" fill="#ffffffa0"/><path d="M0 117 L85 58 147 111 228 44 360 132 360 150H0Z" fill="${c[0]}" opacity=".55"/><path d="M0 143 L89 88 174 132 258 74 360 120V150H0Z" fill="${c[0]}" opacity=".58"/><path d="M22 128V48h51v80m13 0V70h48v58" fill="#ffffff74" stroke="#ffffff" stroke-width="2"/><path d="M0 149H360" stroke="#fff" stroke-width="4"/></svg>`}
-function demoImages(){if(!showDemo)return;const preview=document.getElementById('preview');if(!preview)return;const articles=preview.querySelectorAll('.article');articles.forEach((a,i)=>{if(a.querySelector('.article-image'))return;let d=document.createElement('div');d.className='demo-visual';d.innerHTML=illustration(i+Number((data.layout||'mode1').replace('mode','')));const title=a.querySelector('.underline');if(title)title.after(d);else a.prepend(d);const body=a.querySelector('.article-body');if(body && !body.textContent.trim())body.textContent=uiLanguage==='ko'?'기사 내용을 입력해 주세요.':'請在左側輸入文章正文。';});const ko=uiLanguage==='ko';preview.querySelectorAll('.demo-visual').forEach(el=>el.setAttribute('title',ko?'예시 이미지 · 업로드한 사진으로 교체할 수 있습니다.':'示範圖片，可上傳照片替換'));}
-window.render=function(...args){const result=oldRender.apply(this,args);demoImages();return result;};
-const oldStyle=window.styleEditor;
-function gallery(){const root=document.getElementById('styleEdit');if(!root)return;root.querySelector('.template-gallery-container')?.remove();const ko=uiLanguage==='ko';const area=document.createElement('section');area.className='template-gallery-container';const h=document.createElement('div');h.className='template-guide';h.textContent=ko?'레이아웃을 선택하면 오른쪽에 사진과 글이 포함된 예시 지면이 바로 표시됩니다. 현재 입력한 내용은 유지됩니다.':'點選下方任一模板，右側即時顯示圖文完整佔位版面；你已輸入的內容不會遺失。';area.append(h);
-const label=document.createElement('label');label.style.cssText='display:flex;align-items:center;gap:8px;font-size:12px;margin:10px 0;';const check=document.createElement('input');check.type='checkbox';check.checked=showDemo;check.style.width='auto';check.addEventListener('change',()=>{showDemo=check.checked;render();});label.append(check,document.createTextNode(ko?'빈 이미지 자리에 예시 사진 표시':'空白圖片位置顯示示範圖片'));area.append(label);
-const wrap=document.createElement('div');wrap.className='template-gallery';for(let i=0;i<11;i++){const n=i+1,mode='mode'+n,btn=document.createElement('button');btn.type='button';btn.className='template-option';btn.setAttribute('aria-pressed',String(data.layout===mode));const c=colors[i];btn.innerHTML=`<div class="template-thumb ${mode}" style="--ink:${c[0]};--photo:${c[1]};--paper:${c[2]}"><div class="thumb-head">WOOSONG NEWSLETTER</div><div class="thumb-blocks">${Array.from({length:n===2||n===6?3:2},(_,k)=>`<div class="thumb-section">${(k===0||n===3||n>=7)?'<div class="thumb-photo"></div>':''}<div class="thumb-title"></div><div class="thumb-line"></div><div class="thumb-line short"></div><div class="thumb-line"></div></div>`).join('')}</div></div><strong>${String(n).padStart(2,'0')} · ${names[ko?'ko':'zh'][i]}</strong><small>${desc[ko?'ko':'zh'][i]}</small>`;btn.addEventListener('click',()=>{chooseLayout(mode);gallery();});wrap.append(btn);}area.append(wrap);const layoutInner=root.querySelector('[data-design-group="layout"] .design-inner');if(layoutInner)layoutInner.appendChild(area);else root.prepend(area);const oldPicks=root.querySelector('.layout-picks');if(oldPicks){oldPicks.style.display='none';oldPicks.setAttribute('aria-hidden','true');}}
-window.styleEditor=function(...args){const r=oldStyle.apply(this,args);gallery();return r;};
-const oldLang=window.setUiLanguage;window.setUiLanguage=function(...args){const r=oldLang.apply(this,args);gallery();render();return r;};
-// The V12 sidebar already initializes before this script; restore gallery on load.
-gallery();render();
-})();
-</script><script id="v13-localization">
-/* V13 localized UI layer. Translation applies only to controls, never to user-authored newsletter content. */
-(function(){
-const pairs = [
-['Newsletter 編輯器','뉴스레터 편집기'],['雙欄校園電子報 · 每篇可上傳多張圖片 · A4 PDF 列印','대학 뉴스레터 편집 · 사진 여러 장 첨부 · A4 PDF 저장'],
-['內容','콘텐츠'],['排版','디자인'],['基本資料','기본 정보'],['匯出','내보내기'],
-['保存 PNG','PNG로 저장'],['列印／另存 PDF','인쇄 / PDF로 저장'],['匯出資料 JSON','JSON으로 백업'],['匯入資料','백업 파일 불러오기'],['重設示範內容','예시 콘텐츠 초기화'],
-['01 基本資訊及識別','01 기본 정보 및 로고'],['02 排版模板及欄目抬頭','02 레이아웃과 섹션 제목'],['03 左欄內容編輯','03 왼쪽 콘텐츠'],['04 右欄內容編輯','04 오른쪽 콘텐츠'],['03 第一區塊內容編輯','03 첫 번째 콘텐츠'],['04 第二區塊內容編輯','04 두 번째 콘텐츠'],['05 操作說明','05 사용 안내'],
-['學校英文名稱','학교 영문명'],['主標題（預設 NEWSLETTER）','메인 제목 (기본값: NEWSLETTER)'],['韓文副標題','한국어 부제목'],['月份','발행 월'],['年度','발행 연도'],['期數','발행 호수'],['左欄分類','왼쪽 섹션명'],['右欄分類','오른쪽 섹션명'],['發行單位','발행 부서'],['地址／頁尾','주소 및 하단 정보'],['學校 Logo（上傳圖片）','학교 로고 업로드'],
-['整頁排版模式（即時切換）','전체 레이아웃 (실시간 적용)'],['欄目抬頭外觀（共 10 款）','섹션 제목 스타일 (10종)'],['常用英文抬頭（套用至指定內容區）','영문 섹션 제목 빠른 설정'],['選擇建議文字…','제목 선택…'],['套用第一區','첫 번째 영역에 적용'],['套用第二區','두 번째 영역에 적용'],['自訂文字 / 직접 입력…','직접 입력…'],
-['模式 1｜經典雙欄','01 | 클래식 2단'],['模式 2｜重點摘要','02 | 주요 소식 모아보기'],['模式 3｜圖文卡片','03 | 이미지 카드'],['模式 4｜正式雜誌','04 | 매거진 스타일'],['模式 5｜經典報章','05 | 클래식 신문'],['模式 6｜新聞週刊','06 | 뉴스 매거진'],['模式 7｜藝文月刊','07 | 문화 매거진'],['模式 8｜主圖特寫','08 | 대표 이미지 중심'],['模式 9｜新聞拼貼','09 | 뉴스 콜라주'],['模式 10｜時間軸快訊','10 | 타임라인'],['模式 11｜左右交錯圖文','11 | 교차형 이미지·텍스트'],
-['01 經典橢圓框','01 타원형'],['02 方形色塊','02 컬러 블록'],['03 左側強調線','03 왼쪽 포인트 라인'],['04 底線標題','04 밑줄 제목'],['05 角標標籤','05 라벨형'],['06 深色膠囊','06 캡슐형'],['07 圓角卡片','07 둥근 카드형'],['08 線條極簡','08 미니멀 라인'],['09 雙線報章','09 이중선 신문형'],['10 數位科技風','10 디지털 스타일'],
-['＋ 新增左欄文章','＋ 왼쪽 콘텐츠 추가'],['＋ 新增右欄活動','＋ 오른쪽 콘텐츠 추가'],['新增左欄文章','왼쪽 콘텐츠 추가'],['新增右欄活動','오른쪽 콘텐츠 추가'],['文章','콘텐츠'],['活動','소식'],['刪除','삭제'],['移除 / 삭제','삭제'],['清除內容圖','대표 이미지 삭제'],['標題','제목'],['正文／活動資訊（可換行）','본문 / 행사 안내 (줄바꿈 가능)'],['標題字級','제목 크기'],['正文字級','본문 크기'],['字體','글꼴'],['標題加粗','제목 굵게'],['正文加粗','본문 굵게'],
-['文章版面／기사 레이아웃','콘텐츠 레이아웃'],['圖片展示／이미지 표시','이미지 표시 방식'],['圖文方向 / 사진 위치','이미지 배치'],['圖片裁剪（非破壞性） / 이미지 자르기','이미지 비율 (원본 유지)'],['裁剪焦點：水平 / 자르기 중심: 가로','이미지 초점 · 가로'],['裁剪焦點：垂直 / 자르기 중심: 세로','이미지 초점 · 세로'],['內容照片／海報','대표 이미지 / 포스터'],['更多圖片（同一篇可加入多張）／추가 이미지','추가 이미지 (여러 장 선택 가능)'],['附加圖片','추가 이미지'],['裁切比例 / 비율','이미지 비율'],['顯示方式 / 표시','표시 방식'],['水平焦點 / 가로','가로 초점'],['垂直焦點 / 세로','세로 초점'],
-['自動適配 / 자동 맞춤','자동 맞춤'],['整行寬版 / 가로 전체','가로 전체 너비'],['緊湊卡片 / 작은 카드','작은 카드'],['直式圖片優先 / 세로 사진','세로 이미지 중심'],['圖文左右 / 사진+본문','이미지·본문 나란히'],['完整顯示（不裁切） / 전체','원본 전체 보기'],['填滿裁切 / 채우기','영역 채우기 (자르기)'],['圖片在右・文字在左 / 사진 오른쪽','이미지 오른쪽 / 본문 왼쪽'],['圖片在左・文字在右 / 사진 왼쪽','이미지 왼쪽 / 본문 오른쪽'],
-['原圖比例 / 원본','원본 비율'],['正方形 1:1 / 정사각형','정사각형 1:1'],['橫幅 4:3 / 가로','가로형 4:3'],['寬幅 16:9 / 와이드','와이드 16:9'],['直幅 3:4 / 세로','세로형 3:4'],['原圖 / 원본','원본 비율'],['完整顯示 / 전체','원본 전체 보기'],['填滿裁切 / 채우기','영역 채우기'],['黑體 / 고딕','고딕체'],['宋體 / 명조','명조체'],['經典報刊 / 신문체','신문체'],
-['圖片可上傳 JPG/PNG/WebP 等檔案，系統會自動壓縮；HEIC 建議先轉 JPG。編輯內容自動儲存在目前瀏覽器；如要換電腦，使用「匯出資料 JSON」。PDF 使用瀏覽器「列印／另存為 PDF」，請將紙張設成 A4，縮放選 100%，邊界選無，並啟用背景圖形。內容過多可能超過一頁，請縮短文字或拆成多期。使用正式校徽須上傳已獲授權之圖檔。','JPG·PNG·WebP 이미지를 업로드할 수 있으며, 파일 크기는 자동으로 최적화됩니다. HEIC 파일은 JPG로 변환해 주세요. 편집 내용은 이 브라우저에 자동 저장됩니다. 다른 기기에서 작업하려면 JSON 파일로 백업하세요. PDF 저장 시 용지는 A4, 배율은 100%, 여백은 없음으로 설정하고 배경 그래픽 인쇄를 켜 주세요. 내용이 많으면 페이지를 나눠 편집하는 것을 권장합니다. 공식 로고는 사용 권한을 확인해 주세요.'],
-['右側為即時預覽。示範內容均為版型佔位文字，請於發行前替換、核實所有日期與聯絡資料。','오른쪽에서 편집 결과를 실시간으로 확인할 수 있습니다. 예시 문구는 실제 소식이 아니므로 발행 전 날짜와 연락처 등을 반드시 확인해 주세요.'],
-['點選文章標題展開編輯；可搜尋文章並保留新增、排序、圖片操作。','콘텐츠 제목을 누르면 편집 항목이 펼쳐집니다. 제목 검색과 순서 변경, 이미지 편집도 가능합니다.'],['11 種版面與 10 種欄目標題樣式可即時切換。','레이아웃 11종과 섹션 제목 스타일 10종을 바로 적용할 수 있습니다.'],['集中修改學校名稱、期數、欄目、Logo 與頁尾資訊。','학교명, 발행 호수, 섹션명, 로고와 하단 정보를 수정할 수 있습니다.'],['在此下載 PNG／PDF、備份 JSON 或匯入既有作品。','PNG·PDF 저장, JSON 백업 및 불러오기를 할 수 있습니다.'],['本機自動儲存已開啟','이 브라우저에 자동 저장 중'],['點擊展開／收合','눌러서 펼치기 / 접기'],
-['也可直接在「基本資訊」自行輸入任意英文、中文或韓文欄目名稱。以上為示範分類，可依實際電子報主題調整。','「기본 정보」에서 원하는 언어로 섹션명을 직접 입력할 수 있습니다. 위 항목은 예시이므로 뉴스레터 성격에 맞게 수정해 주세요.'],
-['可一次選取多張 JPG / PNG；圖片會依順序顯示。／여러 이미지를 선택할 수 있습니다.','JPG·PNG 이미지를 여러 장 선택할 수 있으며, 선택한 순서대로 표시됩니다.'],
-['搜尋文章標題 / 제목 검색','콘텐츠 제목 검색'],['搜尋文章標題…','콘텐츠 제목 검색…'],['內容 / 콘텐츠','콘텐츠'],['排版 / 레이아웃','디자인'],['基本資料 / 기본정보','기본 정보'],['匯出 / 내보내기','내보내기']
-];
-const forward = new Map(pairs), backward=new Map(pairs.map(([zh,ko])=>[ko,zh]));
-const existingKo=new Map(Object.entries(window.uiMap||{}));for(const [zh,ko] of existingKo){if(!forward.has(zh)){forward.set(zh,ko);backward.set(ko,zh);}}
-function localize(text,ko){const t=text.trim();if(!t)return text;let out;
- if(ko){out=forward.get(t) || (backward.has(t)?t:null); if(!out){let m=t.match(/^(文章|活動)\s+(\d+)$/);if(m)out=(m[1]==='文章'?'콘텐츠 ':'소식 ')+m[2]; else if((m=t.match(/^附加圖片\s*(\d+)\s*\/.*$/)))out='추가 이미지 '+m[1];}}
- else {out=backward.get(t) || (forward.has(t)?t:null);if(!out){let m=t.match(/^(콘텐츠|소식|기사|항목)\s+(\d+)$/);if(m)out=(m[1]==='소식'||m[1]==='항목'?'活動 ':'文章 ')+m[2];}}
- return out?text.replace(t,out):text;
-}
-let applying=false;
-function refresh(){if(applying)return;applying=true;try{
- const ko=uiLanguage==='ko';document.documentElement.lang=ko?'ko':'zh-Hant';
- for(const area of [document.querySelector('.side'), document.querySelector('.note')]){if(!area)continue;const tree=document.createTreeWalker(area,NodeFilter.SHOW_TEXT);let n;while(n=tree.nextNode()){
- if(n.parentElement?.closest('script,style,textarea,.lang-controls,.ux-status'))continue;
- const next=localize(n.nodeValue,ko);if(next!==n.nodeValue)n.nodeValue=next;
- }}
- for(const el of document.querySelectorAll('.side input[placeholder],.side input[aria-label],.ux-nav[aria-label]')){
-  for(const attr of ['placeholder','aria-label']){if(el.hasAttribute(attr)){const old=el.getAttribute(attr);const next=localize(old,ko);if(next!==old)el.setAttribute(attr,next)}}
- }
- const search=document.querySelector('#uxArticleSearch');if(search)search.placeholder=ko?'콘텐츠 제목 검색…':'搜尋文章標題…';
- const nav=document.querySelector('.ux-nav');if(nav)nav.setAttribute('aria-label',ko?'편집 메뉴':'編輯功能分類');
- const tabs=document.querySelectorAll('.ux-nav .ux-tab');const names=ko?['콘텐츠','디자인','기본 정보','내보내기']:['內容','排版','基本資料','匯出'];tabs.forEach((el,i)=>{if(names[i])el.textContent=names[i]});
- const hints=document.querySelector('.ux-hint');if(hints){const z=localize(hints.textContent,ko);if(z!==hints.textContent)hints.textContent=z;}
- const status=document.querySelector('.ux-status');if(status)status.innerHTML='<span>●</span> '+(ko?'이 브라우저에 자동 저장 중':'本機自動儲存已開啟');
- document.title=ko?'우송대학교 뉴스레터 편집기':'又松大學 Newsletter 編輯器';
- }finally{applying=false;}}
-// Synchronize localization after dynamically rendered articles, layout selections and language switching.
-for(const name of ['setUiLanguage','editor','styleEditor','meta','updateSectionNames']){
- const old=window[name];if(typeof old==='function')window[name]=function(...args){const result=old.apply(this,args);refresh();return result;};
-}
-const alertBase=window.alert.bind(window), confirmBase=window.confirm.bind(window);
-const alerts={
- '確定刪除這個區塊？':'이 콘텐츠를 삭제할까요?',
- '將清除目前修改，回到示範模板。建議先匯出資料。':'현재 편집한 내용이 삭제되고 예시 콘텐츠로 초기화됩니다. 계속하기 전에 JSON 파일로 백업하는 것을 권장합니다.',
- 'JSON 格式不符，無法匯入':'JSON 파일 형식이 올바르지 않아 불러올 수 없습니다.',
- '請先選擇標題或輸入自訂文字 / 제목을 선택하거나 입력하세요.':'섹션 제목을 선택하거나 직접 입력해 주세요.',
- '圖片超過 25 MB，請先縮小。':'이미지 크기가 25MB를 초과합니다. 파일 크기를 줄여 주세요.',
- 'PNG 繪圖元件無法載入。請連接網路後重試。':'PNG 저장 기능을 불러오지 못했습니다. 인터넷 연결을 확인한 후 다시 시도해 주세요.'
-};
-function message(msg){let t=String(msg);if(uiLanguage!=='ko')return t;
- if(alerts[t])return alerts[t];
- if(t.includes('建議使用最新版 Chrome／Edge，並保持網路連線。'))t=t.replace('建議使用最新版 Chrome／Edge，並保持網路連線。','최신 Chrome 또는 Edge를 사용하고 인터넷 연결을 확인해 주세요.');
- if(t.includes('PNG 轉換失敗'))t=t.replace('PNG 轉換失敗','PNG 파일을 생성하지 못했습니다.');
- if(t.includes('畫面擷取失敗'))t=t.replace('畫面擷取失敗','미리보기 화면을 캡처하지 못했습니다.');
- return t;
-}
-window.alert=function(msg){return alertBase(message(msg))};window.confirm=function(msg){return confirmBase(message(msg))};
-// Track DOM additions from any existing editor operation, without touching preview content.
-// Avoid MutationObserver feedback loops: each refresh changes labels and would trigger itself repeatedly.
-// Editor regeneration is already covered by the wrapped functions above.
-refresh();
-})();
-</script>
-<script id="v15-trilingual">
-(function(){
-'use strict';
-const dictionary = [
-['Newsletter 編輯器','Newsletter Editor'],['雙欄校園電子報 · 每篇可上傳多張圖片 · A4 PDF 列印','Campus newsletter · Multiple images per article · A4 PDF'],
-['內容','Content'],['排版','Design'],['基本資料','Publication details'],['匯出','Export'],
-['保存 PNG','Save as PNG'],['列印／另存 PDF','Print / Save as PDF'],['匯出資料 JSON','Back up as JSON'],['匯入資料','Import backup'],['重設示範內容','Reset sample content'],
-['01 基本資訊及識別','01 Publication details'],['02 排版模板及欄目抬頭','02 Layout and headings'],['03 左欄內容編輯','03 Left section'],['04 右欄內容編輯','04 Right section'],['03 第一區塊內容編輯','03 First section'],['04 第二區塊內容編輯','04 Second section'],['05 操作說明','05 Help'],
-['學校英文名稱','University name (English)'],['主標題（預設 NEWSLETTER）','Main title (default: NEWSLETTER)'],['韓文副標題','Korean subtitle'],['月份','Issue month'],['年度','Issue year'],['期數','Issue number'],['左欄分類','Left section heading'],['右欄分類','Right section heading'],['發行單位','Published by'],['地址／頁尾','Address / Footer'],['學校 Logo（上傳圖片）','Upload university logo'],
-['整頁排版模式（即時切換）','Page layout (live preview)'],['欄目抬頭外觀（共 10 款）','Section heading styles (10)'],['常用英文抬頭（套用至指定內容區）','Suggested English headings'],['選擇建議文字…','Choose a heading…'],['套用第一區','Apply to first section'],['套用第二區','Apply to second section'],['自訂文字 / 직접 입력…','Enter custom text…'],
-['模式 1｜經典雙欄','01 | Classic two-column'],['模式 2｜重點摘要','02 | News highlights'],['模式 3｜圖文卡片','03 | Image cards'],['模式 4｜正式雜誌','04 | Editorial magazine'],['模式 5｜經典報章','05 | Newspaper'],['模式 6｜新聞週刊','06 | Weekly news'],['模式 7｜藝文月刊','07 | Culture magazine'],['模式 8｜主圖特寫','08 | Hero image'],['模式 9｜新聞拼貼','09 | News collage'],['模式 10｜時間軸快訊','10 | Timeline'],['模式 11｜左右交錯圖文','11 | Alternating image and text'],
-['01 經典橢圓框','01 Oval label'],['02 方形色塊','02 Color block'],['03 左側強調線','03 Accent line'],['04 底線標題','04 Underline'],['05 角標標籤','05 Corner label'],['06 深色膠囊','06 Pill label'],['07 圓角卡片','07 Rounded card'],['08 線條極簡','08 Minimal line'],['09 雙線報章','09 Double-line newspaper'],['10 數位科技風','10 Digital tech'],
-['＋ 新增左欄文章','+ Add left article'],['＋ 新增右欄活動','+ Add right item'],['新增左欄文章','Add left article'],['新增右欄活動','Add right item'],['文章','Article'],['活動','Update'],['刪除','Delete'],['移除 / 삭제','Remove'],['清除內容圖','Remove main image'],['標題','Title'],['正文／活動資訊（可換行）','Body text / Event details (line breaks supported)'],['標題字級','Title size'],['正文字級','Body size'],['字體','Font'],['標題加粗','Bold title'],['正文加粗','Bold body'],
-['文章版面／기사 레이아웃','Article layout'],['圖片展示／이미지 표시','Image display'],['圖文方向 / 사진 위치','Image position'],['圖片裁剪（非破壞性） / 이미지 자르기','Image crop (non-destructive)'],['裁剪焦點：水平 / 자르기 중심: 가로','Horizontal crop focus'],['裁剪焦點：垂直 / 자르기 중심: 세로','Vertical crop focus'],['內容照片／海報','Main image / Poster'],['更多圖片（同一篇可加入多張）／추가 이미지','Additional images (multiple allowed)'],['附加圖片','Additional image'],['裁切比例 / 비율','Crop ratio'],['顯示方式 / 표시','Display mode'],['水平焦點 / 가로','Horizontal focus'],['垂直焦點 / 세로','Vertical focus'],
-['自動適配 / 자동 맞춤','Auto layout'],['整行寬版 / 가로 전체','Full-width article'],['緊湊卡片 / 작은 카드','Compact card'],['直式圖片優先 / 세로 사진','Portrait image'],['圖文左右 / 사진+본문','Side-by-side image and text'],['完整顯示（不裁切） / 전체','Show full image (no crop)'],['填滿裁切 / 채우기','Fill and crop'],['圖片在右・文字在左 / 사진 오른쪽','Image right / Text left'],['圖片在左・文字在右 / 사진 왼쪽','Image left / Text right'],
-['原圖比例 / 원본','Original ratio'],['正方形 1:1 / 정사각형','Square 1:1'],['橫幅 4:3 / 가로','Landscape 4:3'],['寬幅 16:9 / 와이드','Wide 16:9'],['直幅 3:4 / 세로','Portrait 3:4'],['原圖 / 원본','Original ratio'],['完整顯示 / 전체','Show entire image'],['填滿裁切 / 채우기','Fill and crop'],['黑體 / 고딕','Sans serif'],['宋體 / 명조','Serif'],['經典報刊 / 신문체','Classic newspaper'],
-['點選文章標題展開編輯；可搜尋文章並保留新增、排序、圖片操作。','Select an article to edit it. Search, reorder, and manage images here.'],['11 種版面與 10 種欄目標題樣式可即時切換。','Switch between 11 layouts and 10 heading styles with a live preview.'],['集中修改學校名稱、期數、欄目、Logo 與頁尾資訊。','Edit university details, issue number, headings, logo, and footer.'],['在此下載 PNG／PDF、備份 JSON 或匯入既有作品。','Download PNG/PDF, back up as JSON, or import a saved project.'],['本機自動儲存已開啟','Autosave enabled in this browser'],['點擊展開／收合','Click to expand / collapse'],
-['搜尋文章標題 / 제목 검색','Search article titles'],['搜尋文章標題…','Search article titles…'],['內容 / 콘텐츠','Content'],['排版 / 레이아웃','Design'],['基本資料 / 기본정보','Details'],['匯出 / 내보내기','Export'],
-['點選下方任一模板，右側即時顯示圖文完整佔位版面；你已輸入的內容不會遺失。','Choose a template to preview its image and text layout on the right. Your content is preserved.'],['空白圖片位置顯示示範圖片','Show sample visuals in empty image slots'],['示範圖片，可上傳照片替換','Sample image — upload a photo to replace it'],['請在左側輸入文章正文。','Enter article text in the left panel.'],
-['左右雙欄，適合正式季刊','Traditional two-column newsletter'],['三欄摘要，適合消息快覽','Three-column news overview'],['圖文卡片，適合多個活動','Cards for events and updates'],['典雅欄位，適合專題文章','Polished editorial columns'],['報章式密集文字','Dense newspaper typography'],['三欄新聞，適合大量短訊','Three-column short news'],['圖片與留白兼顧','Balanced images and whitespace'],['大圖焦點與重點標題','Large hero image and headline'],['大小圖片與新聞交錯','Editorial collage of stories'],['事件與日期的閱讀節奏','Chronological news layout'],['左右交替，適合人物報導','Alternating layout for interviews'],
-['經典雙欄','Classic two-column'],['重點摘要','Highlights'],['圖文卡片','Image cards'],['正式雜誌','Editorial magazine'],['經典報章','Newspaper'],['新聞週刊','Weekly news'],['藝文月刊','Culture magazine'],['主圖特寫','Hero image'],['新聞拼貼','News collage'],['時間軸快訊','Timeline'],['左右交錯圖文','Alternating layout'],
-['也可直接在「基本資訊」自行輸入任意英文、中文或韓文欄目名稱。以上為示範分類，可依實際電子報主題調整。','You can also enter custom section names under Publication details. Suggested headings are examples only.'],['可一次選取多張 JPG / PNG；圖片會依順序顯示。／여러 이미지를 선택할 수 있습니다.','Select multiple JPG or PNG files; images appear in selection order.'],
-['右側為即時預覽。示範內容均為版型佔位文字，請於發行前替換、核實所有日期與聯絡資料。','Live preview on the right. Replace all sample content and verify dates and contact details before publishing.'],
-['圖片可上傳 JPG/PNG/WebP 等檔案，系統會自動壓縮；HEIC 建議先轉 JPG。編輯內容自動儲存在目前瀏覽器；如要換電腦，使用「匯出資料 JSON」。PDF 使用瀏覽器「列印／另存為 PDF」，請將紙張設成 A4，縮放選 100%，邊界選無，並啟用背景圖形。內容過多可能超過一頁，請縮短文字或拆成多期。使用正式校徽須上傳已獲授權之圖檔。','Upload JPG, PNG, or WebP images; files are automatically optimized. Convert HEIC files to JPG first. Changes are saved in this browser. Use the JSON backup to move work between devices. For PDF printing, choose A4, 100% scale, no margins, and print background graphics. Split overlong issues into multiple pages. Use official logos only with permission.'],
-];
-const zhEn=new Map(dictionary), enZh=new Map(dictionary.map(([a,b])=>[b,a]));
-const prev=window.setUiLanguage;
-let isEn=false;
-function convert(node,toEnglish){const t=node.nodeValue.trim();if(!t)return;let target=toEnglish?zhEn.get(t):enZh.get(t);let m;
-if(!target&&toEnglish&&(m=t.match(/^(\d{2}\s*·\s*)(.+)$/))&&zhEn.has(m[2]))target=m[1]+zhEn.get(m[2]);
-if(!target&&!toEnglish&&(m=t.match(/^(\d{2}\s*·\s*)(.+)$/))&&enZh.has(m[2]))target=m[1]+enZh.get(m[2]);
-if(!target&&toEnglish&&(m=t.match(/^(文章|活動)\s+(\d+)$/)))target=(m[1]==='文章'?'Article ':'Update ')+m[2];
-if(!target&&!toEnglish&&(m=t.match(/^(Article|Update)\s+(\d+)$/)))target=(m[1]==='Article'?'文章 ':'活動 ')+m[2];
-if(!target&&toEnglish&&(m=t.match(/^附加圖片\s*(\d+)\s*\/.*$/)))target='Additional image '+m[1];
-if(target)node.nodeValue=node.nodeValue.replace(t,target);
-}
-function translateTree(root,toEnglish){if(!root)return;const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){
-if(n.parentElement?.closest('script,style,textarea,.lang-controls'))continue;convert(n,toEnglish);
-}for(const el of root.querySelectorAll('[placeholder],[aria-label],[title]'))for(const attr of ['placeholder','aria-label','title'])if(el.hasAttribute(attr)){const value=el.getAttribute(attr);const target=(toEnglish?zhEn:enZh).get(value);if(target)el.setAttribute(attr,target);}}
-function applyEnglish(){translateTree(document.querySelector('.side'),true);translateTree(document.querySelector('.note'),true);
-const tabs=document.querySelectorAll('.ux-nav .ux-tab');['Content','Design','Details','Export'].forEach((t,i)=>{if(tabs[i])tabs[i].textContent=t;});
-const input=document.querySelector('#uxArticleSearch');if(input)input.placeholder='Search article titles…';
-const status=document.querySelector('.ux-status');if(status)status.innerHTML='<span>●</span> Autosave enabled in this browser';
-const nav=document.querySelector('.ux-nav');if(nav)nav.setAttribute('aria-label','Editor sections');
-const lang=document.querySelector('.lang-controls');if(lang)lang.querySelectorAll('button').forEach(b=>b.classList.toggle('selected',b.id==='langEn'));
-document.documentElement.lang='en';document.title='Woosong University Newsletter Editor';
-}
-function restoreChinese(){translateTree(document.querySelector('.side'),false);translateTree(document.querySelector('.note'),false);isEn=false;}
-window.setUiLanguage=function(language){if(isEn)restoreChinese();if(language==='en'){
-prev('zh');isEn=true;
-// Gallery content and any article editors were regenerated by the existing handlers.
-applyEnglish();
-}else{prev(language);document.getElementById('langEn')?.classList.remove('selected');}}
-for(const key of ['meta','styleEditor','editor','chooseLayout','chooseHeading','addArticle','removeArticle','moveArticle','uploadExtraImages','uploadArticle','resetData','importJSON']){
-const old=window[key];if(typeof old==='function')window[key]=function(...args){const result=old.apply(this,args);if(isEn)applyEnglish();return result;};}
-const oldGallery=window.gallery;
-// Preserve active language across page reloads without changing newsletter content.
-try{const saved=localStorage.getItem('woosong-ui-language');if(saved==='en')window.setUiLanguage('en');else if(saved==='ko')window.setUiLanguage('ko');}catch(e){}
-const switcher=window.setUiLanguage;window.setUiLanguage=function(lang){const result=switcher(lang);try{localStorage.setItem('woosong-ui-language',lang);}catch(e){}return result;};
-const alert0=window.alert.bind(window),confirm0=window.confirm.bind(window);
-const notices=new Map([
-['確定刪除這個區塊？','Delete this content block?'],['將清除目前修改，回到示範模板。建議先匯出資料。','This will discard your edits and restore the sample content. Export a JSON backup first.'],['JSON 格式不符，無法匯入','Invalid JSON format. Unable to import this file.'],['請先選擇標題或輸入自訂文字 / 제목을 선택하거나 입력하세요.','Choose a section heading or enter your own.'],['圖片超過 25 MB，請先縮小。','This image exceeds 25 MB. Please reduce its size.'],['PNG 繪圖元件無法載入。請連接網路後重試。','The PNG renderer could not load. Check your internet connection and try again.']]);
-function notice(v){let s=String(v);if(!isEn)return s;return notices.get(s)||s.replace('PNG 轉換失敗','PNG export failed').replace('畫面擷取失敗','Preview capture failed').replace('建議使用最新版 Chrome／Edge，並保持網路連線。','Use the latest Chrome or Edge and ensure you are connected to the internet.');}
-window.alert=function(v){return alert0(notice(v));};window.confirm=function(v){return confirm0(notice(v));};
-})();
-</script><style id="v16-heading-upgrade">
+.nex-original-part{margin:12px 0!important;border:1px solid #ccdaeb;border-radius:10px;overflow:hidden;background:#fff}
+.nex-original-part>summary{background:#edf4fa!important;padding:13px!important;cursor:pointer}
+.nex-original-part .nex-label-part{font-size:13px;color:#173b60;font-weight:750}
+.nex-original-part .nex-count-mini{background:#dce9f5;border-radius:15px;padding:2px 7px;margin-left:8px}
+.nex-original-part .inner{padding:12px}
+.nex-original-part .item{margin:10px 0}
+.nex-pages-panel .nex-part{margin:12px 0}
+</style>
+<style id="v16-heading-upgrade">
 /* Section-heading choices: independent collapsible groups */
 #styleEdit .design-accordion{border:1px solid #d7e0eb;border-radius:11px;margin:0 0 10px;overflow:hidden;background:#fff}
 #styleEdit .design-accordion>summary{list-style:none;cursor:pointer;padding:13px 14px;display:flex;align-items:center;gap:9px;font-size:13px;font-weight:800;color:#243b56;background:#f5f8fc}
@@ -463,95 +140,6 @@ window.alert=function(v){return alert0(notice(v));};window.confirm=function(v){r
 .page.style15 .pill{border:0;border-left:8px solid #bd6f53;border-radius:0;background:#f5ede7;color:#633b29;padding:7px 17px}
 .page.style16 .pill{border:0;border-radius:0;border-bottom:1px solid #b4976d;background:transparent;color:#724e34;font-family:Georgia,'Noto Serif KR',serif;font-style:italic;padding:6px 3px}
 </style>
-<script id="v16-heading-upgrade">
-(function(){
-'use strict';
-const labels={
-zh:{layout:'整頁排版模板（11 款）',heading:'欄目抬頭外觀（16 款）',layoutHint:'展開後選擇下方圖文模板，右側立即預覽。',headingHint:'點選抬頭樣式即可在右側預覽，文章內容不變。',sample:'欄目標題',styles:['經典橢圓框','方形色塊','左側強調線','底線標題','角標標籤','深色膠囊','圓角卡片','線條極簡','雙線報章','數位科技風','學術細線','雜誌編號','漸層色帶','圓點導覽','側邊色籤','典雅襯線']},
-ko:{layout:'전체 페이지 레이아웃 (11종)',heading:'섹션 제목 디자인 (16종)',layoutHint:'아래 레이아웃을 선택하면 오른쪽에서 바로 미리 볼 수 있습니다.',headingHint:'제목 스타일을 선택하면 오른쪽 미리보기에 적용됩니다. 본문은 그대로 유지됩니다.',sample:'섹션 제목',styles:['클래식 타원형','컬러 블록','왼쪽 강조선','밑줄 제목','라벨형 제목','진한 캡슐형','둥근 카드형','미니멀 라인','이중선 신문형','디지털 스타일','학술형 가는 선','매거진 번호형','그라데이션 바','포인트 도트','사이드 컬러 탭','우아한 명조체']},
-en:{layout:'Page layout templates (11)',heading:'Section heading styles (16)',layoutHint:'Choose a layout below to preview it on the right.',headingHint:'Select a heading style to preview it on the right. Article content stays unchanged.',sample:'SECTION TITLE',styles:['Classic oval','Color block','Accent line','Underline','Corner label','Dark pill','Rounded card','Minimal line','Double-rule newspaper','Digital tech','Academic rules','Magazine number','Gradient ribbon','Dot marker','Side color tab','Elegant serif']}
-};
-let fold={layout:false,heading:true};
-function language(){return document.getElementById('langEn')?.classList.contains('selected')?'en':uiLanguage==='ko'?'ko':'zh';}
-function enhance(){
- const root=document.getElementById('styleEdit');if(!root)return;
- const lang=language(),T=labels[lang];
- const fields=Array.from(root.children).filter(el=>el.classList?.contains('field'));
- if(fields.length<2)return;
- const ids=['layout','heading'];
- for(let i=0;i<2;i++){
-   let field=fields[i];if(field.closest('.design-accordion'))continue;
-   const d=document.createElement('details');d.className='design-accordion';d.dataset.designGroup=ids[i];d.open=fold[ids[i]];
-   const summary=document.createElement('summary');summary.textContent=i===0?T.layout:T.heading;
-   const inner=document.createElement('div');inner.className='design-inner';
-   const hint=document.createElement('p');hint.className='design-caption';hint.textContent=i===0?T.layoutHint:T.headingHint;
-   field.querySelector('label')?.remove();inner.appendChild(hint);inner.appendChild(field);
-   d.appendChild(summary);d.appendChild(inner);
-   if(i===0)root.prepend(d);else root.querySelector('[data-design-group="layout"]').after(d);
-   d.addEventListener('toggle',()=>{fold[ids[i]]=d.open});
- }
- // Keep the actual thumbnail chooser INSIDE the page-layout accordion.
- // gallery() rebuilds it on every layout change, so reparent after each rebuild.
- const layoutGroup=root.querySelector('[data-design-group="layout"]');
- const gallerySection=root.querySelector('.template-gallery-container');
- if(layoutGroup && gallerySection){
-   const inner=layoutGroup.querySelector('.design-inner');
-   const hiddenLegacy=inner.querySelector('.layout-picks');
-   if(hiddenLegacy)hiddenLegacy.style.display='none';
-   inner.appendChild(gallerySection);
- }
- const heading=root.querySelector('[data-design-group="heading"]');
- const picks=heading?.querySelectorAll('.style-picks .pick')||[];
- picks.forEach((btn,i)=>{
-   btn.replaceChildren();
-   const name=document.createElement('span');name.textContent=String(i+1).padStart(2,'0')+' '+T.styles[i];
-   const preview=document.createElement('span');preview.className='mini-heading-preview style'+(i+1);preview.textContent=T.sample;
-   btn.append(name,preview);
- });
-}
-const originalStyle=window.styleEditor;
-if(typeof originalStyle==='function')window.styleEditor=function(...args){const r=originalStyle.apply(this,args);enhance();return r};
-const previousLanguage=window.setUiLanguage;
-if(typeof previousLanguage==='function')window.setUiLanguage=function(...args){const r=previousLanguage.apply(this,args);enhance();return r};
-const previousChoose=window.chooseHeading;
-if(typeof previousChoose==='function')window.chooseHeading=function(...args){const r=previousChoose.apply(this,args);enhance();return r};
-enhance();
-})();
-</script>
-<style id="heading-preset-selection-fix">
-/* Keep the chosen preset readable across browsers and theme modes. */
-#headingPreset{color:#1b324c!important;background-color:#fff!important;-webkit-text-fill-color:#1b324c!important;opacity:1!important;min-height:41px;color-scheme:light}
-#headingPreset option{color:#172c43!important;background-color:#fff!important;-webkit-text-fill-color:#172c43!important}
-#headingChosenStatus{margin:7px 0 5px;padding:8px 11px;background:#eaf3fd;color:#1c436b;border:1px solid #cbdff1;border-radius:7px;font-size:12px;overflow-wrap:anywhere}
-#headingChosenStatus[hidden]{display:none!important}
-</style>
-<script id="heading-preset-selection-fix">
-(function(){
- 'use strict';
- let lastValue='';
- const copy={zh:{selected:'目前選擇',custom:'自訂欄目名稱'},ko:{selected:'선택한 제목',custom:'직접 입력'},en:{selected:'Selected heading',custom:'Custom heading'}};
- function currentLang(){return document.getElementById('langEn')?.classList.contains('selected')?'en':(typeof uiLanguage!=='undefined'&&uiLanguage==='ko'?'ko':'zh')}
- function sync(){
-   const select=document.getElementById('headingPreset');if(!select)return;
-   if(lastValue&&Array.from(select.options).some(o=>o.value===lastValue)&&select.value!==lastValue)select.value=lastValue;
-   const val=select.value;if(val)lastValue=val;
-   let badge=document.getElementById('headingChosenStatus');
-   if(!badge){badge=document.createElement('div');badge.id='headingChosenStatus';badge.setAttribute('role','status');badge.setAttribute('aria-live','polite');select.insertAdjacentElement('afterend',badge)}
-   const l=copy[currentLang()];
-   const option=select.selectedOptions&&select.selectedOptions[0];
-   const label=val==='__custom__'?l.custom:(option?.textContent?.trim()||val);
-   badge.textContent=val?l.selected+'：'+label:'';badge.hidden=!val;
-   select.style.color='#1b324c';select.style.backgroundColor='#fff';
- }
- document.addEventListener('change',e=>{if(e.target?.id==='headingPreset'){lastValue=e.target.value;sync();}});
- document.addEventListener('input',e=>{if(e.target?.id==='headingPreset'){lastValue=e.target.value;sync();}});
- // Recreate the status only after the style panel is rebuilt, without observing our own changes.
- const root=document.getElementById('styleEdit');
- if(root){const ob=new MutationObserver(records=>{if(records.some(r=>Array.from(r.addedNodes).some(n=>n.nodeType===1&&(n.id==='headingPreset'||n.querySelector?.('#headingPreset')))))sync()});ob.observe(root,{childList:true,subtree:true});}
- for(const id of ['langZh','langKo','langEn'])document.getElementById(id)?.addEventListener('click',()=>queueMicrotask(sync));
- sync();
-})();
-</script>
 <style>
 .main-photo-section,.additional-photo-section{margin:12px 0;padding:13px;border:1px solid #d4e0ed;border-radius:12px;background:#f8fbff}
 .photo-section-title{font-size:13px;font-weight:800;color:#234669;margin:0 0 12px}
@@ -567,154 +155,1012 @@ enhance();
 .main-photo-settings-inner{padding:12px}.main-photo-settings-inner .field{margin-bottom:11px}
 .additional-photo-section{margin-top:14px}
 </style>
-<script>
-(function(){const prior=window.setUiLanguage;if(typeof prior==='function')window.setUiLanguage=function(...args){const r=prior.apply(this,args);refreshImgLabels();return r};refreshImgLabels()})();
-</script>
-<!-- NEXAEON STUDIO FOOTER V1 -->
 <style id="nexaeon-footer-style">
 .workspace .nexaeon-footer{width:min(794px,100%);margin:28px auto 14px;padding:17px 20px;border-top:1px solid #d4deea;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;color:#617188;font-size:12px;line-height:1.6}
 .nexaeon-footer .brand-name{font-weight:750;color:#253e5c;letter-spacing:.02em}.nexaeon-footer .brand-dot{color:#6c72bd}.nexaeon-footer .brand-credit{font-size:11px;color:#79869a}.nexaeon-footer .contact-link{border:1px solid #cbd8e7;border-radius:20px;padding:7px 14px;background:#fff;display:inline-flex;gap:7px;align-items:center;color:#244c75;text-decoration:none;cursor:pointer;font-size:12px;font-weight:700}.nexaeon-footer .contact-link:hover{border-color:#527da5;background:#f0f6fc}
 .nexaeon-footer .contact-link svg{width:14px;height:14px;flex:none}.nexaeon-setting{margin-top:14px;border:1px solid #d7e3ed;background:#f8fbff;border-radius:8px;padding:12px}.nexaeon-setting label{display:block;font-size:12px;font-weight:700;color:#2c4967;margin-bottom:5px}.nexaeon-setting input{color:#17324d!important;background:#fff!important;opacity:1!important}.nexaeon-setting .hint{font-size:11px;color:#647890;margin-top:6px;line-height:1.5}
 @media print{.nexaeon-footer{display:none!important}}@media(max-width:850px){.workspace .nexaeon-footer{margin:10px auto;padding:16px}}
 </style>
-<script id="nexaeon-footer-script">
-(function(){
-'use strict';
-const email='joeyaj11@gmail.com';
-const terms={
- zh:{contact:'聯絡我',title:'問題回報與使用協助',intro:'如果編輯器出現錯誤或有使用問題，請透過以下電子郵件聯絡作者。',notset:'尚未設定聯絡信箱',set:'設定作者信箱',label:'作者電子郵件（用於問題回報）',hint:'只需設定一次；之後訪客點擊網頁頁腳的「聯絡我」，便會顯示此電子郵件。',invalid:'請輸入有效的電子郵件地址。',copy:'複製郵箱',copied:'已複製',send:'撰寫郵件',close:'關閉',save:'儲存信箱',edit:'設定信箱',subject:'Newsletter 編輯器問題回報'},
- ko:{contact:'문의하기',title:'오류 신고 및 이용 문의',intro:'편집기 오류나 이용 중 궁금한 점이 있다면 아래 이메일로 문의해 주세요.',notset:'문의 이메일이 등록되지 않았습니다',set:'제작자 이메일 설정',label:'제작자 문의 이메일',hint:'이메일을 한 번 등록하면 페이지 하단의 ‘문의하기’를 눌렀을 때 주소가 표시됩니다.',invalid:'올바른 이메일 주소를 입력해 주세요.',copy:'이메일 복사',copied:'복사 완료',send:'이메일 보내기',close:'닫기',save:'이메일 저장',edit:'이메일 설정',subject:'뉴스레터 편집기 오류 및 이용 문의'},
- en:{contact:'Contact me',title:'Bug reports & support',intro:'Found a bug or need help using the editor? Contact the creator at the email below.',notset:'Contact email has not been set',set:'Set creator email',label:'Creator email for bug reports',hint:'Set this once. Visitors can then click “Contact me” in the footer to see the email address.',invalid:'Enter a valid email address.',copy:'Copy email',copied:'Copied',send:'Write email',close:'Close',save:'Save email',edit:'Set email',subject:'Newsletter Editor Bug Report / Support'}
+<style id="nex-input-placeholder-style">.side input::placeholder,.side textarea::placeholder{color:#718096;opacity:1}.side input:focus::placeholder,.side textarea:focus::placeholder{color:#94a3b8}</style>
+<style id="nl-unified-editor-style">
+/* v18 unified editor: one workflow, one i18n layer, A4 page → Part → Article */
+[hidden]{display:none!important}
+.ux-nav{grid-template-columns:repeat(4,minmax(0,1fr))}
+.ux-tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;line-height:1.25;min-height:50px;padding:6px 3px;text-align:center}
+.ux-tab .tab-step{font-size:10px;font-weight:800;opacity:.65}
+.ux-status.is-error,.ux-status.is-error span{color:#b33d30}
+.pane>.group:first-child,.pane>.nex-pages-panel:first-child{margin-top:0}
+.nex-reset-holder .tiny{margin:7px 0 0}
+.parts-head{display:flex;align-items:center;gap:6px;margin:16px 0 4px}.parts-head h3{font-size:14px;margin:0;color:#213f60}
+.part-card{padding:0!important;overflow:hidden}
+.part-card>.nex-part-head{padding:9px 9px 9px 6px;background:#edf4fa;border-bottom:1px solid #d7e2f0;align-items:flex-start}
+.part-toggle{flex:1;display:flex;align-items:center;gap:6px;flex-wrap:wrap;border:0;background:transparent;text-align:left;cursor:pointer;color:#173b60;font-size:12px;padding:3px;min-width:0}
+.part-caret{display:inline-block;transition:transform .15s;font-size:11px}.part-toggle[aria-expanded="true"] .part-caret{transform:rotate(90deg)}
+.part-head-title{flex-basis:100%;font-size:11px;color:#5d7088;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-left:17px}
+.pos-badge{font-size:10px;border-radius:20px;padding:2px 8px;background:#f3cbd1;color:#6b2633;font-weight:700}.pos-badge.pos-right{background:#c9ebee;color:#14535a}.pos-badge.pos-full{background:#e3e8f2;color:#2a3f5c}
+.nex-part-body{padding:10px 12px 12px}
+.part-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:0 8px}
+.part-articles .item{margin:8px 0}
+.minirow .btn[disabled]{opacity:.4;cursor:default}
+.sample-notice{display:flex;gap:8px;align-items:center;justify-content:space-between;background:#fff8e6;border:1px solid #f0d58e;color:#7a5a12;border-radius:7px;padding:8px 10px;font-size:11px;margin:0 0 10px}
+.sub-settings{margin:10px 0;border:1px solid #d3deea;border-radius:8px;background:#fff;overflow:hidden}.sub-settings>summary{padding:10px 12px;cursor:pointer;font-weight:700;font-size:12px;background:#f3f7fb;color:#234669}.sub-settings-inner{padding:10px 12px}
+.sub-settings .main-photo-section,.sub-settings .additional-photo-section{margin:0 0 12px}
+.btn.block{display:block;width:100%;margin-top:12px}
+.design-scope{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px;font-weight:700;color:#41546a;margin:0 0 10px}.design-scope .nex-pages-row{margin:0}
+.demo-toggle{display:flex;align-items:center;gap:8px;font-size:12px;margin:4px 0 10px}.demo-toggle input{width:auto}
+.ux-fold-main{display:block}
+.export-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 8px}.export-actions .btn{min-height:42px}.export-actions .btn:first-child{grid-column:1/-1}
+.lang-controls button:focus-visible,.ux-tab:focus-visible,.part-toggle:focus-visible,.ux-fold:focus-visible{outline:2px solid #3875b1;outline-offset:2px}
+/* Preview */
+.demo-visual::after{content:attr(data-label)}
+.is-placeholder{color:#8a96a3;font-style:italic;font-weight:400}
+.sample-marker{color:#b4452f;font-weight:700}
+.page .columns+.columns,.page .columns+.full-row,.page .full-row+.columns{margin-top:8px}
+.page .columns.full-row{grid-template-columns:minmax(0,1fr)!important}
+.page .columns.full-row>.column:first-child{border-right:0!important;padding-right:0!important}
+.page.mode2 .columns .column>*{order:0!important}
+.nex-sheet{cursor:pointer}.nex-sheet.nex-page-active{cursor:default}
+.is-exporting:after{display:none!important}
+/* Page flow */
+.flow-box{background:#fff3f1;border:1px solid #f0c3bb;border-radius:9px;padding:10px;margin:8px 0}.flow-box .nex-overflow-warning{margin:0 0 8px}.flow-box .btn{width:100%}.flow-box .tiny{margin:7px 0 0}
+.flow-notice{background:#ecf7f0;border:1px solid #bfe0cb;color:#1f5b39;border-radius:8px;padding:8px 10px;font-size:11px;line-height:1.5;margin:8px 0}
+.flow-tools{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:-2px 0 10px;padding:8px;border:1px dashed #c9d6e4;border-radius:8px;background:#f8fbff}.flow-tools-title{flex-basis:100%;font-size:11px;font-weight:700;color:#4c5968}
+.cont-marker{font-size:.78em;font-weight:600;color:#6b7c8f;font-style:italic;white-space:nowrap}.cont-marker.cont-next{display:block;text-align:right;margin-top:3px}
+.mast-compact{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-top:3px double #111;border-bottom:1px solid #111;padding:6px 2px;margin-bottom:14px;font-size:12px}.mast-compact .mc-title{font-family:Georgia,'Times New Roman',serif;font-weight:900;font-size:24px;letter-spacing:-.5px}.mast-compact .mc-issue{color:#c2412f;font-weight:700}
+.sheet-flow-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;max-width:794px;margin:-14px auto 26px;padding:8px 12px;background:#fff3f1;border:1px solid #f0c3bb;border-radius:8px;font-size:12px;color:#b33d30;font-weight:700}
+/* In-page confirm / alert */
+.ui-dialog-overlay{position:fixed;inset:0;background:rgba(12,26,45,.5);display:grid;place-items:center;z-index:100000;padding:20px}.ui-dialog{width:min(100%,420px);background:#fff;color:#1c344f;border-radius:14px;box-shadow:0 18px 60px #0004;padding:22px}.ui-dialog p{margin:0 0 18px;font-size:14px;line-height:1.6;white-space:pre-line}.ui-dialog-actions{display:flex;justify-content:flex-end;gap:8px}.ui-dialog-actions .btn{min-width:84px;padding:10px 14px}
+@media print{.ui-dialog-overlay{display:none!important}}
+/* Contact dialog */
+.nexaeon-contact-overlay{position:fixed;inset:0;background:rgba(12,26,45,.52);display:none;place-items:center;z-index:99999;padding:20px}.nexaeon-contact-overlay.is-open{display:grid}.nexaeon-contact-dialog{width:min(100%,440px);background:#fff;color:#1c344f;border-radius:16px;box-shadow:0 18px 70px #0004;padding:24px;line-height:1.6}.nexaeon-contact-dialog h3{font-size:20px;margin:0 0 9px}.nexaeon-contact-dialog p{margin:0 0 17px;font-size:13px;color:#54677e}.nexaeon-email-box{background:#eef4fb;border:1px solid #d2dfef;border-radius:10px;padding:13px;overflow-wrap:anywhere;font-weight:700;font-size:16px}.nexaeon-contact-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.nexaeon-contact-actions button,.nexaeon-contact-actions a{border:1px solid #cbd8e7;background:#fff;color:#234768;border-radius:8px;padding:10px 12px;cursor:pointer;text-decoration:none;font-weight:700;font-size:12px}.nexaeon-contact-actions .primary{background:#1b3e64;color:#fff}
+@media print{.sheet-flow-bar,.side,.note,.nexaeon-footer,.nex-pane-handle,.nexaeon-contact-overlay{display:none!important}.nex-sheet{outline:none!important;cursor:default}.nex-sheet:after{display:none!important}.workspace{background:#fff!important}.nex-pages-container{max-width:none;margin:0}}
+</style>
+</head><body><div class="app nex-resizable"><aside class="side">
+<div class="ux-top">
+<div class="lang-controls" role="group" data-i18n-attr="aria-label:lang.label"><button type="button" data-act="lang" data-lang="zh-TW" lang="zh-Hant">繁體中文</button><button type="button" data-act="lang" data-lang="ko" lang="ko">한국어</button><button type="button" data-act="lang" data-lang="en" lang="en">English</button></div>
+<h2 data-i18n="app.title">Newsletter 編輯器</h2><p class="sub" data-i18n="app.subtitle"></p>
+<nav class="ux-nav" role="tablist" data-i18n-attr="aria-label:nav.label">
+<button type="button" class="ux-tab" role="tab" data-act="tab" data-tab="info"><span class="tab-step">1</span><span data-i18n="tab.info"></span></button>
+<button type="button" class="ux-tab" role="tab" data-act="tab" data-tab="layout"><span class="tab-step">2</span><span data-i18n="tab.layout"></span></button>
+<button type="button" class="ux-tab" role="tab" data-act="tab" data-tab="content"><span class="tab-step">3</span><span data-i18n="tab.content"></span></button>
+<button type="button" class="ux-tab" role="tab" data-act="tab" data-tab="export"><span class="tab-step">4</span><span data-i18n="tab.export"></span></button>
+</nav>
+<div class="ux-status" id="saveStatus" role="status" aria-live="polite"></div>
+</div>
+<div class="ux-body">
+<p class="ux-hint" id="tabHint"></p>
+<section class="pane" data-pane="info" role="tabpanel">
+<details class="group" open><summary data-i18n="info.group"></summary><div class="inner" id="metadata"></div></details>
+<div class="nex-reset-holder"><button type="button" class="btn warning" data-act="reset" data-i18n="reset.button"></button><p class="tiny" data-i18n="reset.hint"></p></div>
+</section>
+<section class="pane" data-pane="layout" role="tabpanel" hidden><div id="styleEdit"></div></section>
+<section class="pane" data-pane="content" role="tabpanel" hidden>
+<section class="nex-pages-panel" id="pagesPanel"></section>
+<div class="ux-search"><input id="articleSearch" type="search" data-i18n-attr="placeholder:search.placeholder;aria-label:search.label"></div>
+<div id="partsEdit"></div>
+</section>
+<section class="pane" data-pane="export" role="tabpanel" hidden>
+<details class="group" open><summary data-i18n="export.group"></summary><div class="inner">
+<div class="export-actions"><button type="button" class="btn" data-act="export-pdf" data-i18n="export.pdf"></button><button type="button" class="btn secondary" data-act="export-png"><span data-i18n="export.png"></span></button><button type="button" class="btn secondary" data-act="export-json" data-i18n="export.json"></button><button type="button" class="btn secondary" data-act="export-import" data-i18n="export.import"></button></div>
+<input type="file" id="importFile" accept="application/json,.json" hidden>
+<p class="tiny" data-i18n="export.pngNote"></p></div></details>
+<details class="group" open><summary data-i18n="help.title"></summary><div class="inner tiny" data-i18n="help.body"></div></details>
+</section>
+</div>
+</aside>
+<div class="nex-pane-handle" role="separator" aria-orientation="vertical" tabindex="0" data-i18n-attr="title:handle.title;aria-label:handle.title"></div>
+<main class="workspace"><p class="note" data-i18n="preview.note"></p><div class="nex-pages-container" id="pagesStack"></div>
+<footer class="nexaeon-footer" aria-label="NexAeon Studio"><div><div class="brand-name">© NexAeon<span class="brand-dot">.</span>Studio <span class="brand-credit">· Built by Joey</span></div></div><button type="button" class="contact-link" id="contactOpen" data-act="contact-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span data-i18n="contact.open"></span></button></footer>
+</main></div>
+<div class="nexaeon-contact-overlay" id="contactOverlay"><div class="nexaeon-contact-dialog" role="dialog" aria-modal="true" aria-labelledby="contactTitle"><h3 id="contactTitle" data-i18n="contact.title"></h3><p data-i18n="contact.intro"></p><div class="nexaeon-email-box">joeyaj11@gmail.com</div><div class="nexaeon-contact-actions"><button type="button" id="contactCopy" class="primary" data-act="contact-copy" data-i18n="contact.copy"></button><a id="contactMail" href="mailto:joeyaj11@gmail.com" data-i18n="contact.send"></a><button type="button" id="contactClose" data-act="contact-close" data-i18n="contact.close"></button></div></div></div>
+<script id="newsletter-editor-app">
+/* Woosong Newsletter Editor v18 — single consolidated script (replaces the stacked v12–v17 patch layers). */
+(function(){'use strict';
+/* ===== i18n: one dictionary for every piece of editor UI text (zh-TW / ko / en) ===== */
+const translations={
+'zh-TW':{
+ 'app.docTitle':'又松大學 Newsletter 編輯器','app.title':'Newsletter 編輯器','app.subtitle':'多頁 A4 校園電子報 · 每篇可上傳多張圖片 · PDF／PNG 匯出',
+ 'lang.label':'介面語言','nav.label':'編輯功能分類',
+ 'tab.info':'基本資料','tab.layout':'排版設計','tab.content':'內容編輯','tab.export':'匯出',
+ 'hint.info':'設定學校名稱、期數、Logo 與頁尾資訊，這些資料會套用到所有頁面。',
+ 'hint.layout':'為目前頁面選擇 11 款排版模板與 16 款欄目抬頭樣式，右側即時預覽。',
+ 'hint.content':'依「A4 頁面 → Part → 文章／圖片」編輯。點選文章標題即可展開或收合。',
+ 'hint.export':'列印或另存 PDF、保存 PNG，並以 JSON 備份或匯入作品。',
+ 'status.autosave':'自動儲存已啟用','status.saved':'自動儲存已啟用 · {time} 已儲存','status.failed':'自動儲存失敗，請匯出 JSON 備份',
+ 'info.group':'學校與期刊資料',
+ 'field.university':'學校英文名稱','field.mastTitle':'主標題（預設 NEWSLETTER）','field.subtitle':'副標題（韓文）','field.month':'月份','field.year':'年度','field.volume':'期數','field.issuer':'發行單位','field.address':'地址／頁尾','field.logo':'學校 Logo（上傳圖片）',
+ 'ph.university':'例如：Woosong University','ph.mastTitle':'例如：NEWSLETTER','ph.subtitle':'輸入副標題','ph.month':'輸入月份（例如 11）','ph.year':'輸入年度（例如 2026）','ph.volume':'輸入期數','ph.issuer':'輸入發行單位','ph.address':'輸入地址或頁尾資訊',
+ 'ph.partTitle':'輸入 Part 抬頭文字','ph.articleTitle':'輸入文章標題…','ph.articleBody':'在此輸入正文或活動資訊…',
+ 'logo.uploaded':'已上傳 Logo','logo.remove':'移除 Logo','logo.alt':'學校 Logo 縮圖',
+ 'reset.button':'重設示範內容','reset.hint':'會清除目前所有頁面與內容並回到示範模板，建議先匯出 JSON 備份。',
+ 'file.choose':'選擇圖片','file.chooseMulti':'選擇多張圖片','file.none':'尚未選擇圖片','file.count':'已加入 {n} 張',
+ 'design.pageScope':'套用於頁面：','design.layoutTitle':'整頁排版模板（11 款）','design.layoutHint':'點選任一模板，右側即時預覽；已輸入的內容不會遺失。',
+ 'design.headingTitle':'欄目抬頭樣式（16 款）','design.headingHint':'點選抬頭樣式即可在右側預覽，文章內容不變。','design.headingSample':'欄目標題',
+ 'design.demoToggle':'空白圖片位置顯示示範圖片','design.partNote':'各 Part 的抬頭文字請在「內容編輯」中設定。',
+ 'layouts.names':['經典雙欄','重點摘要','圖文卡片','正式雜誌','經典報章','新聞週刊','藝文月刊','主圖特寫','新聞拼貼','時間軸快訊','左右交錯圖文'],
+ 'layouts.desc':['左右雙欄，適合正式季刊','三欄摘要，適合消息快覽','圖文卡片，適合多個活動','典雅欄位，適合專題文章','報章式密集文字','三欄新聞，適合大量短訊','圖片與留白兼顧','大圖焦點與重點標題','大小圖片與新聞交錯','事件與日期的閱讀節奏','左右交替，適合人物報導'],
+ 'headingStyles.names':['經典橢圓框','方形色塊','左側強調線','底線標題','角標標籤','深色膠囊','圓角卡片','線條極簡','雙線報章','數位科技風','學術細線','雜誌編號','漸層色帶','圓點導覽','側邊色籤','典雅襯線'],
+ 'pages.title':'頁面管理 · A4','pages.add':'＋ 新增 A4 頁','pages.duplicate':'複製目前頁','pages.delete':'刪除目前頁','pages.goTo':'切換到第 {n} 頁',
+ 'pages.note':'每頁固定為 A4（210 × 297 mm）。內容超出時會以紅框提示，請移到其他頁面；系統不會自動縮小文字。',
+ 'pages.overflow':'第 {pages} 頁內容超出 A4 範圍，請縮短內容或移到其他頁面。',
+ 'pages.confirmDelete':'確定刪除目前這一頁及其所有內容？','pages.atLeastOne':'至少需保留一頁。',
+ 'parts.title':'第 {n} 頁的 Part','parts.empty':'此頁尚無 Part，請點選「新增 Part」。',
+ 'part.label':'Part {n}','part.position':'放置位置','pos.left':'左欄','pos.right':'右欄','pos.full':'全寬',
+ 'part.movePage':'移到其他頁面','part.movePagePlaceholder':'選擇頁面…','part.pageOption':'第 {n} 頁',
+ 'part.preset':'常用英文抬頭','part.presetPlaceholder':'選擇建議抬頭…','part.customTitle':'自訂標題',
+ 'part.add':'＋ 新增 Part','part.addArticle':'＋ 新增文章','part.empty':'此 Part 尚未加入文章。',
+ 'part.confirmDelete':'確定刪除這個 Part 及其中所有文章？','part.moved':'已移到第 {n} 頁。',
+ 'common.delete':'刪除','common.moveUp':'上移','common.moveDown':'下移','common.toggle':'展開／收合',
+ 'article.label':'文章 {n}','article.edit':'編輯文章','article.untitled':'未命名文章','article.toggleHint':'點擊展開／收合',
+ 'article.confirmDelete':'確定刪除這篇文章？','article.title':'標題','article.body':'正文／活動資訊（可換行）',
+ 'article.sampleNotice':'系統示範標記：','article.sampleRemove':'移除標記',
+ 'type.group':'文字設定','type.titleSize':'標題字級','type.bodySize':'正文字級','type.font':'字體','type.titleBold':'標題加粗','type.bodyBold':'正文加粗',
+ 'font.sans':'黑體','font.serif':'宋體（襯線）','font.classic':'經典報刊體',
+ 'img.group':'圖片設定','img.coverTitle':'① 主圖／封面圖片','img.coverUpload':'上傳或更換主圖','img.uploaded':'已上傳主圖','img.coverHelp':'下方可調整這張圖片的排版與裁剪。',
+ 'img.remove':'移除圖片','img.noCover':'尚未上傳主圖；選擇圖片後會在這裡顯示縮圖。','img.thumbAlt':'主圖縮圖','img.coverSettings':'主圖排版與裁剪設定',
+ 'img.cardLayout':'文章版面','layout.auto':'自動適配','layout.full':'整行寬版','layout.compact':'緊湊卡片','layout.portrait':'直式圖片優先','layout.split':'圖文左右',
+ 'img.fit':'圖片展示','fit.contain':'完整顯示（不裁切）','fit.cover':'填滿裁切',
+ 'img.side':'圖文方向','side.right':'圖片在右・文字在左','side.left':'圖片在左・文字在右',
+ 'img.crop':'圖片裁剪比例（非破壞性）','crop.original':'原圖比例','crop.square':'正方形 1:1','crop.landscape':'橫幅 4:3','crop.wide':'寬幅 16:9','crop.portrait':'直幅 3:4',
+ 'img.cropX':'裁剪焦點：水平','img.cropY':'裁剪焦點：垂直',
+ 'img.extraTitle':'② 更多圖片','img.extraLabel':'附加圖片（同一篇可加入多張）','img.extraHelp':'可一次選取多張 JPG／PNG；圖片會依選取順序顯示。',
+ 'img.extraItem':'附加圖片 {n}','img.ratio':'裁切比例','img.display':'顯示方式','img.focusX':'水平焦點','img.focusY':'垂直焦點',
+ 'search.placeholder':'搜尋文章標題…','search.label':'搜尋文章標題',
+ 'export.group':'輸出與備份','export.pdf':'列印／另存 PDF','export.png':'保存目前頁 PNG','export.pngBusy':'PNG 產生中…','export.json':'匯出資料 JSON','export.import':'匯入資料 JSON',
+ 'export.pngNote':'PNG 會輸出目前選取的頁面；PDF 會依序列印全部頁面。',
+ 'help.title':'操作說明',
+ 'help.body':'圖片可上傳 JPG／PNG／WebP 等檔案，系統會自動壓縮；HEIC 建議先轉成 JPG。編輯內容會自動儲存在目前瀏覽器；如要換電腦，請使用「匯出資料 JSON」。PDF 請使用「列印／另存 PDF」，紙張設為 A4、縮放 100%、邊界選「無」，並啟用背景圖形。每頁固定為 A4，內容過多時請新增頁面或縮短文字。使用正式校徽前，請確認已獲授權。',
+ 'msg.storageFull':'瀏覽器儲存空間不足，資料可能無法自動保存。請先匯出 JSON 備份，並減少圖片。',
+ 'msg.confirmReset':'將清除目前所有修改並回到示範模板。建議先匯出 JSON 備份。確定要繼續嗎？',
+ 'msg.importInvalid':'JSON 格式不符，無法匯入。',
+ 'msg.imgUnsupported':'只支援圖片檔（JPG、PNG、WebP 等）。','msg.imgTooLarge':'圖片超過 25 MB，請先縮小。',
+ 'msg.imgStillLarge':'圖片處理後仍過大，請改用尺寸較小的 JPG／PNG。','msg.imgProcess':'無法處理圖片，請轉換成 JPG、PNG 或 WebP 後重試。',
+ 'msg.imgRead':'無法讀取圖片（HEIC 等格式可能不支援），請轉換為 JPG、PNG 或 WebP。',
+ 'msg.pngLoad':'PNG 繪圖元件無法載入，請連接網路後重試。','msg.pngCapture':'畫面擷取失敗。','msg.pngConvert':'PNG 轉換失敗。',
+ 'msg.pngFailed':'PNG 匯出失敗：{error}','msg.pngAdvice':'建議使用最新版 Chrome／Edge，並保持網路連線。',
+ 'preview.note':'右側為即時預覽。示範內容均為版型佔位文字，請於發行前替換，並核實所有日期與聯絡資料。',
+ 'preview.noArticles':'尚未加入文章','preview.emptyPage':'此頁尚無內容','preview.articleImageAlt':'文章圖片','preview.extraImageAlt':'附加圖片','preview.logoAlt':'學校 Logo','preview.selectPage':'點選以編輯此頁',
+ 'sample.articlePlaceholder':'[示範文章，請替換]','sample.eventPlaceholder':'[示範活動，請替換]','sample.imagePlaceholder':'示範圖片・可上傳替換',
+ 'sample.newTitle':'新標題','sample.newBody':'請輸入內容','sample.newPart':'新 Part',
+ "design.headerTitle":"頁首樣式（目前頁面）","design.headerHint":"報頭內容（校名、期數、Logo）一律沿用「基本資料」，每一頁自動繼承。","header.full":"完整報頭（與第 1 頁相同）","header.compact":"精簡頁首（適合續頁，節省空間）","header.none":"不顯示頁首","flow.title":"跨頁接續","flow.auto":"自動接續到下一頁","flow.autoHint":"把超出 A4 的文字與圖片自動移到下一頁（沒有下一頁會自動新增），報頭、Part 抬頭與欄位位置都會沿用。","flow.undo":"復原自動接續","flow.confirmUndo":"要回到接續前的狀態嗎？接續之後做的修改也會一併取消。","flow.done":"已把超出的內容接續到後面的頁面，請檢查第 {pages} 頁。","flow.nothing":"目前沒有超出 A4 的內容。","flow.stuck":"第 {pages} 頁有單篇內容（例如大圖）本身就超過一頁，無法自動分割，請縮小圖片或手動分拆。","flow.splitCursor":"從游標處分割 → 後段移到下一頁","flow.moveNext":"整篇移到下一頁","flow.caretHint":"請先在正文中點一下要分割的位置（不能在最前面或最後面）。","flow.contNext":"（接下頁）","flow.contPrev":"（續前頁）","flow.markerNotice":"跨頁接續標示：","flow.markerRemove":"移除接續標示","flow.overflowBar":"第 {n} 頁內容超出 A4","flow.moved":"已移到第 {n} 頁。",
+ 'dialog.ok':'確定','dialog.cancel':'取消',
+ 'handle.title':'拖曳調整寬度',
+ 'contact.open':'聯絡我','contact.title':'問題回報與使用協助','contact.intro':'如果編輯器出現錯誤或有使用問題，請透過以下電子郵件聯絡作者。',
+ 'contact.copy':'複製信箱','contact.copied':'已複製','contact.send':'撰寫郵件','contact.close':'關閉','contact.subject':'Newsletter 編輯器問題回報'
+},
+'ko':{
+ 'app.docTitle':'우송대학교 뉴스레터 편집기','app.title':'뉴스레터 편집기','app.subtitle':'여러 페이지 A4 캠퍼스 뉴스레터 · 기사별 이미지 여러 장 · PDF/PNG 내보내기',
+ 'lang.label':'인터페이스 언어','nav.label':'편집 메뉴',
+ 'tab.info':'기본 정보','tab.layout':'레이아웃 디자인','tab.content':'콘텐츠 편집','tab.export':'내보내기',
+ 'hint.info':'학교명, 발행 호수, 로고와 하단 정보를 설정합니다. 모든 페이지에 공통으로 적용됩니다.',
+ 'hint.layout':'현재 페이지에 적용할 레이아웃 11종과 섹션 제목 스타일 16종을 선택하세요. 오른쪽에서 바로 미리 볼 수 있습니다.',
+ 'hint.content':'‘A4 페이지 → 파트 → 기사/이미지’ 순서로 편집합니다. 기사 제목을 누르면 펼치거나 접을 수 있습니다.',
+ 'hint.export':'PDF로 인쇄·저장하거나 PNG로 저장하고, JSON으로 백업하거나 불러올 수 있습니다.',
+ 'status.autosave':'자동 저장 사용 중','status.saved':'자동 저장 사용 중 · {time} 저장됨','status.failed':'자동 저장에 실패했습니다. JSON으로 백업해 주세요',
+ 'info.group':'학교 및 발행 정보',
+ 'field.university':'학교 영문명','field.mastTitle':'메인 제목 (기본값: NEWSLETTER)','field.subtitle':'부제목 (한국어)','field.month':'발행 월','field.year':'발행 연도','field.volume':'발행 호수','field.issuer':'발행 기관','field.address':'주소 / 하단 정보','field.logo':'학교 로고 (이미지 업로드)',
+ 'ph.university':'예: Woosong University','ph.mastTitle':'예: NEWSLETTER','ph.subtitle':'부제목 입력','ph.month':'발행 월 입력 (예: 11)','ph.year':'발행 연도 입력 (예: 2026)','ph.volume':'발행 호수 입력','ph.issuer':'발행 기관 입력','ph.address':'주소 또는 하단 정보 입력',
+ 'ph.partTitle':'파트 제목을 입력하세요','ph.articleTitle':'기사 제목을 입력하세요…','ph.articleBody':'본문 또는 행사 정보를 입력하세요…',
+ 'logo.uploaded':'로고 업로드 완료','logo.remove':'로고 삭제','logo.alt':'학교 로고 미리보기',
+ 'reset.button':'예시 콘텐츠로 초기화','reset.hint':'현재 모든 페이지와 내용이 삭제되고 예시 템플릿으로 돌아갑니다. 먼저 JSON으로 백업하는 것을 권장합니다.',
+ 'file.choose':'이미지 선택','file.chooseMulti':'여러 이미지 선택','file.none':'선택된 이미지 없음','file.count':'{n}장 추가됨',
+ 'design.pageScope':'적용 페이지:','design.layoutTitle':'전체 페이지 레이아웃 (11종)','design.layoutHint':'템플릿을 선택하면 오른쪽에서 바로 미리 볼 수 있습니다. 입력한 내용은 그대로 유지됩니다.',
+ 'design.headingTitle':'섹션 제목 스타일 (16종)','design.headingHint':'제목 스타일을 선택하면 미리보기에 바로 적용되며, 본문은 바뀌지 않습니다.','design.headingSample':'섹션 제목',
+ 'design.demoToggle':'이미지가 없는 자리에 예시 이미지 표시','design.partNote':'파트별 제목은 ‘콘텐츠 편집’에서 설정합니다.',
+ 'layouts.names':['기본 2단','핵심 소식 요약','이미지 카드형','정통 매거진형','신문 지면형','뉴스 위클리','문화 매거진','대표 이미지 강조','뉴스 콜라주','소식 타임라인','이미지·본문 교차형'],
+ 'layouts.desc':['공식 소식지에 적합한 2단 구성','주요 소식을 한눈에 정리','여러 행사 소식을 카드로 구성','기획 기사에 어울리는 정갈한 편집','기사 중심의 신문형 지면','짧은 뉴스를 모은 3단 편집','사진과 여백을 살린 구성','대표 사진을 크게 강조','기사와 사진을 다양하게 배치','행사 소식을 순서대로 정리','인터뷰에 어울리는 교차 배치'],
+ 'headingStyles.names':['클래식 타원형','컬러 블록','왼쪽 강조선','밑줄 제목','라벨형 제목','진한 캡슐형','둥근 카드형','미니멀 라인','이중선 신문형','디지털 스타일','학술형 가는 선','매거진 번호형','그라데이션 바','포인트 도트','사이드 컬러 탭','우아한 명조체'],
+ 'pages.title':'페이지 관리 · A4','pages.add':'＋ A4 페이지 추가','pages.duplicate':'현재 페이지 복제','pages.delete':'현재 페이지 삭제','pages.goTo':'{n}페이지로 이동',
+ 'pages.note':'각 페이지는 A4(210 × 297mm) 크기로 고정됩니다. 내용이 넘치면 빨간 테두리로 표시되니 다른 페이지로 옮겨 주세요. 글자 크기는 자동으로 줄어들지 않습니다.',
+ 'pages.overflow':'{pages}페이지의 내용이 A4 범위를 벗어났습니다. 분량을 줄이거나 다른 페이지로 옮겨 주세요.',
+ 'pages.confirmDelete':'현재 페이지와 모든 내용을 삭제할까요?','pages.atLeastOne':'페이지는 최소 한 장이 필요합니다.',
+ 'parts.title':'{n}페이지 파트','parts.empty':'이 페이지에는 아직 파트가 없습니다. ‘파트 추가’를 눌러 주세요.',
+ 'part.label':'파트 {n}','part.position':'배치 위치','pos.left':'왼쪽 단','pos.right':'오른쪽 단','pos.full':'전체 너비',
+ 'part.movePage':'다른 페이지로 이동','part.movePagePlaceholder':'페이지 선택…','part.pageOption':'{n}페이지',
+ 'part.preset':'자주 쓰는 영문 제목','part.presetPlaceholder':'추천 제목 선택…','part.customTitle':'제목 직접 입력',
+ 'part.add':'＋ 파트 추가','part.addArticle':'＋ 기사 추가','part.empty':'이 파트에 아직 기사가 없습니다.',
+ 'part.confirmDelete':'이 파트와 포함된 모든 기사를 삭제할까요?','part.moved':'{n}페이지로 이동했습니다.',
+ 'common.delete':'삭제','common.moveUp':'위로 이동','common.moveDown':'아래로 이동','common.toggle':'펼치기 / 접기',
+ 'article.label':'기사 {n}','article.edit':'기사 편집','article.untitled':'제목 없는 기사','article.toggleHint':'눌러서 펼치기 / 접기',
+ 'article.confirmDelete':'이 기사를 삭제할까요?','article.title':'제목','article.body':'본문 / 행사 정보 (줄바꿈 가능)',
+ 'article.sampleNotice':'시스템 예시 표시:','article.sampleRemove':'표시 삭제',
+ 'type.group':'텍스트 설정','type.titleSize':'제목 글자 크기','type.bodySize':'본문 글자 크기','type.font':'글꼴','type.titleBold':'제목 굵게','type.bodyBold':'본문 굵게',
+ 'font.sans':'고딕체','font.serif':'명조체','font.classic':'신문체',
+ 'img.group':'이미지 설정','img.coverTitle':'① 대표 이미지','img.coverUpload':'대표 이미지 업로드 또는 변경','img.uploaded':'대표 이미지 업로드 완료','img.coverHelp':'아래에서 이미지 배치와 자르기를 조정할 수 있습니다.',
+ 'img.remove':'이미지 삭제','img.noCover':'등록된 대표 이미지가 없습니다. 이미지를 선택하면 여기에 미리보기가 표시됩니다.','img.thumbAlt':'대표 이미지 미리보기','img.coverSettings':'대표 이미지 배치 및 자르기',
+ 'img.cardLayout':'기사 레이아웃','layout.auto':'자동 맞춤','layout.full':'가로 전체','layout.compact':'작은 카드','layout.portrait':'세로 이미지 중심','layout.split':'이미지·본문 나란히',
+ 'img.fit':'이미지 표시 방식','fit.contain':'전체 보기 (자르지 않음)','fit.cover':'영역 채우기 (자르기)',
+ 'img.side':'이미지 위치','side.right':'이미지 오른쪽 · 본문 왼쪽','side.left':'이미지 왼쪽 · 본문 오른쪽',
+ 'img.crop':'이미지 자르기 비율 (원본 유지)','crop.original':'원본 비율','crop.square':'정사각형 1:1','crop.landscape':'가로형 4:3','crop.wide':'와이드 16:9','crop.portrait':'세로형 3:4',
+ 'img.cropX':'자르기 중심: 가로','img.cropY':'자르기 중심: 세로',
+ 'img.extraTitle':'② 추가 이미지','img.extraLabel':'추가 이미지 (한 기사에 여러 장 가능)','img.extraHelp':'JPG·PNG 이미지를 여러 장 선택할 수 있으며, 선택한 순서대로 표시됩니다.',
+ 'img.extraItem':'추가 이미지 {n}','img.ratio':'자르기 비율','img.display':'표시 방식','img.focusX':'가로 초점','img.focusY':'세로 초점',
+ 'search.placeholder':'기사 제목 검색…','search.label':'기사 제목 검색',
+ 'export.group':'출력 및 백업','export.pdf':'인쇄 / PDF로 저장','export.png':'현재 페이지 PNG로 저장','export.pngBusy':'PNG 생성 중…','export.json':'JSON으로 백업','export.import':'JSON 불러오기',
+ 'export.pngNote':'PNG는 현재 선택한 페이지만 저장하며, PDF는 모든 페이지를 순서대로 인쇄합니다.',
+ 'help.title':'사용 안내',
+ 'help.body':'JPG·PNG·WebP 이미지를 업로드할 수 있으며, 파일 크기는 자동으로 최적화됩니다. HEIC 파일은 JPG로 변환한 뒤 업로드해 주세요. 편집 내용은 이 브라우저에 자동 저장됩니다. 다른 기기에서 작업하려면 ‘JSON으로 백업’을 이용하세요. PDF로 저장할 때는 ‘인쇄 / PDF로 저장’에서 용지 A4, 배율 100%, 여백 없음으로 설정하고 배경 그래픽 인쇄를 켜 주세요. 각 페이지는 A4로 고정되므로 내용이 많으면 페이지를 추가하거나 분량을 줄여 주세요. 학교 공식 로고는 사용 권한을 확인한 뒤 사용해 주세요.',
+ 'msg.storageFull':'브라우저 저장 공간이 부족해 자동 저장이 되지 않을 수 있습니다. JSON으로 백업하고 이미지 수를 줄여 주세요.',
+ 'msg.confirmReset':'현재 편집한 내용이 모두 삭제되고 예시 템플릿으로 초기화됩니다. 먼저 JSON으로 백업하는 것을 권장합니다. 계속할까요?',
+ 'msg.importInvalid':'JSON 파일 형식이 올바르지 않아 불러올 수 없습니다.',
+ 'msg.imgUnsupported':'이미지 파일(JPG, PNG, WebP 등)만 업로드할 수 있습니다.','msg.imgTooLarge':'이미지가 25MB를 초과합니다. 크기를 줄여 주세요.',
+ 'msg.imgStillLarge':'이미지를 처리한 후에도 용량이 큽니다. 더 작은 JPG/PNG 파일을 사용해 주세요.','msg.imgProcess':'이미지를 처리할 수 없습니다. JPG, PNG 또는 WebP로 변환한 뒤 다시 시도해 주세요.',
+ 'msg.imgRead':'이미지를 읽을 수 없습니다. HEIC 등의 파일은 JPG, PNG, WebP로 변환해 주세요.',
+ 'msg.pngLoad':'PNG 저장 기능을 불러오지 못했습니다. 인터넷 연결을 확인한 후 다시 시도해 주세요.','msg.pngCapture':'미리보기 화면을 캡처하지 못했습니다.','msg.pngConvert':'PNG 파일을 생성하지 못했습니다.',
+ 'msg.pngFailed':'PNG 저장 실패: {error}','msg.pngAdvice':'최신 Chrome 또는 Edge를 사용하고 인터넷 연결을 확인해 주세요.',
+ 'preview.note':'오른쪽에서 편집 결과를 실시간으로 확인할 수 있습니다. 예시 문구는 실제 소식이 아니므로 발행 전에 내용을 바꾸고 날짜와 연락처를 반드시 확인해 주세요.',
+ 'preview.noArticles':'아직 기사가 없습니다','preview.emptyPage':'이 페이지에는 아직 내용이 없습니다','preview.articleImageAlt':'기사 이미지','preview.extraImageAlt':'추가 이미지','preview.logoAlt':'학교 로고','preview.selectPage':'클릭하여 이 페이지 편집',
+ 'sample.articlePlaceholder':'[예시 기사입니다. 실제 내용으로 변경해 주세요.]','sample.eventPlaceholder':'[예시 행사입니다. 실제 내용으로 변경해 주세요.]','sample.imagePlaceholder':'예시 이미지 · 업로드하여 교체할 수 있습니다',
+ 'sample.newTitle':'새 제목','sample.newBody':'내용을 입력해 주세요','sample.newPart':'새 파트',
+ "design.headerTitle":"페이지 머리글 (현재 페이지)","design.headerHint":"제호 정보(학교명, 호수, 로고)는 ‘기본 정보’ 설정을 모든 페이지가 자동으로 이어받습니다.","header.full":"전체 제호 (1페이지와 동일)","header.compact":"간략 머리글 (속지용, 공간 절약)","header.none":"머리글 표시 안 함","flow.title":"페이지 이어서 배치","flow.auto":"다음 페이지로 자동 이어서 배치","flow.autoHint":"A4를 벗어난 글과 이미지를 다음 페이지로 자동으로 옮깁니다. 다음 페이지가 없으면 새로 만들며, 제호·파트 제목·단 위치는 그대로 유지됩니다.","flow.undo":"자동 배치 되돌리기","flow.confirmUndo":"이어서 배치하기 전 상태로 되돌릴까요? 이후에 수정한 내용도 함께 취소됩니다.","flow.done":"넘친 내용을 다음 페이지로 옮겼습니다. {pages}페이지를 확인해 주세요.","flow.nothing":"현재 A4를 벗어난 내용이 없습니다.","flow.stuck":"{pages}페이지에 한 페이지보다 큰 항목(예: 큰 이미지)이 있어 자동으로 나눌 수 없습니다. 이미지를 줄이거나 직접 나눠 주세요.","flow.splitCursor":"커서 위치에서 나누기 → 뒷부분을 다음 페이지로","flow.moveNext":"기사 전체를 다음 페이지로","flow.caretHint":"본문에서 나눌 위치를 먼저 클릭해 주세요. (맨 앞이나 맨 끝은 안 됩니다)","flow.contNext":"(다음 페이지에 계속)","flow.contPrev":"(앞 페이지에서 계속)","flow.markerNotice":"페이지 이어짐 표시:","flow.markerRemove":"이어짐 표시 삭제","flow.overflowBar":"{n}페이지 내용이 A4를 벗어남","flow.moved":"{n}페이지로 옮겼습니다.",
+ 'dialog.ok':'확인','dialog.cancel':'취소',
+ 'handle.title':'드래그하여 너비 조절',
+ 'contact.open':'문의하기','contact.title':'오류 신고 및 이용 문의','contact.intro':'편집기 오류나 이용 중 궁금한 점이 있다면 아래 이메일로 문의해 주세요.',
+ 'contact.copy':'이메일 복사','contact.copied':'복사 완료','contact.send':'이메일 보내기','contact.close':'닫기','contact.subject':'뉴스레터 편집기 오류 및 이용 문의'
+},
+'en':{
+ 'app.docTitle':'Woosong University Newsletter Editor','app.title':'Newsletter Editor','app.subtitle':'Multi-page A4 campus newsletter · Multiple images per article · PDF/PNG export',
+ 'lang.label':'Interface language','nav.label':'Editor sections',
+ 'tab.info':'Basic Information','tab.layout':'Layout & Design','tab.content':'Content Editor','tab.export':'Export',
+ 'hint.info':'Set the university name, issue details, logo, and footer. These apply to every page.',
+ 'hint.layout':'Choose one of 11 page layouts and 16 section heading styles for the current page. The preview updates instantly.',
+ 'hint.content':'Edit in the order A4 page → Part → Article / Image. Click an article title to expand or collapse it.',
+ 'hint.export':'Print or save as PDF, save as PNG, and back up or import your work as JSON.',
+ 'status.autosave':'Autosave enabled','status.saved':'Autosave enabled · Saved at {time}','status.failed':'Autosave failed. Please export a JSON backup',
+ 'info.group':'University & Issue Details',
+ 'field.university':'University name (English)','field.mastTitle':'Main title (default: NEWSLETTER)','field.subtitle':'Subtitle (Korean)','field.month':'Month','field.year':'Year','field.volume':'Issue number','field.issuer':'Publisher','field.address':'Address / Footer','field.logo':'University logo (image upload)',
+ 'ph.university':'e.g. Woosong University','ph.mastTitle':'e.g. NEWSLETTER','ph.subtitle':'Enter a subtitle','ph.month':'Enter month (e.g. 11)','ph.year':'Enter year (e.g. 2026)','ph.volume':'Enter issue number','ph.issuer':'Enter publisher','ph.address':'Enter address or footer details',
+ 'ph.partTitle':'Enter a Part heading','ph.articleTitle':'Enter article title…','ph.articleBody':'Enter body text or event details…',
+ 'logo.uploaded':'Logo uploaded','logo.remove':'Remove Logo','logo.alt':'University logo preview',
+ 'reset.button':'Reset to Sample Content','reset.hint':'This clears all pages and content and restores the sample template. Export a JSON backup first.',
+ 'file.choose':'Choose Image','file.chooseMulti':'Choose Images','file.none':'No image selected','file.count':'{n} added',
+ 'design.pageScope':'Applies to page:','design.layoutTitle':'Page Layout Templates (11)','design.layoutHint':'Choose a template to preview it on the right. Your content is preserved.',
+ 'design.headingTitle':'Section Heading Styles (16)','design.headingHint':'Select a heading style to preview it. Article content stays the same.','design.headingSample':'SECTION TITLE',
+ 'design.demoToggle':'Show sample images in empty image slots','design.partNote':'Set each Part’s heading text in Content Editor.',
+ 'layouts.names':['Classic Two-Column','Highlights','Image Cards','Editorial Magazine','Newspaper','Weekly News','Culture Magazine','Hero Image','News Collage','Timeline','Alternating Layout'],
+ 'layouts.desc':['Traditional two-column newsletter','Three-column news overview','Cards for events and updates','Polished editorial columns','Dense newspaper typography','Three-column short news','Balanced images and whitespace','Large hero image and headline','Editorial collage of stories','Chronological news layout','Alternating layout for interviews'],
+ 'headingStyles.names':['Classic oval','Color block','Accent line','Underline','Corner label','Dark pill','Rounded card','Minimal line','Double-rule newspaper','Digital tech','Academic rules','Magazine number','Gradient ribbon','Dot marker','Side color tab','Elegant serif'],
+ 'pages.title':'Pages · A4','pages.add':'+ Add A4 Page','pages.duplicate':'Duplicate Page','pages.delete':'Delete Page','pages.goTo':'Go to page {n}',
+ 'pages.note':'Each page is fixed at A4 (210 × 297 mm). Overflowing content is outlined in red; move it to another page. Text is never shrunk automatically.',
+ 'pages.overflow':'Content on page {pages} exceeds the A4 area. Shorten it or move it to another page.',
+ 'pages.confirmDelete':'Delete the current page and all of its content?','pages.atLeastOne':'Keep at least one page.',
+ 'parts.title':'Parts on page {n}','parts.empty':'This page has no Parts yet. Click “Add Part”.',
+ 'part.label':'Part {n}','part.position':'Placement','pos.left':'Left column','pos.right':'Right column','pos.full':'Full width',
+ 'part.movePage':'Move to page','part.movePagePlaceholder':'Choose a page…','part.pageOption':'Page {n}',
+ 'part.preset':'Common English Headings','part.presetPlaceholder':'Choose a suggested heading…','part.customTitle':'Custom Heading',
+ 'part.add':'+ Add Part','part.addArticle':'+ Add Article','part.empty':'No articles in this Part yet.',
+ 'part.confirmDelete':'Delete this Part and all of its articles?','part.moved':'Moved to page {n}.',
+ 'common.delete':'Delete','common.moveUp':'Move up','common.moveDown':'Move down','common.toggle':'Expand / Collapse',
+ 'article.label':'Article {n}','article.edit':'Edit Article','article.untitled':'Untitled article','article.toggleHint':'Click to expand / collapse',
+ 'article.confirmDelete':'Delete this article?','article.title':'Title','article.body':'Body / Event details (line breaks allowed)',
+ 'article.sampleNotice':'System sample marker:','article.sampleRemove':'Remove Marker',
+ 'type.group':'Text Settings','type.titleSize':'Heading Font Size','type.bodySize':'Body Font Size','type.font':'Font','type.titleBold':'Bold heading','type.bodyBold':'Bold body text',
+ 'font.sans':'Sans-serif','font.serif':'Serif','font.classic':'Classic newspaper',
+ 'img.group':'Image Settings','img.coverTitle':'① Main / Cover Image','img.coverUpload':'Upload or replace the main image','img.uploaded':'Main image uploaded','img.coverHelp':'Adjust the layout and cropping of this image below.',
+ 'img.remove':'Remove Image','img.noCover':'No main image yet. A thumbnail appears here after you choose an image.','img.thumbAlt':'Main image thumbnail','img.coverSettings':'Main Image Layout & Crop',
+ 'img.cardLayout':'Article layout','layout.auto':'Auto fit','layout.full':'Full width','layout.compact':'Compact card','layout.portrait':'Portrait image first','layout.split':'Image beside text',
+ 'img.fit':'Image display','fit.contain':'Show full image (no crop)','fit.cover':'Fill and crop',
+ 'img.side':'Image position','side.right':'Image right · Text left','side.left':'Image left · Text right',
+ 'img.crop':'Crop ratio (non-destructive)','crop.original':'Original','crop.square':'Square 1:1','crop.landscape':'Landscape 4:3','crop.wide':'Wide 16:9','crop.portrait':'Portrait 3:4',
+ 'img.cropX':'Crop focus: horizontal','img.cropY':'Crop focus: vertical',
+ 'img.extraTitle':'② Additional Images','img.extraLabel':'Additional images (several per article)','img.extraHelp':'Select multiple JPG/PNG files; they appear in the order selected.',
+ 'img.extraItem':'Additional image {n}','img.ratio':'Crop ratio','img.display':'Display','img.focusX':'Horizontal focus','img.focusY':'Vertical focus',
+ 'search.placeholder':'Search article titles…','search.label':'Search article titles',
+ 'export.group':'Output & Backup','export.pdf':'Print / Save as PDF','export.png':'Save Current Page as PNG','export.pngBusy':'Generating PNG…','export.json':'Export JSON Backup','export.import':'Import JSON',
+ 'export.pngNote':'PNG saves the currently selected page; PDF prints all pages in order.',
+ 'help.title':'How to Use',
+ 'help.body':'Upload JPG, PNG, or WebP images; files are optimized automatically. Convert HEIC files to JPG first. Your work is saved automatically in this browser. To continue on another device, use “Export JSON Backup”. For PDF, use “Print / Save as PDF” with A4 paper, 100% scale, no margins, and background graphics turned on. Each page is fixed at A4, so add a page or shorten the text if content overflows. Use the official university logo only with permission.',
+ 'msg.storageFull':'Browser storage is full, so changes may not be saved. Export a JSON backup and reduce the number of images.',
+ 'msg.confirmReset':'This discards all your edits and restores the sample template. Export a JSON backup first. Continue?',
+ 'msg.importInvalid':'Invalid JSON format. This file cannot be imported.',
+ 'msg.imgUnsupported':'Only image files (JPG, PNG, WebP, etc.) are supported.','msg.imgTooLarge':'This image exceeds 25 MB. Please reduce its size.',
+ 'msg.imgStillLarge':'The image is still too large after processing. Use a smaller JPG/PNG file.','msg.imgProcess':'The image could not be processed. Convert it to JPG, PNG, or WebP and try again.',
+ 'msg.imgRead':'The image could not be read (HEIC and similar formats may not be supported). Convert it to JPG, PNG, or WebP.',
+ 'msg.pngLoad':'The PNG renderer could not be loaded. Check your internet connection and try again.','msg.pngCapture':'The preview could not be captured.','msg.pngConvert':'The PNG file could not be created.',
+ 'msg.pngFailed':'PNG export failed: {error}','msg.pngAdvice':'Use the latest Chrome or Edge and make sure you are online.',
+ 'preview.note':'Live preview. All sample content is placeholder text; replace it and verify all dates and contact details before publishing.',
+ 'preview.noArticles':'No articles yet','preview.emptyPage':'This page has no content yet','preview.articleImageAlt':'Article image','preview.extraImageAlt':'Additional image','preview.logoAlt':'University logo','preview.selectPage':'Click to edit this page',
+ 'sample.articlePlaceholder':'[Sample article. Replace with your own content.]','sample.eventPlaceholder':'[Sample event. Replace with your own content.]','sample.imagePlaceholder':'Sample image · Upload to replace',
+ 'sample.newTitle':'New title','sample.newBody':'Enter content','sample.newPart':'New Part',
+ "design.headerTitle":"Page Header (current page)","design.headerHint":"Masthead details (university, issue, logo) come from Basic Information and carry over to every page automatically.","header.full":"Full masthead (same as page 1)","header.compact":"Compact header (for inner pages, saves space)","header.none":"No header","flow.title":"Continue Across Pages","flow.auto":"Continue Overflow on Next Page","flow.autoHint":"Moves text and images that overflow the A4 page to the next page (creating it if needed), keeping the masthead, Part headings and column placement.","flow.undo":"Undo Continue","flow.confirmUndo":"Return to the state before continuing? Changes made afterwards will also be undone.","flow.done":"Overflowing content was continued on the following pages. Please check page {pages}.","flow.nothing":"No content currently exceeds the A4 page.","flow.stuck":"An item on page {pages} (such as a large image) is taller than a whole page and cannot be split automatically. Shrink the image or split it manually.","flow.splitCursor":"Split at Cursor → Rest to Next Page","flow.moveNext":"Move Article to Next Page","flow.caretHint":"First click in the body text where you want to split (not at the very beginning or end).","flow.contNext":"(Continued on next page)","flow.contPrev":"(Continued from previous page)","flow.markerNotice":"Page continuation marker:","flow.markerRemove":"Remove Marker","flow.overflowBar":"Page {n} exceeds A4","flow.moved":"Moved to page {n}.",
+ 'dialog.ok':'OK','dialog.cancel':'Cancel',
+ 'handle.title':'Drag to resize',
+ 'contact.open':'Contact me','contact.title':'Bug Reports & Support','contact.intro':'Found a bug or need help with the editor? Contact the creator at the email below.',
+ 'contact.copy':'Copy Email','contact.copied':'Copied','contact.send':'Write Email','contact.close':'Close','contact.subject':'Newsletter Editor Bug Report / Support'
+}
 };
-const lang=()=>document.getElementById('langEn')?.classList.contains('selected')?'en':(document.getElementById('langKo')?.classList.contains('selected')?'ko':'zh');
-const valid=s=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
-const workspace=document.querySelector('.workspace');if(!workspace)return;
-const footer=document.createElement('footer');footer.className='nexaeon-footer';footer.setAttribute('aria-label','NexAeon Studio');
-footer.innerHTML='<div><div class="brand-name">© NexAeon<span class="brand-dot">.</span>Studio <span class="brand-credit">· Built by Joey</span></div></div><button type="button" class="contact-link" id="nexaeonContact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span id="nexaeonContactLabel"></span></button>';
-workspace.appendChild(footer);
-const style=document.createElement('style');style.textContent='.nexaeon-contact-overlay{position:fixed;inset:0;background:rgba(12,26,45,.52);display:none;place-items:center;z-index:99999;padding:20px}.nexaeon-contact-overlay.is-open{display:grid}.nexaeon-contact-dialog{width:min(100%,440px);background:#fff;color:#1c344f;border-radius:16px;box-shadow:0 18px 70px #0004;padding:24px;line-height:1.6}.nexaeon-contact-dialog h3{font-size:20px;margin:0 0 9px}.nexaeon-contact-dialog p{margin:0 0 17px;font-size:13px;color:#54677e}.nexaeon-email-box{background:#eef4fb;border:1px solid #d2dfef;border-radius:10px;padding:13px;overflow-wrap:anywhere;font-weight:700;font-size:16px}.nexaeon-contact-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.nexaeon-contact-actions button,.nexaeon-contact-actions a{border:1px solid #cbd8e7;background:#fff;color:#234768;border-radius:8px;padding:10px 12px;cursor:pointer;text-decoration:none;font-weight:700;font-size:12px}.nexaeon-contact-actions .primary{background:#1b3e64;color:#fff}.nexaeon-contact-actions [hidden]{display:none!important}@media print{.nexaeon-contact-overlay{display:none!important}}';document.head.appendChild(style);
-const overlay=document.createElement('div');overlay.className='nexaeon-contact-overlay';overlay.innerHTML='<div class="nexaeon-contact-dialog" role="dialog" aria-modal="true" aria-labelledby="nexaeonDlgTitle"><h3 id="nexaeonDlgTitle"></h3><p id="nexaeonDlgIntro"></p><div class="nexaeon-email-box" id="nexaeonEmailText"></div><div class="nexaeon-contact-actions"><button type="button" id="nexaeonCopy" class="primary"></button><a id="nexaeonMail" href="#"></a><button type="button" id="nexaeonClose"></button></div></div>';document.body.appendChild(overlay);
-const el=id=>document.getElementById(id);let setting=null;const contact=el('nexaeonContact');
-function paint(){const t=terms[lang()];el('nexaeonContactLabel').textContent=t.contact;el('nexaeonDlgTitle').textContent=t.title;el('nexaeonDlgIntro').textContent=t.intro;el('nexaeonEmailText').textContent=valid(email)?email:t.notset;el('nexaeonCopy').textContent=valid(email)?t.copy:t.edit;el('nexaeonMail').textContent=t.send;el('nexaeonMail').hidden=!valid(email);el('nexaeonMail').href=valid(email)?'mailto:'+email+'?subject='+encodeURIComponent(t.subject):'#';el('nexaeonClose').textContent=t.close;if(setting){setting.querySelector('label').textContent=t.label;setting.querySelector('.hint').textContent=t.hint;setting.querySelector('button').textContent=t.save;}}
-function show(){paint();overlay.classList.add('is-open');el('nexaeonClose').focus()}
-function hide(){overlay.classList.remove('is-open');contact.focus()}
-function showSetting(){hide();const tab=[...document.querySelectorAll('.ux-nav .ux-tab')].find(x=>/基本資料|기본 정보|Details|Basic/i.test(x.textContent));tab?.click();const input=setting?.querySelector('input');input?.scrollIntoView({block:'center'});input?.focus()}
-contact.addEventListener('click',show);el('nexaeonClose').addEventListener('click',hide);overlay.addEventListener('click',e=>{if(e.target===overlay)hide()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay.classList.contains('is-open'))hide()});
-el('nexaeonCopy').addEventListener('click',async()=>{if(!valid(email)){showSetting();return}try{await navigator.clipboard.writeText(email)}catch(e){const ta=document.createElement('textarea');ta.value=email;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove()}el('nexaeonCopy').textContent=terms[lang()].copied});
-for(const id of ['langZh','langKo','langEn'])el(id)?.addEventListener('click',()=>queueMicrotask(paint));paint();
+const SUPPORTED_LANGUAGES=['zh-TW','ko','en'];
+const HTML_LANG={'zh-TW':'zh-Hant','ko':'ko','en':'en'};
+const STORAGE_KEY='woosong-newsletter-v1',LEGACY_BACKUP_KEY='woosong-newsletter-v1-legacy-backup',LANG_KEY='woosong-ui-language',TAB_KEY='woosong-ui-tab',WIDTH_KEY='nex-sidebar-width',DEMO_KEY='woosong-ui-demo-images';
+const TABS=['info','layout','content','export'];
+const META_FIELDS=['university','mastTitle','subtitle','month','year','volume','issuer','address'];
+const META_KEYS=[...META_FIELDS,'logo'];
+const LAYOUTS=Array.from({length:11},(_,i)=>'mode'+(i+1));
+const STYLES=Array.from({length:16},(_,i)=>'style'+(i+1));
+const POSITIONS=['left','right','full'];
+const HEADERS=['full','compact','none'];
+const CROPS=['original','square','landscape','wide','portrait'];
+const CARD_LAYOUTS=['auto','full','compact','portrait','split'];
+const HEADINGS=["President's Message",'Woosong Global News','Alumni Spotlight','Alumni Around China','Student Success Stories','Career & Opportunity','Global Partnership','Woosong Memories','Alumni Business Network','Get Involved'];
+const CONTACT_EMAIL='joeyaj11@gmail.com';
+const THUMB_COLORS=[['#233c5b','#c2d0dd','#fff'],['#285782','#c7ddec','#f4f9ff'],['#3a6f88','#b4d0dc','#f8fafc'],['#253f59','#cad0dc','#f9f6f1'],['#262626','#c2c2c2','#fff'],['#a63039','#e4b1b2','#fff'],['#876949','#d9c8b3','#fff9f1'],['#135d66','#92c7ca','#f6fbfa'],['#253c68','#b8c9e2','#fff'],['#3a7c71','#bfdcd1','#f6faf7'],['#6a4e87','#d1c0e2','#fff']];
+/* Exact strings that older versions of this editor wrote into user data as system defaults.
+   Only these exact values are converted during migration; everything else is kept verbatim. */
+const LEGACY_SAMPLE_MARKERS=[['[示範文章，請替換]','article'],['[示範活動，請替換]','event']];
+const LEGACY_DEFAULT_TITLES=['新標題','新文章','새 기사','New article'];
+const LEGACY_DEFAULT_BODIES=['請輸入內容','내용을 입력하세요','Enter content'];
+const LEGACY_DEFAULT_PARTS=['新主題','새 파트','New Part'];
+
+let currentLanguage=(()=>{try{const v=localStorage.getItem(LANG_KEY);if(v==='zh')return 'zh-TW';if(SUPPORTED_LANGUAGES.includes(v))return v}catch(e){}return 'zh-TW'})();
+function t(key,vars){
+ let s=translations[currentLanguage][key];
+ if(s===undefined){console.warn('[i18n] missing key',currentLanguage,key);s=key}
+ if(vars&&typeof s==='string')s=s.replace(/\{(\w+)\}/g,(m,k)=>vars[k]!==undefined?vars[k]:m);
+ return s;
+}
+const $=sel=>document.querySelector(sel);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const uid=()=>Math.random().toString(36).slice(2,9)+Date.now().toString(36).slice(-4);
+const num=(v,d=50)=>{const n=Number(v);return Number.isFinite(n)?n:d};
+const opt=(value,label,selected)=>`<option value="${esc(value)}"${selected?' selected':''}>${esc(label)}</option>`;
+
+/* ===== Data model: A4 page → Part → Article / Image ===== */
+function newArticle(){return {id:uid(),title:'',body:'',image:'',qr:'',extraImages:[]}}
+function normalizeArticle(a,legacy){
+ a=a&&typeof a==='object'?a:{};
+ const out={...a,id:a.id||uid(),title:String(a.title??''),body:String(a.body??''),image:typeof a.image==='string'?a.image:''};
+ if(legacy){
+  for(const [marker,tag] of LEGACY_SAMPLE_MARKERS){
+   if(out.body===marker||out.body.startsWith(marker+'\n')){out.body=out.body.slice(marker.length).replace(/^\n/,'');out.sampleTag=tag;break}
+  }
+  if(LEGACY_DEFAULT_TITLES.includes(out.title))out.title='';
+  if(LEGACY_DEFAULT_BODIES.includes(out.body))out.body='';
+ }
+ if(out.sampleTag!=='article'&&out.sampleTag!=='event')delete out.sampleTag;
+ out.extraImages=(Array.isArray(a.extraImages)?a.extraImages:[]).map(im=>typeof im==='string'?{src:im,ratio:'original',fit:'contain',x:50,y:50}:im).filter(im=>im&&typeof im.src==='string'&&im.src);
+ return out;
+}
+function normalizePart(x,legacy){
+ x=x&&typeof x==='object'?x:{};
+ let title=String(x.title??'');if(legacy&&LEGACY_DEFAULT_PARTS.includes(title))title='';
+ const list=Array.isArray(x.articles)?x.articles:Array.isArray(x.stories)?x.stories:[];
+ const part={id:x.id||uid(),title,position:POSITIONS.includes(x.position)?x.position:'full',articles:list.map(a=>normalizeArticle(a,legacy))};
+ if(x.contOf)part.contOf=String(x.contOf);
+ return part;
+}
+function normalizePage(p,legacy){
+ p=p&&typeof p==='object'?p:{};
+ return {id:p.id||uid(),header:HEADERS.includes(p.header)?p.header:'full',layout:LAYOUTS.includes(p.layout)?p.layout:'mode1',headingStyle:STYLES.includes(p.headingStyle)?p.headingStyle:'style1',parts:(Array.isArray(p.parts)?p.parts:[]).map(x=>normalizePart(x,legacy))};
+}
+/* Converts the old "left/right columns + extra parts" format into the unified Part model. */
+function legacyPage(p,root){
+ const pick=k=>p[k]!==undefined?p[k]:root[k];
+ const parts=[
+  {title:pick('leftLabel'),position:'left',articles:Array.isArray(pick('left'))?pick('left'):[]},
+  {title:pick('rightLabel'),position:'right',articles:Array.isArray(pick('right'))?pick('right'):[]}
+ ];
+ for(const x of Array.isArray(p.parts)?p.parts:[])parts.push(x);
+ return normalizePage({layout:pick('layout'),headingStyle:pick('headingStyle'),parts},true);
+}
+function normalizeData(raw){
+ if(!raw||typeof raw!=='object'||Array.isArray(raw))throw new Error('invalid');
+ const out={schema:2};
+ for(const k of META_KEYS)out[k]=raw[k]==null?'':String(raw[k]);
+ if(raw.mastTitle===undefined)out.mastTitle='NEWSLETTER';
+ if(raw.schema===2){
+  if(!Array.isArray(raw.pages))throw new Error('invalid');
+  out.pages=raw.pages.map(p=>normalizePage(p,false));
+ }else{
+  const legacyPages=Array.isArray(raw.pages)&&raw.pages.length?raw.pages:null;
+  if(!legacyPages&&!(Array.isArray(raw.left)&&Array.isArray(raw.right)))throw new Error('invalid');
+  out.pages=(legacyPages||[raw]).map(p=>legacyPage(p&&typeof p==='object'?p:{},raw));
+ }
+ if(!out.pages.length)out.pages=[normalizePage({parts:[{title:'',position:'left'},{title:'',position:'right'}]},false)];
+ return out;
+}
+function sample(){
+ const art=(title,body,tag)=>({title,body,sampleTag:tag});
+ return normalizeData({schema:2,university:'Woosong University',subtitle:'우송대학교 취업지원센터 뉴스레터',month:'11',year:'2026',volume:'127',mastTitle:'NEWSLETTER',issuer:'우송대학교 취업지원센터',address:'대전광역시 동구 동대전로 171',logo:'',
+  pages:[{layout:'mode1',headingStyle:'style1',parts:[
+   {title:"President's Message",position:'left',articles:[
+    art('AI 리터러시가 채용 시장을 바꾼다\n- AI 활용을 넘어 협업하는 능력까지!','AI 도구를 이해하고 결과를 비판적으로 검토하는 역량이 중요해지고 있습니다.\n실제 취업 정보와 출처를 확인하여 작성해 주세요.','article'),
+    art('AI 시대, 신입사원에게 필요한 진짜 실무 역량','AI가 생성한 결과의 오류를 확인하고 업무 목적에 맞게 수정하는 능력이 필요합니다.','article'),
+    art('경력이 없어 고민이라면? 실무 경험으로 시작하자!','프로그램 일정과 참여 방법을 확인한 뒤 게시해 주세요.','article')]},
+   {title:'Woosong Global News',position:'right',articles:[
+    art('2026년 커리어비전 캠프(2학년)\n- 나의 커리어 설계 2학년부터 시작!','- 신청기간: YYYY. MM. DD. ~ MM. DD.\n- 진행일자: YYYY. MM. DD.\n- 진행장소: 교내 강의장\n- 문의사항: 담당 부서 확인','event'),
+    art('2026년 취업박람회\n- 전공에서 찾은 꿈, 취업으로 달리다!','- 진행일자: YYYY. MM. DD.\n- 진행내용: 채용 상담 및 현장 면접\n- 문의사항: 담당 부서 확인','event'),
+    art('2026년 취업역량 강화 캠프(3학년)','- 신청기간: YYYY. MM. DD.\n- 교육내용: 자기소개서 및 면접 준비\n- 문의사항: 담당 부서 확인','event')]}
+  ]}]});
+}
+function loadData(){
+ let rawText=null,raw=null;
+ try{rawText=localStorage.getItem(STORAGE_KEY);raw=rawText?JSON.parse(rawText):null}catch(e){raw=null}
+ if(!raw){
+  if(rawText){try{localStorage.setItem(LEGACY_BACKUP_KEY+'-unreadable',rawText)}catch(e){}}
+  return sample();
+ }
+ try{
+  if(raw.schema!==2){try{if(!localStorage.getItem(LEGACY_BACKUP_KEY))localStorage.setItem(LEGACY_BACKUP_KEY,rawText)}catch(e){}}
+  return normalizeData(raw);
+ }catch(e){
+  try{localStorage.setItem(LEGACY_BACKUP_KEY+'-unreadable',rawText)}catch(err){}
+  return sample();
+ }
+}
+let data=loadData();
+let pageIndex=0;
+let activeTab=(()=>{try{const v=sessionStorage.getItem(TAB_KEY);if(TABS.includes(v))return v}catch(e){}return 'info'})();
+let showDemo=(()=>{try{return localStorage.getItem(DEMO_KEY)!=='off'}catch(e){return true}})();
+let searchText='';
+const openArticles=new Set(),collapsedParts=new Set(),folds=new Map();
+const fold=(key,def)=>folds.has(key)?folds.get(key):def;
+const curPage=()=>data.pages[pageIndex];
+const findPart=pid=>curPage().parts.find(p=>p.id===pid)||null;
+const findArticle=(pid,aid)=>{const p=findPart(pid);return p?p.articles.find(a=>a.id===aid)||null:null};
+
+/* ===== In-page dialogs =====
+   The browser's own confirm and alert boxes are silently blocked in sandboxed previews (a confirm then
+   answers "no", so deleting did nothing). These dialogs work everywhere and follow the interface language. */
+function uiDialog(message,withCancel){
+ return new Promise(resolve=>{
+  const prev=document.activeElement,wrap=document.createElement('div');
+  wrap.className='ui-dialog-overlay';
+  wrap.innerHTML=`<div class="ui-dialog" role="${withCancel?'alertdialog':'dialog'}" aria-modal="true" aria-describedby="uiDialogMsg"><p id="uiDialogMsg"></p><div class="ui-dialog-actions">${withCancel?`<button type="button" class="btn secondary" id="uiDialogCancel">${esc(t('dialog.cancel'))}</button>`:''}<button type="button" class="btn" id="uiDialogOk">${esc(t('dialog.ok'))}</button></div></div>`;
+  wrap.querySelector('#uiDialogMsg').textContent=message;
+  const close=v=>{document.removeEventListener('keydown',onKey,true);wrap.remove();if(prev&&prev.isConnected)prev.focus();resolve(v)};
+  const onKey=e=>{if(e.key==='Escape'){e.preventDefault();e.stopPropagation();close(false)}};
+  wrap.addEventListener('click',e=>{if(e.target.id==='uiDialogOk')close(true);else if(e.target.id==='uiDialogCancel'||e.target===wrap)close(false)});
+  document.addEventListener('keydown',onKey,true);
+  document.body.appendChild(wrap);wrap.querySelector('#uiDialogOk').focus();
+ });
+}
+const uiConfirm=msg=>uiDialog(msg,true),uiAlert=msg=>uiDialog(msg,false);
+
+/* ===== Persistence ===== */
+let saveTimer=null,saveState='idle',lastSaved=null,storageWarned=false;
+function persist(){clearTimeout(saveTimer);saveTimer=setTimeout(saveNow,250)}
+function saveNow(){
+ clearTimeout(saveTimer);saveTimer=null;
+ try{localStorage.setItem(STORAGE_KEY,JSON.stringify(data));saveState='saved';lastSaved=new Date()}
+ catch(err){saveState='failed';if(!storageWarned){storageWarned=true;uiAlert(t('msg.storageFull'))}}
+ paintStatus();
+}
+window.addEventListener('pagehide',()=>{if(saveTimer)saveNow()});
+window.addEventListener('beforeunload',()=>{if(saveTimer)saveNow()});
+function paintStatus(){
+ const el=$('#saveStatus');if(!el)return;
+ const text=saveState==='failed'?t('status.failed'):saveState==='saved'&&lastSaved?t('status.saved',{time:lastSaved.toLocaleTimeString(HTML_LANG[currentLanguage],{hour:'2-digit',minute:'2-digit',second:'2-digit'})}):t('status.autosave');
+ el.classList.toggle('is-error',saveState==='failed');
+ el.innerHTML='<span aria-hidden="true">●</span> '+esc(text);
+}
+
+/* ===== Static UI translation ===== */
+function applyTranslations(){
+ document.documentElement.lang=HTML_LANG[currentLanguage];
+ document.title=t('app.docTitle');
+ document.querySelectorAll('[data-i18n]').forEach(el=>{el.textContent=t(el.dataset.i18n)});
+ document.querySelectorAll('[data-i18n-attr]').forEach(el=>{
+  for(const pair of el.dataset.i18nAttr.split(';')){const [attr,key]=pair.split(':');if(attr&&key)el.setAttribute(attr.trim(),t(key.trim()))}
+ });
+ document.querySelectorAll('.lang-controls [data-lang]').forEach(b=>{const on=b.dataset.lang===currentLanguage;b.classList.toggle('selected',on);b.setAttribute('aria-pressed',String(on))});
+ $('#tabHint').textContent=t('hint.'+activeTab);
+ const mail=$('#contactMail');if(mail)mail.href='mailto:'+CONTACT_EMAIL+'?subject='+encodeURIComponent(t('contact.subject'));
+ paintStatus();
+}
+function setLanguage(lang){
+ if(!SUPPORTED_LANGUAGES.includes(lang))return;
+ const side=$('.side'),scroll=side.scrollTop;
+ currentLanguage=lang;
+ try{localStorage.setItem(LANG_KEY,lang)}catch(e){}
+ applyTranslations();renderPanels();renderPreview();
+ side.scrollTop=scroll;
+}
+function showTab(tab){
+ if(!TABS.includes(tab))tab='info';
+ activeTab=tab;try{sessionStorage.setItem(TAB_KEY,tab)}catch(e){}
+ document.querySelectorAll('.ux-tab').forEach(b=>{const on=b.dataset.tab===tab;b.classList.toggle('active',on);b.setAttribute('aria-selected',String(on))});
+ document.querySelectorAll('.pane').forEach(p=>{p.hidden=p.dataset.pane!==tab});
+ $('#tabHint').textContent=t('hint.'+tab);
+}
+
+/* ===== Sidebar panels ===== */
+function fileControl(kind,multiple,state){
+ return `<label class="nex-file-control"><input type="file" accept="image/*"${multiple?' multiple':''} data-upload="${kind}"><span>${esc(t(multiple?'file.chooseMulti':'file.choose'))}</span><small>${esc(state||t('file.none'))}</small></label>`;
+}
+function renderInfo(){
+ $('#metadata').innerHTML=META_FIELDS.map(k=>`<div class="field"><label for="meta-${k}">${esc(t('field.'+k))}</label><input id="meta-${k}" type="text" data-meta="${k}" value="${esc(data[k])}" placeholder="${esc(t('ph.'+k))}"></div>`).join('')+
+ `<div class="field"><label>${esc(t('field.logo'))}</label>${fileControl('logo',false,data.logo?t('logo.uploaded'):'')}${data.logo?`<div class="main-photo-card"><img class="main-photo-thumbnail" src="${esc(data.logo)}" alt="${esc(t('logo.alt'))}"><div class="main-photo-details"><strong>${esc(t('logo.uploaded'))}</strong><button type="button" class="btn warning small" data-act="logo-remove">${esc(t('logo.remove'))}</button></div></div>`:''}</div>`;
+}
+function pageButtonsHTML(){
+ return `<div class="nex-pages-row">${data.pages.map((p,i)=>`<button type="button" class="nex-page-btn" data-act="page-select" data-page="${i}" aria-current="${i===pageIndex?'page':'false'}" title="${esc(t('pages.goTo',{n:i+1}))}">${i+1} / ${data.pages.length}</button>`).join('')}</div>`;
+}
+function illustration(seed){
+ const c=THUMB_COLORS[seed%THUMB_COLORS.length];
+ return `<svg viewBox="0 0 360 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="360" height="150" fill="${c[1]}"/><circle cx="288" cy="31" r="23" fill="#ffffffa0"/><path d="M0 117 L85 58 147 111 228 44 360 132 360 150H0Z" fill="${c[0]}" opacity=".55"/><path d="M0 143 L89 88 174 132 258 74 360 120V150H0Z" fill="${c[0]}" opacity=".58"/><path d="M22 128V48h51v80m13 0V70h48v58" fill="#ffffff74" stroke="#ffffff" stroke-width="2"/><path d="M0 149H360" stroke="#fff" stroke-width="4"/></svg>`;
+}
+function renderDesign(){
+ const pg=curPage(),names=t('layouts.names'),desc=t('layouts.desc'),styleNames=t('headingStyles.names');
+ const gallery=LAYOUTS.map((mode,i)=>{const n=i+1,c=THUMB_COLORS[i];
+  return `<button type="button" class="template-option" data-act="layout-pick" data-mode="${mode}" aria-pressed="${pg.layout===mode}"><div class="template-thumb ${mode}" style="--ink:${c[0]};--photo:${c[1]};--paper:${c[2]}"><div class="thumb-head">WOOSONG NEWSLETTER</div><div class="thumb-blocks">${Array.from({length:n===2||n===6?3:2},(_,k)=>`<div class="thumb-section">${(k===0||n===3||n>=7)?'<div class="thumb-photo"></div>':''}<div class="thumb-title"></div><div class="thumb-line"></div><div class="thumb-line short"></div><div class="thumb-line"></div></div>`).join('')}</div></div><strong>${String(n).padStart(2,'0')} · ${esc(names[i])}</strong><small>${esc(desc[i])}</small></button>`}).join('');
+ const picks=STYLES.map((s,i)=>`<button type="button" class="pick${pg.headingStyle===s?' active':''}" data-act="heading-pick" data-style="${s}" aria-pressed="${pg.headingStyle===s}"><span>${String(i+1).padStart(2,'0')} ${esc(styleNames[i])}</span><span class="mini-heading-preview style${i+1}">${esc(t('design.headingSample'))}</span></button>`).join('');
+ $('#styleEdit').innerHTML=`<div class="design-scope"><span>${esc(t('design.pageScope'))}</span>${pageButtonsHTML()}</div>
+<div class="field header-field"><label for="pageHeader">${esc(t('design.headerTitle'))}</label><select id="pageHeader" data-page-header>${HEADERS.map(h=>opt(h,t('header.'+h),pg.header===h)).join('')}</select><p class="tiny">${esc(t('design.headerHint'))}</p></div>
+<details class="design-accordion" data-fold="design:layout"${fold('design:layout',true)?' open':''}><summary>${esc(t('design.layoutTitle'))}</summary><div class="design-inner"><p class="design-caption">${esc(t('design.layoutHint'))}</p><section class="template-gallery-container"><label class="demo-toggle"><input type="checkbox" data-demo-toggle${showDemo?' checked':''}> ${esc(t('design.demoToggle'))}</label><div class="template-gallery">${gallery}</div></section></div></details>
+<details class="design-accordion" data-fold="design:heading"${fold('design:heading',true)?' open':''}><summary>${esc(t('design.headingTitle'))}</summary><div class="design-inner"><p class="design-caption">${esc(t('design.headingHint'))}</p><div class="style-picks">${picks}</div><p class="tiny">${esc(t('design.partNote'))}</p></div></details>`;
+}
+function articleHTML(part,a,j,count){
+ const open=openArticles.has(a.id),firstLine=(a.title||'').split('\n')[0]||t('article.untitled');
+ const sel=(field,list,current,labelKey)=>`<select data-art-field="${field}">${list.map(v=>opt(v,labelKey?t(labelKey+v):v,current===v)).join('')}</select>`;
+ const typeControls=`<div class="type-controls">
+<div><label>${esc(t('type.titleSize'))}</label><select data-art-field="titleSize">${[12,14,15,16,18,20,24,28].map(n=>opt(n,n+'px',String(a.titleSize||15)===String(n))).join('')}</select></div>
+<div><label>${esc(t('type.bodySize'))}</label><select data-art-field="bodySize">${[10,11,12,13,14,16,18].map(n=>opt(n,n+'px',String(a.bodySize||12)===String(n))).join('')}</select></div>
+<div><label>${esc(t('type.font'))}</label>${sel('fontFamily',['sans','serif','classic'],a.fontFamily||'sans','font.')}</div><div></div>
+<label class="type-bold"><input type="checkbox" data-art-field="titleBold"${a.titleBold!==false?' checked':''}>${esc(t('type.titleBold'))}</label>
+<label class="type-bold"><input type="checkbox" data-art-field="bodyBold"${a.bodyBold?' checked':''}>${esc(t('type.bodyBold'))}</label></div>`;
+ const cover=`<section class="main-photo-section"><div class="photo-section-title">${esc(t('img.coverTitle'))}</div><div class="image-upload-label">${esc(t('img.coverUpload'))}</div>${fileControl('cover',false,a.image?t('img.uploaded'):'')}
+${a.image?`<div class="main-photo-card"><img class="main-photo-thumbnail" src="${esc(a.image)}" alt="${esc(t('img.thumbAlt'))}"><div class="main-photo-details"><strong>${esc(t('img.uploaded'))}</strong><small>${esc(t('img.coverHelp'))}</small><button type="button" class="btn warning small" data-act="img-remove">${esc(t('img.remove'))}</button></div></div>`:`<div class="photo-empty">${esc(t('img.noCover'))}</div>`}
+<details class="main-photo-settings" data-fold="cover:${a.id}"${fold('cover:'+a.id,!!a.image)?' open':''}><summary>${esc(t('img.coverSettings'))}</summary><div class="main-photo-settings-inner">
+<div class="field"><label>${esc(t('img.cardLayout'))}</label>${sel('cardLayout',CARD_LAYOUTS,CARD_LAYOUTS.includes(a.cardLayout)?a.cardLayout:'auto','layout.')}</div>
+<div class="field"><label>${esc(t('img.fit'))}</label>${sel('imageFit',['contain','cover'],a.imageFit==='cover'?'cover':'contain','fit.')}</div>
+<div class="field"><label>${esc(t('img.side'))}</label>${sel('photoSide',['right','left'],a.photoSide==='left'?'left':'right','side.')}</div>
+<div class="field"><label>${esc(t('img.crop'))}</label>${sel('cropRatio',CROPS,CROPS.includes(a.cropRatio)?a.cropRatio:'original','crop.')}</div>
+<div class="field"><label>${esc(t('img.cropX'))}</label><input type="range" min="0" max="100" value="${num(a.cropX)}" data-art-field="cropX"></div>
+<div class="field"><label>${esc(t('img.cropY'))}</label><input type="range" min="0" max="100" value="${num(a.cropY)}" data-art-field="cropY"></div>
+</div></details></section>`;
+ const extras=`<section class="additional-photo-section"><div class="photo-section-title">${esc(t('img.extraTitle'))}</div><div class="field"><label>${esc(t('img.extraLabel'))}</label>${fileControl('extra',true,a.extraImages.length?t('file.count',{n:a.extraImages.length}):'')}<div class="tiny">${esc(t('img.extraHelp'))}</div></div>
+${a.extraImages.map((ex,k)=>`<div class="extra-edit" data-j="${k}"><div class="extra-head"><img src="${esc(ex.src)}" alt="${esc(t('img.extraItem',{n:k+1}))}"><strong>${esc(t('img.extraItem',{n:k+1}))}</strong><button type="button" class="btn warning small" data-act="extra-remove">${esc(t('img.remove'))}</button></div><div class="extra-grid">
+<label>${esc(t('img.ratio'))}<select data-extra-field="ratio">${CROPS.map(v=>opt(v,t('crop.'+v),(ex.ratio||'original')===v)).join('')}</select></label>
+<label>${esc(t('img.display'))}<select data-extra-field="fit">${['contain','cover'].map(v=>opt(v,t('fit.'+v),(ex.fit||'contain')===v)).join('')}</select></label>
+<label>${esc(t('img.focusX'))}<input type="range" min="0" max="100" value="${num(ex.x)}" data-extra-field="x"></label>
+<label>${esc(t('img.focusY'))}<input type="range" min="0" max="100" value="${num(ex.y)}" data-extra-field="y"></label></div></div>`).join('')}</section>`;
+ const imgCount=(a.image?1:0)+a.extraImages.length;
+ return `<div class="item article-item" data-aid="${a.id}"><div class="item-head">
+<button type="button" class="ux-fold" data-act="art-toggle" aria-expanded="${open}" title="${esc(t('article.edit'))}"><span class="ux-fold-main"><span class="ux-fold-label">${esc(t('article.label',{n:j+1}))}</span>　▸ <span class="ux-fold-title">${esc(firstLine.slice(0,40))}</span></span><span class="ux-snippet">${esc(t('article.toggleHint'))}</span></button>
+<div class="minirow"><button type="button" class="btn secondary small" data-act="art-up" title="${esc(t('common.moveUp'))}" aria-label="${esc(t('common.moveUp'))}"${j===0?' disabled':''}>↑</button><button type="button" class="btn secondary small" data-act="art-down" title="${esc(t('common.moveDown'))}" aria-label="${esc(t('common.moveDown'))}"${j===count-1?' disabled':''}>↓</button><button type="button" class="btn warning small" data-act="art-del">${esc(t('common.delete'))}</button></div></div>
+<div class="ux-article-body"${open?'':' hidden'}>
+<div class="field"><label>${esc(t('article.title'))}</label><textarea rows="2" data-art-field="title" placeholder="${esc(t('ph.articleTitle'))}">${esc(a.title)}</textarea></div>
+${a.sampleTag?`<div class="sample-notice"><span>${esc(t('article.sampleNotice'))} <b>${esc(t('sample.'+a.sampleTag+'Placeholder'))}</b></span><button type="button" class="btn secondary small" data-act="art-unmark">${esc(t('article.sampleRemove'))}</button></div>`:''}
+<div class="field"><label>${esc(t('article.body'))}</label><textarea data-art-field="body" placeholder="${esc(t('ph.articleBody'))}">${esc(a.body)}</textarea></div>
+${(a.continuesNext||a.continuedFrom)?`<div class="sample-notice cont-notice"><span>${esc(t('flow.markerNotice'))} <b>${esc([a.continuedFrom?t('flow.contPrev'):'',a.continuesNext?t('flow.contNext'):''].filter(Boolean).join(' '))}</b></span><button type="button" class="btn secondary small" data-act="art-unflow">${esc(t('flow.markerRemove'))}</button></div>`:''}
+<div class="flow-tools"><span class="flow-tools-title">${esc(t('flow.title'))}</span><button type="button" class="btn secondary small" data-act="art-split">${esc(t('flow.splitCursor'))}</button><button type="button" class="btn secondary small" data-act="art-next">${esc(t('flow.moveNext'))}</button></div>
+<details class="sub-settings" data-fold="text:${a.id}"${fold('text:'+a.id,false)?' open':''}><summary>${esc(t('type.group'))}</summary><div class="sub-settings-inner">${typeControls}</div></details>
+<details class="sub-settings" data-fold="img:${a.id}"${fold('img:'+a.id,imgCount>0)?' open':''}><summary>${esc(t('img.group'))}${imgCount?` <span class="ux-count">${imgCount}</span>`:''}</summary><div class="sub-settings-inner">${cover}${extras}</div></details>
+</div></div>`;
+}
+function partHTML(part,i,count){
+ const open=!collapsedParts.has(part.id),id='p-'+part.id;
+ const movable=data.pages.length>1?`<div class="field"><label for="${id}-move">${esc(t('part.movePage'))}</label><select id="${id}-move" data-part-field="movePage">${opt('',t('part.movePagePlaceholder'),true)}${data.pages.map((p,k)=>k===pageIndex?'':opt(k,t('part.pageOption',{n:k+1}),false)).join('')}</select></div>`:'';
+ return `<section class="nex-part part-card" data-pid="${part.id}"><div class="nex-part-head">
+<button type="button" class="part-toggle" data-act="part-toggle" aria-expanded="${open}" title="${esc(t('common.toggle'))}"><span class="part-caret" aria-hidden="true">▸</span><strong>${esc(t('part.label',{n:i+1}))}</strong><span class="pos-badge pos-${part.position}">${esc(t('pos.'+part.position))}</span><span class="ux-count">${part.articles.length}</span><span class="part-head-title">${esc(part.title||t('sample.newPart'))}</span></button>
+<div class="minirow"><button type="button" class="btn secondary small" data-act="part-up" title="${esc(t('common.moveUp'))}" aria-label="${esc(t('common.moveUp'))}"${i===0?' disabled':''}>↑</button><button type="button" class="btn secondary small" data-act="part-down" title="${esc(t('common.moveDown'))}" aria-label="${esc(t('common.moveDown'))}"${i===count-1?' disabled':''}>↓</button><button type="button" class="btn warning small" data-act="part-del">${esc(t('common.delete'))}</button></div></div>
+<div class="nex-part-body"${open?'':' hidden'}><div class="part-grid">
+<div class="field"><label for="${id}-pos">${esc(t('part.position'))}</label><select id="${id}-pos" data-part-field="position">${POSITIONS.map(v=>opt(v,t('pos.'+v),part.position===v)).join('')}</select></div>${movable}</div>
+<div class="field"><label for="${id}-preset">${esc(t('part.preset'))}</label><select id="${id}-preset" data-part-field="preset">${opt('',t('part.presetPlaceholder'),!HEADINGS.includes(part.title))}${HEADINGS.map(h=>opt(h,h,part.title===h)).join('')}</select></div>
+<div class="field"><label for="${id}-title">${esc(t('part.customTitle'))}</label><input id="${id}-title" type="text" data-part-field="title" value="${esc(part.title)}" placeholder="${esc(t('ph.partTitle'))}"></div>
+<div class="part-articles">${part.articles.length?part.articles.map((a,j)=>articleHTML(part,a,j,part.articles.length)).join(''):`<p class="photo-empty">${esc(t('part.empty'))}</p>`}</div>
+<button type="button" class="btn secondary small" data-act="art-add">${esc(t('part.addArticle'))}</button></div></section>`;
+}
+function renderContent(){
+ const pg=curPage();
+ $('#pagesPanel').innerHTML=`<h3>${esc(t('pages.title'))}</h3>${pageButtonsHTML()}<div class="nex-pages-row"><button type="button" class="btn secondary small" data-act="page-add">${esc(t('pages.add'))}</button><button type="button" class="btn secondary small" data-act="page-dup">${esc(t('pages.duplicate'))}</button><button type="button" class="btn warning small" data-act="page-del">${esc(t('pages.delete'))}</button></div><p class="nex-paging-note">${esc(t('pages.note'))}</p><div class="flow-box" id="overflowWarning" hidden><p class="nex-overflow-warning" id="overflowText" role="status"></p><button type="button" class="btn" data-act="flow-auto">${esc(t('flow.auto'))}</button><p class="tiny">${esc(t('flow.autoHint'))}</p></div>${flowMessage?`<p class="flow-notice" role="status">${esc(flowMessage)}</p>`:''}${undoSnapshot?`<button type="button" class="btn secondary small" data-act="flow-undo">${esc(t('flow.undo'))}</button>`:''}`;
+ $('#partsEdit').innerHTML=`<div class="parts-head"><h3>${esc(t('parts.title',{n:pageIndex+1}))}</h3><span class="ux-count">${pg.parts.length}</span></div>${pg.parts.length?'':`<p class="photo-empty">${esc(t('parts.empty'))}</p>`}${pg.parts.map((p,i)=>partHTML(p,i,pg.parts.length)).join('')}<button type="button" class="btn secondary block" data-act="part-add">${esc(t('part.add'))}</button>`;
+ applySearch();paintOverflow();
+}
+function renderPanels(){
+ const side=$('.side'),scroll=side.scrollTop;
+ renderInfo();renderDesign();renderContent();paintStatus();
+ side.scrollTop=scroll;
+}
+function applySearch(){
+ const q=searchText.trim().toLowerCase();
+ document.querySelectorAll('#partsEdit .article-item').forEach(item=>{
+  const part=findPart(item.closest('[data-pid]').dataset.pid),a=part&&part.articles.find(x=>x.id===item.dataset.aid);
+  item.hidden=!!q&&!(a&&a.title.toLowerCase().includes(q));
+ });
+}
+
+/* ===== Preview ===== */
+/* Body markup is shared by the preview and the page-flow measurement so both lay out identically. */
+function bodyInner(a,text){
+ const marker=a.sampleTag?`<span class="sample-marker">${esc(t('sample.'+a.sampleTag+'Placeholder'))}</span>\n`:'';
+ const body=text?esc(text):(a.sampleTag||a.continuedFrom)?'':`<span class="is-placeholder">${esc(t('sample.newBody'))}</span>`;
+ return marker+body+(a.continuesNext?`<span class="cont-marker cont-next">${esc(t('flow.contNext'))}</span>`:'');
+}
+function mastHTML(pg){
+ if(pg.header==='none')return '';
+ if(pg.header==='compact')return `<header class="mast-compact"><span class="mc-univ">${esc(data.university)}</span><span class="mc-title">${esc(data.mastTitle)}</span><span class="mc-issue">${esc(data.year)}${data.month?' · '+esc(data.month):''}${data.volume?' · vol. '+esc(data.volume):''}</span></header>`;
+ const logo=data.logo?`<img src="${esc(data.logo)}" alt="${esc(t('preview.logoAlt'))}">`:'<div class="placeholder-logo">SCHOOL<br>LOGO</div>';
+ return `<header class="mast"><div class="schoolmark">${logo}</div><div class="mast-title"><div class="univ">${esc(data.university)}</div><div class="newsletter">${esc(data.mastTitle)}</div><div class="korean">${esc(data.subtitle)}</div></div><div class="issue"><div><span class="month">${esc(data.month)}</span> <span class="year">${esc(data.year)}</span></div><div class="vol">vol. ${esc(data.volume)}</div></div></header>`;
+}
+function card(a,pos,seed){
+ const family=a.fontFamily==='serif'?"Georgia, 'Noto Serif KR', 'Batang', 'SimSun', serif":a.fontFamily==='classic'?"'Times New Roman', 'Batang', 'PMingLiU', serif":"Arial, 'Noto Sans KR', 'Malgun Gothic', 'Microsoft JhengHei', sans-serif";
+ const cardLayout=CARD_LAYOUTS.includes(a.cardLayout)?a.cardLayout:'auto',imageFit=a.imageFit==='cover'?'cover':'contain';
+ const titleSize=Number(a.titleSize)||15,bodySize=Number(a.bodySize)||12;
+ const img=a.image?`<img class="article-image ${pos==='left'?'float':''} crop-${CROPS.includes(a.cropRatio)?a.cropRatio:'original'}" style="object-position:${num(a.cropX)}% ${num(a.cropY)}%" src="${esc(a.image)}" alt="${esc(t('preview.articleImageAlt'))}">`
+  :showDemo&&!a.continuedFrom?`<div class="demo-visual" data-label="${esc(t('sample.imagePlaceholder'))}" title="${esc(t('sample.imagePlaceholder'))}">${illustration(seed)}</div>`:'';
+ const title=(a.title?esc(a.title):`<span class="is-placeholder">${esc(t('sample.newTitle'))}</span>`)+(a.continuedFrom?` <span class="cont-marker cont-prev">${esc(t('flow.contPrev'))}</span>`:'');
+ const extras=a.extraImages.map(x=>{const ratio=CROPS.includes(x.ratio)&&x.ratio!=='original'?'crop-'+x.ratio:'crop-original';const fit=x.ratio&&x.ratio!=='original'?'cover':(x.fit==='cover'?'cover':'contain');return `<img class="article-image extra-preview ${ratio}" style="object-fit:${fit};object-position:${num(x.x)}% ${num(x.y)}%" src="${esc(x.src)}" alt="${esc(t('preview.extraImageAlt'))}">`}).join('');
+ return `<article data-aid="${a.id}" class="article card-${cardLayout} photo-${a.photoSide==='left'?'left':'right'}" style="--image-fit:${imageFit};--item-title-size:${titleSize}px;--item-body-size:${bodySize}px;font-family:${family};"><div class="article-head"><h3 class="article-title-custom" style="font-size:${titleSize}px;font-weight:${a.titleBold===false?400:700};font-family:inherit">${title}</h3></div><div class="underline"></div>${img}<div class="article-body article-body-custom" style="font-size:${bodySize}px;font-weight:${a.bodyBold?700:400};font-family:inherit">${bodyInner(a,a.body)}</div>${extras}<div style="clear:both"></div></article>`;
+}
+function pageHTML(pg){
+ let seed=Number(pg.layout.replace('mode',''));
+ const partBlock=(part,color)=>`<div class="bar"><span class="pill ${color}">${part.title?esc(part.title):`<span class="is-placeholder">${esc(t('sample.newPart'))}</span>`}</span></div>${part.articles.length?part.articles.map(a=>card(a,part.position,seed++)).join(''):`<div class="noitems">${esc(t('preview.noArticles'))}</div>`}`;
+ const column=(parts,color)=>{const n=parts.reduce((s,p)=>s+p.articles.length,0);return `<section class="column${n===1?' single-story':''}">${parts.map(p=>partBlock(p,color)).join('')}</section>`};
+ let body='',group=null;
+ const flush=()=>{if(group){body+=`<div class="columns">${column(group.left,'pink')}${column(group.right,'blue')}</div>`;group=null}};
+ for(const part of pg.parts){
+  if(part.position==='full'){flush();body+=`<div class="columns full-row">${column([part],'pink')}</div>`}
+  else{group=group||{left:[],right:[]};group[part.position].push(part)}
+ }
+ flush();
+ if(!pg.parts.length)body=`<div class="noitems">${esc(t('preview.emptyPage'))}</div>`;
+ return `${mastHTML(pg)}${body}<footer class="footer"><strong>${esc(data.issuer)}</strong><span>발행인: ${esc(data.issuer)}</span><span>주소: ${esc(data.address)}</span></footer>`;
+}
+function sheetAttrs(el,i){
+ const pg=data.pages[i],active=i===pageIndex;
+ el.className=`page nex-sheet ${pg.layout} ${pg.headingStyle}${active?' nex-page-active':''}`;
+ el.dataset.sheet=i;el.dataset.sheetCaption=`${i+1} / ${data.pages.length}`;
+ if(active){el.id='preview';el.removeAttribute('title')}else{el.removeAttribute('id');el.title=t('preview.selectPage')}
+}
+function renderPreview(){
+ const stack=$('#pagesStack');
+ stack.innerHTML=data.pages.map((p,i)=>`<section></section><div class="sheet-flow-bar" data-bar="${i}" hidden><span>${esc(t('flow.overflowBar',{n:i+1}))}</span><button type="button" class="btn small" data-act="flow-auto">${esc(t('flow.auto'))}</button></div>`).join('');
+ [...stack.querySelectorAll('section')].forEach((el,i)=>{sheetAttrs(el,i);el.innerHTML=pageHTML(data.pages[i])});
+ checkOverflow();
+}
+function renderCurrentSheet(){
+ const el=document.querySelector(`#pagesStack [data-sheet="${pageIndex}"]`);
+ if(!el||document.querySelectorAll('#pagesStack .nex-sheet').length!==data.pages.length)return renderPreview();
+ sheetAttrs(el,pageIndex);el.innerHTML=pageHTML(curPage());checkOverflow();
+}
+let previewFrame=0,previewAll=false;
+function schedulePreview(all){previewAll=previewAll||!!all;if(previewFrame)return;previewFrame=requestAnimationFrame(()=>{previewFrame=0;const a=previewAll;previewAll=false;a?renderPreview():renderCurrentSheet()})}
+let overflowPages=[];
+function checkOverflow(){
+ overflowPages=[];
+ document.querySelectorAll('#pagesStack .nex-sheet').forEach((el,i)=>{const footer=el.querySelector('.footer'),over=footer?footer.offsetTop+footer.offsetHeight>el.clientHeight:el.scrollHeight>el.clientHeight+2;el.classList.toggle('nex-page-overflow',over);const bar=document.querySelector(`#pagesStack [data-bar="${i}"]`);if(bar)bar.hidden=!over;if(over)overflowPages.push(i+1)});
+ paintOverflow();
+}
+function paintOverflow(){
+ const w=$('#overflowWarning');if(!w)return;
+ w.hidden=!overflowPages.length;$('#overflowText').textContent=overflowPages.length?t('pages.overflow',{pages:overflowPages.join(', ')}):'';
+}
+
+/* ===== Actions ===== */
+function selectPage(i){
+ if(i<0||i>=data.pages.length)return;
+ pageIndex=i;renderDesign();renderContent();
+ document.querySelectorAll('#pagesStack .nex-sheet').forEach((el,k)=>sheetAttrs(el,k));
+ $('#preview')?.scrollIntoView({block:'start',behavior:'smooth'});
+}
+function cloneWithNewIds(page){
+ const copy=JSON.parse(JSON.stringify(page));copy.id=uid();
+ copy.parts.forEach(p=>{p.id=uid();p.articles.forEach(a=>{a.id=uid()})});
+ return copy;
+}
+function addPage(duplicate){
+ const cur=curPage();let page;
+ if(duplicate)page=cloneWithNewIds(cur);
+ else{
+  const left=cur.parts.find(p=>p.position==='left'),right=cur.parts.find(p=>p.position==='right');
+  page=normalizePage({header:cur.header,layout:cur.layout,headingStyle:cur.headingStyle,parts:[{title:left?left.title:'',position:'left'},{title:right?right.title:'',position:'right'}]},false);
+ }
+ data.pages.splice(pageIndex+1,0,page);pageIndex++;
+ persist();renderDesign();renderContent();renderPreview();
+}
+async function deletePage(){
+ if(data.pages.length===1){uiAlert(t('pages.atLeastOne'));return}
+ if(!await uiConfirm(t('pages.confirmDelete')))return;
+ data.pages.splice(pageIndex,1);pageIndex=Math.min(pageIndex,data.pages.length-1);
+ persist();renderDesign();renderContent();renderPreview();
+}
+function move(list,i,d){const n=i+d;if(n<0||n>=list.length)return false;[list[i],list[n]]=[list[n],list[i]];return true}
+function structural(){persist();renderContent();renderCurrentSheet()}
+function readImage(file,callback,kind){
+ if(!file)return;
+ const supported=/\.(png|jpe?g|webp|gif|bmp|heic|heif)$/i.test(file.name)||/^image\//.test(file.type);
+ if(!supported){uiAlert(t('msg.imgUnsupported'));return}
+ if(file.size>25*1024*1024){uiAlert(t('msg.imgTooLarge'));return}
+ const url=URL.createObjectURL(file),img=new Image();
+ img.onload=()=>{URL.revokeObjectURL(url);try{
+  const max=kind==='logo'?700:1400,scale=Math.min(1,max/Math.max(img.naturalWidth,img.naturalHeight));
+  const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(img.naturalWidth*scale));canvas.height=Math.max(1,Math.round(img.naturalHeight*scale));
+  const ctx=canvas.getContext('2d');if(!ctx)throw Error('Canvas unavailable');
+  ctx.fillStyle='#ffffff';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(img,0,0,canvas.width,canvas.height);
+  const result=canvas.toDataURL('image/jpeg',.78);
+  if(result.length>2.5e6){uiAlert(t('msg.imgStillLarge'));return}
+  callback(result);
+ }catch(err){uiAlert(t('msg.imgProcess'))}};
+ img.onerror=()=>{URL.revokeObjectURL(url);uiAlert(t('msg.imgRead'))};
+ img.src=url;
+}
+function handleUpload(input){
+ const kind=input.dataset.upload,files=Array.from(input.files||[]);input.value='';
+ if(!files.length)return;
+ if(kind==='logo'){readImage(files[0],v=>{data.logo=v;persist();renderInfo();renderPreview()},'logo');return}
+ const pid=input.closest('[data-pid]')?.dataset.pid,aid=input.closest('[data-aid]')?.dataset.aid;
+ const target=()=>findArticle(pid,aid);
+ if(kind==='cover')readImage(files[0],v=>{const a=target();if(!a)return;a.image=v;folds.set('img:'+aid,true);structural()},'photo');
+ if(kind==='extra')for(const file of files)readImage(file,v=>{const a=target();if(!a)return;a.extraImages.push({src:v,ratio:'original',fit:'contain',x:50,y:50});folds.set('img:'+aid,true);structural()},'photo');
+}
+function onAction(btn){
+ const act=btn.dataset.act,pid=btn.closest('[data-pid]')?.dataset.pid,aid=btn.closest('[data-aid]')?.dataset.aid;
+ const pg=curPage(),part=pid?findPart(pid):null,a=part&&aid?part.articles.find(x=>x.id===aid):null;
+ switch(act){
+  case 'lang':return setLanguage(btn.dataset.lang);
+  case 'tab':return showTab(btn.dataset.tab);
+  case 'page-select':return selectPage(Number(btn.dataset.page));
+  case 'page-add':return addPage(false);
+  case 'page-dup':return addPage(true);
+  case 'page-del':return deletePage();
+  case 'layout-pick':pg.layout=btn.dataset.mode;persist();renderDesign();renderCurrentSheet();return;
+  case 'heading-pick':pg.headingStyle=btn.dataset.style;persist();renderDesign();renderCurrentSheet();return;
+  case 'part-add':{const p=normalizePart({title:'',position:'right',articles:[newArticle()]},false);pg.parts.push(p);openArticles.add(p.articles[0].id);return structural()}
+  case 'part-toggle':{const open=btn.getAttribute('aria-expanded')!=='true';btn.setAttribute('aria-expanded',String(open));btn.closest('.part-card').querySelector('.nex-part-body').hidden=!open;open?collapsedParts.delete(pid):collapsedParts.add(pid);return}
+  case 'part-up':case 'part-down':if(move(pg.parts,pg.parts.indexOf(part),act==='part-up'?-1:1))structural();return;
+  case 'part-del':if(part)uiConfirm(t('part.confirmDelete')).then(ok=>{if(ok&&pg.parts.includes(part)){pg.parts.splice(pg.parts.indexOf(part),1);structural()}});return;
+  case 'art-add':{if(!part)return;const n=newArticle();part.articles.push(n);openArticles.add(n.id);collapsedParts.delete(pid);return structural()}
+  case 'art-toggle':{const open=btn.getAttribute('aria-expanded')!=='true';btn.setAttribute('aria-expanded',String(open));btn.closest('.article-item').querySelector('.ux-article-body').hidden=!open;open?openArticles.add(aid):openArticles.delete(aid);return}
+  case 'art-up':case 'art-down':if(part&&a&&move(part.articles,part.articles.indexOf(a),act==='art-up'?-1:1))structural();return;
+  case 'art-del':if(part&&a)uiConfirm(t('article.confirmDelete')).then(ok=>{if(ok&&part.articles.includes(a)){part.articles.splice(part.articles.indexOf(a),1);structural()}});return;
+  case 'art-unmark':if(a){delete a.sampleTag;structural()}return;
+  case 'img-remove':if(a){a.image='';structural()}return;
+  case 'extra-remove':if(a){a.extraImages.splice(Number(btn.closest('[data-j]').dataset.j),1);structural()}return;
+  case 'logo-remove':data.logo='';persist();renderInfo();renderPreview();return;
+  case 'reset':
+   uiConfirm(t('msg.confirmReset')).then(ok=>{if(!ok)return;data=sample();pageIndex=0;openArticles.clear();collapsedParts.clear();folds.clear();saveNow();renderPanels();renderPreview()});return;
+  case 'flow-auto':return autoFlow();
+  case 'flow-undo':return undoFlow();
+  case 'art-split':{if(!part||!a)return;const ta=btn.closest('.article-item').querySelector('textarea[data-art-field="body"]');const cut=ta?ta.selectionStart:0;
+   if(!(cut>0&&cut<a.body.length)){uiAlert(t('flow.caretHint'));return}
+   takeUndo();splitArticle(pageIndex,part,a,0,cut);afterFlow(t('flow.moved',{n:pageIndex+2}));return}
+  case 'art-next':if(part&&a){takeUndo();moveWhole(pageIndex,part,a);afterFlow(t('flow.moved',{n:pageIndex+2}))}return;
+  case 'art-unflow':if(a){delete a.continuesNext;delete a.continuedFrom;delete a.contJoin;structural()}return;
+  case 'export-pdf':saveNow();return window.print();
+  case 'export-png':return savePNG(btn);
+  case 'export-json':return saveJSON();
+  case 'export-import':return $('#importFile').click();
+  case 'contact-open':return openContact();
+  case 'contact-close':return closeContact();
+  case 'contact-copy':return copyEmail(btn);
+ }
+}
+document.addEventListener('click',e=>{
+ const btn=e.target.closest('button[data-act]');
+ if(btn&&!btn.disabled){e.preventDefault();onAction(btn);return}
+ const sheet=e.target.closest('#pagesStack .nex-sheet');
+ if(sheet&&Number(sheet.dataset.sheet)!==pageIndex)selectPage(Number(sheet.dataset.sheet));
+ if(e.target.id==='contactOverlay')closeContact();
+});
+document.addEventListener('input',e=>{
+ const el=e.target;if(!el.closest('.side'))return;
+ if(el.dataset.meta){data[el.dataset.meta]=el.value;persist();schedulePreview(true);return}
+ if(el.id==='articleSearch'){searchText=el.value;applySearch();return}
+ const pid=el.closest('[data-pid]')?.dataset.pid,aid=el.closest('[data-aid]')?.dataset.aid;
+ if(el.dataset.partField==='title'){
+  const part=findPart(pid);if(!part)return;part.title=el.value;
+  const card=el.closest('.part-card');card.querySelector('.part-head-title').textContent=el.value||t('sample.newPart');
+  const preset=card.querySelector('[data-part-field="preset"]');if(preset)preset.value=HEADINGS.includes(el.value)?el.value:'';
+  persist();schedulePreview();return;
+ }
+ if(el.dataset.artField&&(el.tagName==='TEXTAREA'||el.type==='range')){
+  const a=findArticle(pid,aid);if(!a)return;const f=el.dataset.artField;
+  a[f]=el.type==='range'?Number(el.value):el.value;
+  const item=el.closest('.article-item');
+  if(f==='body'&&a.sampleTag){delete a.sampleTag;item.querySelector('.sample-notice')?.remove()}
+  if(f==='title')item.querySelector('.ux-fold-title').textContent=(el.value.split('\n')[0]||t('article.untitled')).slice(0,40);
+  persist();schedulePreview();return;
+ }
+ if(el.dataset.extraField&&el.type==='range'){
+  const a=findArticle(pid,aid),ex=a&&a.extraImages[Number(el.closest('[data-j]').dataset.j)];if(!ex)return;
+  ex[el.dataset.extraField]=Number(el.value);persist();schedulePreview();
+ }
+});
+document.addEventListener('change',e=>{
+ const el=e.target;
+ if(el.id==='importFile')return importJSON(el);
+ if(!el.closest('.side'))return;
+ if(el.matches('input[type=file][data-upload]'))return handleUpload(el);
+ if(el.matches('[data-page-header]')&&HEADERS.includes(el.value)){curPage().header=el.value;persist();renderCurrentSheet();return}
+ if(el.matches('[data-demo-toggle]')){showDemo=el.checked;try{localStorage.setItem(DEMO_KEY,showDemo?'on':'off')}catch(err){}renderPreview();return}
+ const pid=el.closest('[data-pid]')?.dataset.pid,aid=el.closest('[data-aid]')?.dataset.aid;
+ if(el.dataset.artField&&el.tagName!=='TEXTAREA'&&el.type!=='range'){
+  const a=findArticle(pid,aid);if(!a)return;a[el.dataset.artField]=el.type==='checkbox'?el.checked:el.value;persist();schedulePreview();return;
+ }
+ if(el.dataset.extraField&&el.tagName==='SELECT'){
+  const a=findArticle(pid,aid),ex=a&&a.extraImages[Number(el.closest('[data-j]').dataset.j)];if(!ex)return;ex[el.dataset.extraField]=el.value;persist();schedulePreview();return;
+ }
+ const part=findPart(pid);if(!part)return;
+ if(el.dataset.partField==='position'&&POSITIONS.includes(el.value)){part.position=el.value;structural();return}
+ if(el.dataset.partField==='preset'&&el.value){part.title=el.value;structural();return}
+ if(el.dataset.partField==='movePage'&&el.value!==''){
+  const target=Number(el.value);if(!data.pages[target])return;
+  const pg=curPage();pg.parts.splice(pg.parts.indexOf(part),1);data.pages[target].parts.push(part);
+  persist();renderContent();renderPreview();return;
+ }
+});
+/* <details> toggle events do not bubble, so listen in the capture phase to remember fold state. */
+document.addEventListener('toggle',e=>{const d=e.target;if(d.dataset&&d.dataset.fold)folds.set(d.dataset.fold,d.open)},true);
+document.getElementById('pagesStack').addEventListener('load',()=>{clearTimeout(window.__nlOverflow);window.__nlOverflow=setTimeout(checkOverflow,60)},true);
+
+/* ===== Page flow: continue overflowing content on the next A4 page =====
+   The overflowing page is rendered for real and measured; text is cut at the last position that still
+   fits (preferring line/sentence breaks), extra images move first, and whole articles move when even an
+   empty body does not fit. Continuations keep the Part heading, column position and text style. */
+let undoSnapshot=null,flowMessage='',flowBusy=false;
+function takeUndo(){undoSnapshot={json:JSON.stringify(data),page:pageIndex};flowMessage=''}
+async function undoFlow(){
+ if(!undoSnapshot||!await uiConfirm(t('flow.confirmUndo'))||!undoSnapshot)return;
+ data=JSON.parse(undoSnapshot.json);pageIndex=Math.min(undoSnapshot.page,data.pages.length-1);undoSnapshot=null;flowMessage='';
+ saveNow();renderPanels();renderPreview();
+}
+function afterFlow(msg){flowMessage=msg;persist();renderPanels();renderPreview()}
+function ensureNextPage(i){
+ if(!data.pages[i+1]){const pg=data.pages[i];data.pages.splice(i+1,0,normalizePage({header:pg.header,layout:pg.layout,headingStyle:pg.headingStyle,parts:[]},false))}
+ return data.pages[i+1];
+}
+function contPartFor(i,part){
+ const next=ensureNextPage(i),src=data.pages[i].parts;
+ let cont=next.parts.find(p=>p.contOf===part.id);
+ if(!cont){
+  cont={id:uid(),title:part.title,position:part.position,contOf:part.id,articles:[]};
+  const order=x=>src.findIndex(p=>p.id===x.contOf),mine=order(cont);let at=0;
+  while(at<next.parts.length&&next.parts[at].contOf&&order(next.parts[at])>-1&&order(next.parts[at])<mine)at++;
+  next.parts.splice(at,0,cont);
+ }
+ return cont;
+}
+function dropEmptySource(i,part,cont){
+ if(part.articles.length)return;
+ const list=data.pages[i].parts;list.splice(list.indexOf(part),1);
+ if(part.contOf)cont.contOf=part.contOf;else delete cont.contOf;
+}
+const STYLE_KEYS=['titleSize','bodySize','fontFamily','titleBold','bodyBold'];
+function splitArticle(i,part,a,extrasKeep,cut){
+ const cont=contPartFor(i,part),headText=a.body.slice(0,cut).replace(/\s+$/,''),rest=a.body.slice(headText.length),lead=rest.match(/^\s*/)[0],join=lead;
+ const tail={id:uid(),title:a.title,body:rest.slice(lead.length),image:'',qr:'',extraImages:a.extraImages.slice(extrasKeep),continuedFrom:a.id,contJoin:join};
+ for(const k of STYLE_KEYS)if(a[k]!==undefined)tail[k]=a[k];
+ a.body=headText;a.extraImages=a.extraImages.slice(0,extrasKeep);a.continuesNext=true;
+ const existing=cont.articles.find(x=>x.continuedFrom===a.id);
+ if(existing){existing.body=tail.body+(existing.contJoin||'')+existing.body;existing.contJoin=join;existing.extraImages=tail.extraImages.concat(existing.extraImages)}
+ else cont.articles.unshift(tail);
+}
+function moveWhole(i,part,a){
+ const cont=contPartFor(i,part);
+ part.articles.splice(part.articles.indexOf(a),1);
+ const k=cont.articles.findIndex(x=>x.continuedFrom===a.id);
+ if(k>-1){const tail=cont.articles[k];a.body=a.body+(tail.contJoin||'')+tail.body;a.extraImages=a.extraImages.concat(tail.extraImages);if(tail.continuesNext)a.continuesNext=true;else delete a.continuesNext;cont.articles.splice(k,1)}
+ else delete a.continuesNext;
+ cont.articles.unshift(a);
+ dropEmptySource(i,part,cont);
+}
+const sheetEl=i=>document.querySelector(`#pagesStack .nex-sheet[data-sheet="${i}"]`);
+function sheetOverflows(el){const f=el.querySelector('.footer');return f?f.offsetTop+f.offsetHeight>el.clientHeight:el.scrollHeight>el.clientHeight+2}
+async function decodeImages(root){await Promise.all([...root.querySelectorAll('img')].map(img=>img.complete&&img.naturalWidth?null:img.decode().catch(()=>{})))}
+function niceCut(text,max){
+ if(max>=text.length)return text.length;
+ const floor=Math.floor(max*0.6);
+ for(const re of [/\n/g,/[。！？.!?；;]/g,/[，、,\s]/g]){let best=-1,m;re.lastIndex=0;while((m=re.exec(text))&&m.index<max){if(m.index+1>floor)best=m.index+1}if(best>0)return best}
+ return max;
+}
+/* Returns {keep, cut} for a split that fits, or null when the article must move as a whole. */
+function measureSplit(sheet,el,a){
+ const bodyEl=el.querySelector('.article-body'),extras=[...el.querySelectorAll('.extra-preview')],footer=sheet.querySelector('.footer');
+ /* Judge only this article against the line where the footer must start, so another overflowing column
+    does not force this article to move whole. */
+ const gap=footer?Math.max(0,footer.getBoundingClientRect().top-el.getBoundingClientRect().bottom):0;
+ const limit=sheet.getBoundingClientRect().top+sheet.clientHeight-(footer?footer.offsetHeight:0)-gap;
+ const fits=()=>el.getBoundingClientRect().bottom<=limit+0.5;
+ const trial=Object.assign({},a,{continuesNext:true});
+ for(let keep=extras.length-1;keep>=0;keep--){
+  extras[keep].remove();bodyEl.innerHTML=bodyInner(trial,a.body);
+  if(fits())return {keep,cut:a.body.length};
+ }
+ let lo=0,hi=a.body.length-1,best=-1;
+ while(lo<=hi){const mid=(lo+hi)>>1;bodyEl.innerHTML=bodyInner(trial,a.body.slice(0,mid));if(!fits())hi=mid-1;else{best=mid;lo=mid+1}}
+ if(best<=0)return null;
+ const cut=niceCut(a.body,best);
+ return cut<12&&a.body.length>40?null:{keep:0,cut};
+}
+async function flowPage(i){
+ let changed=false;
+ for(let guard=0;guard<80;guard++){
+  const sheet=sheetEl(i);if(!sheet)return changed;
+  sheet.innerHTML=pageHTML(data.pages[i]);await decodeImages(sheet);
+  if(!sheetOverflows(sheet))return changed;
+  const arts=[...sheet.querySelectorAll('.article[data-aid]')];if(!arts.length)return 'stuck';
+  const el=arts.reduce((m,x)=>x.getBoundingClientRect().bottom>m.getBoundingClientRect().bottom?x:m);
+  const part=data.pages[i].parts.find(p=>p.articles.some(x=>x.id===el.dataset.aid)),a=part.articles.find(x=>x.id===el.dataset.aid);
+  const plan=measureSplit(sheet,el,a);
+  if(plan)splitArticle(i,part,a,plan.keep,plan.cut);
+  else{const first=el.closest('.column')?.querySelector('.article')===el;if(first)return 'stuck';moveWhole(i,part,a)}
+  changed=true;
+  if(data.pages.length>i+1&&!sheetEl(i+1))renderPreview();
+ }
+ return 'stuck';
+}
+async function autoFlow(){
+ if(flowBusy)return;flowBusy=true;
+ const before=JSON.stringify(data),beforePage=pageIndex,touched=[],stuck=[];
+ try{
+  for(let i=0;i<data.pages.length&&i<60;i++){
+   renderPreview();
+   const r=await flowPage(i);
+   if(r==='stuck')stuck.push(i+1);else if(r)touched.push(i+2);
+  }
+ }finally{flowBusy=false}
+ if(JSON.stringify(data)!==before){undoSnapshot={json:before,page:beforePage}}
+ flowMessage=touched.length?t('flow.done',{pages:[...new Set(touched)].join(', ')}):stuck.length?'':t('flow.nothing');
+ if(stuck.length)flowMessage=(flowMessage?flowMessage+' ':'')+t('flow.stuck',{pages:stuck.join(', ')});
+ persist();renderPanels();renderPreview();
+ await decodeImages($('#pagesStack'));checkOverflow();
+}
+
+/* ===== Export ===== */
+function saveJSON(){
+ saveNow();
+ const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),link=document.createElement('a');
+ link.href=url;link.download=`newsletter-${data.year||'year'}-${data.month||'month'}.json`;document.body.appendChild(link);link.click();link.remove();
+ setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+function importJSON(input){
+ const file=input.files&&input.files[0];input.value='';if(!file)return;
+ const reader=new FileReader();
+ reader.onload=()=>{
+  let next;try{next=normalizeData(JSON.parse(reader.result))}catch(err){uiAlert(t('msg.importInvalid'));return}
+  data=next;pageIndex=0;openArticles.clear();collapsedParts.clear();folds.clear();saveNow();renderPanels();renderPreview();
+ };
+ reader.readAsText(file);
+}
+const PNG_SOURCES=['https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js','https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js'];
+async function ensurePngRenderer(){
+ if(typeof window.html2canvas==='function')return;
+ for(const src of PNG_SOURCES){
+  try{await new Promise((resolve,reject)=>{const js=document.createElement('script');js.src=src;js.onload=resolve;js.onerror=reject;document.head.appendChild(js)});if(typeof window.html2canvas==='function')return}catch(e){}
+ }
+ throw new Error(t('msg.pngLoad'));
+}
+async function savePNG(btn){
+ const label=btn.querySelector('[data-i18n]')||btn;
+ try{
+  btn.disabled=true;label.textContent=t('export.pngBusy');
+  await ensurePngRenderer();
+  if(document.fonts&&document.fonts.ready)await document.fonts.ready;
+  const target=document.getElementById('preview');
+  const canvas=await window.html2canvas(target,{backgroundColor:'#ffffff',scale:2,useCORS:true,allowTaint:false,logging:false,scrollX:0,scrollY:0,windowWidth:1200,onclone:doc=>{const p=doc.getElementById('preview');p.classList.remove('nex-page-active','nex-page-overflow');p.classList.add('is-exporting');p.style.transform='none';p.style.boxShadow='none';p.style.margin='0'}});
+  if(!canvas.width||!canvas.height)throw new Error(t('msg.pngCapture'));
+  const blob=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(new Error(t('msg.pngConvert'))),'image/png'));
+  const url=URL.createObjectURL(blob),link=document.createElement('a');
+  link.href=url;link.download=`woosong-newsletter-${data.year||'year'}-${data.month||'month'}-p${pageIndex+1}.png`;document.body.appendChild(link);link.click();link.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),60000);
+ }catch(e){uiAlert(t('msg.pngFailed',{error:e.message})+'\n'+t('msg.pngAdvice'))}
+ finally{btn.disabled=false;label.textContent=t('export.png')}
+}
+
+/* ===== Contact dialog ===== */
+function openContact(){$('#contactCopy').textContent=t('contact.copy');$('#contactOverlay').classList.add('is-open');$('#contactClose').focus()}
+function closeContact(){$('#contactOverlay').classList.remove('is-open');$('#contactOpen').focus()}
+async function copyEmail(btn){
+ try{await navigator.clipboard.writeText(CONTACT_EMAIL)}catch(e){const ta=document.createElement('textarea');ta.value=CONTACT_EMAIL;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove()}
+ btn.textContent=t('contact.copied');
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#contactOverlay').classList.contains('is-open'))closeContact()});
+
+/* ===== Resizable editor / preview panes ===== */
+(function initResize(){
+ const app=$('.app'),handle=$('.nex-pane-handle');if(!app||!handle)return;
+ let w=440;try{w=Number(localStorage.getItem(WIDTH_KEY))||440}catch(e){}
+ const update=n=>{w=Math.min(Math.max(300,n),Math.max(320,innerWidth-340));app.style.setProperty('--nex-sidebar-width',w+'px')};update(w);
+ const finish=()=>{handle.classList.remove('dragging');try{localStorage.setItem(WIDTH_KEY,String(w))}catch(e){}};
+ handle.addEventListener('pointerdown',e=>{if(innerWidth<=850)return;handle.setPointerCapture(e.pointerId);handle.classList.add('dragging');e.preventDefault()});
+ handle.addEventListener('pointermove',e=>{if(handle.hasPointerCapture(e.pointerId))update(e.clientX-app.getBoundingClientRect().left)});
+ handle.addEventListener('pointerup',finish);handle.addEventListener('pointercancel',finish);
+ handle.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();update(w+(e.key==='ArrowRight'?24:-24));finish()}});
+ window.addEventListener('resize',()=>update(w));
 })();
-</script>
-<script id="nex-pane-i18n-final">
-(()=>{'use strict';
-const app=document.querySelector('.app'),side=document.querySelector('.side'),preview=document.querySelector('.workspace');
-if(app&&side&&preview){app.classList.add('nex-resizable');const handle=document.createElement('div');handle.className='nex-pane-handle';handle.setAttribute('role','separator');handle.setAttribute('aria-orientation','vertical');handle.tabIndex=0;handle.title='Drag to resize / 드래그하여 너비 조절 / 拖曳調整寬度';side.after(handle);
-let w=440;try{w=Number(localStorage.getItem('nex-sidebar-width'))||440}catch(e){};
-const update=n=>{w=Math.min(Math.max(300,n),Math.max(320,innerWidth-340));app.style.setProperty('--nex-sidebar-width',w+'px')};update(w);
-handle.addEventListener('pointerdown',e=>{if(innerWidth<=850)return;handle.setPointerCapture(e.pointerId);handle.classList.add('dragging');e.preventDefault()});handle.addEventListener('pointermove',e=>{if(handle.hasPointerCapture(e.pointerId))update(e.clientX-app.getBoundingClientRect().left)});const finish=()=>{handle.classList.remove('dragging');try{localStorage.setItem('nex-sidebar-width',String(w))}catch(e){}};handle.addEventListener('pointerup',finish);handle.addEventListener('pointercancel',finish);handle.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();update(w+(e.key==='ArrowRight'?24:-24));finish()}});window.addEventListener('resize',()=>update(w));}
-// Move the existing reset button, preserving its onclick handler and confirmation.
-const reset=[...document.querySelectorAll('.toolbar button')].find(x=>/resetData\(\)/.test(x.getAttribute('onclick')||''));
-const info=document.querySelector('#metadata');if(reset&&info){let holder=document.createElement('div');holder.className='nex-reset-holder';holder.id='nex-reset-holder';reset.parentElement.removeChild(reset);holder.appendChild(reset);info.after(holder);}
-const WORDS={
-'本機自動儲存已開啟':['이 브라우저에 자동 저장 중','Autosave is on'],
-'11 種版面與 10 種欄目標題樣式可即時切換。':['11가지 레이아웃과 16가지 섹션 제목 스타일을 선택할 수 있습니다.','Switch between 11 layouts and 16 section heading styles.'],
-'11 種版面與 16 種欄目標題樣式可即時切換。':['11가지 레이아웃과 16가지 섹션 제목 스타일을 선택할 수 있습니다.','Switch between 11 layouts and 16 section heading styles.'],
-'整頁排版模板（11 款）':['전체 페이지 레이아웃 (11종)','Page layouts (11)'],
-'欄目抬頭外觀（16 款）':['섹션 제목 디자인 (16종)','Section heading styles (16)'],
-'點選抬頭樣式即可在右側預覽，文章內容不會改變。':['제목 스타일을 선택하면 오른쪽 미리보기에 적용됩니다. 본문은 변경되지 않습니다.','Select a heading style to preview it on the right. Article content will remain unchanged.'],
-'點選版型即可在右側即時預覽。':['레이아웃을 선택하면 오른쪽에서 바로 미리볼 수 있습니다.','Select a layout to preview it on the right.'],
-'欄目標題':['섹션 제목','Section heading'],
-'選擇建議文字…':['추천 제목 선택...','Choose a suggested heading...'],
-'自訂文字 / 직접 입력…':['직접 입력...','Enter custom text...'],
-'輸入自訂欄目名稱 / 제목 직접 입력':['섹션 제목 직접 입력','Enter a custom section heading'],
-'套用第一區':['첫 번째 섹션에 적용','Apply to first section'],
-'套用第二區':['두 번째 섹션에 적용','Apply to second section'],
-'常用英文抬頭（套用至指定內容區）':['추천 영문 섹션 제목','Suggested English headings'],
-'可一次選取多張 JPG / PNG；圖片會依順序顯示。／여러 이미지를 선택할 수 있습니다.':['JPG·PNG 이미지 여러 장을 선택할 수 있습니다. 선택 순서대로 표시됩니다.','Select multiple JPG/PNG images. They appear in the order selected.'],
-'文章版面 / 기사 레이아웃':['기사 레이아웃','Article layout'],
-'圖片展示 / 이미지 표시':['이미지 표시 방식','Image display'],
-'圖文方向 / 사진 위치':['이미지 위치','Image position'],
-'圖片裁剪（非破壞性） / 이미지 자르기':['이미지 자르기 (원본 유지)','Image crop (non-destructive)'],
-'裁剪焦點：水平 / 자르기 중심: 가로':['자르기 중심: 가로','Crop focus: horizontal'],
-'裁剪焦點：垂直 / 자르기 중심: 세로':['자르기 중심: 세로','Crop focus: vertical'],
-'內容照片／海報':['대표 이미지','Main image'],
-'更多圖片（同一篇可加入多張）／추가 이미지':['추가 이미지 (여러 장 가능)','Additional images (multiple allowed)'],
-'附加圖片 1 / 추가 이미지 1':['추가 이미지 1','Additional image 1'],
-'清除內容圖':['대표 이미지 삭제','Remove main image'],
-'左欄分類':['왼쪽 섹션 제목','Left section heading'],
-'右欄分類':['오른쪽 섹션 제목','Right section heading'],
-'標題字級':['제목 글자 크기','Title font size'],
-'正文字級':['본문 글자 크기','Body font size'],
-'標題加粗':['제목 굵게','Bold title'],
-'正文加粗':['본문 굵게','Bold body'],
-'內容':['콘텐츠','Content'],'排版':['디자인','Design'],'基本資料':['기본 정보','Details'],'匯出':['내보내기','Export'],
-'重設示範內容':['예시 콘텐츠 초기화','Reset sample content'],
-'左欄文章':['왼쪽 기사','Left articles'],'右欄活動':['오른쪽 소식','Right updates'],
-'內容照片 / 海報':['대표 이미지','Main image'],
-'學校 Logo（上傳圖片）':['학교 로고 (이미지 업로드)','University logo (upload image)']
-};
-const maps={ko:new Map(),en:new Map()};for(const [zh,[ko,en]] of Object.entries(WORDS)){maps.ko.set(zh,ko);maps.en.set(zh,en);maps.ko.set(ko,ko);maps.en.set(en,en)}
-// Existing i18n scripts may leave Korean labels untranslated in English, and Chinese labels in Korean.
-const cross=new Map();for(const [zh,[ko,en]] of Object.entries(WORDS)){cross.set(ko,{zh,en});cross.set(en,{zh,ko});}
-function lang(){return document.getElementById('langEn')?.classList.contains('selected')?'en':document.getElementById('langKo')?.classList.contains('selected')?'ko':'zh'}
-function trans(t,l){const key=t.trim();if(!key||l==='zh')return t;let z=maps[l].get(key);if(!z){const c=cross.get(key);if(c)z=c[l]||key;}if(!z){const m=key.match(/^附加圖片\s*(\d+)\s*\/.*$/);if(m)z=(l==='ko'?'추가 이미지 ':'Additional image ')+m[1];}return z?t.replace(key,z):t}
-let busy=false;function repair(){if(busy)return;busy=true;try{const l=lang();if(!side)return;const walk=document.createTreeWalker(side,NodeFilter.SHOW_TEXT);let n;while(n=walk.nextNode()){if(n.parentElement?.closest('textarea,script,style,.lang-controls,.item textarea'))continue;const v=trans(n.nodeValue,l);if(v!==n.nodeValue)n.nodeValue=v}
-for(const el of side.querySelectorAll('[placeholder],[title],[aria-label]'))for(const a of ['placeholder','title','aria-label']){const v=el.getAttribute(a);if(v){const z=trans(v,l);if(z!==v)el.setAttribute(a,z)}}
-if(reset)reset.textContent=({zh:'重設示範內容',ko:'예시 콘텐츠 초기화',en:'Reset sample content'})[l];
-const holder=document.getElementById('nex-reset-holder');if(holder&&info&&!info.parentNode?.contains(holder))info.after(holder);
-const u=document.querySelector('.ux-status');if(u)u.innerHTML='<span>●</span> '+({zh:'本機自動儲存已開啟',ko:'이 브라우저에 자동 저장 중',en:'Autosave is on'})[l];
-}finally{busy=false}}
-for(const id of ['langZh','langKo','langEn'])document.getElementById(id)?.addEventListener('click',()=>queueMicrotask(repair));
-// Editor sections update after direct user interaction; observe new UI nodes only.
-const observer=new MutationObserver(records=>{if(busy)return;if(records.some(r=>r.type==='childList'&&[...r.addedNodes].some(n=>n.nodeType===1||n.nodeType===3)))queueMicrotask(repair)});
-/* Observer disabled to prevent endless interface-update loop. */
-repair();
-})();
-</script><script id="nex-multipage-extension">
-(()=>{'use strict';
-const pEl=document.getElementById('preview');if(!pEl)return;
-const baseRender=window.render, originalReset=window.resetData, originalImport=window.importJSON;
-const keys=['left','right','leftLabel','rightLabel','layout','headingStyle'];
-const languages={
- zh:{pages:'頁面管理 · A4',newPage:'＋ 新增 A4 頁',duplicate:'複製目前頁',remove:'刪除目前頁',part:'Part 主題區塊',addPart:'＋ 新增 Part',addStory:'＋ 新增文章',del:'刪除',up:'上移',down:'下移',title:'Part 標題',storyTitle:'文章標題',body:'文章內容',image:'內容圖片',choose:'選擇頁面',note:'每頁固定 A4（210 × 297 mm）。內容超出頁面會提示，請移到下一頁；不會擅自縮小文字。',confirm:'確定刪除這一頁及其內容？',confirmPart:'確定刪除這個 Part？',atLeast:'至少需保留一頁。',overflow:'內容超過 A4 範圍，請減少內容或新增頁面。',partLabel:'新主題',story:'新文章',content:'請輸入內容',active:'目前編輯'},
- ko:{pages:'페이지 관리 · A4',newPage:'＋ A4 페이지 추가',duplicate:'현재 페이지 복제',remove:'현재 페이지 삭제',part:'파트 섹션',addPart:'＋ 파트 추가',addStory:'＋ 기사 추가',del:'삭제',up:'위로',down:'아래로',title:'파트 제목',storyTitle:'기사 제목',body:'본문',image:'본문 이미지',choose:'페이지 선택',note:'각 페이지는 A4(210 × 297mm) 크기로 고정됩니다. 내용이 넘치면 다음 페이지로 옮겨 주세요. 글자 크기는 자동으로 줄이지 않습니다.',confirm:'현재 페이지와 내용을 삭제할까요?',confirmPart:'이 파트를 삭제할까요?',atLeast:'페이지는 최소 한 장이 필요합니다.',overflow:'A4 페이지를 벗어난 내용이 있습니다. 분량을 줄이거나 페이지를 추가해 주세요.',partLabel:'새 파트',story:'새 기사',content:'내용을 입력하세요',active:'편집 중'},
- en:{pages:'Pages · A4',newPage:'＋ Add A4 page',duplicate:'Duplicate page',remove:'Delete page',part:'Part sections',addPart:'＋ Add Part',addStory:'＋ Add article',del:'Delete',up:'Move up',down:'Move down',title:'Part heading',storyTitle:'Article title',body:'Body text',image:'Article image',choose:'Choose a page',note:'Each page is fixed at A4 (210 × 297 mm). If content overflows, move it to another page; text will not shrink automatically.',confirm:'Delete this page and its content?',confirmPart:'Delete this Part?',atLeast:'Keep at least one page.',overflow:'Content exceeds the A4 page. Shorten it or add another page.',partLabel:'New Part',story:'New article',content:'Enter content',active:'Editing'}
-};
-let idx=0, working=false;
-function lng(){return document.getElementById('langEn')?.classList.contains('selected')?'en':document.getElementById('langKo')?.classList.contains('selected')?'ko':'zh'}
-function t(){return languages[lng()]}
-function snapshot(){let o={};for(const k of keys)o[k]=structuredClone(data[k]);return o}
-function load(o){for(const k of keys)data[k]=structuredClone(o[k])}
-function normalPage(o){if(!o||typeof o!=='object')o=snapshot();o.parts=Array.isArray(o.parts)?o.parts:[];for(const k of keys){if(o[k]===undefined)o[k]=structuredClone(data[k])}return o}
-if(!Array.isArray(data.pages)||!data.pages.length)data.pages=[{...snapshot(),parts:[]}];
-data.pages=data.pages.map(normalPage);
-function saveActive(){if(!data.pages[idx])return;const old=data.pages[idx];data.pages[idx]={...snapshot(),parts:old.parts||[]}}
-function persistPages(){try{localStorage.setItem('woosong-newsletter-v1',JSON.stringify(data))}catch(e){}}
-const panel=document.createElement('section');panel.id='nexPagesPanel';panel.className='nex-pages-panel';
-const contentPane=document.getElementById('leftEdit')?.closest('details');if(contentPane)contentPane.parentNode.insertBefore(panel,contentPane);else document.querySelector('.side')?.append(panel);
-const stack=document.createElement('div');stack.className='nex-pages-container';stack.id='nexPagesStack';pEl.parentNode.insertBefore(stack,pEl);stack.append(pEl);
-function safe(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function makeExtras(page){return (page.parts||[]).map((part)=>`<section class="nex-extra-section"><h2>${safe(part.title)}</h2>${(part.stories||[]).map(st=>`<article class="nex-extra-story ${st.image?'':'no-photo'}">${st.image?`<img src="${safe(st.image)}" alt="">`:''}<div><h3>${safe(st.title)}</h3><p>${safe(st.body)}</p></div></article>`).join('')}</section>`).join('')}
-function renderPages(){if(working)return;working=true;try{saveActive();persistPages();const current=snapshot(), pages=data.pages, results=[];for(let i=0;i<pages.length;i++){load(pages[i]);baseRender();const head=pEl.innerHTML;const html=head.replace('</div><footer class="footer">',makeExtras(pages[i])+'</div><footer class="footer">');results.push(html)}load(current);pEl.className='page nex-sheet '+(data.layout||'mode1')+' '+(data.headingStyle||'style1');pEl.innerHTML=results[idx];pEl.classList.add('nex-page-active');pEl.dataset.sheetCaption=`${idx+1} / ${pages.length}`;stack.querySelectorAll('[data-nex-extra-page]').forEach(x=>x.remove());results.forEach((html,i)=>{if(i===idx)return;const node=document.createElement('section');node.className='page nex-sheet '+(pages[i].layout||'mode1')+' '+(pages[i].headingStyle||'style1');node.setAttribute('data-nex-extra-page','');node.dataset.sheetCaption=`${i+1} / ${pages.length}`;node.innerHTML=html;if(i<idx)stack.insertBefore(node,pEl);else stack.append(node)});document.querySelectorAll('#nexPagesStack .nex-sheet').forEach(el=>{const footer=el.querySelector('.footer');el.classList.toggle('nex-page-overflow',!!footer&&footer.getBoundingClientRect().bottom>el.getBoundingClientRect().bottom-25)})}finally{working=false}}
-window.render=function(){renderPages()};
-function refreshControls(){meta();styleEditor();editor('left');editor('right');if(window.updateSectionNames)updateSectionNames();paintPanel();window.render()}
-function selectPage(i){if(i<0||i>=data.pages.length)return;saveActive();idx=i;load(data.pages[idx]);persistPages();refreshControls();pEl.scrollIntoView({block:'start',behavior:'smooth'})}
-function addPage(copy=false){saveActive();let newp=copy?structuredClone(data.pages[idx]):{...snapshot(),left:[],right:[],leftLabel:data.leftLabel,rightLabel:data.rightLabel,parts:[]};data.pages.splice(idx+1,0,newp);idx++;load(newp);persistPages();refreshControls()}
-function deletePage(){if(data.pages.length===1){alert(t().atLeast);return}if(!confirm(t().confirm))return;data.pages.splice(idx,1);idx=Math.min(idx,data.pages.length-1);load(data.pages[idx]);persistPages();refreshControls()}
-function addPart(){saveActive();data.pages[idx].parts.push({title:t().partLabel,stories:[{title:t().story,body:t().content,image:''}]});persistPages();paintPanel();window.render()}
-function updatePart(p,key,v){saveActive();data.pages[idx].parts[p][key]=v;persistPages();window.render()}
-function updateStory(p,i,key,v){saveActive();data.pages[idx].parts[p].stories[i][key]=v;persistPages();window.render()}
-function managePart(p,action){saveActive();const a=data.pages[idx].parts;if(action==='delete'){if(!confirm(t().confirmPart))return;a.splice(p,1)}else if(action==='up'&&p>0)[a[p-1],a[p]]=[a[p],a[p-1]];else if(action==='down'&&p<a.length-1)[a[p+1],a[p]]=[a[p],a[p+1]];persistPages();paintPanel();window.render()}
-function manageStory(p,i,action){saveActive();const a=data.pages[idx].parts[p].stories;if(action==='add')a.push({title:t().story,body:'',image:''});if(action==='delete')a.splice(i,1);if(action==='up'&&i>0)[a[i-1],a[i]]=[a[i],a[i-1]];if(action==='down'&&i<a.length-1)[a[i+1],a[i]]=[a[i],a[i+1]];persistPages();paintPanel();window.render()}
-function uploadStory(evt,p,i){let file=evt.target.files?.[0];if(!file)return;readImage(file,v=>{updateStory(p,i,'image',v);paintPanel()},'photo')}
-function paintPanel(){const l=t();panel.innerHTML=`<h3>${l.pages}</h3><div class="nex-pages-row">${data.pages.map((p,i)=>`<button class="nex-page-btn" data-page="${i}" aria-current="${i===idx?'page':'false'}">${i+1} / ${data.pages.length}</button>`).join('')}</div><div class="nex-pages-row"><button class="btn secondary small" data-action="new">${l.newPage}</button><button class="btn secondary small" data-action="duplicate">${l.duplicate}</button><button class="btn warning small" data-action="remove">${l.remove}</button></div><p class="nex-paging-note">${l.note}</p><hr><h3>${l.part} · ${2+data.pages[idx].parts.length}</h3><div class="nex-paging-note">Part 1 / Part 2 = ${lng()==='ko'?'기존 왼쪽·오른쪽 섹션':lng()==='en'?'Existing left and right sections':'原有左欄、右欄'}</div>${data.pages[idx].parts.map((part,p)=>`<div class="nex-part"><div class="nex-part-head"><strong>Part ${p+3}</strong><div class="minirow"><button class="btn secondary small" data-partaction="up" data-p="${p}">↑</button><button class="btn secondary small" data-partaction="down" data-p="${p}">↓</button><button class="btn warning small" data-partaction="delete" data-p="${p}">${l.del}</button></div></div><label>${l.title}</label><input data-parttitle="${p}" value="${safe(part.title)}">${part.stories.map((st,i)=>`<div class="nex-part"><div class="nex-part-head"><b>${l.storyTitle} ${i+1}</b><div class="minirow"><button class="btn secondary small" data-storyaction="up" data-p="${p}" data-i="${i}">↑</button><button class="btn secondary small" data-storyaction="down" data-p="${p}" data-i="${i}">↓</button><button class="btn warning small" data-storyaction="delete" data-p="${p}" data-i="${i}">${l.del}</button></div></div><label>${l.storyTitle}</label><input data-stitle="${p}:${i}" value="${safe(st.title)}"><label>${l.body}</label><textarea data-sbody="${p}:${i}">${safe(st.body)}</textarea><label>${l.image}</label><input type="file" accept="image/*" data-simage="${p}:${i}">${st.image?`<img src="${safe(st.image)}" style="width:95px;height:70px;object-fit:contain" alt="">`:''}</div>`).join('')}<div class="nex-part-actions"><button class="btn secondary small" data-storyaction="add" data-p="${p}" data-i="0">${l.addStory}</button></div></div>`).join('')}<button class="btn secondary" data-action="part">${l.addPart}</button>`}
-panel.addEventListener('click',e=>{const x=e.target.closest('button');if(!x)return;if(x.dataset.page!==undefined)return selectPage(Number(x.dataset.page));if(x.dataset.action==='new')return addPage();if(x.dataset.action==='duplicate')return addPage(true);if(x.dataset.action==='remove')return deletePage();if(x.dataset.action==='part')return addPart();if(x.dataset.partaction)return managePart(Number(x.dataset.p),x.dataset.partaction);if(x.dataset.storyaction)return manageStory(Number(x.dataset.p),Number(x.dataset.i),x.dataset.storyaction)});
-panel.addEventListener('input',e=>{const x=e.target;if(x.dataset.parttitle!==undefined)return updatePart(Number(x.dataset.parttitle),'title',x.value);for(const [key,field] of [['stitle','title'],['sbody','body']])if(x.dataset[key]){const [p,i]=x.dataset[key].split(':').map(Number);updateStory(p,i,field,x.value);return}});
-panel.addEventListener('change',e=>{if(!e.target.dataset.simage)return;const [p,i]=e.target.dataset.simage.split(':').map(Number);uploadStory(e,p,i)});
-for(const id of ['langZh','langKo','langEn'])document.getElementById(id)?.addEventListener('click',()=>queueMicrotask(paintPanel));
-window.resetData=function(){originalReset();idx=0;data.pages=[{...snapshot(),parts:[]}];persistPages();refreshControls()};
-// Keep historical JSON compatible. Existing import handler loads it then rebuilds the page manager.
-window.importJSON=function(e){const f=e.target.files?.[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const val=JSON.parse(r.result);if(!Array.isArray(val.left)||!Array.isArray(val.right))throw Error('invalid');data=val;idx=0;if(!Array.isArray(data.pages)||!data.pages.length)data.pages=[{...snapshot(),parts:[]}];data.pages=data.pages.map(normalPage);load(data.pages[0]);persistPages();refreshControls()}catch(ex){alert(lng()==='ko'?'올바른 JSON 파일이 아닙니다.':lng()==='en'?'Invalid JSON file.':'JSON 格式不符，無法匯入')}};r.readAsText(f)};
-// Save pages into the legacy JSON exporter before every save (wrapper render syncs edits).
-load(data.pages[0]);paintPanel();renderPages();
+
+/* ===== Start ===== */
+applyTranslations();renderPanels();renderPreview();showTab(activeTab);
+window.NewsletterEditor={autoFlow,get data(){return data},get currentLanguage(){return currentLanguage},get pageIndex(){return pageIndex},translations,t,setLanguage,showTab,saveNow};
 })();
 </script></body></html>
